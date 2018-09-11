@@ -1,0 +1,1313 @@
+[DEBUG|worknetCrawlerBot_just_windows.py:1067] 2018-09-07 10:22:10,446 > 전체 게시물 개수 : 93515
+[DEBUG|worknetCrawlerBot_just_windows.py:1085] 2018-09-07 10:22:10,447 > 전체 페이지 수: 9352
+[DEBUG|worknetCrawlerBot_just_windows.py:1107] 2018-09-07 10:22:13,309 > current_url => http://www.work.go.kr/empInfo/empInfoSrch/list/dtlEmpSrchList.do?pageIndex=1
+[DEBUG|worknetCrawlerBot_just_windows.py:1113] 2018-09-07 10:22:15,532 > 개별 공고 정보 검색 시작
+[DEBUG|worknetCrawlerBot_just_windows.py:1137] 2018-09-07 10:22:15,561 > 구인인증번호|회사명|공고내용: K131311809070013|VALIDATION|한국STS|생산직 단순종사자 모집
+[DEBUG|worknetCrawlerBot_just_windows.py:1144] 2018-09-07 10:22:15,561 > 구인인증번호: K131311809070013
+[DEBUG|worknetCrawlerBot_just_windows.py:1156] 2018-09-07 10:22:15,564 > 처음 크롤링하는 취업 공고
+[DEBUG|worknetCrawlerBot_just_windows.py:1029] 2018-09-07 10:22:16,880 > 스크롤이 가능한 페이지
+[DEBUG|worknetCrawlerBot_just_windows.py:133] 2018-09-07 10:22:18,977 > 조회수:4명, 지원자:0명
+[DEBUG|worknetCrawlerBot_just_windows.py:140] 2018-09-07 10:22:18,980 > 회사 이미지 사용하지 않음
+[DEBUG|worknetCrawlerBot_just_windows.py:224] 2018-09-07 10:22:19,013 > 7-0.첨부자료:         -             
+[DEBUG|worknetCrawlerBot_just_windows.py:344] 2018-09-07 10:22:19,015 > #지원자격
+[DEBUG|worknetCrawlerBot_just_windows.py:344] 2018-09-07 10:22:19,022 > #근무조건
+[DEBUG|worknetCrawlerBot_just_windows.py:344] 2018-09-07 10:22:19,029 > #고용형태
+[DEBUG|worknetCrawlerBot_just_windows.py:427] 2018-09-07 10:22:19,037 > 모집요강 (구인인증번호:K131311809070013)
+[DEBUG|worknetCrawlerBot_just_windows.py:430] 2018-09-07 10:22:19,038 > $$: 6
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:22:19,038 > infoTable_No1
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:22:19,040 > -모집요강
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:22:19,041 > 모집요강 : 11
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:19,043 > 기계·금속 분야 단순 종사원(890001)    직업정보 훈련정보 자격정보 
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:19,045 >  
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:19,047 > -    
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:19,049 >     스텐레스파이프인발및기타생산보조업무   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:19,051 >     신입       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:19,053 >           고졸 ~ 대졸(2~3년)          
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:19,055 >     기간의 정함이 없는 근로계약          / 파견근로 비희망      
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:19,057 >     2명      지원현황 : 총0명    (취업알선기관 알선       취업알선기관 알선 관할고용센터(또는 취업알선기관)의 취업알선 서비스를 통해 알선된 알선자수.관할 취업알선기관의 취업알선담당자에게 서비스를 요청하시기 바랍니다.        : 0 명&    이메일 입사지원       이메일입사지원 워크넷 웹사이트를 통해 이메일입사지원한 지원자수. 채용정보상세화면 상/하단 이메일입사지원 기능을 이용하시기 바랍니다.        : 0 명)     * 한 지원자가 알선과 이메일입사지원을 모두 한 경우 총인원수에서는 한명으로 카운트됩니다.   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:19,060 >     경상남도             김해시         한림면 가동로62-45          
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:19,062 > -
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:19,064 > -          
+[DEBUG|worknetCrawlerBot_just_windows.py:757] 2018-09-07 10:22:19,064 > #인근전철역,-          
+[DEBUG|worknetCrawlerBot_just_windows.py:758] 2018-09-07 10:22:19,064 > 인근전철역:-          
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:22:19,064 > infoTable_No2
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:22:19,066 > -근무환경및복리후생
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:22:19,067 > 근무환경및복리후생 : 6
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:19,069 >         시급    7&530원 이상                       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:19,071 >     2식   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:19,073 >                                (오전)8시00분~(오후)7시30분              (2교대)        
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:19,075 >       주 6일 근무         
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:19,077 >         국민연금     고용보험     산재보험     건강보험    
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:19,079 >     퇴직금   
+[DEBUG|worknetCrawlerBot_just_windows.py:757] 2018-09-07 10:22:19,079 > #퇴직금지급방법,    퇴직금   
+[DEBUG|worknetCrawlerBot_just_windows.py:758] 2018-09-07 10:22:19,079 > 퇴직금지급방법:    퇴직금   
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:22:19,080 > infoTable_No3
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:22:19,081 > -전형방법
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:22:19,082 > 전형방법 : 5
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:19,084 >     채용시까지       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:19,087 >     서류&면접   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:19,089 >            방문&우편&팩스        
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:19,091 >     이력서 
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:19,093 >            등록된 파일이 없습니다.      
+[DEBUG|worknetCrawlerBot_just_windows.py:757] 2018-09-07 10:22:19,093 > #제출서류양식첨부,           등록된 파일이 없습니다.      
+[DEBUG|worknetCrawlerBot_just_windows.py:758] 2018-09-07 10:22:19,093 > 제출서류양식첨부:           등록된 파일이 없습니다.      
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:22:19,093 > infoTable_No4
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:22:19,095 > -우대사항
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:22:19,096 > 우대사항 : 10
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:19,098 >     -       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:19,100 > -               
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:19,102 >                     -   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:19,104 >     -       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:19,106 >         외국인채용   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:19,108 >     비희망       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:19,110 >               -         
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:19,112 > -       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:19,115 >     기숙사   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:19,117 > -       
+[DEBUG|worknetCrawlerBot_just_windows.py:757] 2018-09-07 10:22:19,117 > #장애인편의시설,-       
+[DEBUG|worknetCrawlerBot_just_windows.py:758] 2018-09-07 10:22:19,117 > 장애인편의시설:-       
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:22:19,117 > infoTable_No5
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:22:19,119 > -기타입력사항
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:22:19,120 > 기타입력사항 : 1
+[DEBUG|worknetCrawlerBot_just_windows.py:530] 2018-09-07 10:22:19,122 >     -       
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:22:19,122 > infoTable_No6
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:22:19,124 > -회사주소
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:22:19,125 > 회사주소 : 2
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:19,127 >              (50849) 경상남도 김해시 한림면 가동로 62-45& 한국STS           
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:19,129 >     (50849)             경상남도     김해시   한림면 가동로  62-45               ※ 채용정보의 근무예정지 지도가 등록되지 않았습니다. 
+[DEBUG|worknetCrawlerBot_just_windows.py:757] 2018-09-07 10:22:19,129 > #근무예정지지도,    (50849)             경상남도     김해시   한림면 가동로  62-45               ※ 채용정보의 근무예정지 지도가 등록되지 않았습니다. 
+[DEBUG|worknetCrawlerBot_just_windows.py:758] 2018-09-07 10:22:19,129 > 근무예정지지도:    (50849)             경상남도     김해시   한림면 가동로  62-45               ※ 채용정보의 근무예정지 지도가 등록되지 않았습니다. 
+[DEBUG|worknetCrawlerBot_just_windows.py:851] 2018-09-07 10:22:19,142 > E-mail:-
+[DEBUG|worknetCrawlerBot_just_windows.py:931] 2018-09-07 10:22:19,147 > DB INSERT : K131311809070013,         -             ,생산직단순종사자모집				,4,0,,         -             ,         -             ,         -             ,         -             ,         -             ,         -             ,         -             ,             (50849) 경상남도 김해시 한림면 가동로 62-45& 한국STS           ,         -             ,기계·금속 분야 단순 종사원(890001)    직업정보 훈련정보 자격정보 , ,-    ,    스텐레스파이프인발및기타생산보조업무   ,    신입       ,          고졸 ~ 대졸(2~3년)          ,,,    기간의 정함이 없는 근로계약          / 파견근로 비희망      ,    2명      지원현황 : 총0명    (취업알선기관 알선       취업알선기관 알선 관할고용센터(또는 취업알선기관)의 취업알선 서비스를 통해 알선된 알선자수.관할 취업알선기관의 취업알선담당자에게 서비스를 요청하시기 바랍니다.        : 0 명&    이메일 입사지원       이메일입사지원 워크넷 웹사이트를 통해 이메일입사지원한 지원자수. 채용정보상세화면 상/하단 이메일입사지원 기능을 이용하시기 바랍니다.        : 0 명)     * 한 지원자가 알선과 이메일입사지원을 모두 한 경우 총인원수에서는 한명으로 카운트됩니다.   ,    경상남도             김해시         한림면 가동로62-45          ,-,-          ,        시급    7&530원 이상                       ,                               (오전)8시00분~(오후)7시30분              (2교대)        ,      주 6일 근무         ,        국민연금     고용보험     산재보험     건강보험    ,    퇴직금   ,    채용시까지       ,    서류&면접   ,           방문&우편&팩스        ,    이력서 ,           등록된 파일이 없습니다.      ,    -       ,-               ,                    -   ,    -       ,        외국인채용   ,    비희망       ,              -         ,-       ,    기숙사   ,-       ,    -       , 경영지원팀 / 이경순과장   ,     055-724-3633      ,-,   055-724-3634    ,-
+[DEBUG|worknetCrawlerBot_just_windows.py:1010] 2018-09-07 10:22:19,277 > DB INSERT COUNT : 1
+[DEBUG|worknetCrawlerBot_just_windows.py:1013] 2018-09-07 10:22:19,278 > DB insert result : True
+[DEBUG|worknetCrawlerBot_just_windows.py:1113] 2018-09-07 10:22:22,331 > 개별 공고 정보 검색 시작
+[DEBUG|worknetCrawlerBot_just_windows.py:1137] 2018-09-07 10:22:22,362 > 구인인증번호|회사명|공고내용: K131131809070010|VALIDATION|주식회사디에이치콘트롤스|설계 캐드원 모집
+[DEBUG|worknetCrawlerBot_just_windows.py:1144] 2018-09-07 10:22:22,362 > 구인인증번호: K131131809070010
+[DEBUG|worknetCrawlerBot_just_windows.py:1156] 2018-09-07 10:22:22,364 > 처음 크롤링하는 취업 공고
+[DEBUG|worknetCrawlerBot_just_windows.py:1029] 2018-09-07 10:22:22,990 > 스크롤이 가능한 페이지
+[DEBUG|worknetCrawlerBot_just_windows.py:133] 2018-09-07 10:22:25,078 > 조회수:6명, 지원자:0명
+[DEBUG|worknetCrawlerBot_just_windows.py:140] 2018-09-07 10:22:25,081 > 회사 이미지 사용하지 않음
+[DEBUG|worknetCrawlerBot_just_windows.py:224] 2018-09-07 10:22:25,114 > 7-0.첨부자료:         -             
+[DEBUG|worknetCrawlerBot_just_windows.py:344] 2018-09-07 10:22:25,118 > #지원자격
+[DEBUG|worknetCrawlerBot_just_windows.py:344] 2018-09-07 10:22:25,125 > #근무조건
+[DEBUG|worknetCrawlerBot_just_windows.py:344] 2018-09-07 10:22:25,133 > #고용형태
+[DEBUG|worknetCrawlerBot_just_windows.py:427] 2018-09-07 10:22:25,141 > 모집요강 (구인인증번호:K131131809070010)
+[DEBUG|worknetCrawlerBot_just_windows.py:430] 2018-09-07 10:22:25,142 > $$: 6
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:22:25,142 > infoTable_No1
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:22:25,145 > -모집요강
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:22:25,146 > 모집요강 : 11
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:25,148 > 기계·금속 제도사(캐드원)(159103)    직업정보 훈련정보 자격정보 
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:25,150 >  
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:25,152 > -    
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:25,154 >     선박부품인밸브생산하여조선소납품하는회사이며&설계도면&승인도면작성이주업무 캐드.3D&엑셀&워드가능자   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:25,157 >     관계없음       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:25,159 >           대졸(2~3년) ~ 대졸(4년)          
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:25,161 >     기간의 정함이 없는 근로계약          / 파견근로 비희망      
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:25,163 >     2명      지원현황 : 총0명    (취업알선기관 알선       취업알선기관 알선 관할고용센터(또는 취업알선기관)의 취업알선 서비스를 통해 알선된 알선자수.관할 취업알선기관의 취업알선담당자에게 서비스를 요청하시기 바랍니다.        : 0 명&    이메일 입사지원       이메일입사지원 워크넷 웹사이트를 통해 이메일입사지원한 지원자수. 채용정보상세화면 상/하단 이메일입사지원 기능을 이용하시기 바랍니다.        : 0 명)     * 한 지원자가 알선과 이메일입사지원을 모두 한 경우 총인원수에서는 한명으로 카운트됩니다.   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:25,165 >     경상남도             창원시         의창구 대산면 가술산단남로27          
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:25,168 > -
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:25,170 > -          
+[DEBUG|worknetCrawlerBot_just_windows.py:757] 2018-09-07 10:22:25,170 > #인근전철역,-          
+[DEBUG|worknetCrawlerBot_just_windows.py:758] 2018-09-07 10:22:25,170 > 인근전철역:-          
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:22:25,170 > infoTable_No2
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:22:25,172 > -근무환경및복리후생
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:22:25,173 > 근무환경및복리후생 : 6
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:25,175 >         연봉    24&000&000원 이상      ~ 28&000&000원 이하                                상여금 별도 : 0%                면접 후 결정 가능       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:25,177 >     1식   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:25,179 >                                (오전)8시30분~(오후)5시30분               소정근로시간 : 40시간    ※ "소정근로시간" 이란 근로자와 사용자가 정한 1주 동안 근로하는 근로시간을 말합니다.  
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:25,182 >       주 5일 근무         
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:25,184 >         국민연금     고용보험     산재보험     건강보험    
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:25,187 >     퇴직연금   
+[DEBUG|worknetCrawlerBot_just_windows.py:757] 2018-09-07 10:22:25,187 > #퇴직금지급방법,    퇴직연금   
+[DEBUG|worknetCrawlerBot_just_windows.py:758] 2018-09-07 10:22:25,187 > 퇴직금지급방법:    퇴직연금   
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:22:25,187 > infoTable_No3
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:22:25,189 > -전형방법
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:22:25,190 > 전형방법 : 5
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:25,193 >     채용시까지       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:25,195 >     서류&면접   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:25,198 >            우편&이메일     이메일 입사지원    
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:25,201 >     이력서&자기소개서 
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:25,203 >            등록된 파일이 없습니다.      
+[DEBUG|worknetCrawlerBot_just_windows.py:757] 2018-09-07 10:22:25,203 > #제출서류양식첨부,           등록된 파일이 없습니다.      
+[DEBUG|worknetCrawlerBot_just_windows.py:758] 2018-09-07 10:22:25,203 > 제출서류양식첨부:           등록된 파일이 없습니다.      
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:22:25,203 > infoTable_No4
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:22:25,206 > -우대사항
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:22:25,207 > 우대사항 : 10
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:25,209 >     -       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:25,212 > -               
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:25,214 >                     -   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:25,216 >         문서작성&스프레드시트&기타(캐드3D)   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:25,218 >     -       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:25,220 >     비희망       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:25,222 >               -         
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:25,224 > -       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:25,226 > -       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:25,228 > -       
+[DEBUG|worknetCrawlerBot_just_windows.py:757] 2018-09-07 10:22:25,228 > #장애인편의시설,-       
+[DEBUG|worknetCrawlerBot_just_windows.py:758] 2018-09-07 10:22:25,228 > 장애인편의시설:-       
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:22:25,228 > infoTable_No5
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:22:25,230 > -기타입력사항
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:22:25,231 > 기타입력사항 : 1
+[DEBUG|worknetCrawlerBot_just_windows.py:530] 2018-09-07 10:22:25,233 >     -       
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:22:25,233 > infoTable_No6
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:22:25,235 > -회사주소
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:22:25,236 > 회사주소 : 2
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:25,238 >              (51124) 경상남도 창원시 의창구 대산면 가술산단남로 27& (주)디에이치콘트롤스           
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:25,240 >     (51124)             경상남도     창원시   의창구 대산면 가술산단남로  27               ※ 채용정보의 근무예정지 지도가 등록되지 않았습니다. 
+[DEBUG|worknetCrawlerBot_just_windows.py:757] 2018-09-07 10:22:25,241 > #근무예정지지도,    (51124)             경상남도     창원시   의창구 대산면 가술산단남로  27               ※ 채용정보의 근무예정지 지도가 등록되지 않았습니다. 
+[DEBUG|worknetCrawlerBot_just_windows.py:758] 2018-09-07 10:22:25,241 > 근무예정지지도:    (51124)             경상남도     창원시   의창구 대산면 가술산단남로  27               ※ 채용정보의 근무예정지 지도가 등록되지 않았습니다. 
+[DEBUG|worknetCrawlerBot_just_windows.py:851] 2018-09-07 10:22:25,254 > E-mail:       dh@dohn.kr     
+[DEBUG|worknetCrawlerBot_just_windows.py:931] 2018-09-07 10:22:25,258 > DB INSERT : K131131809070010,         -             ,설계캐드원모집				,6,0,,         -             ,         -             ,         -             ,         -             ,         -             ,         -             ,         -             ,             (51124) 경상남도 창원시 의창구 대산면 가술산단남로 27& (주)디에이치콘트롤스           ,         -             ,기계·금속 제도사(캐드원)(159103)    직업정보 훈련정보 자격정보 , ,-    ,    선박부품인밸브생산하여조선소납품하는회사이며&설계도면&승인도면작성이주업무 캐드.3D&엑셀&워드가능자   ,    관계없음       ,          대졸(2~3년) ~ 대졸(4년)          ,,,    기간의 정함이 없는 근로계약          / 파견근로 비희망      ,    2명      지원현황 : 총0명    (취업알선기관 알선       취업알선기관 알선 관할고용센터(또는 취업알선기관)의 취업알선 서비스를 통해 알선된 알선자수.관할 취업알선기관의 취업알선담당자에게 서비스를 요청하시기 바랍니다.        : 0 명&    이메일 입사지원       이메일입사지원 워크넷 웹사이트를 통해 이메일입사지원한 지원자수. 채용정보상세화면 상/하단 이메일입사지원 기능을 이용하시기 바랍니다.        : 0 명)     * 한 지원자가 알선과 이메일입사지원을 모두 한 경우 총인원수에서는 한명으로 카운트됩니다.   ,    경상남도             창원시         의창구 대산면 가술산단남로27          ,-,-          ,        연봉    24&000&000원 이상      ~ 28&000&000원 이하                                상여금 별도 : 0%                면접 후 결정 가능       ,                               (오전)8시30분~(오후)5시30분               소정근로시간 : 40시간    ※ "소정근로시간" 이란 근로자와 사용자가 정한 1주 동안 근로하는 근로시간을 말합니다.  ,      주 5일 근무         ,        국민연금     고용보험     산재보험     건강보험    ,    퇴직연금   ,    채용시까지       ,    서류&면접   ,           우편&이메일     이메일 입사지원    ,    이력서&자기소개서 ,           등록된 파일이 없습니다.      ,    -       ,-               ,                    -   ,        문서작성&스프레드시트&기타(캐드3D)   ,    -       ,    비희망       ,              -         ,-       ,-       ,-       ,    -       , 관리부 / 장지숙   ,     055-255-3356   (내선 : 5)    ,       010-8540-4144     ,   055-324-7725    ,       dh@dohn.kr     
+[DEBUG|worknetCrawlerBot_just_windows.py:1010] 2018-09-07 10:22:25,325 > DB INSERT COUNT : 1
+[DEBUG|worknetCrawlerBot_just_windows.py:1013] 2018-09-07 10:22:25,326 > DB insert result : True
+[DEBUG|worknetCrawlerBot_just_windows.py:1113] 2018-09-07 10:22:28,037 > 개별 공고 정보 검색 시작
+[DEBUG|worknetCrawlerBot_just_windows.py:1137] 2018-09-07 10:22:28,066 > 구인인증번호|회사명|공고내용: K140131809070002|VALIDATION|유진화성|유진화성 정규직 모집 (야간 가능자)
+[DEBUG|worknetCrawlerBot_just_windows.py:1144] 2018-09-07 10:22:28,066 > 구인인증번호: K140131809070002
+[DEBUG|worknetCrawlerBot_just_windows.py:1156] 2018-09-07 10:22:28,068 > 처음 크롤링하는 취업 공고
+[DEBUG|worknetCrawlerBot_just_windows.py:1029] 2018-09-07 10:22:28,649 > 스크롤이 가능한 페이지
+[DEBUG|worknetCrawlerBot_just_windows.py:133] 2018-09-07 10:22:30,743 > 조회수:2명, 지원자:0명
+[DEBUG|worknetCrawlerBot_just_windows.py:140] 2018-09-07 10:22:30,746 > 회사 이미지 사용하지 않음
+[DEBUG|worknetCrawlerBot_just_windows.py:224] 2018-09-07 10:22:30,779 > 7-0.첨부자료:         -             
+[DEBUG|worknetCrawlerBot_just_windows.py:344] 2018-09-07 10:22:30,786 > #지원자격
+[DEBUG|worknetCrawlerBot_just_windows.py:344] 2018-09-07 10:22:30,799 > #근무조건
+[DEBUG|worknetCrawlerBot_just_windows.py:344] 2018-09-07 10:22:30,815 > #고용형태
+[DEBUG|worknetCrawlerBot_just_windows.py:427] 2018-09-07 10:22:30,826 > 모집요강 (구인인증번호:K140131809070002)
+[DEBUG|worknetCrawlerBot_just_windows.py:430] 2018-09-07 10:22:30,827 > $$: 6
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:22:30,827 > infoTable_No1
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:22:30,829 > -모집요강
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:22:30,831 > 모집요강 : 11
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:30,833 > 플라스틱 압출성형기 조작원(852202)    직업정보 훈련정보 자격정보 
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:30,835 >         플라스틱압출성형기조작원       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:30,837 > -    
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:30,839 >     포장비닐생산   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:30,841 >     관계없음       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:30,844 >           고졸 ~ 대졸(4년)          
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:30,846 >     기간의 정함이 없는 근로계약          / 파견근로 비희망      
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:30,848 >     2명      지원현황 : 총0명    (취업알선기관 알선       취업알선기관 알선 관할고용센터(또는 취업알선기관)의 취업알선 서비스를 통해 알선된 알선자수.관할 취업알선기관의 취업알선담당자에게 서비스를 요청하시기 바랍니다.        : 0 명&    이메일 입사지원       이메일입사지원 워크넷 웹사이트를 통해 이메일입사지원한 지원자수. 채용정보상세화면 상/하단 이메일입사지원 기능을 이용하시기 바랍니다.        : 0 명)     * 한 지원자가 알선과 이메일입사지원을 모두 한 경우 총인원수에서는 한명으로 카운트됩니다.   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:30,850 >     경상북도             경산시         진량읍 공단4로170          
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:30,852 > 경산제1일반산업단지
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:30,854 > -          
+[DEBUG|worknetCrawlerBot_just_windows.py:757] 2018-09-07 10:22:30,855 > #인근전철역,-          
+[DEBUG|worknetCrawlerBot_just_windows.py:758] 2018-09-07 10:22:30,855 > 인근전철역:-          
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:22:30,855 > infoTable_No2
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:22:30,857 > -근무환경및복리후생
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:22:30,858 > 근무환경및복리후생 : 6
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:30,860 >         연봉    32&000&000원 이상      ~ 34&000&000원 이하                                상여금 별도 : 0%                면접 후 결정 가능       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:30,862 >     1식   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:30,864 >  ※ 상세 근무시간      (평일)08:30~18:30 (토)08:30~17:00 (점심시간)12:00~13:00 (간식시간)15:40~16:00 (야간근무)22:00~08:30(주5일)                     (2교대)       소정근로시간 : 40시간    ※ "소정근로시간" 이란 근로자와 사용자가 정한 1주 동안 근로하는 근로시간을 말합니다.  
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:30,866 >       주 6일 근무         
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:30,869 >         국민연금     고용보험     산재보험     건강보험    
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:30,871 >     퇴직금   
+[DEBUG|worknetCrawlerBot_just_windows.py:757] 2018-09-07 10:22:30,871 > #퇴직금지급방법,    퇴직금   
+[DEBUG|worknetCrawlerBot_just_windows.py:758] 2018-09-07 10:22:30,871 > 퇴직금지급방법:    퇴직금   
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:22:30,871 > infoTable_No3
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:22:30,873 > -전형방법
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:22:30,874 > 전형방법 : 5
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:30,876 >                   2018년 11월 06일                     D-60 
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:30,878 >     서류&면접   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:30,880 >            이메일     이메일 입사지원    
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:30,883 >     이력서 
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:30,885 >            등록된 파일이 없습니다.      
+[DEBUG|worknetCrawlerBot_just_windows.py:757] 2018-09-07 10:22:30,885 > #제출서류양식첨부,           등록된 파일이 없습니다.      
+[DEBUG|worknetCrawlerBot_just_windows.py:758] 2018-09-07 10:22:30,885 > 제출서류양식첨부:           등록된 파일이 없습니다.      
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:22:30,885 > infoTable_No4
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:22:30,887 > -우대사항
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:22:30,888 > 우대사항 : 10
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:30,890 >     -       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:30,892 > -               
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:30,894 >     자동차운전면허1종보통(우대)    &    건설기계조종사면허(3톤 미만의 지게차)(우대)           
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:30,897 >     -       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:30,899 >         운전가능자&인근거주자&청년층우대   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:30,901 >     비희망       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:30,903 >               -         
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:30,905 > -       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:30,907 >     차량유지비&직원대출 제도   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:30,910 > -       
+[DEBUG|worknetCrawlerBot_just_windows.py:757] 2018-09-07 10:22:30,910 > #장애인편의시설,-       
+[DEBUG|worknetCrawlerBot_just_windows.py:758] 2018-09-07 10:22:30,910 > 장애인편의시설:-       
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:22:30,910 > infoTable_No5
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:22:30,912 > -기타입력사항
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:22:30,913 > 기타입력사항 : 1
+[DEBUG|worknetCrawlerBot_just_windows.py:530] 2018-09-07 10:22:30,915 >     -       
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:22:30,915 > infoTable_No6
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:22:30,917 > -회사주소
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:22:30,918 > 회사주소 : 2
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:30,920 >              (38460) 경상북도 경산시 진량읍 공단4로 170           
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:30,923 >     (38460)             경상북도     경산시   진량읍 공단4로  170               ※ 채용정보의 근무예정지 지도가 등록되지 않았습니다. 
+[DEBUG|worknetCrawlerBot_just_windows.py:757] 2018-09-07 10:22:30,923 > #근무예정지지도,    (38460)             경상북도     경산시   진량읍 공단4로  170               ※ 채용정보의 근무예정지 지도가 등록되지 않았습니다. 
+[DEBUG|worknetCrawlerBot_just_windows.py:758] 2018-09-07 10:22:30,923 > 근무예정지지도:    (38460)             경상북도     경산시   진량읍 공단4로  170               ※ 채용정보의 근무예정지 지도가 등록되지 않았습니다. 
+[DEBUG|worknetCrawlerBot_just_windows.py:851] 2018-09-07 10:22:30,936 > E-mail:       ujstrap@naver.com     
+[DEBUG|worknetCrawlerBot_just_windows.py:931] 2018-09-07 10:22:30,942 > DB INSERT : K140131809070002,         -             ,유진화성정규직모집(야간가능자)				,2,0,,         -             ,         -             ,         -             ,         -             ,         -             ,         -             ,         -             ,             (38460) 경상북도 경산시 진량읍 공단4로 170           ,         -             ,플라스틱 압출성형기 조작원(852202)    직업정보 훈련정보 자격정보 ,        플라스틱압출성형기조작원       ,-    ,    포장비닐생산   ,    관계없음       ,          고졸 ~ 대졸(4년)          ,,,    기간의 정함이 없는 근로계약          / 파견근로 비희망      ,    2명      지원현황 : 총0명    (취업알선기관 알선       취업알선기관 알선 관할고용센터(또는 취업알선기관)의 취업알선 서비스를 통해 알선된 알선자수.관할 취업알선기관의 취업알선담당자에게 서비스를 요청하시기 바랍니다.        : 0 명&    이메일 입사지원       이메일입사지원 워크넷 웹사이트를 통해 이메일입사지원한 지원자수. 채용정보상세화면 상/하단 이메일입사지원 기능을 이용하시기 바랍니다.        : 0 명)     * 한 지원자가 알선과 이메일입사지원을 모두 한 경우 총인원수에서는 한명으로 카운트됩니다.   ,    경상북도             경산시         진량읍 공단4로170          ,경산제1일반산업단지,-          ,        연봉    32&000&000원 이상      ~ 34&000&000원 이하                                상여금 별도 : 0%                면접 후 결정 가능       , ※ 상세 근무시간      (평일)08:30~18:30 (토)08:30~17:00 (점심시간)12:00~13:00 (간식시간)15:40~16:00 (야간근무)22:00~08:30(주5일)                     (2교대)       소정근로시간 : 40시간    ※ "소정근로시간" 이란 근로자와 사용자가 정한 1주 동안 근로하는 근로시간을 말합니다.  ,      주 6일 근무         ,        국민연금     고용보험     산재보험     건강보험    ,    퇴직금   ,                  2018년 11월 06일                     D-60 ,    서류&면접   ,           이메일     이메일 입사지원    ,    이력서 ,           등록된 파일이 없습니다.      ,    -       ,-               ,    자동차운전면허1종보통(우대)    &    건설기계조종사면허(3톤 미만의 지게차)(우대)           ,    -       ,        운전가능자&인근거주자&청년층우대   ,    비희망       ,              -         ,-       ,    차량유지비&직원대출 제도   ,-       ,    -       , 관리 / 이두리 대리   ,     053-854-4029      ,-,-    ,       ujstrap@naver.com     
+[DEBUG|worknetCrawlerBot_just_windows.py:1010] 2018-09-07 10:22:31,032 > DB INSERT COUNT : 1
+[DEBUG|worknetCrawlerBot_just_windows.py:1013] 2018-09-07 10:22:31,032 > DB insert result : True
+[DEBUG|worknetCrawlerBot_just_windows.py:1113] 2018-09-07 10:22:33,677 > 개별 공고 정보 검색 시작
+[DEBUG|worknetCrawlerBot_just_windows.py:1137] 2018-09-07 10:22:33,707 > 구인인증번호|회사명|공고내용: K150111809070005|VALIDATION|(주)샤바스|디자인 채용 공고
+[DEBUG|worknetCrawlerBot_just_windows.py:1144] 2018-09-07 10:22:33,707 > 구인인증번호: K150111809070005
+[DEBUG|worknetCrawlerBot_just_windows.py:1156] 2018-09-07 10:22:33,708 > 처음 크롤링하는 취업 공고
+[DEBUG|worknetCrawlerBot_just_windows.py:1029] 2018-09-07 10:22:34,357 > 스크롤이 가능한 페이지
+[DEBUG|worknetCrawlerBot_just_windows.py:133] 2018-09-07 10:22:36,467 > 조회수:3명, 지원자:0명
+[DEBUG|worknetCrawlerBot_just_windows.py:140] 2018-09-07 10:22:36,471 > 회사 이미지 사용하지 않음
+[DEBUG|worknetCrawlerBot_just_windows.py:1113] 2018-09-07 10:22:36,473 > 개별 공고 정보 검색 시작
+[DEBUG|worknetCrawlerBot_just_windows.py:1137] 2018-09-07 10:22:36,511 > 구인인증번호|회사명|공고내용: K162211809070007|VALIDATION|한전산업개발㈜2지역본부|고흥 전기 검침원 모집
+[DEBUG|worknetCrawlerBot_just_windows.py:1144] 2018-09-07 10:22:36,511 > 구인인증번호: K162211809070007
+[DEBUG|worknetCrawlerBot_just_windows.py:1156] 2018-09-07 10:22:36,513 > 처음 크롤링하는 취업 공고
+[DEBUG|worknetCrawlerBot_just_windows.py:1029] 2018-09-07 10:22:37,210 > 스크롤이 가능한 페이지
+[DEBUG|worknetCrawlerBot_just_windows.py:133] 2018-09-07 10:22:39,337 > 조회수:3명, 지원자:0명
+[DEBUG|worknetCrawlerBot_just_windows.py:140] 2018-09-07 10:22:39,340 > 회사 이미지 사용하지 않음
+[DEBUG|worknetCrawlerBot_just_windows.py:224] 2018-09-07 10:22:39,373 > 7-0.첨부자료:         -             
+[DEBUG|worknetCrawlerBot_just_windows.py:344] 2018-09-07 10:22:39,379 > #지원자격
+[DEBUG|worknetCrawlerBot_just_windows.py:344] 2018-09-07 10:22:39,393 > #근무조건
+[DEBUG|worknetCrawlerBot_just_windows.py:344] 2018-09-07 10:22:39,404 > #고용형태
+[DEBUG|worknetCrawlerBot_just_windows.py:427] 2018-09-07 10:22:39,412 > 모집요강 (구인인증번호:K162211809070007)
+[DEBUG|worknetCrawlerBot_just_windows.py:430] 2018-09-07 10:22:39,413 > $$: 6
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:22:39,413 > infoTable_No1
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:22:39,415 > -모집요강
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:22:39,416 > 모집요강 : 11
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:39,418 > 계기 검침원 및 가스 점검원(562100)    직업정보 훈련정보 자격정보 
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:39,420 >         전기검침원& 전기안전점검원       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:39,422 > -    
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:39,424 >     매월본인의정해진구역을방문하여전기계량기검침및전기요금청구서송달업무를수행하면서기타지시사항수행  개인차량(또는오토바이등)으로업무를수행하며차량유지비등이포함된급여입니다.  지원자는이력서를담당자이메일(keternity@korea.kr)로보내주세요. 워크넷이메일입사지원은지원불가능합니다.   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:39,426 >     신입       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:39,429 >           고졸 ~ 대졸(4년)          
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:39,431 >     기간의 정함이 있는 근로계약        3개월/ 계약기간 만료 후 상용직전환검토         / 파견근로 비희망      
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:39,433 >     1명      지원현황 : 총0명    (취업알선기관 알선       취업알선기관 알선 관할고용센터(또는 취업알선기관)의 취업알선 서비스를 통해 알선된 알선자수.관할 취업알선기관의 취업알선담당자에게 서비스를 요청하시기 바랍니다.        : 0 명&    이메일 입사지원       이메일입사지원 워크넷 웹사이트를 통해 이메일입사지원한 지원자수. 채용정보상세화면 상/하단 이메일입사지원 기능을 이용하시기 바랍니다.        : 0 명)     * 한 지원자가 알선과 이메일입사지원을 모두 한 경우 총인원수에서는 한명으로 카운트됩니다.   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:39,435 >     전라남도             고흥군         고흥읍 고흥로1887& (남계리226번지) 한전산업 고흥지점[한전고흥지사3층]          
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:39,437 > -
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:39,439 > -          
+[DEBUG|worknetCrawlerBot_just_windows.py:757] 2018-09-07 10:22:39,439 > #인근전철역,-          
+[DEBUG|worknetCrawlerBot_just_windows.py:758] 2018-09-07 10:22:39,440 > 인근전철역:-          
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:22:39,440 > infoTable_No2
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:22:39,442 > -근무환경및복리후생
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:22:39,443 > 근무환경및복리후생 : 6
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:39,445 >         월급    1&900&000원 이상                                                상여금 별도 : 0%               
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:39,447 >     미제공   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:39,449 >                                (오전)9시00분~(오후)6시00분               소정근로시간 : 40시간    ※ "소정근로시간" 이란 근로자와 사용자가 정한 1주 동안 근로하는 근로시간을 말합니다.  
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:39,451 >       주 5일 근무         
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:39,453 >         국민연금     고용보험     산재보험     건강보험    
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:39,455 >     퇴직연금   
+[DEBUG|worknetCrawlerBot_just_windows.py:757] 2018-09-07 10:22:39,455 > #퇴직금지급방법,    퇴직연금   
+[DEBUG|worknetCrawlerBot_just_windows.py:758] 2018-09-07 10:22:39,455 > 퇴직금지급방법:    퇴직연금   
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:22:39,455 > infoTable_No3
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:22:39,457 > -전형방법
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:22:39,458 > 전형방법 : 5
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:39,460 >     채용시까지       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:39,462 >     서류&면접   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:39,465 >            이메일     이메일 입사지원    
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:39,467 >     이력서 
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:39,469 >            등록된 파일이 없습니다.      
+[DEBUG|worknetCrawlerBot_just_windows.py:757] 2018-09-07 10:22:39,469 > #제출서류양식첨부,           등록된 파일이 없습니다.      
+[DEBUG|worknetCrawlerBot_just_windows.py:758] 2018-09-07 10:22:39,469 > 제출서류양식첨부:           등록된 파일이 없습니다.      
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:22:39,469 > infoTable_No4
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:22:39,471 > -우대사항
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:22:39,472 > 우대사항 : 10
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:39,474 >     -       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:39,476 > -               
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:39,478 >                     -   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:39,480 >     -       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:39,482 >     -       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:39,484 >     비희망       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:39,487 >               -         
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:39,489 > -       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:39,491 > -       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:39,493 > -       
+[DEBUG|worknetCrawlerBot_just_windows.py:757] 2018-09-07 10:22:39,493 > #장애인편의시설,-       
+[DEBUG|worknetCrawlerBot_just_windows.py:758] 2018-09-07 10:22:39,493 > 장애인편의시설:-       
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:22:39,493 > infoTable_No5
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:22:39,495 > -기타입력사항
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:22:39,496 > 기타입력사항 : 1
+[DEBUG|worknetCrawlerBot_just_windows.py:530] 2018-09-07 10:22:39,498 >         정부공공기관정규직가이드라인에의해'17.7.20일이후채용된자는한전정규직전환대상이아님   
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:22:39,498 > infoTable_No6
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:22:39,500 > -회사주소
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:22:39,501 > 회사주소 : 3
+[DEBUG|worknetCrawlerBot_just_windows.py:565] 2018-09-07 10:22:39,501 > infoTable_content_No.1
+[DEBUG|worknetCrawlerBot_just_windows.py:649] 2018-09-07 10:22:39,503 >              (59535) 전라남도 고흥군 고흥읍 고흥로 1887& (남계리226번지) 한전산업 고흥지점[한전고흥지사3층]           
+[DEBUG|worknetCrawlerBot_just_windows.py:565] 2018-09-07 10:22:39,503 > infoTable_content_No.2
+[DEBUG|worknetCrawlerBot_just_windows.py:649] 2018-09-07 10:22:39,505 >     (59535)             전라남도     고흥군   고흥읍 고흥로  1887&  (남계리226번지) 한전산업 고흥지점[한전고흥지사3층]             ※ 지도 정보는 다음 지도 API를 이용하여 제공하고 있습니다. 
+[DEBUG|worknetCrawlerBot_just_windows.py:931] 2018-09-07 10:22:39,512 > DB INSERT : K162211809070007,         -             ,고흥전기검침원모집				,3,0,,         -             ,         -             ,         -             ,         -             ,         -             ,         -             ,         -             ,         -             ,         -             ,계기 검침원 및 가스 점검원(562100)    직업정보 훈련정보 자격정보 ,        전기검침원& 전기안전점검원       ,-    ,    매월본인의정해진구역을방문하여전기계량기검침및전기요금청구서송달업무를수행하면서기타지시사항수행  개인차량(또는오토바이등)으로업무를수행하며차량유지비등이포함된급여입니다.  지원자는이력서를담당자이메일(keternity@korea.kr)로보내주세요. 워크넷이메일입사지원은지원불가능합니다.   ,    신입       ,          고졸 ~ 대졸(4년)          ,,,    기간의 정함이 있는 근로계약        3개월/ 계약기간 만료 후 상용직전환검토         / 파견근로 비희망      ,    1명      지원현황 : 총0명    (취업알선기관 알선       취업알선기관 알선 관할고용센터(또는 취업알선기관)의 취업알선 서비스를 통해 알선된 알선자수.관할 취업알선기관의 취업알선담당자에게 서비스를 요청하시기 바랍니다.        : 0 명&    이메일 입사지원       이메일입사지원 워크넷 웹사이트를 통해 이메일입사지원한 지원자수. 채용정보상세화면 상/하단 이메일입사지원 기능을 이용하시기 바랍니다.        : 0 명)     * 한 지원자가 알선과 이메일입사지원을 모두 한 경우 총인원수에서는 한명으로 카운트됩니다.   ,    전라남도             고흥군         고흥읍 고흥로1887& (남계리226번지) 한전산업 고흥지점[한전고흥지사3층]          ,-,-          ,        월급    1&900&000원 이상                                                상여금 별도 : 0%               ,                               (오전)9시00분~(오후)6시00분               소정근로시간 : 40시간    ※ "소정근로시간" 이란 근로자와 사용자가 정한 1주 동안 근로하는 근로시간을 말합니다.  ,      주 5일 근무         ,        국민연금     고용보험     산재보험     건강보험    ,    퇴직연금   ,    채용시까지       ,    서류&면접   ,           이메일     이메일 입사지원    ,    이력서 ,           등록된 파일이 없습니다.      ,    -       ,-               ,                    -   ,    -       ,    -       ,    비희망       ,              -         ,-       ,-       ,-       ,    (59535)             전라남도     고흥군   고흥읍 고흥로  1887&  (남계리226번지) 한전산업 고흥지점[한전고흥지사3층]             ※ 지도 정보는 다음 지도 API를 이용하여 제공하고 있습니다. ,-,-,-,-,-
+[DEBUG|worknetCrawlerBot_just_windows.py:1010] 2018-09-07 10:22:39,611 > DB INSERT COUNT : 1
+[DEBUG|worknetCrawlerBot_just_windows.py:1013] 2018-09-07 10:22:39,611 > DB insert result : True
+[DEBUG|worknetCrawlerBot_just_windows.py:1113] 2018-09-07 10:22:39,624 > 개별 공고 정보 검색 시작
+[DEBUG|worknetCrawlerBot_just_windows.py:1137] 2018-09-07 10:22:39,666 > 구인인증번호|회사명|공고내용: K152121809070005|VALIDATION|(주)디큐|기획자 모집
+[DEBUG|worknetCrawlerBot_just_windows.py:1144] 2018-09-07 10:22:39,666 > 구인인증번호: K152121809070005
+[DEBUG|worknetCrawlerBot_just_windows.py:1156] 2018-09-07 10:22:39,670 > 처음 크롤링하는 취업 공고
+[DEBUG|worknetCrawlerBot_just_windows.py:1029] 2018-09-07 10:22:40,331 > 스크롤이 가능한 페이지
+[DEBUG|worknetCrawlerBot_just_windows.py:133] 2018-09-07 10:22:42,416 > 조회수:2명, 지원자:0명
+[DEBUG|worknetCrawlerBot_just_windows.py:145] 2018-09-07 10:22:42,419 > 회사 이미지 저장 디렉토리 : /framework/filedownload/getImage.do?filePathName=3ICURCtAIU1F1LcUx7%2BkD6m3hPRVmB5wE1R3iXuCpbQMw5KlVnkb6uN%2FuWgF34kWf21dk%2BzmQHQkxNEREfpByg%3D%3D
+[DEBUG|worknetCrawlerBot_just_windows.py:224] 2018-09-07 10:22:42,455 > 7-0.첨부자료:         -             
+[DEBUG|worknetCrawlerBot_just_windows.py:344] 2018-09-07 10:22:42,461 > #지원자격
+[DEBUG|worknetCrawlerBot_just_windows.py:344] 2018-09-07 10:22:42,475 > #근무조건
+[DEBUG|worknetCrawlerBot_just_windows.py:344] 2018-09-07 10:22:42,489 > #고용형태
+[DEBUG|worknetCrawlerBot_just_windows.py:427] 2018-09-07 10:22:42,498 > 모집요강 (구인인증번호:K152121809070005)
+[DEBUG|worknetCrawlerBot_just_windows.py:430] 2018-09-07 10:22:42,499 > $$: 6
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:22:42,499 > infoTable_No1
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:22:42,501 > -모집요강
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:22:42,502 > 모집요강 : 11
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:42,505 > 마케팅·광고·홍보·상품기획 사무원(026102)    직업정보 훈련정보 자격정보 
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:42,507 >         제품개발계획원       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:42,509 > -    
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:42,511 >     -서비스기획및제품기획 -ICT서비스및제품기획   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:42,513 >     경력      (최소 1년 0 개월 이상)       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:42,516 >           대졸(2~3년) ~ 박사          
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:42,518 >     기간의 정함이 없는 근로계약          / 파견근로 비희망      
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:42,520 >     1명      지원현황 : 총0명    (취업알선기관 알선       취업알선기관 알선 관할고용센터(또는 취업알선기관)의 취업알선 서비스를 통해 알선된 알선자수.관할 취업알선기관의 취업알선담당자에게 서비스를 요청하시기 바랍니다.        : 0 명&    이메일 입사지원       이메일입사지원 워크넷 웹사이트를 통해 이메일입사지원한 지원자수. 채용정보상세화면 상/하단 이메일입사지원 기능을 이용하시기 바랍니다.        : 0 명)     * 한 지원자가 알선과 이메일입사지원을 모두 한 경우 총인원수에서는 한명으로 카운트됩니다.   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:42,522 >     강원도             춘천시         퇴계로62& 디큐프라임빌딩4~5층 (퇴계동)         
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:42,524 > -
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:42,527 > -          
+[DEBUG|worknetCrawlerBot_just_windows.py:757] 2018-09-07 10:22:42,527 > #인근전철역,-          
+[DEBUG|worknetCrawlerBot_just_windows.py:758] 2018-09-07 10:22:42,527 > 인근전철역:-          
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:22:42,527 > infoTable_No2
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:22:42,529 > -근무환경및복리후생
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:22:42,530 > 근무환경및복리후생 : 6
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:42,532 >         연봉    24&000&000원 이상                                상여금 별도 : 0%                면접 후 결정 가능       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:42,534 >     미제공   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:42,537 >                                (오전)9시00분~(오후)6시00분               소정근로시간 : 40시간    ※ "소정근로시간" 이란 근로자와 사용자가 정한 1주 동안 근로하는 근로시간을 말합니다.  
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:42,539 >       주 5일 근무         
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:42,541 >         국민연금     고용보험     산재보험     건강보험    
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:42,543 >     퇴직연금   
+[DEBUG|worknetCrawlerBot_just_windows.py:757] 2018-09-07 10:22:42,543 > #퇴직금지급방법,    퇴직연금   
+[DEBUG|worknetCrawlerBot_just_windows.py:758] 2018-09-07 10:22:42,543 > 퇴직금지급방법:    퇴직연금   
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:22:42,543 > infoTable_No3
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:22:42,545 > -전형방법
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:22:42,546 > 전형방법 : 5
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:42,549 >     채용시까지       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:42,551 >     서류&면접   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:42,553 >            이메일     이메일 입사지원    
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:42,555 >     이력서&자기소개서 
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:42,558 >            등록된 파일이 없습니다.      
+[DEBUG|worknetCrawlerBot_just_windows.py:757] 2018-09-07 10:22:42,558 > #제출서류양식첨부,           등록된 파일이 없습니다.      
+[DEBUG|worknetCrawlerBot_just_windows.py:758] 2018-09-07 10:22:42,558 > 제출서류양식첨부:           등록된 파일이 없습니다.      
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:22:42,558 > infoTable_No4
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:22:42,560 > -우대사항
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:22:42,561 > 우대사항 : 10
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:42,563 >     -       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:42,565 > -               
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:42,567 >                     -   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:42,570 >     -       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:42,572 >     -       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:42,574 >     비희망       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:42,576 >               -         
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:42,578 > -       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:42,581 > -       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:42,583 > -       
+[DEBUG|worknetCrawlerBot_just_windows.py:757] 2018-09-07 10:22:42,583 > #장애인편의시설,-       
+[DEBUG|worknetCrawlerBot_just_windows.py:758] 2018-09-07 10:22:42,583 > 장애인편의시설:-       
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:22:42,583 > infoTable_No5
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:22:42,585 > -기타입력사항
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:22:42,586 > 기타입력사항 : 1
+[DEBUG|worknetCrawlerBot_just_windows.py:530] 2018-09-07 10:22:42,588 >     -       
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:22:42,588 > infoTable_No6
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:22:42,590 > -회사주소
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:22:42,591 > 회사주소 : 3
+[DEBUG|worknetCrawlerBot_just_windows.py:565] 2018-09-07 10:22:42,591 > infoTable_content_No.1
+[DEBUG|worknetCrawlerBot_just_windows.py:649] 2018-09-07 10:22:42,593 >              (24369) 강원도 춘천시 퇴계로 62& 디큐프라임빌딩4~5층 (퇴계동)          
+[DEBUG|worknetCrawlerBot_just_windows.py:565] 2018-09-07 10:22:42,593 > infoTable_content_No.2
+[DEBUG|worknetCrawlerBot_just_windows.py:649] 2018-09-07 10:22:42,596 >     (24369)             강원도     춘천시   퇴계로  62&  디큐프라임빌딩4~5층  (퇴계동)           ※ 지도 정보는 다음 지도 API를 이용하여 제공하고 있습니다. 
+[DEBUG|worknetCrawlerBot_just_windows.py:851] 2018-09-07 10:22:42,609 > E-mail:       lmk@idq.co.kr     
+[DEBUG|worknetCrawlerBot_just_windows.py:931] 2018-09-07 10:22:42,613 > DB INSERT : K152121809070005,         -             ,기획자모집				,2,0,/framework/filedownload/getImage.do?filePathName=3ICURCtAIU1F1LcUx7%2BkD6m3hPRVmB5wE1R3iXuCpbQMw5KlVnkb6uN%2FuWgF34kWf21dk%2BzmQHQkxNEREfpByg%3D%3D,         -             ,         -             ,         -             ,         -             ,         -             ,         -             ,         -             ,         -             ,         -             ,마케팅·광고·홍보·상품기획 사무원(026102)    직업정보 훈련정보 자격정보 ,        제품개발계획원       ,-    ,    -서비스기획및제품기획 -ICT서비스및제품기획   ,    경력      (최소 1년 0 개월 이상)       ,          대졸(2~3년) ~ 박사          ,,,    기간의 정함이 없는 근로계약          / 파견근로 비희망      ,    1명      지원현황 : 총0명    (취업알선기관 알선       취업알선기관 알선 관할고용센터(또는 취업알선기관)의 취업알선 서비스를 통해 알선된 알선자수.관할 취업알선기관의 취업알선담당자에게 서비스를 요청하시기 바랍니다.        : 0 명&    이메일 입사지원       이메일입사지원 워크넷 웹사이트를 통해 이메일입사지원한 지원자수. 채용정보상세화면 상/하단 이메일입사지원 기능을 이용하시기 바랍니다.        : 0 명)     * 한 지원자가 알선과 이메일입사지원을 모두 한 경우 총인원수에서는 한명으로 카운트됩니다.   ,    강원도             춘천시         퇴계로62& 디큐프라임빌딩4~5층 (퇴계동)         ,-,-          ,        연봉    24&000&000원 이상                                상여금 별도 : 0%                면접 후 결정 가능       ,                               (오전)9시00분~(오후)6시00분               소정근로시간 : 40시간    ※ "소정근로시간" 이란 근로자와 사용자가 정한 1주 동안 근로하는 근로시간을 말합니다.  ,      주 5일 근무         ,        국민연금     고용보험     산재보험     건강보험    ,    퇴직연금   ,    채용시까지       ,    서류&면접   ,           이메일     이메일 입사지원    ,    이력서&자기소개서 ,           등록된 파일이 없습니다.      ,    -       ,-               ,                    -   ,    -       ,    -       ,    비희망       ,              -         ,-       ,-       ,-       ,    (24369)             강원도     춘천시   퇴계로  62&  디큐프라임빌딩4~5층  (퇴계동)           ※ 지도 정보는 다음 지도 API를 이용하여 제공하고 있습니다. , 경영지원팀 / 이미경   ,     033-241-9310   (내선 : 9328)    ,-,-    ,       lmk@idq.co.kr     
+[DEBUG|worknetCrawlerBot_just_windows.py:1010] 2018-09-07 10:22:42,704 > DB INSERT COUNT : 1
+[DEBUG|worknetCrawlerBot_just_windows.py:1013] 2018-09-07 10:22:42,704 > DB insert result : True
+[DEBUG|worknetCrawlerBot_just_windows.py:1113] 2018-09-07 10:22:45,473 > 개별 공고 정보 검색 시작
+[DEBUG|worknetCrawlerBot_just_windows.py:1137] 2018-09-07 10:22:45,505 > 구인인증번호|회사명|공고내용: K151151809070013|VALIDATION|에이플|이마트 서면점 내 단일 브랜드 화장품 단독 매장 샵 매니저 모집
+[DEBUG|worknetCrawlerBot_just_windows.py:1144] 2018-09-07 10:22:45,505 > 구인인증번호: K151151809070013
+[DEBUG|worknetCrawlerBot_just_windows.py:1156] 2018-09-07 10:22:45,507 > 처음 크롤링하는 취업 공고
+[DEBUG|worknetCrawlerBot_just_windows.py:1029] 2018-09-07 10:22:46,110 > 스크롤이 가능한 페이지
+[DEBUG|worknetCrawlerBot_just_windows.py:133] 2018-09-07 10:22:48,201 > 조회수:3명, 지원자:0명
+[DEBUG|worknetCrawlerBot_just_windows.py:140] 2018-09-07 10:22:48,204 > 회사 이미지 사용하지 않음
+[DEBUG|worknetCrawlerBot_just_windows.py:224] 2018-09-07 10:22:48,242 > 7-0.첨부자료:         -             
+[DEBUG|worknetCrawlerBot_just_windows.py:344] 2018-09-07 10:22:48,248 > #지원자격
+[DEBUG|worknetCrawlerBot_just_windows.py:344] 2018-09-07 10:22:48,256 > #근무조건
+[DEBUG|worknetCrawlerBot_just_windows.py:344] 2018-09-07 10:22:48,263 > #고용형태
+[DEBUG|worknetCrawlerBot_just_windows.py:427] 2018-09-07 10:22:48,272 > 모집요강 (구인인증번호:K151151809070013)
+[DEBUG|worknetCrawlerBot_just_windows.py:430] 2018-09-07 10:22:48,273 > $$: 6
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:22:48,274 > infoTable_No1
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:22:48,276 > -모집요강
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:22:48,277 > 모집요강 : 11
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:48,279 > 소규모 매장점장(매장매니저·매장슈퍼바이저)(614000)    직업정보 훈련정보 자격정보 
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:48,281 >         매장점장      &   점장      &   판매점장      &   샵마스터       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:48,283 > -    
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:48,285 >     업무:판매판촉홍보매장.재고관리 삼품:단일브랜드화장품단독매장 급여:기본급200만원+식대30만원+휴일근무수당50만원(5일/월)인센티브+격려금 휴무:월2~7회 -판매유경험자우대 -본사교육지원   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:48,287 >     관계없음       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:48,290 >        학력무관             
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:48,292 >     기간의 정함이 없는 근로계약          / 파견근로 비희망      
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:48,294 >     3명      지원현황 : 총0명    (취업알선기관 알선       취업알선기관 알선 관할고용센터(또는 취업알선기관)의 취업알선 서비스를 통해 알선된 알선자수.관할 취업알선기관의 취업알선담당자에게 서비스를 요청하시기 바랍니다.        : 0 명&    이메일 입사지원       이메일입사지원 워크넷 웹사이트를 통해 이메일입사지원한 지원자수. 채용정보상세화면 상/하단 이메일입사지원 기능을 이용하시기 바랍니다.        : 0 명)     * 한 지원자가 알선과 이메일입사지원을 모두 한 경우 총인원수에서는 한명으로 카운트됩니다.   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:48,296 >     부산광역시             부산진구         시민공원로31& 이마트트레이더스 서면점 (부암동)         
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:48,299 > -
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:48,301 > -          
+[DEBUG|worknetCrawlerBot_just_windows.py:757] 2018-09-07 10:22:48,301 > #인근전철역,-          
+[DEBUG|worknetCrawlerBot_just_windows.py:758] 2018-09-07 10:22:48,301 > 인근전철역:-          
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:22:48,301 > infoTable_No2
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:22:48,303 > -근무환경및복리후생
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:22:48,304 > 근무환경및복리후생 : 6
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:48,307 >         월급    2&300&000원 이상      ~ 3&000&000원 이하                                                상여금 별도 : 0%               
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:48,309 >     미제공   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:48,311 >                                (오전)10시30분~(오후)10시00분               소정근로시간 : 40시간    ※ "소정근로시간" 이란 근로자와 사용자가 정한 1주 동안 근로하는 근로시간을 말합니다.  
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:48,313 >       주 6일 근무         
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:48,315 >         국민연금     고용보험     산재보험     건강보험    
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:48,318 >     퇴직금   
+[DEBUG|worknetCrawlerBot_just_windows.py:757] 2018-09-07 10:22:48,318 > #퇴직금지급방법,    퇴직금   
+[DEBUG|worknetCrawlerBot_just_windows.py:758] 2018-09-07 10:22:48,318 > 퇴직금지급방법:    퇴직금   
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:22:48,318 > infoTable_No3
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:22:48,320 > -전형방법
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:22:48,321 > 전형방법 : 5
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:48,323 >                   2018년 09월 14일                     D-7 
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:48,326 >     서류&면접   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:48,328 >            이메일     이메일 입사지원    
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:48,330 >     이력서&자기소개서 
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:48,332 >            등록된 파일이 없습니다.      
+[DEBUG|worknetCrawlerBot_just_windows.py:757] 2018-09-07 10:22:48,333 > #제출서류양식첨부,           등록된 파일이 없습니다.      
+[DEBUG|worknetCrawlerBot_just_windows.py:758] 2018-09-07 10:22:48,333 > 제출서류양식첨부:           등록된 파일이 없습니다.      
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:22:48,333 > infoTable_No4
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:22:48,335 > -우대사항
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:22:48,336 > 우대사항 : 10
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:48,340 >     -       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:48,345 > -               
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:48,350 >                     -   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:48,355 >     -       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:48,359 >         여성우대&운전가능자&차량소지자&청년층우대   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:48,362 >     비희망       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:48,364 >               -         
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:48,366 > -       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:48,369 > -       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:48,371 > -       
+[DEBUG|worknetCrawlerBot_just_windows.py:757] 2018-09-07 10:22:48,371 > #장애인편의시설,-       
+[DEBUG|worknetCrawlerBot_just_windows.py:758] 2018-09-07 10:22:48,371 > 장애인편의시설:-       
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:22:48,371 > infoTable_No5
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:22:48,373 > -기타입력사항
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:22:48,374 > 기타입력사항 : 1
+[DEBUG|worknetCrawlerBot_just_windows.py:530] 2018-09-07 10:22:48,376 >     -       
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:22:48,376 > infoTable_No6
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:22:48,378 > -회사주소
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:22:48,380 > 회사주소 : 2
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:48,382 >              (18542) 경기도 화성시 마도면 마도공단로1길 8& 마도유통상가 사동105호.           
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:48,384 >     (47192)             부산광역시     부산진구   시민공원로  31&  이마트트레이더스 서면점  (부암동)           ※ 채용정보의 근무예정지 지도가 등록되지 않았습니다. 
+[DEBUG|worknetCrawlerBot_just_windows.py:757] 2018-09-07 10:22:48,384 > #근무예정지지도,    (47192)             부산광역시     부산진구   시민공원로  31&  이마트트레이더스 서면점  (부암동)           ※ 채용정보의 근무예정지 지도가 등록되지 않았습니다. 
+[DEBUG|worknetCrawlerBot_just_windows.py:758] 2018-09-07 10:22:48,384 > 근무예정지지도:    (47192)             부산광역시     부산진구   시민공원로  31&  이마트트레이더스 서면점  (부암동)           ※ 채용정보의 근무예정지 지도가 등록되지 않았습니다. 
+[DEBUG|worknetCrawlerBot_just_windows.py:851] 2018-09-07 10:22:48,398 > E-mail:       aplus.life@hanmail.net     
+[DEBUG|worknetCrawlerBot_just_windows.py:931] 2018-09-07 10:22:48,403 > DB INSERT : K151151809070013,         -             ,이마트서면점내단일브랜드화장품단독매장샵매니저모집				,3,0,,         -             ,         -             ,         -             ,         -             ,         -             ,         -             ,         -             ,             (18542) 경기도 화성시 마도면 마도공단로1길 8& 마도유통상가 사동105호.           ,         -             ,소규모 매장점장(매장매니저·매장슈퍼바이저)(614000)    직업정보 훈련정보 자격정보 ,        매장점장      &   점장      &   판매점장      &   샵마스터       ,-    ,    업무:판매판촉홍보매장.재고관리 삼품:단일브랜드화장품단독매장 급여:기본급200만원+식대30만원+휴일근무수당50만원(5일/월)인센티브+격려금 휴무:월2~7회 -판매유경험자우대 -본사교육지원   ,    관계없음       ,       학력무관             ,,,    기간의 정함이 없는 근로계약          / 파견근로 비희망      ,    3명      지원현황 : 총0명    (취업알선기관 알선       취업알선기관 알선 관할고용센터(또는 취업알선기관)의 취업알선 서비스를 통해 알선된 알선자수.관할 취업알선기관의 취업알선담당자에게 서비스를 요청하시기 바랍니다.        : 0 명&    이메일 입사지원       이메일입사지원 워크넷 웹사이트를 통해 이메일입사지원한 지원자수. 채용정보상세화면 상/하단 이메일입사지원 기능을 이용하시기 바랍니다.        : 0 명)     * 한 지원자가 알선과 이메일입사지원을 모두 한 경우 총인원수에서는 한명으로 카운트됩니다.   ,    부산광역시             부산진구         시민공원로31& 이마트트레이더스 서면점 (부암동)         ,-,-          ,        월급    2&300&000원 이상      ~ 3&000&000원 이하                                                상여금 별도 : 0%               ,                               (오전)10시30분~(오후)10시00분               소정근로시간 : 40시간    ※ "소정근로시간" 이란 근로자와 사용자가 정한 1주 동안 근로하는 근로시간을 말합니다.  ,      주 6일 근무         ,        국민연금     고용보험     산재보험     건강보험    ,    퇴직금   ,                  2018년 09월 14일                     D-7 ,    서류&면접   ,           이메일     이메일 입사지원    ,    이력서&자기소개서 ,           등록된 파일이 없습니다.      ,    -       ,-               ,                    -   ,    -       ,        여성우대&운전가능자&차량소지자&청년층우대   ,    비희망       ,              -         ,-       ,-       ,-       ,    -       , 관리팀 / 홍상서   ,     031-355-1724      ,       010-5754-2388     ,-    ,       aplus.life@hanmail.net     
+[DEBUG|worknetCrawlerBot_just_windows.py:1010] 2018-09-07 10:22:48,460 > DB INSERT COUNT : 1
+[DEBUG|worknetCrawlerBot_just_windows.py:1013] 2018-09-07 10:22:48,460 > DB insert result : True
+[DEBUG|worknetCrawlerBot_just_windows.py:1113] 2018-09-07 10:22:48,471 > 개별 공고 정보 검색 시작
+[DEBUG|worknetCrawlerBot_just_windows.py:1137] 2018-09-07 10:22:48,513 > 구인인증번호|회사명|공고내용: KJDE001809070002|VALIDATION|JY물류|목재포장 근로자 모집
+[DEBUG|worknetCrawlerBot_just_windows.py:1144] 2018-09-07 10:22:48,514 > 구인인증번호: KJDE001809070002
+[DEBUG|worknetCrawlerBot_just_windows.py:1156] 2018-09-07 10:22:48,516 > 처음 크롤링하는 취업 공고
+[DEBUG|worknetCrawlerBot_just_windows.py:1029] 2018-09-07 10:22:49,123 > 스크롤이 가능한 페이지
+[DEBUG|worknetCrawlerBot_just_windows.py:133] 2018-09-07 10:22:51,228 > 조회수:6명, 지원자:0명
+[DEBUG|worknetCrawlerBot_just_windows.py:140] 2018-09-07 10:22:51,231 > 회사 이미지 사용하지 않음
+[DEBUG|worknetCrawlerBot_just_windows.py:224] 2018-09-07 10:22:51,265 > 7-0.첨부자료:         -             
+[DEBUG|worknetCrawlerBot_just_windows.py:344] 2018-09-07 10:22:51,269 > #지원자격
+[DEBUG|worknetCrawlerBot_just_windows.py:344] 2018-09-07 10:22:51,277 > #근무조건
+[DEBUG|worknetCrawlerBot_just_windows.py:344] 2018-09-07 10:22:51,284 > #고용형태
+[DEBUG|worknetCrawlerBot_just_windows.py:427] 2018-09-07 10:22:51,292 > 모집요강 (구인인증번호:KJDE001809070002)
+[DEBUG|worknetCrawlerBot_just_windows.py:430] 2018-09-07 10:22:51,293 > $$: 6
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:22:51,293 > infoTable_No1
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:22:51,295 > -모집요강
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:22:51,296 > 모집요강 : 11
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:51,298 > 인쇄& 목재& 가구 및 기타 제조 분야 단순 종사원(890007)    직업정보 훈련정보 자격정보 
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:51,300 >         목재단순노무자       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:51,303 > -    
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:51,305 >     목재포장근로자모집(경험자우대) 목재포장및종이포장 급여250만원(면접시협의가능) 상여금은휴가&명절등에별도지급 주5일오전8시-오후5시(툐요일근무시특근수당지급.면접시협의) F2&F4&F5&F6지원가능함   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:51,307 >     관계없음       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:51,309 >        학력무관             
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:51,311 >     기간의 정함이 없는 근로계약          / 파견근로 비희망      
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:51,313 >     1명      지원현황 : 총0명    (취업알선기관 알선       취업알선기관 알선 관할고용센터(또는 취업알선기관)의 취업알선 서비스를 통해 알선된 알선자수.관할 취업알선기관의 취업알선담당자에게 서비스를 요청하시기 바랍니다.        : 0 명&    이메일 입사지원       이메일입사지원 워크넷 웹사이트를 통해 이메일입사지원한 지원자수. 채용정보상세화면 상/하단 이메일입사지원 기능을 이용하시기 바랍니다.        : 0 명)     * 한 지원자가 알선과 이메일입사지원을 모두 한 경우 총인원수에서는 한명으로 카운트됩니다.   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:51,316 >     인천광역시             중구         서해대로94번길96 (신흥동3가)         
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:51,318 > -
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:51,320 > -          
+[DEBUG|worknetCrawlerBot_just_windows.py:757] 2018-09-07 10:22:51,320 > #인근전철역,-          
+[DEBUG|worknetCrawlerBot_just_windows.py:758] 2018-09-07 10:22:51,320 > 인근전철역:-          
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:22:51,320 > infoTable_No2
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:22:51,322 > -근무환경및복리후생
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:22:51,323 > 근무환경및복리후생 : 6
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:51,325 >         월급    2&500&000원 이상                                                상여금 별도 : 0%                면접 후 결정 가능       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:51,327 >     2식   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:51,330 >                                (오전)8시00분~(오후)5시00분               소정근로시간 : 40시간    ※ "소정근로시간" 이란 근로자와 사용자가 정한 1주 동안 근로하는 근로시간을 말합니다.  
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:51,332 >       주 5일 근무         
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:51,334 >         국민연금     고용보험     산재보험     건강보험    
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:51,336 >     퇴직금   
+[DEBUG|worknetCrawlerBot_just_windows.py:757] 2018-09-07 10:22:51,336 > #퇴직금지급방법,    퇴직금   
+[DEBUG|worknetCrawlerBot_just_windows.py:758] 2018-09-07 10:22:51,336 > 퇴직금지급방법:    퇴직금   
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:22:51,336 > infoTable_No3
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:22:51,338 > -전형방법
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:22:51,339 > 전형방법 : 5
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:51,341 >     채용시까지       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:51,344 >     서류&면접   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:51,346 >            방문&팩스&이메일     이메일 입사지원    
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:51,348 >     이력서 
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:51,350 >            등록된 파일이 없습니다.      
+[DEBUG|worknetCrawlerBot_just_windows.py:757] 2018-09-07 10:22:51,350 > #제출서류양식첨부,           등록된 파일이 없습니다.      
+[DEBUG|worknetCrawlerBot_just_windows.py:758] 2018-09-07 10:22:51,350 > 제출서류양식첨부:           등록된 파일이 없습니다.      
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:22:51,350 > infoTable_No4
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:22:51,352 > -우대사항
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:22:51,353 > 우대사항 : 10
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:51,355 >     -       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:51,357 > -               
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:51,360 >                     -   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:51,362 >     -       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:51,364 >         외국인채용   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:51,366 >     비희망       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:51,368 >               -         
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:51,370 >     지게차운전가능자   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:51,372 >     기타(중식& 석식& 명절 및 휴가비지원)   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:51,375 > -       
+[DEBUG|worknetCrawlerBot_just_windows.py:757] 2018-09-07 10:22:51,375 > #장애인편의시설,-       
+[DEBUG|worknetCrawlerBot_just_windows.py:758] 2018-09-07 10:22:51,375 > 장애인편의시설:-       
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:22:51,375 > infoTable_No5
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:22:51,377 > -기타입력사항
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:22:51,378 > 기타입력사항 : 1
+[DEBUG|worknetCrawlerBot_just_windows.py:530] 2018-09-07 10:22:51,380 >         전화통화후방문하시면됩니다   
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:22:51,380 > infoTable_No6
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:22:51,382 > -회사주소
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:22:51,383 > 회사주소 : 2
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:51,385 >              (21597) 인천광역시 남동구 담방로 22-16& 만수동 (만수동& 금호타운아파트)          
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:51,387 >     (22343)             인천광역시     중구   서해대로94번길  96    (신흥동3가)           ※ 채용정보의 근무예정지 지도가 등록되지 않았습니다. 
+[DEBUG|worknetCrawlerBot_just_windows.py:757] 2018-09-07 10:22:51,387 > #근무예정지지도,    (22343)             인천광역시     중구   서해대로94번길  96    (신흥동3가)           ※ 채용정보의 근무예정지 지도가 등록되지 않았습니다. 
+[DEBUG|worknetCrawlerBot_just_windows.py:758] 2018-09-07 10:22:51,387 > 근무예정지지도:    (22343)             인천광역시     중구   서해대로94번길  96    (신흥동3가)           ※ 채용정보의 근무예정지 지도가 등록되지 않았습니다. 
+[DEBUG|worknetCrawlerBot_just_windows.py:851] 2018-09-07 10:22:51,401 > E-mail:-
+[DEBUG|worknetCrawlerBot_just_windows.py:931] 2018-09-07 10:22:51,406 > DB INSERT : KJDE001809070002,         -             ,목재포장근로자모집				,6,0,,         -             ,         -             ,         -             ,         -             ,         -             ,         -             ,         -             ,             (21597) 인천광역시 남동구 담방로 22-16& 만수동 (만수동& 금호타운아파트)          ,         -             ,인쇄& 목재& 가구 및 기타 제조 분야 단순 종사원(890007)    직업정보 훈련정보 자격정보 ,        목재단순노무자       ,-    ,    목재포장근로자모집(경험자우대) 목재포장및종이포장 급여250만원(면접시협의가능) 상여금은휴가&명절등에별도지급 주5일오전8시-오후5시(툐요일근무시특근수당지급.면접시협의) F2&F4&F5&F6지원가능함   ,    관계없음       ,       학력무관             ,,,    기간의 정함이 없는 근로계약          / 파견근로 비희망      ,    1명      지원현황 : 총0명    (취업알선기관 알선       취업알선기관 알선 관할고용센터(또는 취업알선기관)의 취업알선 서비스를 통해 알선된 알선자수.관할 취업알선기관의 취업알선담당자에게 서비스를 요청하시기 바랍니다.        : 0 명&    이메일 입사지원       이메일입사지원 워크넷 웹사이트를 통해 이메일입사지원한 지원자수. 채용정보상세화면 상/하단 이메일입사지원 기능을 이용하시기 바랍니다.        : 0 명)     * 한 지원자가 알선과 이메일입사지원을 모두 한 경우 총인원수에서는 한명으로 카운트됩니다.   ,    인천광역시             중구         서해대로94번길96 (신흥동3가)         ,-,-          ,        월급    2&500&000원 이상                                                상여금 별도 : 0%                면접 후 결정 가능       ,                               (오전)8시00분~(오후)5시00분               소정근로시간 : 40시간    ※ "소정근로시간" 이란 근로자와 사용자가 정한 1주 동안 근로하는 근로시간을 말합니다.  ,      주 5일 근무         ,        국민연금     고용보험     산재보험     건강보험    ,    퇴직금   ,    채용시까지       ,    서류&면접   ,           방문&팩스&이메일     이메일 입사지원    ,    이력서 ,           등록된 파일이 없습니다.      ,    -       ,-               ,                    -   ,    -       ,        외국인채용   ,    비희망       ,              -         ,    지게차운전가능자   ,    기타(중식& 석식& 명절 및 휴가비지원)   ,-       ,        전화통화후방문하시면됩니다   ,-  / 이미영   ,     032-471-9706      ,       010-4057-3295     ,   032-259-9706    ,-
+[DEBUG|worknetCrawlerBot_just_windows.py:1010] 2018-09-07 10:22:51,509 > DB INSERT COUNT : 1
+[DEBUG|worknetCrawlerBot_just_windows.py:1013] 2018-09-07 10:22:51,510 > DB insert result : True
+[DEBUG|worknetCrawlerBot_just_windows.py:1113] 2018-09-07 10:22:54,021 > 개별 공고 정보 검색 시작
+[DEBUG|worknetCrawlerBot_just_windows.py:1137] 2018-09-07 10:22:54,052 > 구인인증번호|회사명|공고내용: K141221809070005|VALIDATION|(주)더순수|9.12(수) 오후1시 2018 김천 일자리 한마당 행사 실시
+[DEBUG|worknetCrawlerBot_just_windows.py:1144] 2018-09-07 10:22:54,052 > 구인인증번호: K141221809070005
+[DEBUG|worknetCrawlerBot_just_windows.py:1156] 2018-09-07 10:22:54,054 > 처음 크롤링하는 취업 공고
+[DEBUG|worknetCrawlerBot_just_windows.py:1029] 2018-09-07 10:22:54,688 > 스크롤이 가능한 페이지
+[DEBUG|worknetCrawlerBot_just_windows.py:133] 2018-09-07 10:22:56,793 > 조회수:6명, 지원자:0명
+[DEBUG|worknetCrawlerBot_just_windows.py:140] 2018-09-07 10:22:56,796 > 회사 이미지 사용하지 않음
+[DEBUG|worknetCrawlerBot_just_windows.py:224] 2018-09-07 10:22:56,833 > 7-0.첨부자료:         -             
+[DEBUG|worknetCrawlerBot_just_windows.py:344] 2018-09-07 10:22:56,837 > #지원자격
+[DEBUG|worknetCrawlerBot_just_windows.py:344] 2018-09-07 10:22:56,845 > #근무조건
+[DEBUG|worknetCrawlerBot_just_windows.py:344] 2018-09-07 10:22:56,852 > #고용형태
+[DEBUG|worknetCrawlerBot_just_windows.py:427] 2018-09-07 10:22:56,860 > 모집요강 (구인인증번호:K141221809070005)
+[DEBUG|worknetCrawlerBot_just_windows.py:430] 2018-09-07 10:22:56,861 > $$: 6
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:22:56,861 > infoTable_No1
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:22:56,863 > -모집요강
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:22:56,864 > 모집요강 : 11
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:56,866 > 식품 분야 단순 종사원(890006)    직업정보 훈련정보 자격정보 
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:56,868 >  
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:56,871 > -    
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:56,873 >     *2018김천일자리한마당행사실시* -일시:2018.09.12.(수)오후1시~5시 -장소:김천시실내체육관 -준비물:이력서(사진부착) -행사내용:구인&구직자간부스별1:1현장면접  *물류-자사상품출하&상품입출고관리&재고검수관리 *고졸이상&연봉:2&800만원이상   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:56,875 >     관계없음       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:56,877 >        초졸이하             
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:56,879 >     기간의 정함이 없는 근로계약          / 파견근로 비희망      
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:56,881 >     7명      지원현황 : 총0명    (취업알선기관 알선       취업알선기관 알선 관할고용센터(또는 취업알선기관)의 취업알선 서비스를 통해 알선된 알선자수.관할 취업알선기관의 취업알선담당자에게 서비스를 요청하시기 바랍니다.        : 0 명&    이메일 입사지원       이메일입사지원 워크넷 웹사이트를 통해 이메일입사지원한 지원자수. 채용정보상세화면 상/하단 이메일입사지원 기능을 이용하시기 바랍니다.        : 0 명)     * 한 지원자가 알선과 이메일입사지원을 모두 한 경우 총인원수에서는 한명으로 카운트됩니다.   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:56,883 >     경상북도             김천시         어모면 산업단지7로211          
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:56,885 > -
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:56,887 > -          
+[DEBUG|worknetCrawlerBot_just_windows.py:757] 2018-09-07 10:22:56,888 > #인근전철역,-          
+[DEBUG|worknetCrawlerBot_just_windows.py:758] 2018-09-07 10:22:56,888 > 인근전철역:-          
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:22:56,888 > infoTable_No2
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:22:56,890 > -근무환경및복리후생
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:22:56,891 > 근무환경및복리후생 : 6
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:56,893 >         연봉    28&000&000원 이상                                상여금 별도 : 0%               
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:56,895 >     1식   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:56,897 >                                (오전)9시00분~(오후)6시00분               소정근로시간 : 40시간    ※ "소정근로시간" 이란 근로자와 사용자가 정한 1주 동안 근로하는 근로시간을 말합니다.  
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:56,899 >       주 5일 근무         
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:56,901 >         국민연금     고용보험     산재보험     건강보험    
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:56,903 >     퇴직연금   
+[DEBUG|worknetCrawlerBot_just_windows.py:757] 2018-09-07 10:22:56,903 > #퇴직금지급방법,    퇴직연금   
+[DEBUG|worknetCrawlerBot_just_windows.py:758] 2018-09-07 10:22:56,903 > 퇴직금지급방법:    퇴직연금   
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:22:56,903 > infoTable_No3
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:22:56,905 > -전형방법
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:22:56,906 > 전형방법 : 5
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:56,908 >                   2018년 09월 12일                     D-5 
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:56,911 >     서류&면접   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:56,913 >            방문&기타(-18.09.12(수)오후1시2018김천일자리한마당채용행사참여업체로 당일행사장에오시면현장면접가능합니다.)        
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:56,915 >     이력서&자기소개서 
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:56,917 >            등록된 파일이 없습니다.      
+[DEBUG|worknetCrawlerBot_just_windows.py:757] 2018-09-07 10:22:56,917 > #제출서류양식첨부,           등록된 파일이 없습니다.      
+[DEBUG|worknetCrawlerBot_just_windows.py:758] 2018-09-07 10:22:56,917 > 제출서류양식첨부:           등록된 파일이 없습니다.      
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:22:56,917 > infoTable_No4
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:22:56,919 > -우대사항
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:22:56,920 > 우대사항 : 10
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:56,922 >     -       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:56,925 > -               
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:56,927 >                     -   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:56,929 >     -       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:56,931 >         고용촉진지원금대상자&인근거주자&차량소지자&청년층우대   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:56,933 >     비희망       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:56,935 >               -         
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:56,937 >     자격증소지자   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:56,939 > -       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:56,941 > -       
+[DEBUG|worknetCrawlerBot_just_windows.py:757] 2018-09-07 10:22:56,941 > #장애인편의시설,-       
+[DEBUG|worknetCrawlerBot_just_windows.py:758] 2018-09-07 10:22:56,942 > 장애인편의시설:-       
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:22:56,942 > infoTable_No5
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:22:56,944 > -기타입력사항
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:22:56,945 > 기타입력사항 : 1
+[DEBUG|worknetCrawlerBot_just_windows.py:530] 2018-09-07 10:22:56,947 >     -       
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:22:56,947 > infoTable_No6
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:22:56,949 > -회사주소
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:22:56,950 > 회사주소 : 2
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:56,952 >              (39536) 경상북도 김천시 어모면 산업단지7로 211           
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:22:56,954 >     (39536)             경상북도     김천시   어모면 산업단지7로  211               ※ 채용정보의 근무예정지 지도가 등록되지 않았습니다. 
+[DEBUG|worknetCrawlerBot_just_windows.py:757] 2018-09-07 10:22:56,954 > #근무예정지지도,    (39536)             경상북도     김천시   어모면 산업단지7로  211               ※ 채용정보의 근무예정지 지도가 등록되지 않았습니다. 
+[DEBUG|worknetCrawlerBot_just_windows.py:758] 2018-09-07 10:22:56,954 > 근무예정지지도:    (39536)             경상북도     김천시   어모면 산업단지7로  211               ※ 채용정보의 근무예정지 지도가 등록되지 않았습니다. 
+[DEBUG|worknetCrawlerBot_just_windows.py:851] 2018-09-07 10:22:56,967 > E-mail:       thesunsoo@naver.com     
+[DEBUG|worknetCrawlerBot_just_windows.py:931] 2018-09-07 10:22:56,972 > DB INSERT : K141221809070005,         -             ,9.12(수)오후1시2018김천일자리한마당행사실시				,6,0,,         -             ,         -             ,         -             ,         -             ,         -             ,         -             ,         -             ,             (39536) 경상북도 김천시 어모면 산업단지7로 211           ,         -             ,식품 분야 단순 종사원(890006)    직업정보 훈련정보 자격정보 , ,-    ,    *2018김천일자리한마당행사실시* -일시:2018.09.12.(수)오후1시~5시 -장소:김천시실내체육관 -준비물:이력서(사진부착) -행사내용:구인&구직자간부스별1:1현장면접  *물류-자사상품출하&상품입출고관리&재고검수관리 *고졸이상&연봉:2&800만원이상   ,    관계없음       ,       초졸이하             ,,,    기간의 정함이 없는 근로계약          / 파견근로 비희망      ,    7명      지원현황 : 총0명    (취업알선기관 알선       취업알선기관 알선 관할고용센터(또는 취업알선기관)의 취업알선 서비스를 통해 알선된 알선자수.관할 취업알선기관의 취업알선담당자에게 서비스를 요청하시기 바랍니다.        : 0 명&    이메일 입사지원       이메일입사지원 워크넷 웹사이트를 통해 이메일입사지원한 지원자수. 채용정보상세화면 상/하단 이메일입사지원 기능을 이용하시기 바랍니다.        : 0 명)     * 한 지원자가 알선과 이메일입사지원을 모두 한 경우 총인원수에서는 한명으로 카운트됩니다.   ,    경상북도             김천시         어모면 산업단지7로211          ,-,-          ,        연봉    28&000&000원 이상                                상여금 별도 : 0%               ,                               (오전)9시00분~(오후)6시00분               소정근로시간 : 40시간    ※ "소정근로시간" 이란 근로자와 사용자가 정한 1주 동안 근로하는 근로시간을 말합니다.  ,      주 5일 근무         ,        국민연금     고용보험     산재보험     건강보험    ,    퇴직연금   ,                  2018년 09월 12일                     D-5 ,    서류&면접   ,           방문&기타(-18.09.12(수)오후1시2018김천일자리한마당채용행사참여업체로 당일행사장에오시면현장면접가능합니다.)        ,    이력서&자기소개서 ,           등록된 파일이 없습니다.      ,    -       ,-               ,                    -   ,    -       ,        고용촉진지원금대상자&인근거주자&차량소지자&청년층우대   ,    비희망       ,              -         ,    자격증소지자   ,-       ,-       ,    -       ,-  / 황대웅 이사   ,     070-4400-6833      ,-,-    ,       thesunsoo@naver.com     
+[DEBUG|worknetCrawlerBot_just_windows.py:1010] 2018-09-07 10:22:57,074 > DB INSERT COUNT : 1
+[DEBUG|worknetCrawlerBot_just_windows.py:1013] 2018-09-07 10:22:57,074 > DB insert result : True
+[DEBUG|worknetCrawlerBot_just_windows.py:1113] 2018-09-07 10:22:59,813 > 개별 공고 정보 검색 시작
+[DEBUG|worknetCrawlerBot_just_windows.py:1137] 2018-09-07 10:22:59,846 > 구인인증번호|회사명|공고내용: K131311809070012|VALIDATION|이지바이오텍주식회사|CNC 생산직 구함
+[DEBUG|worknetCrawlerBot_just_windows.py:1144] 2018-09-07 10:22:59,846 > 구인인증번호: K131311809070012
+[DEBUG|worknetCrawlerBot_just_windows.py:1156] 2018-09-07 10:22:59,848 > 처음 크롤링하는 취업 공고
+[DEBUG|worknetCrawlerBot_just_windows.py:1029] 2018-09-07 10:23:00,462 > 스크롤이 가능한 페이지
+[DEBUG|worknetCrawlerBot_just_windows.py:133] 2018-09-07 10:23:02,567 > 조회수:8명, 지원자:0명
+[DEBUG|worknetCrawlerBot_just_windows.py:140] 2018-09-07 10:23:02,570 > 회사 이미지 사용하지 않음
+[DEBUG|worknetCrawlerBot_just_windows.py:224] 2018-09-07 10:23:02,604 > 7-0.첨부자료:         -             
+[DEBUG|worknetCrawlerBot_just_windows.py:344] 2018-09-07 10:23:02,610 > #지원자격
+[DEBUG|worknetCrawlerBot_just_windows.py:344] 2018-09-07 10:23:02,624 > #근무조건
+[DEBUG|worknetCrawlerBot_just_windows.py:344] 2018-09-07 10:23:02,638 > #고용형태
+[DEBUG|worknetCrawlerBot_just_windows.py:427] 2018-09-07 10:23:02,653 > 모집요강 (구인인증번호:K131311809070012)
+[DEBUG|worknetCrawlerBot_just_windows.py:430] 2018-09-07 10:23:02,654 > $$: 6
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:23:02,654 > infoTable_No1
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:23:02,655 > -모집요강
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:23:02,657 > 모집요강 : 11
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:23:02,659 > CNC 선반 조작원(NC 선반 조작원)(813201)    직업정보 훈련정보 자격정보 
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:23:02,661 >         CNC선반기능원       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:23:02,663 > -    
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:23:02,665 >     CNC선반이용한생산직구함.   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:23:02,667 >     관계없음       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:23:02,669 >        학력무관             
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:23:02,671 >     기간의 정함이 없는 근로계약          / 파견근로 비희망      
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:23:02,673 >     1명      지원현황 : 총0명    (취업알선기관 알선       취업알선기관 알선 관할고용센터(또는 취업알선기관)의 취업알선 서비스를 통해 알선된 알선자수.관할 취업알선기관의 취업알선담당자에게 서비스를 요청하시기 바랍니다.        : 0 명&    이메일 입사지원       이메일입사지원 워크넷 웹사이트를 통해 이메일입사지원한 지원자수. 채용정보상세화면 상/하단 이메일입사지원 기능을 이용하시기 바랍니다.        : 0 명)     * 한 지원자가 알선과 이메일입사지원을 모두 한 경우 총인원수에서는 한명으로 카운트됩니다.   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:23:02,676 >     경상남도             김해시         한림면 안곡로443          
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:23:02,678 > -
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:23:02,680 > -          
+[DEBUG|worknetCrawlerBot_just_windows.py:757] 2018-09-07 10:23:02,680 > #인근전철역,-          
+[DEBUG|worknetCrawlerBot_just_windows.py:758] 2018-09-07 10:23:02,680 > 인근전철역:-          
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:23:02,680 > infoTable_No2
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:23:02,682 > -근무환경및복리후생
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:23:02,683 > 근무환경및복리후생 : 6
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:23:02,685 >         시급    7&530원 이상                        면접 후 결정 가능       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:23:02,687 >     2식   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:23:02,689 >  시간협의                        (오전)8시00분~(오후)8시00분              (2교대)        
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:23:02,691 >       주 6일 근무         
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:23:02,693 >         국민연금     고용보험     산재보험     건강보험    
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:23:02,695 >     퇴직금   
+[DEBUG|worknetCrawlerBot_just_windows.py:757] 2018-09-07 10:23:02,695 > #퇴직금지급방법,    퇴직금   
+[DEBUG|worknetCrawlerBot_just_windows.py:758] 2018-09-07 10:23:02,695 > 퇴직금지급방법:    퇴직금   
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:23:02,696 > infoTable_No3
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:23:02,697 > -전형방법
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:23:02,698 > 전형방법 : 5
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:23:02,701 >     채용시까지       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:23:02,703 >     면접   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:23:02,705 >            방문        
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:23:02,707 >     이력서 
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:23:02,709 >            등록된 파일이 없습니다.      
+[DEBUG|worknetCrawlerBot_just_windows.py:757] 2018-09-07 10:23:02,709 > #제출서류양식첨부,           등록된 파일이 없습니다.      
+[DEBUG|worknetCrawlerBot_just_windows.py:758] 2018-09-07 10:23:02,709 > 제출서류양식첨부:           등록된 파일이 없습니다.      
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:23:02,709 > infoTable_No4
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:23:02,711 > -우대사항
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:23:02,712 > 우대사항 : 10
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:23:02,714 >     -       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:23:02,716 > -               
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:23:02,718 >                     -   
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:23:02,721 >     -       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:23:02,723 >     -       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:23:02,725 >     비희망       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:23:02,727 >               -         
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:23:02,729 > -       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:23:02,731 > -       
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:23:02,733 > -       
+[DEBUG|worknetCrawlerBot_just_windows.py:757] 2018-09-07 10:23:02,733 > #장애인편의시설,-       
+[DEBUG|worknetCrawlerBot_just_windows.py:758] 2018-09-07 10:23:02,733 > 장애인편의시설:-       
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:23:02,733 > infoTable_No5
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:23:02,735 > -기타입력사항
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:23:02,736 > 기타입력사항 : 1
+[DEBUG|worknetCrawlerBot_just_windows.py:530] 2018-09-07 10:23:02,738 >     -       
+[DEBUG|worknetCrawlerBot_just_windows.py:435] 2018-09-07 10:23:02,738 > infoTable_No6
+[DEBUG|worknetCrawlerBot_just_windows.py:473] 2018-09-07 10:23:02,740 > -회사주소
+[DEBUG|worknetCrawlerBot_just_windows.py:482] 2018-09-07 10:23:02,741 > 회사주소 : 2
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:23:02,743 >              (50852) 경상남도 김해시 한림면 안곡로 443           
+[DEBUG|worknetCrawlerBot_just_windows.py:701] 2018-09-07 10:23:02,745 >     (50852)             경상남도     김해시   한림면 안곡로  443               ※ 채용정보의 근무예정지 지도가 등록되지 않았습니다. 
+[DEBUG|worknetCrawlerBot_just_windows.py:757] 2018-09-07 10:23:02,746 > #근무예정지지도,    (50852)             경상남도     김해시   한림면 안곡로  443               ※ 채용정보의 근무예정지 지도가 등록되지 않았습니다. 
+[DEBUG|worknetCrawlerBot_just_windows.py:758] 2018-09-07 10:23:02,746 > 근무예정지지도:    (50852)             경상남도     김해시   한림면 안곡로  443               ※ 채용정보의 근무예정지 지도가 등록되지 않았습니다. 
+[DEBUG|worknetCrawlerBot_just_windows.py:851] 2018-09-07 10:23:02,759 > E-mail:       egbiotec@naver.com     
+[DEBUG|worknetCrawlerBot_just_windows.py:931] 2018-09-07 10:23:02,763 > DB INSERT : K131311809070012,         -             ,CNC생산직구함				,8,0,,         -             ,         -             ,         -             ,         -             ,         -             ,         -             ,         -             ,             (50852) 경상남도 김해시 한림면 안곡로 443           ,         -             ,CNC 선반 조작원(NC 선반 조작원)(813201)    직업정보 훈련정보 자격정보 ,        CNC선반기능원       ,-    ,    CNC선반이용한생산직구함.   ,    관계없음       ,       학력무관             ,,,    기간의 정함이 없는 근로계약          / 파견근로 비희망      ,    1명      지원현황 : 총0명    (취업알선기관 알선       취업알선기관 알선 관할고용센터(또는 취업알선기관)의 취업알선 서비스를 통해 알선된 알선자수.관할 취업알선기관의 취업알선담당자에게 서비스를 요청하시기 바랍니다.        : 0 명&    이메일 입사지원       이메일입사지원 워크넷 웹사이트를 통해 이메일입사지원한 지원자수. 채용정보상세화면 상/하단 이메일입사지원 기능을 이용하시기 바랍니다.        : 0 명)     * 한 지원자가 알선과 이메일입사지원을 모두 한 경우 총인원수에서는 한명으로 카운트됩니다.   ,    경상남도             김해시         한림면 안곡로443          ,-,-          ,        시급    7&530원 이상                        면접 후 결정 가능       , 시간협의                        (오전)8시00분~(오후)8시00분              (2교대)        ,      주 6일 근무         ,        국민연금     고용보험     산재보험     건강보험    ,    퇴직금   ,    채용시까지       ,    면접   ,           방문        ,    이력서 ,           등록된 파일이 없습니다.      ,    -       ,-               ,                    -   ,    -       ,    -       ,    비희망       ,              -         ,-       ,-       ,-       ,    -       ,-  / 임찬주   ,   3483-5798        ,       010-3483-5798     ,-    ,       egbiotec@naver.com     
+[DEBUG|worknetCrawlerBot_just_windows.py:1010] 2018-09-07 10:23:02,824 > DB INSERT COUNT : 1
+[DEBUG|worknetCrawlerBot_just_windows.py:1013] 2018-09-07 10:23:02,824 > DB insert result : True
+[DEBUG|worknetCrawlerBot_just_windows.py:1074] 2018-09-07 10:57:55,840 > 전체 게시물 개수 : 93573
+[DEBUG|worknetCrawlerBot_just_windows.py:1092] 2018-09-07 10:57:55,841 > 전체 페이지 수: 9358
+[DEBUG|worknetCrawlerBot_just_windows.py:1114] 2018-09-07 10:57:58,780 > current_url => http://www.work.go.kr/empInfo/empInfoSrch/list/dtlEmpSrchList.do?pageIndex=1
+[DEBUG|worknetCrawlerBot_just_windows.py:1120] 2018-09-07 10:58:00,995 > 개별 공고 정보 검색 시작
+[DEBUG|worknetCrawlerBot_just_windows.py:1144] 2018-09-07 10:58:01,023 > 구인인증번호|회사명|공고내용: K172111809070003|VALIDATION|대한정밀(주)|영업부 경력직 직원채용
+[DEBUG|worknetCrawlerBot_just_windows.py:1151] 2018-09-07 10:58:01,023 > 구인인증번호: K172111809070003
+[DEBUG|worknetCrawlerBot_just_windows.py:1163] 2018-09-07 10:58:01,025 > 처음 크롤링하는 취업 공고
+[DEBUG|worknetCrawlerBot_just_windows.py:1036] 2018-09-07 10:58:02,654 > 스크롤이 가능한 페이지
+[DEBUG|worknetCrawlerBot_just_windows.py:140] 2018-09-07 10:58:04,772 > 조회수:1명, 지원자:0명
+[DEBUG|worknetCrawlerBot_just_windows.py:147] 2018-09-07 10:58:04,776 > 회사 이미지 사용하지 않음
+[DEBUG|worknetCrawlerBot_just_windows.py:1120] 2018-09-07 10:58:04,777 > 개별 공고 정보 검색 시작
+[DEBUG|worknetCrawlerBot_just_windows.py:1144] 2018-09-07 10:58:04,806 > 구인인증번호|회사명|공고내용: K160011809070024|VALIDATION|에이치엘건설 주식회사|현장(시공 및 품질관리)  근무자 구인
+[DEBUG|worknetCrawlerBot_just_windows.py:1151] 2018-09-07 10:58:04,806 > 구인인증번호: K160011809070024
+[DEBUG|worknetCrawlerBot_just_windows.py:1163] 2018-09-07 10:58:04,808 > 처음 크롤링하는 취업 공고
+[DEBUG|worknetCrawlerBot_just_windows.py:1036] 2018-09-07 10:58:05,439 > 스크롤이 가능한 페이지
+[DEBUG|worknetCrawlerBot_just_windows.py:140] 2018-09-07 10:58:07,544 > 조회수:1명, 지원자:0명
+[DEBUG|worknetCrawlerBot_just_windows.py:147] 2018-09-07 10:58:07,547 > 회사 이미지 사용하지 않음
+[DEBUG|worknetCrawlerBot_just_windows.py:231] 2018-09-07 10:58:07,582 > 7-0.첨부자료:         -             
+[DEBUG|worknetCrawlerBot_just_windows.py:351] 2018-09-07 10:58:07,584 > #지원자격
+[DEBUG|worknetCrawlerBot_just_windows.py:351] 2018-09-07 10:58:07,591 > #근무조건
+[DEBUG|worknetCrawlerBot_just_windows.py:351] 2018-09-07 10:58:07,598 > #고용형태
+[DEBUG|worknetCrawlerBot_just_windows.py:434] 2018-09-07 10:58:07,605 > 모집요강 (구인인증번호:K160011809070024)
+[DEBUG|worknetCrawlerBot_just_windows.py:437] 2018-09-07 10:58:07,607 > $$: 6
+[DEBUG|worknetCrawlerBot_just_windows.py:442] 2018-09-07 10:58:07,607 > infoTable_No1
+[DEBUG|worknetCrawlerBot_just_windows.py:480] 2018-09-07 10:58:07,609 > -모집요강
+[DEBUG|worknetCrawlerBot_just_windows.py:489] 2018-09-07 10:58:07,610 > 모집요강 : 11
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:07,612 > 건설·채굴 단순 종사원(706000)    직업정보 훈련정보 자격정보 
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:07,614 >  
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:07,615 > -    
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:07,618 >     현장시공및품질관리원   
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:07,620 >     경력      (최소 3년 0 개월 이상)       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:07,622 >        대졸(2~3년)             
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:07,624 >     기간의 정함이 없는 근로계약          / 파견근로 비희망      
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:07,626 >     1명      지원현황 : 총0명    (취업알선기관 알선       취업알선기관 알선 관할고용센터(또는 취업알선기관)의 취업알선 서비스를 통해 알선된 알선자수.관할 취업알선기관의 취업알선담당자에게 서비스를 요청하시기 바랍니다.        : 0 명&    이메일 입사지원       이메일입사지원 워크넷 웹사이트를 통해 이메일입사지원한 지원자수. 채용정보상세화면 상/하단 이메일입사지원 기능을 이용하시기 바랍니다.        : 0 명)     * 한 지원자가 알선과 이메일입사지원을 모두 한 경우 총인원수에서는 한명으로 카운트됩니다.   
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:07,628 >     부산광역시             남구         신선로294& 한국해양수산연수원 용당캠퍼스 내 에이치엘건설(주) (용당동)         
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:07,630 > -
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:07,632 > -          
+[DEBUG|worknetCrawlerBot_just_windows.py:764] 2018-09-07 10:58:07,632 > #인근전철역,-          
+[DEBUG|worknetCrawlerBot_just_windows.py:765] 2018-09-07 10:58:07,632 > 인근전철역:-          
+[DEBUG|worknetCrawlerBot_just_windows.py:442] 2018-09-07 10:58:07,632 > infoTable_No2
+[DEBUG|worknetCrawlerBot_just_windows.py:480] 2018-09-07 10:58:07,634 > -근무환경및복리후생
+[DEBUG|worknetCrawlerBot_just_windows.py:489] 2018-09-07 10:58:07,635 > 근무환경및복리후생 : 6
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:07,637 >         연봉    30&000&000원 이상                                상여금 별도 : 0%                면접 후 결정 가능       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:07,639 >     3식   
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:07,641 >                                (오전)9시00분~(오후)6시00분               소정근로시간 : 40시간    ※ "소정근로시간" 이란 근로자와 사용자가 정한 1주 동안 근로하는 근로시간을 말합니다.  
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:07,643 >       주 5일 근무         
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:07,645 >         국민연금     고용보험     산재보험     건강보험    
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:07,647 >     퇴직금   
+[DEBUG|worknetCrawlerBot_just_windows.py:764] 2018-09-07 10:58:07,647 > #퇴직금지급방법,    퇴직금   
+[DEBUG|worknetCrawlerBot_just_windows.py:765] 2018-09-07 10:58:07,647 > 퇴직금지급방법:    퇴직금   
+[DEBUG|worknetCrawlerBot_just_windows.py:442] 2018-09-07 10:58:07,648 > infoTable_No3
+[DEBUG|worknetCrawlerBot_just_windows.py:480] 2018-09-07 10:58:07,649 > -전형방법
+[DEBUG|worknetCrawlerBot_just_windows.py:489] 2018-09-07 10:58:07,651 > 전형방법 : 5
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:07,653 >                   2018년 10월 04일                     D-27 
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:07,655 >     서류   
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:07,657 >            우편&팩스&이메일     이메일 입사지원    
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:07,659 >     이력서&자기소개서&경력증명서 
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:07,661 >            등록된 파일이 없습니다.      
+[DEBUG|worknetCrawlerBot_just_windows.py:764] 2018-09-07 10:58:07,661 > #제출서류양식첨부,           등록된 파일이 없습니다.      
+[DEBUG|worknetCrawlerBot_just_windows.py:765] 2018-09-07 10:58:07,661 > 제출서류양식첨부:           등록된 파일이 없습니다.      
+[DEBUG|worknetCrawlerBot_just_windows.py:442] 2018-09-07 10:58:07,661 > infoTable_No4
+[DEBUG|worknetCrawlerBot_just_windows.py:480] 2018-09-07 10:58:07,663 > -우대사항
+[DEBUG|worknetCrawlerBot_just_windows.py:489] 2018-09-07 10:58:07,664 > 우대사항 : 10
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:07,666 >     -       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:07,668 > -               
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:07,670 >     건축기사(우대)              기타 : 건축초급이상 - 필수           
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:07,672 >     -       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:07,674 >     -       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:07,676 >     비희망       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:07,678 >               -         
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:07,680 > -       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:07,682 > -       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:07,684 > -       
+[DEBUG|worknetCrawlerBot_just_windows.py:764] 2018-09-07 10:58:07,684 > #장애인편의시설,-       
+[DEBUG|worknetCrawlerBot_just_windows.py:765] 2018-09-07 10:58:07,684 > 장애인편의시설:-       
+[DEBUG|worknetCrawlerBot_just_windows.py:442] 2018-09-07 10:58:07,684 > infoTable_No5
+[DEBUG|worknetCrawlerBot_just_windows.py:480] 2018-09-07 10:58:07,686 > -기타입력사항
+[DEBUG|worknetCrawlerBot_just_windows.py:489] 2018-09-07 10:58:07,687 > 기타입력사항 : 1
+[DEBUG|worknetCrawlerBot_just_windows.py:537] 2018-09-07 10:58:07,689 >     -       
+[DEBUG|worknetCrawlerBot_just_windows.py:442] 2018-09-07 10:58:07,689 > infoTable_No6
+[DEBUG|worknetCrawlerBot_just_windows.py:480] 2018-09-07 10:58:07,691 > -회사주소
+[DEBUG|worknetCrawlerBot_just_windows.py:489] 2018-09-07 10:58:07,692 > 회사주소 : 2
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:07,694 >              (61948) 광주광역시 서구 시청로56번길 8 (치평동)          
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:07,696 >     (48562)             부산광역시     남구   신선로  294&  한국해양수산연수원 용당캠퍼스 내 에이치엘건설(주)  (용당동)           ※ 채용정보의 근무예정지 지도가 등록되지 않았습니다. 
+[DEBUG|worknetCrawlerBot_just_windows.py:764] 2018-09-07 10:58:07,696 > #근무예정지지도,    (48562)             부산광역시     남구   신선로  294&  한국해양수산연수원 용당캠퍼스 내 에이치엘건설(주)  (용당동)           ※ 채용정보의 근무예정지 지도가 등록되지 않았습니다. 
+[DEBUG|worknetCrawlerBot_just_windows.py:765] 2018-09-07 10:58:07,696 > 근무예정지지도:    (48562)             부산광역시     남구   신선로  294&  한국해양수산연수원 용당캠퍼스 내 에이치엘건설(주)  (용당동)           ※ 채용정보의 근무예정지 지도가 등록되지 않았습니다. 
+[DEBUG|worknetCrawlerBot_just_windows.py:858] 2018-09-07 10:58:07,709 > E-mail:       sk8356@naver.com     
+[DEBUG|worknetCrawlerBot_just_windows.py:938] 2018-09-07 10:58:07,714 > DB INSERT : K160011809070024,         -             ,현장(시공및품질관리)근무자구인				,1,0,,         -             ,         -             ,         -             ,         -             ,         -             ,         -             ,         -             ,             (61948) 광주광역시 서구 시청로56번길 8 (치평동)          ,         -             ,건설·채굴 단순 종사원(706000)    직업정보 훈련정보 자격정보 , ,-    ,    현장시공및품질관리원   ,    경력      (최소 3년 0 개월 이상)       ,       대졸(2~3년)             ,,,    기간의 정함이 없는 근로계약          / 파견근로 비희망      ,    1명      지원현황 : 총0명    (취업알선기관 알선       취업알선기관 알선 관할고용센터(또는 취업알선기관)의 취업알선 서비스를 통해 알선된 알선자수.관할 취업알선기관의 취업알선담당자에게 서비스를 요청하시기 바랍니다.        : 0 명&    이메일 입사지원       이메일입사지원 워크넷 웹사이트를 통해 이메일입사지원한 지원자수. 채용정보상세화면 상/하단 이메일입사지원 기능을 이용하시기 바랍니다.        : 0 명)     * 한 지원자가 알선과 이메일입사지원을 모두 한 경우 총인원수에서는 한명으로 카운트됩니다.   ,    부산광역시             남구         신선로294& 한국해양수산연수원 용당캠퍼스 내 에이치엘건설(주) (용당동)         ,-,-          ,        연봉    30&000&000원 이상                                상여금 별도 : 0%                면접 후 결정 가능       ,                               (오전)9시00분~(오후)6시00분               소정근로시간 : 40시간    ※ "소정근로시간" 이란 근로자와 사용자가 정한 1주 동안 근로하는 근로시간을 말합니다.  ,      주 5일 근무         ,        국민연금     고용보험     산재보험     건강보험    ,    퇴직금   ,                  2018년 10월 04일                     D-27 ,    서류   ,           우편&팩스&이메일     이메일 입사지원    ,    이력서&자기소개서&경력증명서 ,           등록된 파일이 없습니다.      ,    -       ,-               ,    건축기사(우대)              기타 : 건축초급이상 - 필수           ,    -       ,    -       ,    비희망       ,              -         ,-       ,-       ,-       ,    -       , 인사팀 / 문성민   ,     062-371-0496      ,       010-5612-8959     ,   062-373-8358    ,       sk8356@naver.com     
+[DEBUG|worknetCrawlerBot_just_windows.py:1017] 2018-09-07 10:58:07,807 > DB INSERT COUNT : 1
+[DEBUG|worknetCrawlerBot_just_windows.py:1020] 2018-09-07 10:58:07,807 > DB insert result : True
+[DEBUG|worknetCrawlerBot_just_windows.py:1120] 2018-09-07 10:58:10,641 > 개별 공고 정보 검색 시작
+[DEBUG|worknetCrawlerBot_just_windows.py:1144] 2018-09-07 10:58:10,671 > 구인인증번호|회사명|공고내용: K140141809070002|VALIDATION|그린케미컬|생산직 직원을 모집합니다.
+[DEBUG|worknetCrawlerBot_just_windows.py:1151] 2018-09-07 10:58:10,671 > 구인인증번호: K140141809070002
+[DEBUG|worknetCrawlerBot_just_windows.py:1163] 2018-09-07 10:58:10,673 > 처음 크롤링하는 취업 공고
+[DEBUG|worknetCrawlerBot_just_windows.py:1036] 2018-09-07 10:58:11,460 > 스크롤이 가능한 페이지
+[DEBUG|worknetCrawlerBot_just_windows.py:140] 2018-09-07 10:58:13,553 > 조회수:7명, 지원자:0명
+[DEBUG|worknetCrawlerBot_just_windows.py:147] 2018-09-07 10:58:13,556 > 회사 이미지 사용하지 않음
+[DEBUG|worknetCrawlerBot_just_windows.py:231] 2018-09-07 10:58:13,589 > 7-0.첨부자료:         -             
+[DEBUG|worknetCrawlerBot_just_windows.py:351] 2018-09-07 10:58:13,594 > #지원자격
+[DEBUG|worknetCrawlerBot_just_windows.py:351] 2018-09-07 10:58:13,607 > #근무조건
+[DEBUG|worknetCrawlerBot_just_windows.py:351] 2018-09-07 10:58:13,620 > #고용형태
+[DEBUG|worknetCrawlerBot_just_windows.py:434] 2018-09-07 10:58:13,633 > 모집요강 (구인인증번호:K140141809070002)
+[DEBUG|worknetCrawlerBot_just_windows.py:437] 2018-09-07 10:58:13,634 > $$: 6
+[DEBUG|worknetCrawlerBot_just_windows.py:442] 2018-09-07 10:58:13,634 > infoTable_No1
+[DEBUG|worknetCrawlerBot_just_windows.py:480] 2018-09-07 10:58:13,636 > -모집요강
+[DEBUG|worknetCrawlerBot_just_windows.py:489] 2018-09-07 10:58:13,637 > 모집요강 : 11
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:13,639 > 제조 단순 종사원(890000)    직업정보 훈련정보 자격정보 
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:13,641 >  
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:13,643 > -    
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:13,645 >     단순노무업무(제품포장)   
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:13,647 >     관계없음       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:13,649 >        학력무관             
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:13,652 >     기간의 정함이 없는 근로계약          / 파견근로 비희망      
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:13,654 >     1명      지원현황 : 총0명    (취업알선기관 알선       취업알선기관 알선 관할고용센터(또는 취업알선기관)의 취업알선 서비스를 통해 알선된 알선자수.관할 취업알선기관의 취업알선담당자에게 서비스를 요청하시기 바랍니다.        : 0 명&    이메일 입사지원       이메일입사지원 워크넷 웹사이트를 통해 이메일입사지원한 지원자수. 채용정보상세화면 상/하단 이메일입사지원 기능을 이용하시기 바랍니다.        : 0 명)     * 한 지원자가 알선과 이메일입사지원을 모두 한 경우 총인원수에서는 한명으로 카운트됩니다.   
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:13,656 >     대구광역시             북구         3공단로177-12& ` (노원동3가)         
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:13,658 > -
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:13,660 > -          
+[DEBUG|worknetCrawlerBot_just_windows.py:764] 2018-09-07 10:58:13,660 > #인근전철역,-          
+[DEBUG|worknetCrawlerBot_just_windows.py:765] 2018-09-07 10:58:13,661 > 인근전철역:-          
+[DEBUG|worknetCrawlerBot_just_windows.py:442] 2018-09-07 10:58:13,661 > infoTable_No2
+[DEBUG|worknetCrawlerBot_just_windows.py:480] 2018-09-07 10:58:13,662 > -근무환경및복리후생
+[DEBUG|worknetCrawlerBot_just_windows.py:489] 2018-09-07 10:58:13,663 > 근무환경및복리후생 : 6
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:13,665 >         월급    1&573&770원 이상      ~ 1&573&770원 이하                                       기본급 기준          상여금 별도 : 80%               
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:13,668 >     1식   
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:13,670 >                                (오전)8시30분~(오후)6시00분               소정근로시간 : 40시간    ※ "소정근로시간" 이란 근로자와 사용자가 정한 1주 동안 근로하는 근로시간을 말합니다.  
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:13,672 >       주 5일 근무         
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:13,674 >         국민연금     고용보험     산재보험     건강보험    
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:13,676 >     퇴직금   
+[DEBUG|worknetCrawlerBot_just_windows.py:764] 2018-09-07 10:58:13,676 > #퇴직금지급방법,    퇴직금   
+[DEBUG|worknetCrawlerBot_just_windows.py:765] 2018-09-07 10:58:13,676 > 퇴직금지급방법:    퇴직금   
+[DEBUG|worknetCrawlerBot_just_windows.py:442] 2018-09-07 10:58:13,676 > infoTable_No3
+[DEBUG|worknetCrawlerBot_just_windows.py:480] 2018-09-07 10:58:13,678 > -전형방법
+[DEBUG|worknetCrawlerBot_just_windows.py:489] 2018-09-07 10:58:13,679 > 전형방법 : 5
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:13,681 >     채용시까지       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:13,683 >     면접   
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:13,685 >            방문        
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:13,687 >     이력서 
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:13,689 >            등록된 파일이 없습니다.      
+[DEBUG|worknetCrawlerBot_just_windows.py:764] 2018-09-07 10:58:13,689 > #제출서류양식첨부,           등록된 파일이 없습니다.      
+[DEBUG|worknetCrawlerBot_just_windows.py:765] 2018-09-07 10:58:13,690 > 제출서류양식첨부:           등록된 파일이 없습니다.      
+[DEBUG|worknetCrawlerBot_just_windows.py:442] 2018-09-07 10:58:13,690 > infoTable_No4
+[DEBUG|worknetCrawlerBot_just_windows.py:480] 2018-09-07 10:58:13,691 > -우대사항
+[DEBUG|worknetCrawlerBot_just_windows.py:489] 2018-09-07 10:58:13,692 > 우대사항 : 10
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:13,694 >     -       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:13,697 > -               
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:13,699 >                     -   
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:13,701 >     -       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:13,703 >         고용촉진지원금대상자   
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:13,705 >     비희망       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:13,707 >               -         
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:13,709 > -       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:13,711 > -       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:13,713 > -       
+[DEBUG|worknetCrawlerBot_just_windows.py:764] 2018-09-07 10:58:13,713 > #장애인편의시설,-       
+[DEBUG|worknetCrawlerBot_just_windows.py:765] 2018-09-07 10:58:13,713 > 장애인편의시설:-       
+[DEBUG|worknetCrawlerBot_just_windows.py:442] 2018-09-07 10:58:13,713 > infoTable_No5
+[DEBUG|worknetCrawlerBot_just_windows.py:480] 2018-09-07 10:58:13,715 > -기타입력사항
+[DEBUG|worknetCrawlerBot_just_windows.py:489] 2018-09-07 10:58:13,716 > 기타입력사항 : 1
+[DEBUG|worknetCrawlerBot_just_windows.py:537] 2018-09-07 10:58:13,718 >     -       
+[DEBUG|worknetCrawlerBot_just_windows.py:442] 2018-09-07 10:58:13,718 > infoTable_No6
+[DEBUG|worknetCrawlerBot_just_windows.py:480] 2018-09-07 10:58:13,720 > -회사주소
+[DEBUG|worknetCrawlerBot_just_windows.py:489] 2018-09-07 10:58:13,721 > 회사주소 : 3
+[DEBUG|worknetCrawlerBot_just_windows.py:572] 2018-09-07 10:58:13,721 > infoTable_content_No.1
+[DEBUG|worknetCrawlerBot_just_windows.py:656] 2018-09-07 10:58:13,723 >              (702815) 대구광역시 북구 3공단로 177-12& ` (노원동3가)          
+[DEBUG|worknetCrawlerBot_just_windows.py:572] 2018-09-07 10:58:13,723 > infoTable_content_No.2
+[DEBUG|worknetCrawlerBot_just_windows.py:656] 2018-09-07 10:58:13,725 >     (702815)             대구광역시     북구   3공단로  177-12&  `  (노원동3가)           ※ 지도 정보는 다음 지도 API를 이용하여 제공하고 있습니다. 
+[DEBUG|worknetCrawlerBot_just_windows.py:858] 2018-09-07 10:58:13,738 > E-mail:       cabinreed@naver.com     
+[DEBUG|worknetCrawlerBot_just_windows.py:938] 2018-09-07 10:58:13,743 > DB INSERT : K140141809070002,         -             ,생산직직원을모집합니다.				,7,0,,         -             ,         -             ,         -             ,         -             ,         -             ,         -             ,         -             ,         -             ,         -             ,제조 단순 종사원(890000)    직업정보 훈련정보 자격정보 , ,-    ,    단순노무업무(제품포장)   ,    관계없음       ,       학력무관             ,,,    기간의 정함이 없는 근로계약          / 파견근로 비희망      ,    1명      지원현황 : 총0명    (취업알선기관 알선       취업알선기관 알선 관할고용센터(또는 취업알선기관)의 취업알선 서비스를 통해 알선된 알선자수.관할 취업알선기관의 취업알선담당자에게 서비스를 요청하시기 바랍니다.        : 0 명&    이메일 입사지원       이메일입사지원 워크넷 웹사이트를 통해 이메일입사지원한 지원자수. 채용정보상세화면 상/하단 이메일입사지원 기능을 이용하시기 바랍니다.        : 0 명)     * 한 지원자가 알선과 이메일입사지원을 모두 한 경우 총인원수에서는 한명으로 카운트됩니다.   ,    대구광역시             북구         3공단로177-12& ` (노원동3가)         ,-,-          ,        월급    1&573&770원 이상      ~ 1&573&770원 이하                                       기본급 기준          상여금 별도 : 80%               ,                               (오전)8시30분~(오후)6시00분               소정근로시간 : 40시간    ※ "소정근로시간" 이란 근로자와 사용자가 정한 1주 동안 근로하는 근로시간을 말합니다.  ,      주 5일 근무         ,        국민연금     고용보험     산재보험     건강보험    ,    퇴직금   ,    채용시까지       ,    면접   ,           방문        ,    이력서 ,           등록된 파일이 없습니다.      ,    -       ,-               ,                    -   ,    -       ,        고용촉진지원금대상자   ,    비희망       ,              -         ,-       ,-       ,-       ,    (702815)             대구광역시     북구   3공단로  177-12&  `  (노원동3가)           ※ 지도 정보는 다음 지도 API를 이용하여 제공하고 있습니다. ,-  / 박효진   ,     053-354-4360      ,-,-    ,       cabinreed@naver.com     
+[DEBUG|worknetCrawlerBot_just_windows.py:1017] 2018-09-07 10:58:13,812 > DB INSERT COUNT : 1
+[DEBUG|worknetCrawlerBot_just_windows.py:1020] 2018-09-07 10:58:13,813 > DB insert result : True
+[DEBUG|worknetCrawlerBot_just_windows.py:1120] 2018-09-07 10:58:16,408 > 개별 공고 정보 검색 시작
+[DEBUG|worknetCrawlerBot_just_windows.py:1144] 2018-09-07 10:58:16,439 > 구인인증번호|회사명|공고내용: KJK2001809070004|VALIDATION|이지앤비|운송직(배송직원모집)
+[DEBUG|worknetCrawlerBot_just_windows.py:1151] 2018-09-07 10:58:16,440 > 구인인증번호: KJK2001809070004
+[DEBUG|worknetCrawlerBot_just_windows.py:1163] 2018-09-07 10:58:16,441 > 처음 크롤링하는 취업 공고
+[DEBUG|worknetCrawlerBot_just_windows.py:1036] 2018-09-07 10:58:17,115 > 스크롤이 가능한 페이지
+[DEBUG|worknetCrawlerBot_just_windows.py:140] 2018-09-07 10:58:19,222 > 조회수:2명, 지원자:0명
+[DEBUG|worknetCrawlerBot_just_windows.py:147] 2018-09-07 10:58:19,225 > 회사 이미지 사용하지 않음
+[DEBUG|worknetCrawlerBot_just_windows.py:231] 2018-09-07 10:58:19,258 > 7-0.첨부자료:         -             
+[DEBUG|worknetCrawlerBot_just_windows.py:351] 2018-09-07 10:58:19,264 > #지원자격
+[DEBUG|worknetCrawlerBot_just_windows.py:351] 2018-09-07 10:58:19,277 > #근무조건
+[DEBUG|worknetCrawlerBot_just_windows.py:351] 2018-09-07 10:58:19,290 > #고용형태
+[DEBUG|worknetCrawlerBot_just_windows.py:434] 2018-09-07 10:58:19,302 > 모집요강 (구인인증번호:KJK2001809070004)
+[DEBUG|worknetCrawlerBot_just_windows.py:437] 2018-09-07 10:58:19,303 > $$: 6
+[DEBUG|worknetCrawlerBot_just_windows.py:442] 2018-09-07 10:58:19,303 > infoTable_No1
+[DEBUG|worknetCrawlerBot_just_windows.py:480] 2018-09-07 10:58:19,305 > -모집요강
+[DEBUG|worknetCrawlerBot_just_windows.py:489] 2018-09-07 10:58:19,306 > 모집요강 : 11
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:19,308 > 배송·납품 운전원(납품영업 포함)(624103)    직업정보 훈련정보 자격정보 
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:19,310 >         납품 운전원      &   납품원       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:19,312 > -    
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:19,314 >     /물품이동및물품회수[1톤&스틱]/1km내외지역배송업무 /인쇄물(가공전)인쇄물(가공후)목적지로출고 /운송관리업무   
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:19,316 >     관계없음       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:19,318 >        학력무관             
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:19,321 >     기간의 정함이 없는 근로계약          / 파견근로 비희망      
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:19,323 >     1명      지원현황 : 총0명    (취업알선기관 알선       취업알선기관 알선 관할고용센터(또는 취업알선기관)의 취업알선 서비스를 통해 알선된 알선자수.관할 취업알선기관의 취업알선담당자에게 서비스를 요청하시기 바랍니다.        : 0 명&    이메일 입사지원       이메일입사지원 워크넷 웹사이트를 통해 이메일입사지원한 지원자수. 채용정보상세화면 상/하단 이메일입사지원 기능을 이용하시기 바랍니다.        : 0 명)     * 한 지원자가 알선과 이메일입사지원을 모두 한 경우 총인원수에서는 한명으로 카운트됩니다.   
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:19,325 >     경기도             파주시         소라지로63-36 (신촌동)         
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:19,327 > -
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:19,329 > -          
+[DEBUG|worknetCrawlerBot_just_windows.py:764] 2018-09-07 10:58:19,329 > #인근전철역,-          
+[DEBUG|worknetCrawlerBot_just_windows.py:765] 2018-09-07 10:58:19,329 > 인근전철역:-          
+[DEBUG|worknetCrawlerBot_just_windows.py:442] 2018-09-07 10:58:19,329 > infoTable_No2
+[DEBUG|worknetCrawlerBot_just_windows.py:480] 2018-09-07 10:58:19,332 > -근무환경및복리후생
+[DEBUG|worknetCrawlerBot_just_windows.py:489] 2018-09-07 10:58:19,333 > 근무환경및복리후생 : 6
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:19,335 >         연봉    28&000&000원 이상      ~ 30&000&000원 이하                                상여금 별도 : 0%                면접 후 결정 가능       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:19,337 >     중식비지급   
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:19,339 >  ※ 상세 근무시간      09:00~19:00/주6일(월~토)근무 위근로에대한급여임.                      소정근로시간 : 40시간    ※ "소정근로시간" 이란 근로자와 사용자가 정한 1주 동안 근로하는 근로시간을 말합니다.  
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:19,341 >       주 6일 근무         
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:19,343 >         국민연금     고용보험     산재보험     건강보험    
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:19,345 >     퇴직금   
+[DEBUG|worknetCrawlerBot_just_windows.py:764] 2018-09-07 10:58:19,345 > #퇴직금지급방법,    퇴직금   
+[DEBUG|worknetCrawlerBot_just_windows.py:765] 2018-09-07 10:58:19,345 > 퇴직금지급방법:    퇴직금   
+[DEBUG|worknetCrawlerBot_just_windows.py:442] 2018-09-07 10:58:19,345 > infoTable_No3
+[DEBUG|worknetCrawlerBot_just_windows.py:480] 2018-09-07 10:58:19,347 > -전형방법
+[DEBUG|worknetCrawlerBot_just_windows.py:489] 2018-09-07 10:58:19,348 > 전형방법 : 5
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:19,350 >                   2018년 10월 06일                     D-29 
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:19,352 >     서류&면접   
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:19,354 >            방문&팩스&이메일     이메일 입사지원    
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:19,356 >     이력서 
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:19,358 >            등록된 파일이 없습니다.      
+[DEBUG|worknetCrawlerBot_just_windows.py:764] 2018-09-07 10:58:19,359 > #제출서류양식첨부,           등록된 파일이 없습니다.      
+[DEBUG|worknetCrawlerBot_just_windows.py:765] 2018-09-07 10:58:19,359 > 제출서류양식첨부:           등록된 파일이 없습니다.      
+[DEBUG|worknetCrawlerBot_just_windows.py:442] 2018-09-07 10:58:19,359 > infoTable_No4
+[DEBUG|worknetCrawlerBot_just_windows.py:480] 2018-09-07 10:58:19,363 > -우대사항
+[DEBUG|worknetCrawlerBot_just_windows.py:489] 2018-09-07 10:58:19,364 > 우대사항 : 10
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:19,368 >     -       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:19,372 > -               
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:19,376 >                     -   
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:19,380 >     -       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:19,384 >         운전가능자&인근거주자&차량소지자   
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:19,388 >     비희망       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:19,392 >               -         
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:19,394 > -       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:19,396 > -       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:19,398 > -       
+[DEBUG|worknetCrawlerBot_just_windows.py:764] 2018-09-07 10:58:19,398 > #장애인편의시설,-       
+[DEBUG|worknetCrawlerBot_just_windows.py:765] 2018-09-07 10:58:19,398 > 장애인편의시설:-       
+[DEBUG|worknetCrawlerBot_just_windows.py:442] 2018-09-07 10:58:19,398 > infoTable_No5
+[DEBUG|worknetCrawlerBot_just_windows.py:480] 2018-09-07 10:58:19,400 > -기타입력사항
+[DEBUG|worknetCrawlerBot_just_windows.py:489] 2018-09-07 10:58:19,401 > 기타입력사항 : 1
+[DEBUG|worknetCrawlerBot_just_windows.py:537] 2018-09-07 10:58:19,403 >     -       
+[DEBUG|worknetCrawlerBot_just_windows.py:442] 2018-09-07 10:58:19,403 > infoTable_No6
+[DEBUG|worknetCrawlerBot_just_windows.py:480] 2018-09-07 10:58:19,405 > -회사주소
+[DEBUG|worknetCrawlerBot_just_windows.py:489] 2018-09-07 10:58:19,406 > 회사주소 : 3
+[DEBUG|worknetCrawlerBot_just_windows.py:572] 2018-09-07 10:58:19,406 > infoTable_content_No.1
+[DEBUG|worknetCrawlerBot_just_windows.py:656] 2018-09-07 10:58:19,408 >              (10863) 경기도 파주시 소라지로 63-36 (신촌동)          
+[DEBUG|worknetCrawlerBot_just_windows.py:572] 2018-09-07 10:58:19,408 > infoTable_content_No.2
+[DEBUG|worknetCrawlerBot_just_windows.py:656] 2018-09-07 10:58:19,410 >     (10863)             경기도     파주시   소라지로  63-36    (신촌동)           ※ 지도 정보는 다음 지도 API를 이용하여 제공하고 있습니다. 
+[DEBUG|worknetCrawlerBot_just_windows.py:858] 2018-09-07 10:58:19,423 > E-mail:       shc223@naver.com     
+[DEBUG|worknetCrawlerBot_just_windows.py:938] 2018-09-07 10:58:19,427 > DB INSERT : KJK2001809070004,         -             ,운송직(배송직원모집)				,2,0,,         -             ,         -             ,         -             ,         -             ,         -             ,         -             ,         -             ,         -             ,         -             ,배송·납품 운전원(납품영업 포함)(624103)    직업정보 훈련정보 자격정보 ,        납품 운전원      &   납품원       ,-    ,    /물품이동및물품회수[1톤&스틱]/1km내외지역배송업무 /인쇄물(가공전)인쇄물(가공후)목적지로출고 /운송관리업무   ,    관계없음       ,       학력무관             ,,,    기간의 정함이 없는 근로계약          / 파견근로 비희망      ,    1명      지원현황 : 총0명    (취업알선기관 알선       취업알선기관 알선 관할고용센터(또는 취업알선기관)의 취업알선 서비스를 통해 알선된 알선자수.관할 취업알선기관의 취업알선담당자에게 서비스를 요청하시기 바랍니다.        : 0 명&    이메일 입사지원       이메일입사지원 워크넷 웹사이트를 통해 이메일입사지원한 지원자수. 채용정보상세화면 상/하단 이메일입사지원 기능을 이용하시기 바랍니다.        : 0 명)     * 한 지원자가 알선과 이메일입사지원을 모두 한 경우 총인원수에서는 한명으로 카운트됩니다.   ,    경기도             파주시         소라지로63-36 (신촌동)         ,-,-          ,        연봉    28&000&000원 이상      ~ 30&000&000원 이하                                상여금 별도 : 0%                면접 후 결정 가능       , ※ 상세 근무시간      09:00~19:00/주6일(월~토)근무 위근로에대한급여임.                      소정근로시간 : 40시간    ※ "소정근로시간" 이란 근로자와 사용자가 정한 1주 동안 근로하는 근로시간을 말합니다.  ,      주 6일 근무         ,        국민연금     고용보험     산재보험     건강보험    ,    퇴직금   ,                  2018년 10월 06일                     D-29 ,    서류&면접   ,           방문&팩스&이메일     이메일 입사지원    ,    이력서 ,           등록된 파일이 없습니다.      ,    -       ,-               ,                    -   ,    -       ,        운전가능자&인근거주자&차량소지자   ,    비희망       ,              -         ,-       ,-       ,-       ,    (10863)             경기도     파주시   소라지로  63-36    (신촌동)           ※ 지도 정보는 다음 지도 API를 이용하여 제공하고 있습니다. , 관리부 / 장성현   ,     031-932-8756   (내선 : 2)    ,-,   031-932-8757    ,       shc223@naver.com     
+[DEBUG|worknetCrawlerBot_just_windows.py:1017] 2018-09-07 10:58:19,528 > DB INSERT COUNT : 1
+[DEBUG|worknetCrawlerBot_just_windows.py:1020] 2018-09-07 10:58:19,528 > DB insert result : True
+[DEBUG|worknetCrawlerBot_just_windows.py:1120] 2018-09-07 10:58:22,166 > 개별 공고 정보 검색 시작
+[DEBUG|worknetCrawlerBot_just_windows.py:1144] 2018-09-07 10:58:22,197 > 구인인증번호|회사명|공고내용: K172111809070002|VALIDATION|대한정밀(주)|MCT 머시닝센타 기계조작원
+[DEBUG|worknetCrawlerBot_just_windows.py:1151] 2018-09-07 10:58:22,197 > 구인인증번호: K172111809070002
+[DEBUG|worknetCrawlerBot_just_windows.py:1163] 2018-09-07 10:58:22,199 > 처음 크롤링하는 취업 공고
+[DEBUG|worknetCrawlerBot_just_windows.py:1036] 2018-09-07 10:58:22,950 > 스크롤이 가능한 페이지
+[DEBUG|worknetCrawlerBot_just_windows.py:140] 2018-09-07 10:58:25,074 > 조회수:1명, 지원자:0명
+[DEBUG|worknetCrawlerBot_just_windows.py:147] 2018-09-07 10:58:25,077 > 회사 이미지 사용하지 않음
+[DEBUG|worknetCrawlerBot_just_windows.py:1120] 2018-09-07 10:58:25,078 > 개별 공고 정보 검색 시작
+[DEBUG|worknetCrawlerBot_just_windows.py:1144] 2018-09-07 10:58:25,109 > 구인인증번호|회사명|공고내용: KJSE001809070003|VALIDATION|청호나이스(주)|관리직 플래너 팀장 모집
+[DEBUG|worknetCrawlerBot_just_windows.py:1151] 2018-09-07 10:58:25,109 > 구인인증번호: KJSE001809070003
+[DEBUG|worknetCrawlerBot_just_windows.py:1163] 2018-09-07 10:58:25,111 > 처음 크롤링하는 취업 공고
+[DEBUG|worknetCrawlerBot_just_windows.py:1036] 2018-09-07 10:58:25,922 > 스크롤이 가능한 페이지
+[DEBUG|worknetCrawlerBot_just_windows.py:140] 2018-09-07 10:58:28,037 > 조회수:4명, 지원자:0명
+[DEBUG|worknetCrawlerBot_just_windows.py:152] 2018-09-07 10:58:28,040 > 회사 이미지 저장 디렉토리 : /framework/filedownload/getImage.do?filePathName=3ICURCtAIU1F1LcUx7%2BkD4iUBo9XmamOs8J0hJj4S1dxMHYMV0rdUtqmlLKdj%2FuSEgUP9XFsJUeiurI8Z%2BlFKQ%3D%3D
+[DEBUG|worknetCrawlerBot_just_windows.py:231] 2018-09-07 10:58:28,075 > 7-0.첨부자료: 회사로그.bmp 
+[DEBUG|worknetCrawlerBot_just_windows.py:351] 2018-09-07 10:58:28,081 > #지원자격
+[DEBUG|worknetCrawlerBot_just_windows.py:351] 2018-09-07 10:58:28,097 > #근무조건
+[DEBUG|worknetCrawlerBot_just_windows.py:351] 2018-09-07 10:58:28,112 > #고용형태
+[DEBUG|worknetCrawlerBot_just_windows.py:434] 2018-09-07 10:58:28,125 > 모집요강 (구인인증번호:KJSE001809070003)
+[DEBUG|worknetCrawlerBot_just_windows.py:437] 2018-09-07 10:58:28,126 > $$: 6
+[DEBUG|worknetCrawlerBot_just_windows.py:442] 2018-09-07 10:58:28,126 > infoTable_No1
+[DEBUG|worknetCrawlerBot_just_windows.py:480] 2018-09-07 10:58:28,128 > -모집요강
+[DEBUG|worknetCrawlerBot_just_windows.py:489] 2018-09-07 10:58:28,129 > 모집요강 : 11
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:28,132 > 영업·판매 관리자(015100)    직업정보 훈련정보 자격정보 
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:28,136 >  
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:28,141 > -    
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:28,145 >     관리팀장모집 -고객관리&직원교육및행정&고객안내내용컨텍 -관할지역:김해&밀양   
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:28,149 >     관계없음       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:28,153 >        학력무관             
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:28,155 >     기간의 정함이 없는 근로계약          / 파견근로 비희망      
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:28,157 >     5명      지원현황 : 총0명    (취업알선기관 알선       취업알선기관 알선 관할고용센터(또는 취업알선기관)의 취업알선 서비스를 통해 알선된 알선자수.관할 취업알선기관의 취업알선담당자에게 서비스를 요청하시기 바랍니다.        : 0 명&    이메일 입사지원       이메일입사지원 워크넷 웹사이트를 통해 이메일입사지원한 지원자수. 채용정보상세화면 상/하단 이메일입사지원 기능을 이용하시기 바랍니다.        : 0 명)     * 한 지원자가 알선과 이메일입사지원을 모두 한 경우 총인원수에서는 한명으로 카운트됩니다.   
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:28,159 >     경상남도             김해시         진영읍 장등로8& 신한빌딩 3층          
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:28,162 > -
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:28,164 > -          
+[DEBUG|worknetCrawlerBot_just_windows.py:764] 2018-09-07 10:58:28,164 > #인근전철역,-          
+[DEBUG|worknetCrawlerBot_just_windows.py:765] 2018-09-07 10:58:28,164 > 인근전철역:-          
+[DEBUG|worknetCrawlerBot_just_windows.py:442] 2018-09-07 10:58:28,164 > infoTable_No2
+[DEBUG|worknetCrawlerBot_just_windows.py:480] 2018-09-07 10:58:28,166 > -근무환경및복리후생
+[DEBUG|worknetCrawlerBot_just_windows.py:489] 2018-09-07 10:58:28,167 > 근무환경및복리후생 : 6
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:28,169 >         월급    1&800&000원 이상      ~ 2&500&000원 이하                                                상여금 별도 : 0%                면접 후 결정 가능       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:28,172 >     미제공   
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:28,174 >  시간협의                        (오전)9시00분~(오후)6시00분               소정근로시간 : 40시간    ※ "소정근로시간" 이란 근로자와 사용자가 정한 1주 동안 근로하는 근로시간을 말합니다.  
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:28,176 >       주 5일 근무         
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:28,179 >         국민연금     고용보험     산재보험     건강보험    
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:28,181 >     퇴직금   
+[DEBUG|worknetCrawlerBot_just_windows.py:764] 2018-09-07 10:58:28,181 > #퇴직금지급방법,    퇴직금   
+[DEBUG|worknetCrawlerBot_just_windows.py:765] 2018-09-07 10:58:28,181 > 퇴직금지급방법:    퇴직금   
+[DEBUG|worknetCrawlerBot_just_windows.py:442] 2018-09-07 10:58:28,181 > infoTable_No3
+[DEBUG|worknetCrawlerBot_just_windows.py:480] 2018-09-07 10:58:28,183 > -전형방법
+[DEBUG|worknetCrawlerBot_just_windows.py:489] 2018-09-07 10:58:28,184 > 전형방법 : 5
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:28,186 >                   2018년 10월 13일                     D-36 
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:28,189 >     서류&면접   
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:28,191 >            방문&기타(방문전연락요망)        
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:28,193 >     이력서 
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:28,195 >            등록된 파일이 없습니다.      
+[DEBUG|worknetCrawlerBot_just_windows.py:764] 2018-09-07 10:58:28,196 > #제출서류양식첨부,           등록된 파일이 없습니다.      
+[DEBUG|worknetCrawlerBot_just_windows.py:765] 2018-09-07 10:58:28,196 > 제출서류양식첨부:           등록된 파일이 없습니다.      
+[DEBUG|worknetCrawlerBot_just_windows.py:442] 2018-09-07 10:58:28,196 > infoTable_No4
+[DEBUG|worknetCrawlerBot_just_windows.py:480] 2018-09-07 10:58:28,198 > -우대사항
+[DEBUG|worknetCrawlerBot_just_windows.py:489] 2018-09-07 10:58:28,199 > 우대사항 : 10
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:28,201 >     -       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:28,203 > -               
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:28,205 >                     -   
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:28,208 >     -       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:28,210 >         여성우대&운전가능자&인근거주자&차량소지자   
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:28,212 >     비희망       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:28,214 >               -         
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:28,217 > -       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:28,219 > -       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:28,221 > -       
+[DEBUG|worknetCrawlerBot_just_windows.py:764] 2018-09-07 10:58:28,221 > #장애인편의시설,-       
+[DEBUG|worknetCrawlerBot_just_windows.py:765] 2018-09-07 10:58:28,221 > 장애인편의시설:-       
+[DEBUG|worknetCrawlerBot_just_windows.py:442] 2018-09-07 10:58:28,221 > infoTable_No5
+[DEBUG|worknetCrawlerBot_just_windows.py:480] 2018-09-07 10:58:28,223 > -기타입력사항
+[DEBUG|worknetCrawlerBot_just_windows.py:489] 2018-09-07 10:58:28,224 > 기타입력사항 : 1
+[DEBUG|worknetCrawlerBot_just_windows.py:537] 2018-09-07 10:58:28,226 >         전화문의후방문접수   
+[DEBUG|worknetCrawlerBot_just_windows.py:442] 2018-09-07 10:58:28,227 > infoTable_No6
+[DEBUG|worknetCrawlerBot_just_windows.py:480] 2018-09-07 10:58:28,229 > -회사주소
+[DEBUG|worknetCrawlerBot_just_windows.py:489] 2018-09-07 10:58:28,230 > 회사주소 : 2
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:28,232 >              (28625) 충청북도 청주시 서원구 산남로62번길 15& 4층 청호나이스 (산남동)          
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:28,234 >     (50858)             경상남도     김해시   진영읍 장등로  8&  신한빌딩 3층             ※ 채용정보의 근무예정지 지도가 등록되지 않았습니다. 
+[DEBUG|worknetCrawlerBot_just_windows.py:764] 2018-09-07 10:58:28,234 > #근무예정지지도,    (50858)             경상남도     김해시   진영읍 장등로  8&  신한빌딩 3층             ※ 채용정보의 근무예정지 지도가 등록되지 않았습니다. 
+[DEBUG|worknetCrawlerBot_just_windows.py:765] 2018-09-07 10:58:28,234 > 근무예정지지도:    (50858)             경상남도     김해시   진영읍 장등로  8&  신한빌딩 3층             ※ 채용정보의 근무예정지 지도가 등록되지 않았습니다. 
+[DEBUG|worknetCrawlerBot_just_windows.py:858] 2018-09-07 10:58:28,248 > E-mail:-
+[DEBUG|worknetCrawlerBot_just_windows.py:938] 2018-09-07 10:58:28,252 > DB INSERT : KJSE001809070003, 회사로그.bmp ,관리직플래너팀장모집				,4,0,/framework/filedownload/getImage.do?filePathName=3ICURCtAIU1F1LcUx7%2BkD4iUBo9XmamOs8J0hJj4S1dxMHYMV0rdUtqmlLKdj%2FuSEgUP9XFsJUeiurI8Z%2BlFKQ%3D%3D, 회사로그.bmp , 회사로그.bmp , 회사로그.bmp , 회사로그.bmp , 회사로그.bmp , 회사로그.bmp , 회사로그.bmp ,             (28625) 충청북도 청주시 서원구 산남로62번길 15& 4층 청호나이스 (산남동)          , 회사로그.bmp ,영업·판매 관리자(015100)    직업정보 훈련정보 자격정보 , ,-    ,    관리팀장모집 -고객관리&직원교육및행정&고객안내내용컨텍 -관할지역:김해&밀양   ,    관계없음       ,       학력무관             ,,,    기간의 정함이 없는 근로계약          / 파견근로 비희망      ,    5명      지원현황 : 총0명    (취업알선기관 알선       취업알선기관 알선 관할고용센터(또는 취업알선기관)의 취업알선 서비스를 통해 알선된 알선자수.관할 취업알선기관의 취업알선담당자에게 서비스를 요청하시기 바랍니다.        : 0 명&    이메일 입사지원       이메일입사지원 워크넷 웹사이트를 통해 이메일입사지원한 지원자수. 채용정보상세화면 상/하단 이메일입사지원 기능을 이용하시기 바랍니다.        : 0 명)     * 한 지원자가 알선과 이메일입사지원을 모두 한 경우 총인원수에서는 한명으로 카운트됩니다.   ,    경상남도             김해시         진영읍 장등로8& 신한빌딩 3층          ,-,-          ,        월급    1&800&000원 이상      ~ 2&500&000원 이하                                                상여금 별도 : 0%                면접 후 결정 가능       , 시간협의                        (오전)9시00분~(오후)6시00분               소정근로시간 : 40시간    ※ "소정근로시간" 이란 근로자와 사용자가 정한 1주 동안 근로하는 근로시간을 말합니다.  ,      주 5일 근무         ,        국민연금     고용보험     산재보험     건강보험    ,    퇴직금   ,                  2018년 10월 13일                     D-36 ,    서류&면접   ,           방문&기타(방문전연락요망)        ,    이력서 ,           등록된 파일이 없습니다.      ,    -       ,-               ,                    -   ,    -       ,        여성우대&운전가능자&인근거주자&차량소지자   ,    비희망       ,              -         ,-       ,-       ,-       ,        전화문의후방문접수   , 지사장 / 박용욱   ,     055-342-2742      ,       010-6312-3821     ,-    ,-
+[DEBUG|worknetCrawlerBot_just_windows.py:1017] 2018-09-07 10:58:28,316 > DB INSERT COUNT : 1
+[DEBUG|worknetCrawlerBot_just_windows.py:1020] 2018-09-07 10:58:28,316 > DB insert result : True
+[DEBUG|worknetCrawlerBot_just_windows.py:1120] 2018-09-07 10:58:31,412 > 개별 공고 정보 검색 시작
+[DEBUG|worknetCrawlerBot_just_windows.py:1144] 2018-09-07 10:58:31,444 > 구인인증번호|회사명|공고내용: K170061809070002|VALIDATION|(주)명진에프앤비|물류출하관리
+[DEBUG|worknetCrawlerBot_just_windows.py:1151] 2018-09-07 10:58:31,444 > 구인인증번호: K170061809070002
+[DEBUG|worknetCrawlerBot_just_windows.py:1163] 2018-09-07 10:58:31,445 > 처음 크롤링하는 취업 공고
+[DEBUG|worknetCrawlerBot_just_windows.py:1036] 2018-09-07 10:58:32,079 > 스크롤이 가능한 페이지
+[DEBUG|worknetCrawlerBot_just_windows.py:140] 2018-09-07 10:58:34,180 > 조회수:7명, 지원자:0명
+[DEBUG|worknetCrawlerBot_just_windows.py:147] 2018-09-07 10:58:34,183 > 회사 이미지 사용하지 않음
+[DEBUG|worknetCrawlerBot_just_windows.py:231] 2018-09-07 10:58:34,217 > 7-0.첨부자료:         -             
+[DEBUG|worknetCrawlerBot_just_windows.py:351] 2018-09-07 10:58:34,223 > #지원자격
+[DEBUG|worknetCrawlerBot_just_windows.py:351] 2018-09-07 10:58:34,237 > #근무조건
+[DEBUG|worknetCrawlerBot_just_windows.py:351] 2018-09-07 10:58:34,246 > #고용형태
+[DEBUG|worknetCrawlerBot_just_windows.py:434] 2018-09-07 10:58:34,254 > 모집요강 (구인인증번호:K170061809070002)
+[DEBUG|worknetCrawlerBot_just_windows.py:437] 2018-09-07 10:58:34,255 > $$: 6
+[DEBUG|worknetCrawlerBot_just_windows.py:442] 2018-09-07 10:58:34,255 > infoTable_No1
+[DEBUG|worknetCrawlerBot_just_windows.py:480] 2018-09-07 10:58:34,257 > -모집요강
+[DEBUG|worknetCrawlerBot_just_windows.py:489] 2018-09-07 10:58:34,258 > 모집요강 : 11
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:34,260 > 자재·구매·물류 사무원(028300)    직업정보 훈련정보 자격정보 
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:34,262 >  
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:34,264 > -    
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:34,266 >     ▶물류출하관리(오프라인&온라인포함)재고관리&문서작성(ms오피스&엑셀&워드) ▶수습기간3개월적용되며동기간동안급여는제시급여와동일함.   
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:34,268 >     관계없음       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:34,270 >        학력무관             
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:34,273 >     기간의 정함이 없는 근로계약          / 파견근로 비희망      
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:34,275 >     2명      지원현황 : 총0명    (취업알선기관 알선       취업알선기관 알선 관할고용센터(또는 취업알선기관)의 취업알선 서비스를 통해 알선된 알선자수.관할 취업알선기관의 취업알선담당자에게 서비스를 요청하시기 바랍니다.        : 0 명&    이메일 입사지원       이메일입사지원 워크넷 웹사이트를 통해 이메일입사지원한 지원자수. 채용정보상세화면 상/하단 이메일입사지원 기능을 이용하시기 바랍니다.        : 0 명)     * 한 지원자가 알선과 이메일입사지원을 모두 한 경우 총인원수에서는 한명으로 카운트됩니다.   
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:34,277 >     충청남도             공주시         탄천면 금백로1389          
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:34,279 > -
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:34,281 > -          
+[DEBUG|worknetCrawlerBot_just_windows.py:764] 2018-09-07 10:58:34,281 > #인근전철역,-          
+[DEBUG|worknetCrawlerBot_just_windows.py:765] 2018-09-07 10:58:34,281 > 인근전철역:-          
+[DEBUG|worknetCrawlerBot_just_windows.py:442] 2018-09-07 10:58:34,281 > infoTable_No2
+[DEBUG|worknetCrawlerBot_just_windows.py:480] 2018-09-07 10:58:34,283 > -근무환경및복리후생
+[DEBUG|worknetCrawlerBot_just_windows.py:489] 2018-09-07 10:58:34,284 > 근무환경및복리후생 : 6
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:34,286 >         연봉    20&000&000원 이상                                상여금 별도 : 0%                면접 후 결정 가능       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:34,288 >     1식   
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:34,290 >                                (오전)9시00분~(오후)6시00분               소정근로시간 : 40시간    ※ "소정근로시간" 이란 근로자와 사용자가 정한 1주 동안 근로하는 근로시간을 말합니다.  
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:34,292 >       주 5일 근무         
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:34,294 >         국민연금     고용보험     산재보험     건강보험    
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:34,296 >     퇴직금   
+[DEBUG|worknetCrawlerBot_just_windows.py:764] 2018-09-07 10:58:34,296 > #퇴직금지급방법,    퇴직금   
+[DEBUG|worknetCrawlerBot_just_windows.py:765] 2018-09-07 10:58:34,296 > 퇴직금지급방법:    퇴직금   
+[DEBUG|worknetCrawlerBot_just_windows.py:442] 2018-09-07 10:58:34,296 > infoTable_No3
+[DEBUG|worknetCrawlerBot_just_windows.py:480] 2018-09-07 10:58:34,298 > -전형방법
+[DEBUG|worknetCrawlerBot_just_windows.py:489] 2018-09-07 10:58:34,299 > 전형방법 : 5
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:34,301 >     채용시까지       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:34,303 >     서류&면접   
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:34,306 >            방문&팩스        
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:34,308 >     이력서&자기소개서 
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:34,310 >            등록된 파일이 없습니다.      
+[DEBUG|worknetCrawlerBot_just_windows.py:764] 2018-09-07 10:58:34,310 > #제출서류양식첨부,           등록된 파일이 없습니다.      
+[DEBUG|worknetCrawlerBot_just_windows.py:765] 2018-09-07 10:58:34,310 > 제출서류양식첨부:           등록된 파일이 없습니다.      
+[DEBUG|worknetCrawlerBot_just_windows.py:442] 2018-09-07 10:58:34,310 > infoTable_No4
+[DEBUG|worknetCrawlerBot_just_windows.py:480] 2018-09-07 10:58:34,312 > -우대사항
+[DEBUG|worknetCrawlerBot_just_windows.py:489] 2018-09-07 10:58:34,312 > 우대사항 : 10
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:34,315 >     -       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:34,317 > -               
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:34,319 >  기타 : *지게차관련 자격증 소지자 우대           
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:34,321 >         문서작성   
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:34,323 >         인근거주자&차량소지자&청년층우대   
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:34,325 >     비희망       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:34,327 >               -         
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:34,329 >     ▶군필자우대&자유복장   
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:34,331 > -       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:34,333 > -       
+[DEBUG|worknetCrawlerBot_just_windows.py:764] 2018-09-07 10:58:34,333 > #장애인편의시설,-       
+[DEBUG|worknetCrawlerBot_just_windows.py:765] 2018-09-07 10:58:34,334 > 장애인편의시설:-       
+[DEBUG|worknetCrawlerBot_just_windows.py:442] 2018-09-07 10:58:34,334 > infoTable_No5
+[DEBUG|worknetCrawlerBot_just_windows.py:480] 2018-09-07 10:58:34,335 > -기타입력사항
+[DEBUG|worknetCrawlerBot_just_windows.py:489] 2018-09-07 10:58:34,337 > 기타입력사항 : 1
+[DEBUG|worknetCrawlerBot_just_windows.py:537] 2018-09-07 10:58:34,339 >         ◆당사자간합의할경우관련법률에의거연장근로할수있고&위에제시된채용조건(수습기간/급여등)은회사사정에따라변경될수있으므로&자세한사항은사업장으로문의바랍니다   
+[DEBUG|worknetCrawlerBot_just_windows.py:442] 2018-09-07 10:58:34,339 > infoTable_No6
+[DEBUG|worknetCrawlerBot_just_windows.py:480] 2018-09-07 10:58:34,340 > -회사주소
+[DEBUG|worknetCrawlerBot_just_windows.py:489] 2018-09-07 10:58:34,341 > 회사주소 : 2
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:34,343 >              (314853) 충청남도 공주시 탄천면 금백로 1389           
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:34,346 >     (32611)             충청남도     공주시   탄천면 금백로  1389               ※ 채용정보의 근무예정지 지도가 등록되지 않았습니다. 
+[DEBUG|worknetCrawlerBot_just_windows.py:764] 2018-09-07 10:58:34,346 > #근무예정지지도,    (32611)             충청남도     공주시   탄천면 금백로  1389               ※ 채용정보의 근무예정지 지도가 등록되지 않았습니다. 
+[DEBUG|worknetCrawlerBot_just_windows.py:765] 2018-09-07 10:58:34,346 > 근무예정지지도:    (32611)             충청남도     공주시   탄천면 금백로  1389               ※ 채용정보의 근무예정지 지도가 등록되지 않았습니다. 
+[DEBUG|worknetCrawlerBot_just_windows.py:858] 2018-09-07 10:58:34,359 > E-mail:       cptmxj1@naver.com     
+[DEBUG|worknetCrawlerBot_just_windows.py:938] 2018-09-07 10:58:34,366 > DB INSERT : K170061809070002,         -             ,물류출하관리				,7,0,,         -             ,         -             ,         -             ,         -             ,         -             ,         -             ,         -             ,             (314853) 충청남도 공주시 탄천면 금백로 1389           ,         -             ,자재·구매·물류 사무원(028300)    직업정보 훈련정보 자격정보 , ,-    ,    ▶물류출하관리(오프라인&온라인포함)재고관리&문서작성(ms오피스&엑셀&워드) ▶수습기간3개월적용되며동기간동안급여는제시급여와동일함.   ,    관계없음       ,       학력무관             ,,,    기간의 정함이 없는 근로계약          / 파견근로 비희망      ,    2명      지원현황 : 총0명    (취업알선기관 알선       취업알선기관 알선 관할고용센터(또는 취업알선기관)의 취업알선 서비스를 통해 알선된 알선자수.관할 취업알선기관의 취업알선담당자에게 서비스를 요청하시기 바랍니다.        : 0 명&    이메일 입사지원       이메일입사지원 워크넷 웹사이트를 통해 이메일입사지원한 지원자수. 채용정보상세화면 상/하단 이메일입사지원 기능을 이용하시기 바랍니다.        : 0 명)     * 한 지원자가 알선과 이메일입사지원을 모두 한 경우 총인원수에서는 한명으로 카운트됩니다.   ,    충청남도             공주시         탄천면 금백로1389          ,-,-          ,        연봉    20&000&000원 이상                                상여금 별도 : 0%                면접 후 결정 가능       ,                               (오전)9시00분~(오후)6시00분               소정근로시간 : 40시간    ※ "소정근로시간" 이란 근로자와 사용자가 정한 1주 동안 근로하는 근로시간을 말합니다.  ,      주 5일 근무         ,        국민연금     고용보험     산재보험     건강보험    ,    퇴직금   ,    채용시까지       ,    서류&면접   ,           방문&팩스        ,    이력서&자기소개서 ,           등록된 파일이 없습니다.      ,    -       ,-               , 기타 : *지게차관련 자격증 소지자 우대           ,        문서작성   ,        인근거주자&차량소지자&청년층우대   ,    비희망       ,              -         ,    ▶군필자우대&자유복장   ,-       ,-       ,        ◆당사자간합의할경우관련법률에의거연장근로할수있고&위에제시된채용조건(수습기간/급여등)은회사사정에따라변경될수있으므로&자세한사항은사업장으로문의바랍니다   ,-  / 송병수 부장   ,     041-855-8511      ,       010-7140-3407     ,   041-881-9313    ,       cptmxj1@naver.com     
+[DEBUG|worknetCrawlerBot_just_windows.py:1017] 2018-09-07 10:58:34,442 > DB INSERT COUNT : 1
+[DEBUG|worknetCrawlerBot_just_windows.py:1020] 2018-09-07 10:58:34,442 > DB insert result : True
+[DEBUG|worknetCrawlerBot_just_windows.py:1120] 2018-09-07 10:58:37,003 > 개별 공고 정보 검색 시작
+[DEBUG|worknetCrawlerBot_just_windows.py:1144] 2018-09-07 10:58:37,035 > 구인인증번호|회사명|공고내용: KF11241809070004|VALIDATION|(주)사옹원|★9.12.(수) 오후 2시 현장면접 음성고용복지+센터★생산직 직원 모집
+[DEBUG|worknetCrawlerBot_just_windows.py:1151] 2018-09-07 10:58:37,035 > 구인인증번호: KF11241809070004
+[DEBUG|worknetCrawlerBot_just_windows.py:1163] 2018-09-07 10:58:37,037 > 처음 크롤링하는 취업 공고
+[DEBUG|worknetCrawlerBot_just_windows.py:1036] 2018-09-07 10:58:37,782 > 스크롤이 가능한 페이지
+[DEBUG|worknetCrawlerBot_just_windows.py:140] 2018-09-07 10:58:39,888 > 조회수:4명, 지원자:0명
+[DEBUG|worknetCrawlerBot_just_windows.py:147] 2018-09-07 10:58:39,891 > 회사 이미지 사용하지 않음
+[DEBUG|worknetCrawlerBot_just_windows.py:1120] 2018-09-07 10:58:39,892 > 개별 공고 정보 검색 시작
+[DEBUG|worknetCrawlerBot_just_windows.py:1144] 2018-09-07 10:58:39,924 > 구인인증번호|회사명|공고내용: K151341809070009|VALIDATION|디오베|홈쇼핑 쥬얼리상품 관리 / CS / 방송지원자 모집
+[DEBUG|worknetCrawlerBot_just_windows.py:1151] 2018-09-07 10:58:39,924 > 구인인증번호: K151341809070009
+[DEBUG|worknetCrawlerBot_just_windows.py:1163] 2018-09-07 10:58:39,926 > 처음 크롤링하는 취업 공고
+[DEBUG|worknetCrawlerBot_just_windows.py:1036] 2018-09-07 10:58:40,719 > 스크롤이 가능한 페이지
+[DEBUG|worknetCrawlerBot_just_windows.py:140] 2018-09-07 10:58:42,845 > 조회수:5명, 지원자:0명
+[DEBUG|worknetCrawlerBot_just_windows.py:152] 2018-09-07 10:58:42,848 > 회사 이미지 저장 디렉토리 : /framework/filedownload/getImage.do?filePathName=QXxK5g%2F%2BenuZGfIDUFPYJfxcdakoVc8x6hGnSZVO0DSLuCsqeKJkwELD6RpqNlzvlsZAWULa5%2FUTozL9Y%2FlC0g%3D%3D
+[DEBUG|worknetCrawlerBot_just_windows.py:231] 2018-09-07 10:58:42,883 > 7-0.첨부자료:         -             
+[DEBUG|worknetCrawlerBot_just_windows.py:351] 2018-09-07 10:58:42,887 > #지원자격
+[DEBUG|worknetCrawlerBot_just_windows.py:351] 2018-09-07 10:58:42,894 > #근무조건
+[DEBUG|worknetCrawlerBot_just_windows.py:351] 2018-09-07 10:58:42,902 > #고용형태
+[DEBUG|worknetCrawlerBot_just_windows.py:434] 2018-09-07 10:58:42,910 > 모집요강 (구인인증번호:K151341809070009)
+[DEBUG|worknetCrawlerBot_just_windows.py:437] 2018-09-07 10:58:42,911 > $$: 6
+[DEBUG|worknetCrawlerBot_just_windows.py:442] 2018-09-07 10:58:42,911 > infoTable_No1
+[DEBUG|worknetCrawlerBot_just_windows.py:480] 2018-09-07 10:58:42,913 > -모집요강
+[DEBUG|worknetCrawlerBot_just_windows.py:489] 2018-09-07 10:58:42,914 > 모집요강 : 11
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:42,916 > 생산·품질 사무원 및 관리원(그 외 분야)(028406)    직업정보 훈련정보 자격정보 
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:42,918 >  
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:42,922 >     콜센터 상담원(콜센터·고객센터·CS센터)& 창고 관리원(자재 검수원 포함)
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:42,926 >     디오베(DEOBE)는2016년에설립된회사로사원수7명규모의소기업입니다. 귀금속&시계&전자상거래업사업을하고있으며&현재아임쇼핑(공영홈쇼핑)에쥬얼리(14k&18k&악세사리)제품방송을하고있습니다.  1.홈쇼핑방송지원및물류관리 (업무내용-홈쇼핑방송진행과관련된제반업무/검수및포장/입출고재고관리/방송지원)  2.제출서류-이력서&자기소개서(경력위주로사실대로기재요망&★희망연봉기재요망필)   
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:42,930 >     관계없음       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:42,935 >        학력무관             
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:42,939 >     기간의 정함이 없는 근로계약          / 파견근로 비희망      
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:42,942 >     1명      지원현황 : 총0명    (취업알선기관 알선       취업알선기관 알선 관할고용센터(또는 취업알선기관)의 취업알선 서비스를 통해 알선된 알선자수.관할 취업알선기관의 취업알선담당자에게 서비스를 요청하시기 바랍니다.        : 0 명&    이메일 입사지원       이메일입사지원 워크넷 웹사이트를 통해 이메일입사지원한 지원자수. 채용정보상세화면 상/하단 이메일입사지원 기능을 이용하시기 바랍니다.        : 0 명)     * 한 지원자가 알선과 이메일입사지원을 모두 한 경우 총인원수에서는 한명으로 카운트됩니다.   
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:42,944 >     경기도             안양시         동안구 안양천동로82-3& 3층 디오베 (호계동)         
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:42,947 > -
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:42,949 >     수도권 1호선  명학  2번출구 1KM   
+[DEBUG|worknetCrawlerBot_just_windows.py:764] 2018-09-07 10:58:42,949 > #인근전철역,    수도권 1호선  명학  2번출구 1KM   
+[DEBUG|worknetCrawlerBot_just_windows.py:765] 2018-09-07 10:58:42,949 > 인근전철역:    수도권 1호선  명학  2번출구 1KM   
+[DEBUG|worknetCrawlerBot_just_windows.py:442] 2018-09-07 10:58:42,949 > infoTable_No2
+[DEBUG|worknetCrawlerBot_just_windows.py:480] 2018-09-07 10:58:42,951 > -근무환경및복리후생
+[DEBUG|worknetCrawlerBot_just_windows.py:489] 2018-09-07 10:58:42,952 > 근무환경및복리후생 : 6
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:42,954 >         연봉    20&000&000원 이상      ~ 30&000&000원 이하                                상여금 별도 : 0%                면접 후 결정 가능       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:42,956 >     미제공   
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:42,959 >                                (오전)9시00분~(오후)6시00분               소정근로시간 : 40시간    ※ "소정근로시간" 이란 근로자와 사용자가 정한 1주 동안 근로하는 근로시간을 말합니다.  
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:42,961 >       주 5일 근무         
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:42,963 >         국민연금     고용보험     산재보험     건강보험    
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:42,965 >     퇴직금   
+[DEBUG|worknetCrawlerBot_just_windows.py:764] 2018-09-07 10:58:42,965 > #퇴직금지급방법,    퇴직금   
+[DEBUG|worknetCrawlerBot_just_windows.py:765] 2018-09-07 10:58:42,966 > 퇴직금지급방법:    퇴직금   
+[DEBUG|worknetCrawlerBot_just_windows.py:442] 2018-09-07 10:58:42,966 > infoTable_No3
+[DEBUG|worknetCrawlerBot_just_windows.py:480] 2018-09-07 10:58:42,968 > -전형방법
+[DEBUG|worknetCrawlerBot_just_windows.py:489] 2018-09-07 10:58:42,969 > 전형방법 : 5
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:42,971 >                   2018년 09월 21일                     D-14 
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:42,973 >     서류&면접   
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:42,975 >            이메일     이메일 입사지원    
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:42,978 >     이력서&자기소개서 
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:42,980 >            등록된 파일이 없습니다.      
+[DEBUG|worknetCrawlerBot_just_windows.py:764] 2018-09-07 10:58:42,980 > #제출서류양식첨부,           등록된 파일이 없습니다.      
+[DEBUG|worknetCrawlerBot_just_windows.py:765] 2018-09-07 10:58:42,980 > 제출서류양식첨부:           등록된 파일이 없습니다.      
+[DEBUG|worknetCrawlerBot_just_windows.py:442] 2018-09-07 10:58:42,980 > infoTable_No4
+[DEBUG|worknetCrawlerBot_just_windows.py:480] 2018-09-07 10:58:42,982 > -우대사항
+[DEBUG|worknetCrawlerBot_just_windows.py:489] 2018-09-07 10:58:42,983 > 우대사항 : 10
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:42,986 >     -       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:42,988 > -               
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:42,990 >                     -   
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:42,992 >     -       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:42,995 >         운전가능자&인근거주자&청년층우대   
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:42,997 >     비희망       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:42,999 >               -         
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:43,001 > -       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:43,003 > -       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:43,005 > -       
+[DEBUG|worknetCrawlerBot_just_windows.py:764] 2018-09-07 10:58:43,006 > #장애인편의시설,-       
+[DEBUG|worknetCrawlerBot_just_windows.py:765] 2018-09-07 10:58:43,006 > 장애인편의시설:-       
+[DEBUG|worknetCrawlerBot_just_windows.py:442] 2018-09-07 10:58:43,006 > infoTable_No5
+[DEBUG|worknetCrawlerBot_just_windows.py:480] 2018-09-07 10:58:43,008 > -기타입력사항
+[DEBUG|worknetCrawlerBot_just_windows.py:489] 2018-09-07 10:58:43,009 > 기타입력사항 : 1
+[DEBUG|worknetCrawlerBot_just_windows.py:537] 2018-09-07 10:58:43,011 >     -       
+[DEBUG|worknetCrawlerBot_just_windows.py:442] 2018-09-07 10:58:43,011 > infoTable_No6
+[DEBUG|worknetCrawlerBot_just_windows.py:480] 2018-09-07 10:58:43,013 > -회사주소
+[DEBUG|worknetCrawlerBot_just_windows.py:489] 2018-09-07 10:58:43,014 > 회사주소 : 3
+[DEBUG|worknetCrawlerBot_just_windows.py:572] 2018-09-07 10:58:43,014 > infoTable_content_No.1
+[DEBUG|worknetCrawlerBot_just_windows.py:656] 2018-09-07 10:58:43,016 >              (14042) 경기도 안양시 동안구 안양천동로 82-3& 3층 디오베 (호계동)          
+[DEBUG|worknetCrawlerBot_just_windows.py:572] 2018-09-07 10:58:43,017 > infoTable_content_No.2
+[DEBUG|worknetCrawlerBot_just_windows.py:656] 2018-09-07 10:58:43,020 >     (14042)             경기도     안양시   동안구 안양천동로  82-3&  3층 디오베  (호계동)           ※ 지도 정보는 다음 지도 API를 이용하여 제공하고 있습니다. 
+[DEBUG|worknetCrawlerBot_just_windows.py:858] 2018-09-07 10:58:43,046 > E-mail:       deobe8148@daum.net     
+[DEBUG|worknetCrawlerBot_just_windows.py:938] 2018-09-07 10:58:43,048 > DB INSERT : K151341809070009,         -             ,홈쇼핑쥬얼리상품관리/CS/방송지원자모집				,5,0,/framework/filedownload/getImage.do?filePathName=QXxK5g%2F%2BenuZGfIDUFPYJfxcdakoVc8x6hGnSZVO0DSLuCsqeKJkwELD6RpqNlzvlsZAWULa5%2FUTozL9Y%2FlC0g%3D%3D,         -             ,         -             ,         -             ,         -             ,         -             ,         -             ,         -             ,         -             ,         -             ,생산·품질 사무원 및 관리원(그 외 분야)(028406)    직업정보 훈련정보 자격정보 , ,    콜센터 상담원(콜센터·고객센터·CS센터)& 창고 관리원(자재 검수원 포함),    디오베(DEOBE)는2016년에설립된회사로사원수7명규모의소기업입니다. 귀금속&시계&전자상거래업사업을하고있으며&현재아임쇼핑(공영홈쇼핑)에쥬얼리(14k&18k&악세사리)제품방송을하고있습니다.  1.홈쇼핑방송지원및물류관리 (업무내용-홈쇼핑방송진행과관련된제반업무/검수및포장/입출고재고관리/방송지원)  2.제출서류-이력서&자기소개서(경력위주로사실대로기재요망&★희망연봉기재요망필)   ,    관계없음       ,       학력무관             ,,,    기간의 정함이 없는 근로계약          / 파견근로 비희망      ,    1명      지원현황 : 총0명    (취업알선기관 알선       취업알선기관 알선 관할고용센터(또는 취업알선기관)의 취업알선 서비스를 통해 알선된 알선자수.관할 취업알선기관의 취업알선담당자에게 서비스를 요청하시기 바랍니다.        : 0 명&    이메일 입사지원       이메일입사지원 워크넷 웹사이트를 통해 이메일입사지원한 지원자수. 채용정보상세화면 상/하단 이메일입사지원 기능을 이용하시기 바랍니다.        : 0 명)     * 한 지원자가 알선과 이메일입사지원을 모두 한 경우 총인원수에서는 한명으로 카운트됩니다.   ,    경기도             안양시         동안구 안양천동로82-3& 3층 디오베 (호계동)         ,-,    수도권 1호선  명학  2번출구 1KM   ,        연봉    20&000&000원 이상      ~ 30&000&000원 이하                                상여금 별도 : 0%                면접 후 결정 가능       ,                               (오전)9시00분~(오후)6시00분               소정근로시간 : 40시간    ※ "소정근로시간" 이란 근로자와 사용자가 정한 1주 동안 근로하는 근로시간을 말합니다.  ,      주 5일 근무         ,        국민연금     고용보험     산재보험     건강보험    ,    퇴직금   ,                  2018년 09월 21일                     D-14 ,    서류&면접   ,           이메일     이메일 입사지원    ,    이력서&자기소개서 ,           등록된 파일이 없습니다.      ,    -       ,-               ,                    -   ,    -       ,        운전가능자&인근거주자&청년층우대   ,    비희망       ,              -         ,-       ,-       ,-       ,    (14042)             경기도     안양시   동안구 안양천동로  82-3&  3층 디오베  (호계동)           ※ 지도 정보는 다음 지도 API를 이용하여 제공하고 있습니다. , 관리부 / 김진희   ,     070-4757-3277      ,-,   02-6337-1034    ,       deobe8148@daum.net     
+[DEBUG|worknetCrawlerBot_just_windows.py:1017] 2018-09-07 10:58:43,113 > DB INSERT COUNT : 1
+[DEBUG|worknetCrawlerBot_just_windows.py:1020] 2018-09-07 10:58:43,113 > DB insert result : True
+[DEBUG|worknetCrawlerBot_just_windows.py:1120] 2018-09-07 10:58:45,547 > 개별 공고 정보 검색 시작
+[DEBUG|worknetCrawlerBot_just_windows.py:1144] 2018-09-07 10:58:45,580 > 구인인증번호|회사명|공고내용: KEC0121809070001|VALIDATION|연우테크|9.12(수) 오후1시 2018 김천 일자리 한마당 행사 실시
+[DEBUG|worknetCrawlerBot_just_windows.py:1151] 2018-09-07 10:58:45,581 > 구인인증번호: KEC0121809070001
+[DEBUG|worknetCrawlerBot_just_windows.py:1163] 2018-09-07 10:58:45,582 > 처음 크롤링하는 취업 공고
+[DEBUG|worknetCrawlerBot_just_windows.py:1036] 2018-09-07 10:58:46,363 > 스크롤이 가능한 페이지
+[DEBUG|worknetCrawlerBot_just_windows.py:140] 2018-09-07 10:58:48,465 > 조회수:8명, 지원자:0명
+[DEBUG|worknetCrawlerBot_just_windows.py:147] 2018-09-07 10:58:48,468 > 회사 이미지 사용하지 않음
+[DEBUG|worknetCrawlerBot_just_windows.py:231] 2018-09-07 10:58:48,501 > 7-0.첨부자료: 연우테크 사업자등록증.jpeg 
+[DEBUG|worknetCrawlerBot_just_windows.py:351] 2018-09-07 10:58:48,509 > #지원자격
+[DEBUG|worknetCrawlerBot_just_windows.py:351] 2018-09-07 10:58:48,523 > #근무조건
+[DEBUG|worknetCrawlerBot_just_windows.py:351] 2018-09-07 10:58:48,564 > #고용형태
+[DEBUG|worknetCrawlerBot_just_windows.py:434] 2018-09-07 10:58:48,572 > 모집요강 (구인인증번호:KEC0121809070001)
+[DEBUG|worknetCrawlerBot_just_windows.py:437] 2018-09-07 10:58:48,573 > $$: 6
+[DEBUG|worknetCrawlerBot_just_windows.py:442] 2018-09-07 10:58:48,573 > infoTable_No1
+[DEBUG|worknetCrawlerBot_just_windows.py:480] 2018-09-07 10:58:48,575 > -모집요강
+[DEBUG|worknetCrawlerBot_just_windows.py:489] 2018-09-07 10:58:48,576 > 모집요강 : 11
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:48,578 > 제조 단순 종사원(890000)    직업정보 훈련정보 자격정보 
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:48,580 >  
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:48,582 >     자동차 부품 조립·검사원
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:48,584 >     *2018김천일자리한마당행사실시* -일시:2018.09.12.(수)오후1시~5시 -장소:김천시실내체육관 -준비물:이력서(사진부착) -행사내용:구인&구직자간부스별1:1현장면접  *단순조립업무&시급:7&530원 *근무시간:08:00~19:30   
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:48,586 >     관계없음       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:48,588 >        고졸             
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:48,590 >     기간의 정함이 없는 근로계약          / 파견근로 비희망      
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:48,593 >     5명      지원현황 : 총0명    (취업알선기관 알선       취업알선기관 알선 관할고용센터(또는 취업알선기관)의 취업알선 서비스를 통해 알선된 알선자수.관할 취업알선기관의 취업알선담당자에게 서비스를 요청하시기 바랍니다.        : 0 명&    이메일 입사지원       이메일입사지원 워크넷 웹사이트를 통해 이메일입사지원한 지원자수. 채용정보상세화면 상/하단 이메일입사지원 기능을 이용하시기 바랍니다.        : 0 명)     * 한 지원자가 알선과 이메일입사지원을 모두 한 경우 총인원수에서는 한명으로 카운트됩니다.   
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:48,595 >     경상북도             김천시         어모면 산업단지1로45          
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:48,597 > -
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:48,599 > -          
+[DEBUG|worknetCrawlerBot_just_windows.py:764] 2018-09-07 10:58:48,599 > #인근전철역,-          
+[DEBUG|worknetCrawlerBot_just_windows.py:765] 2018-09-07 10:58:48,599 > 인근전철역:-          
+[DEBUG|worknetCrawlerBot_just_windows.py:442] 2018-09-07 10:58:48,599 > infoTable_No2
+[DEBUG|worknetCrawlerBot_just_windows.py:480] 2018-09-07 10:58:48,601 > -근무환경및복리후생
+[DEBUG|worknetCrawlerBot_just_windows.py:489] 2018-09-07 10:58:48,602 > 근무환경및복리후생 : 6
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:48,604 >         시급    7&530원 이상      ~ 7&530원 이하                       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:48,606 >     1식   
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:48,608 >                                (오전)8시00분~(오후)7시30분                
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:48,610 >       주 5일 근무         
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:48,612 >         국민연금     고용보험     산재보험     건강보험    
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:48,614 >     퇴직연금   
+[DEBUG|worknetCrawlerBot_just_windows.py:764] 2018-09-07 10:58:48,614 > #퇴직금지급방법,    퇴직연금   
+[DEBUG|worknetCrawlerBot_just_windows.py:765] 2018-09-07 10:58:48,614 > 퇴직금지급방법:    퇴직연금   
+[DEBUG|worknetCrawlerBot_just_windows.py:442] 2018-09-07 10:58:48,615 > infoTable_No3
+[DEBUG|worknetCrawlerBot_just_windows.py:480] 2018-09-07 10:58:48,616 > -전형방법
+[DEBUG|worknetCrawlerBot_just_windows.py:489] 2018-09-07 10:58:48,617 > 전형방법 : 5
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:48,620 >                   2018년 09월 12일                     D-5 
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:48,622 >     서류&면접   
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:48,624 >            방문&기타((-18.09.12(수)오후1시2018김천일자리한마당채용행사참여업체로당일행사장에오시면현장면접가능합니다.))        
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:48,626 >     이력서&기타(등본& 건강보험자격득실확인서 (건강보험공단김천지사1577-1000주민번호뒷자리삭제요청)) 
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:48,628 >            등록된 파일이 없습니다.      
+[DEBUG|worknetCrawlerBot_just_windows.py:764] 2018-09-07 10:58:48,628 > #제출서류양식첨부,           등록된 파일이 없습니다.      
+[DEBUG|worknetCrawlerBot_just_windows.py:765] 2018-09-07 10:58:48,628 > 제출서류양식첨부:           등록된 파일이 없습니다.      
+[DEBUG|worknetCrawlerBot_just_windows.py:442] 2018-09-07 10:58:48,628 > infoTable_No4
+[DEBUG|worknetCrawlerBot_just_windows.py:480] 2018-09-07 10:58:48,630 > -우대사항
+[DEBUG|worknetCrawlerBot_just_windows.py:489] 2018-09-07 10:58:48,631 > 우대사항 : 10
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:48,633 >     -       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:48,635 > -               
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:48,637 >                     -   
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:48,639 >     -       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:48,641 >     -       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:48,643 >     비희망       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:48,646 >               -         
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:48,648 > -       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:48,650 > -       
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:48,652 > -       
+[DEBUG|worknetCrawlerBot_just_windows.py:764] 2018-09-07 10:58:48,652 > #장애인편의시설,-       
+[DEBUG|worknetCrawlerBot_just_windows.py:765] 2018-09-07 10:58:48,652 > 장애인편의시설:-       
+[DEBUG|worknetCrawlerBot_just_windows.py:442] 2018-09-07 10:58:48,652 > infoTable_No5
+[DEBUG|worknetCrawlerBot_just_windows.py:480] 2018-09-07 10:58:48,654 > -기타입력사항
+[DEBUG|worknetCrawlerBot_just_windows.py:489] 2018-09-07 10:58:48,655 > 기타입력사항 : 1
+[DEBUG|worknetCrawlerBot_just_windows.py:537] 2018-09-07 10:58:48,657 >     -       
+[DEBUG|worknetCrawlerBot_just_windows.py:442] 2018-09-07 10:58:48,657 > infoTable_No6
+[DEBUG|worknetCrawlerBot_just_windows.py:480] 2018-09-07 10:58:48,659 > -회사주소
+[DEBUG|worknetCrawlerBot_just_windows.py:489] 2018-09-07 10:58:48,660 > 회사주소 : 2
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:48,662 >              (39536) 경상북도 김천시 어모면 산업단지1로 45& 서연오토비전 內 연우테크           
+[DEBUG|worknetCrawlerBot_just_windows.py:708] 2018-09-07 10:58:48,664 >     (39536)             경상북도     김천시   어모면 산업단지1로  45               ※ 채용정보의 근무예정지 지도가 등록되지 않았습니다. 
+[DEBUG|worknetCrawlerBot_just_windows.py:764] 2018-09-07 10:58:48,664 > #근무예정지지도,    (39536)             경상북도     김천시   어모면 산업단지1로  45               ※ 채용정보의 근무예정지 지도가 등록되지 않았습니다. 
+[DEBUG|worknetCrawlerBot_just_windows.py:765] 2018-09-07 10:58:48,664 > 근무예정지지도:    (39536)             경상북도     김천시   어모면 산업단지1로  45               ※ 채용정보의 근무예정지 지도가 등록되지 않았습니다. 
+[DEBUG|worknetCrawlerBot_just_windows.py:858] 2018-09-07 10:58:48,677 > E-mail:-
+[DEBUG|worknetCrawlerBot_just_windows.py:938] 2018-09-07 10:58:48,680 > DB INSERT : KEC0121809070001, 연우테크 사업자등록증.jpeg ,9.12(수)오후1시2018김천일자리한마당행사실시				,8,0,, 연우테크 사업자등록증.jpeg , 연우테크 사업자등록증.jpeg , 연우테크 사업자등록증.jpeg , 연우테크 사업자등록증.jpeg , 연우테크 사업자등록증.jpeg , 연우테크 사업자등록증.jpeg , 연우테크 사업자등록증.jpeg ,             (39536) 경상북도 김천시 어모면 산업단지1로 45& 서연오토비전 內 연우테크           , 연우테크 사업자등록증.jpeg ,제조 단순 종사원(890000)    직업정보 훈련정보 자격정보 , ,    자동차 부품 조립·검사원,    *2018김천일자리한마당행사실시* -일시:2018.09.12.(수)오후1시~5시 -장소:김천시실내체육관 -준비물:이력서(사진부착) -행사내용:구인&구직자간부스별1:1현장면접  *단순조립업무&시급:7&530원 *근무시간:08:00~19:30   ,    관계없음       ,       고졸             ,,,    기간의 정함이 없는 근로계약          / 파견근로 비희망      ,    5명      지원현황 : 총0명    (취업알선기관 알선       취업알선기관 알선 관할고용센터(또는 취업알선기관)의 취업알선 서비스를 통해 알선된 알선자수.관할 취업알선기관의 취업알선담당자에게 서비스를 요청하시기 바랍니다.        : 0 명&    이메일 입사지원       이메일입사지원 워크넷 웹사이트를 통해 이메일입사지원한 지원자수. 채용정보상세화면 상/하단 이메일입사지원 기능을 이용하시기 바랍니다.        : 0 명)     * 한 지원자가 알선과 이메일입사지원을 모두 한 경우 총인원수에서는 한명으로 카운트됩니다.   ,    경상북도             김천시         어모면 산업단지1로45          ,-,-          ,        시급    7&530원 이상      ~ 7&530원 이하                       ,                               (오전)8시00분~(오후)7시30분                ,      주 5일 근무         ,        국민연금     고용보험     산재보험     건강보험    ,    퇴직연금   ,                  2018년 09월 12일                     D-5 ,    서류&면접   ,           방문&기타((-18.09.12(수)오후1시2018김천일자리한마당채용행사참여업체로당일행사장에오시면현장면접가능합니다.))        ,    이력서&기타(등본& 건강보험자격득실확인서 (건강보험공단김천지사1577-1000주민번호뒷자리삭제요청)) ,           등록된 파일이 없습니다.      ,    -       ,-               ,                    -   ,    -       ,    -       ,    비희망       ,              -         ,-       ,-       ,-       ,    -       ,-  / 김강웅대리   ,-    ,       010-2004-2196     ,-    ,-
+[DEBUG|worknetCrawlerBot_just_windows.py:1017] 2018-09-07 10:58:48,769 > DB INSERT COUNT : 1
+[DEBUG|worknetCrawlerBot_just_windows.py:1020] 2018-09-07 10:58:48,769 > DB insert result : True
