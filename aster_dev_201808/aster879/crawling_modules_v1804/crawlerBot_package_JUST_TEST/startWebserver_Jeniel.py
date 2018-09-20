@@ -5,12 +5,8 @@ import json
 import logging
 import urllib.parse
 from http.server import HTTPServer, BaseHTTPRequestHandler
-
-# from PycharmProjects.crawling_modules_v1804.crawlerBot_package_JUST_TEST.NotUsingJSONDATAType import facebookCrawlerBot_new as snsScrapBot
-# from PycharmProjects.crawling_modules_v1804.crawlerBot_package_JUST_TEST.NotUsingJSONDATAType.worknet_just import facebookCrawlerBot_jeniel_GODOHWA as snsScrapBot
-from PycharmProjects.crawling_modules_v1804.crawlerBot_package_JUST_TEST.NotUsingJSONDATAType import \
-    facebookCrawlerBot_jeniel as snsScrapBot
-
+#from aster_dev_201808.aster879.crawling_modules_v1804.crawlerBot_package_JUST_TEST.NotUsingJSONDATAType import facebookCrawlerBot_jeniel_20180911 as snsScrapBot
+from aster_dev_201808.aster879.crawling_modules_v1804.crawlerBot_package_JUST_TEST.NotUsingJSONDATAType import facebookCrawlerBot_jeniel_20180920 as snsScrapBot
 
 class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
 
@@ -73,28 +69,9 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
                 print('kakaoStory SNS 주소가 존재하지 않습니다.')
                 kakaoStory_USERURL = None
 
-            '''
-            if snsURL_ADDR_fromWeb[1]:
-                naverBlog_USERURL_tot= snsURL_ADDR_fromWeb[1].split("=")[1].replace(" ", "")
-
-                try:
-                    print('naverBlog SNS 주소가 존재합니다.')
-                    naverBlog_USERURL_pre = naverBlog_USERURL_tot.split('//')[1]
-                    naverBlog_USERURL = naverBlog_USERURL_pre.split('/')[1]
-                    userData['naver_blog'] = naverBlog_USERURL
-                except Exception as e:
-                    print('naverBlog SNS 주소가 존재하지 않습니다.', e)
-                    naverBlog_USERURL = None
-            else:
-                print('naverBlog SNS 주소가 존재하지 않습니다.')
-                naverBlog_USERURL = None
-            '''
             naverBlog_USERURL = None
 
             if snsURL_ADDR_fromWeb[2]:
-
-                #type 01 : facebook=https://www.facebook.com/danny.woo.33
-                #type 02 : facebook=https://www.facebook.com/profile.php?id=100008174415045
 
                 if 'profile' in snsURL_ADDR_fromWeb[2]:
                     print('문자형식의 페이지ID 값을 갖지 않은 사용자 입니다.')
@@ -106,7 +83,6 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
                     print('2', facebook_USERURL)
 
                     userData['facebook'] = facebook_USERURL
-
 
                 else:
                     facebook_USERURL_tot = snsURL_ADDR_fromWeb[2].split("=")[1].replace(" ", "")
@@ -152,15 +128,12 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
                 print('사용자 이름이 존재하지 않습니다.')
                 userName = None
 
-
-            #print('전달 받은 계정정보 값 :', kakaoStory_USERURL, naverBlog_USERURL, facebook_USERURL, instagram_USERURL, userName)
             print('전달 받은 계정정보 값 :', kakaoStory_USERURL, facebook_USERURL, instagram_USERURL, userName)
             print('user Data : ', userData)
 
             tot_TSCORE = 0
             tot_CSCORE = 0
             tot_MSCORE = 0
-            userSNSRank = ''
 
             #FACEBOOK
             if facebook_USERURL is not None:
@@ -211,141 +184,9 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
                         print('2차 페이스북 크롤링이 내부 요인에 의해 중지 되었습니다. -> ', ex_facebook2)
 
 
-            '''
-            #KAKAOSTORY
-            if kakaoStory_USERURL and facebook_USERURL is not None:
-                if kakaoStory_USERURL:
-                    returnValue_kakaostory = kakaostoryScrapBot.crawling_singleData_KakaoStoryCrawlerBot(
-                        kakaoStory_USERURL, userName, facebook_USERURL)
-
-                    print('returnValue_kakaostory : ', returnValue_kakaostory)
-
-                    if returnValue_kakaostory[0] == True:
-                        print('카카오스토리 크롤링 성공')
-
-                        tot_TSCORE += int(returnValue_kakaostory[1]['kk_TSCORE'])
-                        tot_CSCORE += int(returnValue_kakaostory[1]['kk_CSCORE'])
-                        tot_MSCORE += int(returnValue_kakaostory[1]['kk_MSCORE'])
-
-                        print('kakao: ', tot_TSCORE, tot_CSCORE, tot_MSCORE)
-
-                    else:
-                        print('카카오스토리 크롤링봇의 내부 요인에 의해 결과 값이 제대로 전달되지 않았습니다.')
-
-                elif kakaoStory_USERURL is not None:
-                    facebook_USERURL = ''
-                    if kakaoStory_USERURL:
-                        returnValue_kakaostory = kakaostoryScrapBot.crawling_singleData_KakaoStoryCrawlerBot(
-                            kakaoStory_USERURL, userName, facebook_USERURL)
-                        print('returnValue_kakaostory : ', returnValue_kakaostory)
-
-                        if returnValue_kakaostory == True:
-                            print('카카오스토리 크롤링 성공')
-
-                            tot_TSCORE += returnValue_kakaostory[1]['kk_TSCORE']
-                            tot_CSCORE += returnValue_kakaostory[1]['kk_CSCORE']
-                            tot_MSCORE += returnValue_kakaostory[1]['kk_MSCORE']
-
-                            print('kakao: ', tot_TSCORE, tot_CSCORE, tot_MSCORE)
-
-                        else:
-                            print('카카오스토리 크롤링봇의 내부 요인에 의해 결과 값이 제대로 전달되지 않았습니다.')
-                else:
-                    # kakaoStory_USERURL is None:
-                    returnValue_kakaostory = kakaostoryScrapBot.crawling_CSVdata_KakaoStoryCrawlerBot(facebook_USERURL)
-                    print('returnValue_kakaostory : ', returnValue_kakaostory)
-                    if returnValue_kakaostory[0] == True:
-                        print('카카오스토리 크롤링 성공')
-
-                        tot_TSCORE += returnValue_kakaostory[1]['kk_TSCORE']
-                        tot_CSCORE += returnValue_kakaostory[1]['kk_CSCORE']
-                        tot_MSCORE += returnValue_kakaostory[1]['kk_MSCORE']
-
-                        print('kakao: ', tot_TSCORE, tot_CSCORE, tot_MSCORE)
-                    else:
-                        print('카카오스토리 크롤링봇의 내부 요인에 의해 결과 값이 제대로 전달되지 않았습니다.')
-
-            else:
-                returnValue_kakaostory = kakaostoryScrapBot.crawling_CSVdata_KakaoStoryCrawlerBot()
-                print('returnValue_kakaostory : ', returnValue_kakaostory[0])
-                print('currDate : ', returnValue_kakaostory[1])
-
-                if returnValue_kakaostory[0] == True:
-                    print('카카오스토리 크롤링 성공')
-
-                    tot_TSCORE += returnValue_kakaostory[1]['kk_TSCORE']
-                    tot_CSCORE += returnValue_kakaostory[1]['kk_CSCORE']
-                    tot_MSCORE += returnValue_kakaostory[1]['kk_MSCORE']
-
-                    print('kakao: ', tot_TSCORE, tot_CSCORE, tot_MSCORE)
-                else:
-                    print('카카오스토리 크롤링 봇의 내부 요인에 의해 결과 값이 제대로 전달되지 않았습니다.')
-
-            #INSTAGRAM
-            if instagram_USERURL is not None:
-                print('인스타그램 크롤링')
-                returnValue_instagram = instagramScrapBot.CrawlingByInstagramCrawlBot(instagram_USERURL, userName, facebook_USERURL)
-
-                if returnValue_instagram[0] == True:
-                    print('인스타그램 크롤링 성공')
-                    tot_TSCORE += returnValue_instagram[1]['insta_TSCORE']
-                    tot_CSCORE += returnValue_instagram[1]['insta_CSCORE']
-                    tot_MSCORE += returnValue_instagram[1]['insta_MSCORE']
-
-                    print('instagram : ', tot_TSCORE, tot_CSCORE, tot_MSCORE)
-
-                else:
-                    print('인스타그램 크롤링봇의 내부 요인에 의해 결과 값이 제대로 전달되지 않았습니다.')
-            else:
-                print('인스타그램 크롤링을 위한 계정정보가 존재하지 않습니다.')
-                # 사용자 등급 : userSnsRank
-
-            if (tot_TSCORE <= 600 and tot_TSCORE > 500) and (tot_CSCORE <= 1000 and tot_CSCORE > 850) and (
-                    tot_MSCORE <= 400 and tot_MSCORE > 350):
-                userSNSRank = 'A+'
-            elif (tot_TSCORE <= 500 and tot_TSCORE > 400) and (tot_CSCORE <= 850 and tot_CSCORE > 700) and (
-                    tot_MSCORE <= 350 and tot_MSCORE > 300):
-                userSNSRank = 'A-'
-            elif (tot_TSCORE <= 400 and tot_TSCORE > 350) and (tot_CSCORE <= 700 and tot_CSCORE > 550) and (
-                    tot_MSCORE <= 300 and tot_MSCORE > 250):
-                userSNSRank = 'B+'
-            elif (tot_TSCORE <= 350 and tot_TSCORE > 300) and (tot_CSCORE <= 550 and tot_CSCORE > 400) and (
-                    tot_MSCORE <= 250 and tot_MSCORE > 200):
-                userSNSRank = 'B-'
-            elif (tot_TSCORE <= 300 and tot_TSCORE > 250) and (tot_CSCORE <= 400 and tot_CSCORE > 300) and (
-                    tot_MSCORE <= 200 and tot_MSCORE > 150):
-                userSNSRank = 'C+'
-            elif (tot_TSCORE <= 250 and tot_TSCORE > 200) and (tot_CSCORE <= 300 and tot_CSCORE > 200) and (
-                    tot_MSCORE <= 150 and tot_MSCORE > 100):
-                userSNSRank = 'C-'
-            elif (tot_TSCORE <= 200 and tot_TSCORE > 100) and (tot_CSCORE <= 200 and tot_CSCORE > 100) and (
-                    tot_MSCORE <= 100 and tot_MSCORE > 50):
-                userSNSRank = 'D+'
-            elif (tot_TSCORE <= 100 and tot_TSCORE > 0) and (tot_CSCORE <= 100 and tot_CSCORE > 0) and (
-                    tot_MSCORE <= 50 and tot_MSCORE > 1):
-                userSNSRank = 'D-'
-
-                print('userSNS_Rank :', userSNSRank)
-
-            # DB insert
-            try:
-                # Server Connection to MySQL
-                databaseConnection = mysqlConnection.DatabaseConnection_origin()
-                databaseConnection.update_totalTCM_Record(
-                    str(tot_TSCORE),
-                    str(tot_CSCORE),
-                    str(tot_MSCORE),
-                    userSNSRank,
-                    facebook_USERURL
-                )
-            except Exception as e_maria:
-                print('[ Error ] MariaDB About information Insertion :', e_maria)
-            '''
         else:
             print("전달받은 데이터가 없습니다. ")
 
-#httpd = HTTPServer(('localhost', 8000), SimpleHTTPRequestHandler)
-
 #jeniel
-httpd = HTTPServer(('172.30.1.20', 8000), SimpleHTTPRequestHandler)
+httpd = HTTPServer(('172.30.1.211', 8000), SimpleHTTPRequestHandler)
 httpd.serve_forever()

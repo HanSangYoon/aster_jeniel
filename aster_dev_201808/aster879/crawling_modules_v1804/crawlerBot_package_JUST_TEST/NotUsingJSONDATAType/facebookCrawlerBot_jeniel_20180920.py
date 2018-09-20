@@ -15,6 +15,7 @@ class facebookCrawlerBot:
     def __init__(self):
         print('start')
 
+
 global driver
 global user_id
 global user_pass
@@ -28,22 +29,33 @@ hereWork = 'FaceBook'
 currTime = str(time.localtime().tm_year) + '_' + str(time.localtime().tm_mon) + '_' + str(
     time.localtime().tm_mday) + '_' + str(time.localtime().tm_hour)
 
+# log 기본 설정 - 파일로 남기기 위해 [filename='./log/fb_logging_' + currTime] parameter로 추가한다.
+# logging.basicConfig(filename='C:/python_project/just_project/PycharmProjects/log/' + hereWork + 'crawlerbot_logging_' + currTime, level=logging.DEBUG)
+
+# logger 인스턴스를 생성 및 로그 레벨 설정
 logger = logging.getLogger(hereWork + '_logging')
 logger.setLevel(logging.DEBUG)
 
+# formatter 생성
 formatter = logging.Formatter('[%(levelname)s|%(filename)s:%(lineno)s] %(asctime)s > %(message)s')
 
+# fileHandler와 StreamHandler를 생성
 file_max_bytes = 10 * 1024 * 1024  # log file size : 10MB
 fileHandler = logging.handlers.RotatingFileHandler(
+    #'C://dev_syhan/log/' + hereWork + 'crawlerbot_logging_' + currTime, maxBytes=file_max_bytes, backupCount=10)
     'C://dev_tenspace/PycharmProjects/log/' + hereWork + 'crawlerbot_logging_' + currTime, maxBytes=file_max_bytes, backupCount=10)
+
 streamHandler = logging.StreamHandler()
 
+# handler에 fommater 세팅
 fileHandler.setFormatter(formatter)
 streamHandler.setFormatter(formatter)
 
+# Handler를 logging에 추가
 logger.addHandler(fileHandler)
 logger.addHandler(streamHandler)
 
+# logging
 logging.debug(hereWork + '_crawlerbot_debugging on' + currTime)
 logging.info('info')
 logging.warning('warning')
@@ -85,6 +97,9 @@ def autoScrollerContentsPhotoText(url_addr, driver):
         html_detail_fb_chrome = html_detail_fb_chrome + driver.page_source
 
     detail_fb_info_soup = bs(html_detail_fb_chrome, 'html.parser')
+
+    # print('@@', detail_fb_info_soup.select('#pagelet_timeline_medley_photos > div:nth-of-type(2) > div > ul > li')[0].attrs)
+    # print('@@', len(detail_fb_info_soup.select('#pagelet_timeline_medley_photos > div:nth-of-type(2) > div > ul > li') ) )
     try:
         likeCnt_int = 0
         commentCont_int = 0
@@ -96,13 +111,19 @@ def autoScrollerContentsPhotoText(url_addr, driver):
                     '#pagelet_timeline_medley_photos > div:nth-of-type(2) > div > ul > li:nth-of-type(' + str(
                         lngth + 1) + ') > div > div:nth-of-type(2) > div > a:nth-of-type(4) > div > div:nth-of-type(1) > div:nth-of-type(2)')[
                     0].text
+                # print('likeCnt :', likeCnt_str)
                 likeCnt_int += int(likeCnt_str)
+                # print('Total Like Cnt :', likeCnt_int)
 
                 commentCont_str = detail_fb_info_soup.select(
                     '#pagelet_timeline_medley_photos > div:nth-of-type(2) > div > ul > li:nth-of-type(' + str(
                         lngth + 1) + ') > div > div:nth-of-type(2) > div > a:nth-of-type(4) > div > div:nth-of-type(2) > div:nth-of-type(2)')[
                     0].text
+                # print('commentCont_str :', commentCont_str)
                 commentCont_int += int(commentCont_str)
+
+
+
 
             except Exception as e:
                 print('더이상 좋아요 또는 댓글 표시가 없습니다.', e)
@@ -110,6 +131,7 @@ def autoScrollerContentsPhotoText(url_addr, driver):
         print('총 좋아요 수 :', likeCnt_int)
         print('총 댓글 수 :', commentCont_int)
 
+        # update_PhotoLikeCmntCnt(댓글수, 좋아요수, 페이브북아이디)
         databaseConnection_jeniel = mysqlConnection_jeniel.DatabaseConnection_jeniel()
         databaseConnection_jeniel.update_PhotoLikeCmntCnt(str(commentCont_int), str(likeCnt_int), url_addr)
 
@@ -122,37 +144,58 @@ def autoScroller2(driver, URL):
     driver.get(URL)
 
     print(driver.current_url)
+    # 게시글에서 좋아요 표시 갯수, 댓글 수 등의 정보 추출 >>  AUTO SCROLL 기능 필요
     SCROLL_PAUSE_TIME = 2
+    # 2초가 페이지 로딩에 안정적인 대기시간이다. 사실 매우 느리다.
 
+    # 화면 길이 만큼 나눠 autoScroll 하고 각 페이지마다 데이터 가져오기
     autoScrolled_data_soup_html = ''
 
     last_height = driver.execute_script("return document.body.scrollHeight")
+    # print('last_height : ', last_height)
+    # 화면 사이즈 생성하기(15번의 새로고침이 있을 정도로만 데이터 추출)
     for cyc in range(0, 15):
 
+        # print('@ : ', cyc)
+        # Scroll down to bottom
         driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         time.sleep(SCROLL_PAUSE_TIME)
 
+        # Calculate new scroll height and compare with last scroll height
         new_height = driver.execute_script("return document.body.scrollHeight")
+        # print('new_height : ', new_height)
 
         if new_height == last_height:
+            # print('같다고?')
             print()
             break
         last_height = new_height
+        # print('값 대입해')
 
+        # autoScroll crawling data 가져오기
         autoScrolled_data_soup = bs(driver.page_source, 'html.parser')
 
     return autoScrolled_data_soup
 
 
 def readCSV_goodExpressions():
+    print('1')
+
+    # C:\python_project\aster879_project\PycharmProjects
     reader = csv.reader(
+        #open('C:\\dev_syhan\\aster_jeniel_test_dev_201808\\긍정어4.csv', 'rt', encoding='utf-8-sig', newline=''),
         open('C:\\dev_tenspace\\PycharmProjects\\aster_dev_201808\\긍정어4.csv', 'rt', encoding='utf-8-sig', newline=''),
         delimiter=' ', quotechar='|')
+    # 'rt', encoding='utf-8-sig' 로 설정을 해야 1번째 CSV 값앞에 UTF-8로 인코딩한 헤더(\ufeff)가 나타나지 않는다.
+    # print('reader:', reader)
+
     wordList = []
 
     try:
         for row in reader:
+            # print(row)
             wordList.append(', '.join(row))
+        # print('긍정어 wordList : ', wordList)
 
     except Exception as e:
         print(e)
@@ -172,6 +215,9 @@ def login_facebook(self, loginCnt, userFacebookPageId, insertedUserName, request
     prefs = {}
     prefs['profile.default_content_setting_values.notifications'] = 2
     chrome_options.add_experimental_option('prefs', prefs)
+    #driver_chrome = r"C:\python_project\aster879_project\PycharmProjects\chromedriver.exe"
+
+    #driver_chrome = r"C:\dev_syhan\aster_jeniel_test_dev_201808\chromedriver.exe"
     driver_chrome = r"C:\dev_tenspace\PycharmProjects\aster_dev_201808\chromedriver.exe"
 
     # go to Google and click the I'm Feeling Lucky button
@@ -179,17 +225,22 @@ def login_facebook(self, loginCnt, userFacebookPageId, insertedUserName, request
 
     # url
     driver.get('https://www.facebook.com')
-    #
+
     # user_id = '01027746254'
     # user_pass = 'Gkstkddbs4$'
 
+    # user_id ='daramrec@naver.com'
+    # user_pass = 'gwanwoo777'
+
     user_id = 'idkimtheho@gmail.com'
     user_pass = 'facP@ssw0rd'
+
 
     # id and password
     driver.find_element_by_name('email').send_keys(user_id)
     driver.find_element_by_name('pass').send_keys(user_pass)
 
+    # try login : 로그인 버튼의 id 값이 아래의 범위 내에서 무작위로 변경되기 때문에 이에 대한 대응차원임.
     try:
         driver.find_element_by_xpath('// *[ @ id = "u_0_2"]').click()
         login_or_not = True
@@ -229,7 +280,8 @@ def login_facebook(self, loginCnt, userFacebookPageId, insertedUserName, request
     directlyTypedUserName = insertedUserName
 
     print('driver.current_url : ', driver.current_url)
-    returnedValue_from_method = profileTextDataCrawling(login_or_not, loginCnt, user_facebook_page_id, directlyTypedUserName, driver, requestClient)
+    returnedValue_from_method = profileTextDataCrawling(login_or_not, loginCnt, user_facebook_page_id,
+                                                        directlyTypedUserName, driver, requestClient)
 
     if returnedValue_from_method['trueOrFalse'] == True:
         returnValue_facebook = True
@@ -263,71 +315,54 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
     user_fbpage_id = insertedUser_fbpage_id
     User_timeLine_site_url_addr = 'https://www.facebook.com/' + user_fbpage_id
 
-    returnedResultDict = getDetailInfoDictionaryType(user_fbpage_id, driver, lgnCnt, insertedUserName, requestClient)
+    # returnedResultList = getDetailInfoListType(user_fbpage_id, driver, lgnCnt, insertedUserName)
+    # print('미리 취득한 사용자 세부 데이터 -> ', returnedResultList)
+
+    # timeline_sticky_header_container : 상단의 '최근'을 클릭하여 운영년도를 알 수 있다.
+    returnedResultDict = {}
+    # No.1 -> 세부정보 선 취득_Dictionary type :
+    returnedResultDictpre = getDetailInfoDictionaryType(user_fbpage_id, driver, lgnCnt, insertedUserName, requestClient)
+
+    returnedResultDict['사용자이름'] = ''
+    returnedResultDict['페이스북페이지ID'] = ''
+    returnedResultDict['전체연락처정보'] = ''
+    returnedResultDict['웹사이트및소셜링크정보'] = ''
+    returnedResultDict['소개글'] = ''
+    returnedResultDict['프로필게시개수'] = 0
+    returnedResultDict['전체프로필정보'] = ''
+    returnedResultDict['친구수'] = 0
+    returnedResultDict['좋아요__사람전체명수'] = 0
+    returnedResultDict['좋아요(image)__표시전체갯수'] = 0
+    returnedResultDict['동영상수'] = 0
+    returnedResultDict['사진수'] = 0
+    returnedResultDict['전화번호'] = ''
+    returnedResultDict['주소'] = ''
+    returnedResultDict['소셜링크'] = ''
+    returnedResultDict['웹사이트'] = ''
+    returnedResultDict['생일'] = ''
+    returnedResultDict['친구수'] = 0
+    returnedResultDict['모든친구'] = 0
+    returnedResultDict['함께아는친구'] = 0
+    returnedResultDict['최근추가한친구'] = 0
+    returnedResultDict['대학교'] = 0
+    returnedResultDict['거주지'] = 0
+    returnedResultDict['출신지'] = 0
+    returnedResultDict['팔로워'] = 0
+    returnedResultDict['좋아요클릭한사람수'] = 0
+    returnedResultDict['이미지에좋아요클릭한사람수'] = 0
+    returnedResultDict['좋아요모두'] = 0
+    returnedResultDict['영화'] = 0
+    returnedResultDict['TV프로그램'] = 1
+    returnedResultDict['음악'] = 0
+    returnedResultDict['책'] = 0
+    returnedResultDict['스포츠팀'] = 0
+    returnedResultDict['음식점'] = 0
+    returnedResultDict['앱과게임'] = 0
+    returnedResultDict['고등학교'] = 0
+
+    returnedResultDict = returnedResultDictpre
+
     print('사용자 페이스북 상의 세부 데이터 -> ', returnedResultDict)
-
-
-    #data init
-    # returnedResultDict['사용자이름'] = ''  # userName
-    # returnedResultDict['페이스북페이지ID'] = ''  # facebookUrl
-    # returnedResultDict['전체기본정보'] = ''  # basicInfo_tot
-    returnedResultDict['전체연락처정보'] = ''  # contctInfo_tot
-    # returnedResultDict['웹사이트및소셜링크정보'] = ''  # websiteSnsInfo
-    # returnedResultDict['소개글'] = ''  # introduceText
-    # returnedResultDict['프로필게시개수'] = 0  # profileTotCnt
-    # returnedResultDict['전체프로필정보'] = ''  # profileTotInfo
-    # returnedResultDict['친구수'] = 0  # friendsCnt
-    returnedResultDict['좋아요(image)__표시전체갯수'] = 0  # imgLikeCnt
-    # returnedResultDict['팔로워'] = 0  # fllwerCnt
-    # returnedResultDict['DETAIL'] = ''  # detail_info
-    returnedResultDict['좋아요__사람전체명수'] = 0  # likePeopleCnt
-    # returnedResultDict['생일'] = ''  # birthday
-    # returnedResultDict['음력생일'] = ''  # birthday_luna
-    # returnedResultDict['성별'] = ''  # sex
-    # returnedResultDict['혈액형'] = ''  # bloodType
-    # returnedResultDict['주소'] = ''  # addr
-    # returnedResultDict['웹사이트'] = ''  # website
-    returnedResultDict['소셜링크'] = ''  # snsLink
-    # returnedResultDict['종교관'] = ''  # religion
-    # returnedResultDict['휴대폰'] = ''  # cellPhone
-    # returnedResultDict['모든친구'] = 0  # allFrndCnt
-    # returnedResultDict['함께아는친구'] = 0  # knowEachFrnd
-    # returnedResultDict['최근추가한친구'] = 0  # latestAddFrnd
-    # returnedResultDict['대학교'] = 0  # univFrnd
-    # returnedResultDict['거주지'] = 0  # homeFrnd
-    # returnedResultDict['출신지'] = 0  # homeTwnFrnd
-    # returnedResultDict['고등학교'] = 0  # highschoolFrnd
-    # returnedResultDict['좋아요모두'] = 0  # likeHobbyAllCnt
-    # returnedResultDict['영화'] = 0  # movieLikeCnt
-    # returnedResultDict['TV프로그램'] = 0  # tvLikeCnt
-    # returnedResultDict['음악'] = 0  # musicLikeCnt
-    # returnedResultDict['책'] = 0  # bookLikeCnt
-    # returnedResultDict['스포츠팀'] = 0  # sportsTemaLikeCnt
-    # returnedResultDict['음식점'] = 0  # foodPlaceCnt
-    # returnedResultDict['앱과게임'] = 0  # appAndGamesCnt
-    # returnedResultDict['장소'] = 0  # visitedPlc
-    # returnedResultDict['도시'] = 0  # visitedCity
-    # returnedResultDict['최근에가본곳'] = 0  # recentVisitPlc
-    # returnedResultDict['이벤트내용개수'] = 0  # evntCnt
-    # returnedResultDict['이벤트내용'] = ''  # eventContents
-    # returnedResultDict['봤어요'] = 0  # sawItCnt
-    # returnedResultDict['영화내용개수'] = 0  # sawMovieContentCnt
-    # returnedResultDict['영화제목'] = ''  # sawMovieTitle
-    # returnedResultDict['댓글개수'] = 0  # replyCnt
-    # returnedResultDict['댓글내용'] = ''  # replyContents
-    # returnedResultDict['게시글좋아요수'] = 0  # articleLikeCnt
-    # returnedResultDict['게시글공유수'] = 0  # articleShareCnt
-    # returnedResultDict['수집한게시글개수'] = 0  # articleCnt
-    # returnedResultDict['평균댓글개수'] = 0  # avgReplyCnt
-    # returnedResultDict['평균덧글개수'] = 0  # avgReplyAndReply
-    # returnedResultDict['전체긍정어사용빈도'] = 0  # gdExpssCnt
-    # returnedResultDict['평균긍정어사용비율'] = 0.00  # avgGdExpssRate
-    # returnedResultDict['페이스북게시글등록시간'] = ''  # fbacrticleRegTime
-    # returnedResultDict['개요항목개수'] = 0  # aboutInfoCnt
-    # returnedResultDict['해당월게시글개수'] = 0  # thisMnthArticleCnt
-    # returnedResultDict['전월게시글개수'] = 0  # preMnthArticleCnt
-    # returnedResultDict['운영년수'] = 0  # arrangeYears
-
 
     # wait for loading & set(alter) driver's url
     driver.get(User_timeLine_site_url_addr)
@@ -342,31 +377,31 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
     usernamefromDirect = insertedUserName
 
     profileDic['페이스북페이지ID'] = user_fbpage_id
-    detailInfo.append(user_fbpage_id)
+    detailInfo.append('페이스북페이지ID:' + user_fbpage_id)
 
     try:
         user_name = fb_tmln_soup.select('#fb-timeline-cover-name > a')[0].text
         print('페이스북 상의 사용자 이름 : ', user_name)
         profileDic['사용자이름'] = user_name
 
-        detailInfo.append(user_name)
+        detailInfo.append('@사용자이름:' + user_name)
 
     except:
         print('페이스북 사용자 이름을 가져올 수 없습니다.')
         user_name = usernamefromDirect
         profileDic['사용자이름'] = user_name
 
-        detailInfo.append(user_name)
+        detailInfo.append('@사용자이름:' + user_name)
 
     if user_name == usernamefromDirect:
         print('페이스북 사용자 이름과 이력서의 신청인 이름이 일치합니다.')
 
-        detailInfo.append('페이스북vs이력서_성명일치')
+        detailInfo.append('@페이스북 사용자 이름과 이력서의 신청인 이름이 일치합니다.')
 
     else:
         print('페이스북 사용자 이름과 이력서의 신청인 이름이 일치하지 않습니다.')
 
-        detailInfo.append('페이스북vs이력서_성명일치')
+        detailInfo.append('@페이스북 사용자 이름과 이력서의 신청인 이름이 일치하지 않습니다.')
 
     # DATA crawling and parsing part
     # Got scroll height
@@ -391,7 +426,7 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                 # returnedResultList.append(intro_text_detail[0].text.replace(' ', ''))
                 profileDic['소개글'] = intro_text_detail[0].text.replace(' ', '')
 
-                detailInfo.append(''.join(profileDic['소개글']))
+                detailInfo.append('@'.join(profileDic['소개글']))
 
 
             except Exception as ew:
@@ -404,7 +439,7 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                 # returnedResultList.append(intro_text_detail[0].text.replace(' ', ''))
                 profileDic['소개글'] = intro_text_detail[0].text.replace(' ', '')
 
-                detailInfo.append(''.join(profileDic['소개글']))
+                detailInfo.append('@'.join(profileDic['소개글']))
 
             print('1차 dictionary 결과물 출력 -> ', profileDic)
     except Exception as e:
@@ -456,6 +491,8 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
             print('사용자가 프로필 정보를 등록하지 않았습니다.')
         else:
             print('프로필 정보_01 :', profile_list_detail_text_01[0].text)
+            # returnedResultList.append(profile_list_detail_text_01[0].text.replace(' ', ''))
+            # returnedResultDict['프로필 정보 No.01'] = profile_list_detail_text_01[0].text.replace(' ', '')
 
         profileDataList = []
         prf = 0
@@ -487,10 +524,21 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
     except Exception as e:
         print('프로필 정보 취득 중 오류-> ', e)
 
+    # print('결과 [List type]: ', returnedResultList)
+    print('@@@@@_결과 [Dictionary type]: ', returnedResultDict)
+
+    tcm_score = {}
+
+    # 대상자의 현재 거주지 또는 출신학교 소재지
     t_score_count = 0
     c_score_count = 0
 
+    t_score_count_detail = 0
     c_score_count_detail = 0
+
+    # 20180810
+
+    # [개요]
 
     returnedResultDict['개요항목개수'] = 0
     detail_url_overview = 'https://www.facebook.com/' + user_fbpage_id + '/about?section=overview'
@@ -501,26 +549,36 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
     try:
         aboutOverview_middle_lists = detail_fb_overview_info_soup.select(
             about_overviewURL + ' > div:nth-of-type(1) > ul > li')
+        # 개요 항목의 리스트 개수
         print('개요항목길이:', len(aboutOverview_middle_lists))
 
         returnedResultDict['개요항목개수'] = len(aboutOverview_middle_lists)
 
+        # 개요 항목 리스트 추출
         for about_list in range(len(aboutOverview_middle_lists)):
             print(aboutOverview_middle_lists[about_list].text)
+            # 여기서의 구체적인 값들은 '개요'가 아닌 각 큰 카테고리내에서 개별 선별 해야 함.
 
     except Exception as e:
         print('개요 항목이 존재하지 않음.', e)
 
-    #print('##############################################################')
+    print('##############################################################')
 
     try:
         aboutOverview_rightSide_lists = detail_fb_overview_info_soup.select(
             about_overviewURL + ' > div:nth-of-type(2) > ul > li')
+        # 개요 항목 우측의 리스트 개수
+        # print(len(aboutOverview_rightSide_lists))
+        # 개요 항목 우측 리스트 추출
         for about_list_right in range(len(aboutOverview_rightSide_lists)):
+            # 우측 리스트의 제목
+            # pagelet_timeline_medley_about > div:nth-of-type(2) > div > ul > li:nth-of-type(1) > div > div:nth-of-type(2) > div > div > div:nth-of-type(2) > ul > li > div > div:nth-of-type(2) > span > div:nth-of-type(1)
             title_aboutPage_list_right = detail_fb_overview_info_soup.select(
                 about_overviewURL + ' > div:nth-of-type(2) > ul > li:nth-of-type(' + str(
                     about_list_right + 1) + ') > div > div:nth-of-type(2) > span > div:nth-of-type(1)')
 
+            # 우측 리스트의 내용
+            # pagelet_timeline_medley_about > div:nth-of-type(2) > div > ul > li:nth-of-type(1) > div > div:nth-of-type(2) > div > div > div:nth-of-type(2) > ul > li > div > div:nth-of-type(2) > span > div:nth-of-type(2)
             contents_aboutPage_list_right = detail_fb_overview_info_soup.select(
                 about_overviewURL + ' > div:nth-of-type(2) > ul > li:nth-of-type(' + str(
                     about_list_right + 1) + ') > div > div:nth-of-type(2) > span > div:nth-of-type(2)')
@@ -529,12 +587,18 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
             print(title_aboutPage_list_right[0].text)
             print(contents_aboutPage_list_right[0].text)
 
+            returnedResultDict[title_aboutPage_list_right[0].text.replace(" ","")] = contents_aboutPage_list_right[0].text
+
     except Exception as e:
         print('개요의 우측 항목이 존재하지 않음.', e)
 
+    # [경력 및 학력]
+    # https://www.facebook.com/kpokem/about?section=education
     detail_url_education = 'https://www.facebook.com/' + user_fbpage_id + 'about?section=education'
     detail_fb_education_info_soup = __getHTMLDoc_beautifulSoup4(driver, detail_url_education)
+    # about_educationURL = '#pagelet_eduwork > div > div'
     aboutEducation_lists = detail_fb_education_info_soup.select('#pagelet_eduwork > div > div')
+    # print(len(aboutEducation_lists))
 
     for about_length_of_education_list in range(len(aboutEducation_lists)):
         work_history_lists_title = detail_fb_education_info_soup.select(
@@ -592,26 +656,61 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
 
                 for about_length_of_living_detail in range(len(living_history_lists)):
                     print('len(living_history_lists) : ', len(living_history_lists))
+                    '''
+                    print(detail_fb_living_info_soup.select(
+                        living_history_lists_dir + ' > div > div > div > div > div > div:nth-of-type(2) > span > a')[
+                              0].text)
+                    print(detail_fb_living_info_soup.select(
+                        living_history_lists_dir + ' > div > div > div > div > div > div:nth-of-type(2) > div')[0].text)
+                    '''
             else:
                 print('거주지 출력 부분은 구조가 1 depth 깊음')
                 for about_length_of_living_detail in range(len(living_history_lists)):
                     print('len(living_history_lists) : ', len(living_history_lists))
+                    '''
+                    print(detail_fb_living_info_soup.select(living_history_lists_dir + ':nth-of-type(' + str(
+                        about_length_of_living_detail + 1) + ') > div > div > div > div > div > div:nth-of-type(2) > span > a')[
+                              0].text)
+                    print(detail_fb_living_info_soup.select(living_history_lists_dir + ':nth-of-type(' + str(
+                        about_length_of_living_detail + 1) + ') > div > div > div > div > div > div:nth-of-type(2) > div')[
+                              0].text)
+                    '''
         else:
             if len(living_history_lists) == 1:
 
                 for about_length_of_living_detail in range(len(living_history_lists)):
                     print('len(living_history_lists) : ', len(living_history_lists))
+                    '''
+                    print(detail_fb_living_info_soup.select(
+                        living_history_lists_dir + ' > div > div > div > div > div:nth-of-type(2) > span > a')[0].text)
+                    print(detail_fb_living_info_soup.select(
+                        living_history_lists_dir + ' > div > div > div > div > div:nth-of-type(2) > div')[0].text)
+                    '''
             else:
                 for about_length_of_living_detail in range(len(living_history_lists)):
                     print('len(living_history_lists) : ', len(living_history_lists))
-
+                    '''
+                    print(detail_fb_living_info_soup.select(living_history_lists_dir + ':nth-of-type(' + str(
+                        about_length_of_living_detail + 1) + ') > div > div > div > div > div > div:nth-of-type(2) > span > a')[
+                              0].text)
+                    print(detail_fb_living_info_soup.select(living_history_lists_dir + ':nth-of-type(' + str(
+                        about_length_of_living_detail + 1) + ') > div > div > div > div > div > div:nth-of-type(2) > div')[
+                              0].text)
+                    '''
+        # No.4 [연락처 및 기본정보]-연락처 정보, 웹사이트 및 소셜 링크 정보, 기본 정보
+        # https://www.facebook.com/userpageID/about?section=contact-info
         detail_url_contact = 'https://www.facebook.com/' + user_fbpage_id + '/about?section=contact-info&pnref=about'
         detail_fb_info_soup = __getHTMLDoc_beautifulSoup4(driver, detail_url_contact)
 
+        # [연락처 및 기본정보]-[연락처 정보]란 제목
         user_pglet_contactData_title_01 = detail_fb_info_soup.select(
             '#pagelet_contact > div > div:nth-of-type(1) > div > span')
+
+        # [연락처 및 기본정보]-[웹사이트 및 소셜 링크]란 제목
         user_pglet_contactData_title_01_2 = detail_fb_info_soup.select(
             '#pagelet_contact > div > div:nth-of-type(2) > div > div > span')
+
+        # [연락처 및 기본정보]-[기본 정보]란 제목
         user_pglet_basicData_title_01 = detail_fb_info_soup.select(
             '#pagelet_basic > div > div > span')
 
@@ -625,6 +724,9 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
         # [연락처 정보]란 취득
         if not user_pglet_contactData_title_01:
             print('사용자가 연락처 정보를 등록하지 않았습니다.')
+
+            # make Data
+            # aboutDataDic[user_pglet_contactData_title_01.replace(" ", "")] = ''
 
         else:
             # pagelet_contact
@@ -656,6 +758,11 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                                 int(conCycle + 1)) + ') > div > div:nth-of-type(2) > div > div > span')[
                             0].text.replace(" ", "")
                         print('연락처 정보_value: ', value)
+
+                        # make Data
+                        # aboutDataDic[key] = value
+
+                        # aboutInfo[key] = value
                         conCycle += 1
 
                 except:
@@ -724,7 +831,6 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
 
                 # [기본 정보]란 하단 세부 정보 타이틀
                 pagelet_basic_dir_list = 'div#pagelet_basic > div > ul > li'
-                pagelet_basic_dir_list = 'div#pagelet_basic > div > ul > li'
 
                 # [기본 정보]란 하단 세부 정보 타이틀 갯수
                 length_of_basicList = len(detail_fb_info_soup.select(pagelet_basic_dir_list))
@@ -757,7 +863,10 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
 
                 except:
                     print('더이상 가져올 수 있는 정보가 존재하지 않습니다.')
+                    # print('기본 정보 수집 결과 [Dictionary type]: {}'.format(aboutDataDic))
 
+    # [가족 및 결혼/연애 상태]
+    # https://www.facebook.com/kpokem/about?section=relationship
     detail_url_relationship = 'https://www.facebook.com/' + user_fbpage_id + '/about?section=relationship'
     detail_fb_relationship_info_soup = __getHTMLDoc_beautifulSoup4(driver, detail_url_relationship)
     aboutRelationship_lists = detail_fb_relationship_info_soup.select('#pagelet_relationships > div')
@@ -838,9 +947,15 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                         0].text
                     print('relationship name & status : ', relationship_list_name, ', ', relationship_list_status)
 
+    # [자세한 소개]
+    # https://www.facebook.com/kpokem/about?section=bio
     detail_url_bio = 'https://www.facebook.com/' + user_fbpage_id + '/about?section=bio'
     detail_fb_bio_info_soup = __getHTMLDoc_beautifulSoup4(driver, detail_url_bio)
 
+
+
+
+    # bio와 Quotes는 기본으로 출력함
     try:
         about_Bio_title = detail_fb_bio_info_soup.select('#pagelet_bio > div > div > span')[0].text  # 누구누구님의 정보
     except Exception as e:
@@ -879,6 +994,36 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
         print('bio와 Quotes는 기본으로 출력함2에서 exception')
 
     print('quotes : ', about_Quotes_title, ', ', about_Quotes_contents)
+    '''
+    # [중요 이벤트]
+    # https://www.facebook.com/kpokem/about?section=year-overviews
+    detail_url_yearOverviews = 'https://www.facebook.com/' + user_fbpage_id + '/about?section=year-overviews'
+    detail_fb_yearOverviews_info_soup = __getHTMLDoc_beautifulSoup4(driver, detail_url_yearOverviews)
+
+    yearOverviews_medly_about_title = detail_fb_yearOverviews_info_soup.select(
+        '#timeline-medley > div > div#pagelet_timeline_medley_about > div > div > ul > li > div > div:nth-of-type(2) > div > div > div > span')[
+        0].text  # 중요 이벤트
+    yearOverviews_medly_about_contents_lists = detail_fb_yearOverviews_info_soup.select(
+        '#timeline-medley > div > div#pagelet_timeline_medley_about > div > div > ul > li > div > div:nth-of-type(2) > div > div > ul > li')
+
+    for list_length in range(len(yearOverviews_medly_about_contents_lists)):
+
+        yearOverviews_medly_about_contents_detail_01 = detail_fb_yearOverviews_info_soup.select(
+            '#timeline-medley > div > div#pagelet_timeline_medley_about > div > div > ul > li > div > div:nth-of-type(2) > div > div > ul > li:nth-of-type(' + str(
+                list_length + 1) + ') > div > div:nth-of-type(1) > span')[0].text  # 년도
+        yearOverviews_medly_about_contents_detail_list = detail_fb_yearOverviews_info_soup.select(
+            '#timeline-medley > div > div#pagelet_timeline_medley_about > div > div > ul > li > div > div:nth-of-type(2) > div > div > ul > li:nth-of-type(' + str(
+                list_length + 1) + ') > div > div:nth-of-type(2) > ul > li')
+
+        # print(len(yearOverviews_medly_about_contents_detail_list))
+
+        for detail_list_length in range(len(yearOverviews_medly_about_contents_detail_list)):
+            yearOverviews_medly_about_contents_detail_02 = detail_fb_yearOverviews_info_soup.select(
+                '#timeline-medley > div > div#pagelet_timeline_medley_about > div > div > ul > li > div > div:nth-of-type(2) > div > div > ul > li:nth-of-type(' + str(
+                    list_length + 1) + ') > div > div:nth-of-type(2) > ul > li:nth-of-type(' + str(
+                    detail_list_length + 1) + ') > div > div > a > span')[0].text  # 내용
+            print(yearOverviews_medly_about_contents_detail_01, ', ', yearOverviews_medly_about_contents_detail_02)
+    '''
 
     # [중요 이벤트]
     detail_url_yearOverviews = 'https://www.facebook.com/' + user_fbpage_id + '/about?section=year-overviews'
@@ -944,9 +1089,9 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
         arrangePeriod = 0
         arrangeYearsList_2 = 0
 
-
+    #returnedResultDict.keys()
+    #returnedResultDict.keys()
     DictionaryValue_list = returnedResultDict.values()
-    print('$$$$$:', returnedResultDict.values())
 
     for search_t in DictionaryValue_list:
         try:
@@ -958,7 +1103,7 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                 t_score_count_detail += 50
                 t_score_count += t_score_count_detail
 
-                detailInfo.append('가산근거:남성일경우근속기간이_여성보다_길기때문에_70점이_가산됩니다.__')
+                detailInfo.append('__가산근거:남성일경우근속기간이_여성보다_길기때문에_70점이_가산됩니다.__')
 
             elif '여성' in search_t:
                 t_score_count_detail = 0
@@ -966,7 +1111,7 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
 
                 print('가산 근거 : 여성일 경우 근속 기간이 남성보다 짧기 때문에 50점이 가산 됩니다.')
 
-                detailInfo.append('가산근거:남성일경우근속기간이_여성보다_길기때문에_50점이_가산됩니다.__')
+                detailInfo.append('__가산근거:남성일경우근속기간이_여성보다_길기때문에_50점이_가산됩니다.__')
 
                 t_score_count_detail += 25
                 t_score_count += t_score_count_detail
@@ -980,7 +1125,7 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                 if '서울' in search_t:
                     print('가산 근거 : 근무지가 서울일 경우 60점이 가산 됩니다.')
 
-                    detailInfo.append('가산근거:근무지가_서울일경우_60점이_가산됩니다.__')
+                    detailInfo.append('__가산근거:근무지가_서울일경우_60점이_가산됩니다.__')
 
                     t_score_count_detail += 60
                     t_score_count += t_score_count_detail
@@ -988,14 +1133,14 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                 elif '경기' in search_t:
                     print('가산 근거 : 근무지가 경기일 경우 40점이 가산됩니다.')
 
-                    detailInfo.append('가산근거:근무지가_서울일경우_40점이_가산됩니다.__')
+                    detailInfo.append('__가산근거:근무지가_서울일경우_40점이_가산됩니다.__')
                     t_score_count_detail += 40
                     t_score_count += t_score_count_detail
                     # print("%%", t_score_count)
                 else:
                     print('가산 근거 : 근무지가 비-수도권일 경우 20점이 가산됩니다.')
 
-                    detailInfo.append('가산근거:근무지가_서울일경우_20점이_가산됩니다.__')
+                    detailInfo.append('__가산근거:근무지가_서울일경우_20점이_가산됩니다.__')
 
                     t_score_count_detail += 20
                     t_score_count += t_score_count_detail
@@ -1012,14 +1157,14 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                         if '서울대' or '중앙대' or '덕성여' or '서울교육대' or '홍익대' or '이화여' or '서울시립대' or '동국대' or '서울여' or '연세대' or '명지대' or '숙명여' or '고려대' or '상명대' or '동덕여' or '서강대' or '삼육대' or '국민대' or '서울과학기술대' or '한국체육대' or '성신여' or '한국외' or '숭실대' or '총신대' or '세종대' or '한국종합예술' or '한성대' or '서경대' or '성공회대' in search_t:
                             print('가산 근거 : 출신 대학원 소재지가 서울일 경우 60점이 가산 됩니다.')
 
-                            detailInfo.append('출신대학원소재지가_서울일경우_60점이_가산됩니다.__')
+                            detailInfo.append('__출신대학원소재지가_서울일경우_60점이_가산됩니다.__')
                             t_score_count_detail += 60
                             t_score_count += t_score_count_detail
                             # print("%%", t_score_count)
                         else:
                             print('가산 근거 : 출신 대학원 소재지가 경기일 경우 40점이 가산됩니다.')
 
-                            detailInfo.append('출신대학원소재지가_서울일경우_40점이_가산됩니다.__')
+                            detailInfo.append('__출신대학원소재지가_서울일경우_40점이_가산됩니다.__')
                             t_score_count_detail += 40
                             t_score_count += t_score_count_detail
                             # print("%%", t_score_count)
@@ -1032,7 +1177,7 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                         if '서울대' or '중앙대' or '덕성여' or '서울교육대' or '홍익대' or '이화여' or '서울시립대' or '동국대' or '서울여' or '연세대' or '명지대' or '숙명여' or '고려대' or '상명대' or '동덕여' or '서강대' or '삼육대' or '국민대' or '서울과학기술대' or '한국체육대' or '성신여' or '한국외' or '숭실대' or '총신대' or '세종대' or '한국종합예술' or '한성대' or '서경대' or '성공회대' in search_t:
                             print('가산 근거 : 출신 대학교 소재지가 서울일 경우 60점이 가산 됩니다.')
 
-                            detailInfo.append('출신대학교소재지가_서울일경우_60점이_가산됩니다.__')
+                            detailInfo.append('__출신대학교소재지가_서울일경우_60점이_가산됩니다.__')
 
                             t_score_count_detail += 60
                             t_score_count += t_score_count_detail
@@ -1040,7 +1185,7 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                         else:
                             print('가산 근거 : 출신 대학교 소재지가 경기일 경우 40점이 가산됩니다.')
 
-                            detailInfo.append('출신대학교소재지가_서울일경우_40점이_가산됩니다.__')
+                            detailInfo.append('__출신대학교소재지가_서울일경우_40점이_가산됩니다.__')
 
                             t_score_count_detail += 40
                             t_score_count += t_score_count_detail
@@ -1054,7 +1199,7 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                         if '서울' in search_t:
                             print('가산 근거 : 출신 고등학교 소재지가 서울일 경우 60점이 가산 됩니다.')
 
-                            detailInfo.append('출신고등학교소재지가_서울일경우_60점이_가산됩니다.__')
+                            detailInfo.append('__출신고등학교소재지가_서울일경우_60점이_가산됩니다.__')
 
                             t_score_count_detail += 60
                             t_score_count += t_score_count_detail
@@ -1062,7 +1207,7 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                         elif '경기' in search_t:
                             print('가산 근거 : 출신 고등학교 소재지가 경기일 경우 40점이 가산됩니다.')
 
-                            detailInfo.append('출신고등학교소재지가_서울일경우_40점이_가산됩니다.__')
+                            detailInfo.append('__출신고등학교소재지가_서울일경우_40점이_가산됩니다.__')
 
                             t_score_count_detail += 40
                             t_score_count += t_score_count_detail
@@ -1070,7 +1215,7 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                         else:
                             print('가산 근거 : 출신 고등학교 소재지가 비-수도권일 경우 20점이 가산됩니다.')
 
-                            detailInfo.append('출신고등학교소재지가_서울일경우_20점이_가산됩니다.__')
+                            detailInfo.append('__출신고등학교소재지가_서울일경우_20점이_가산됩니다.__')
 
                             t_score_count_detail += 20
                             t_score_count += t_score_count_detail
@@ -1083,7 +1228,7 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                         if '서울' in search_t:
                             print('가산 근거 : 출신 대학(2~3년제 대학) 소재지가 서울일 경우 60점이 가산 됩니다.')
 
-                            detailInfo.append('출신대학(2~3년제대학)소재지가_서울일경우_60점이_가산됩니다.__')
+                            detailInfo.append('__출신대학(2~3년제대학)소재지가_서울일경우_60점이_가산됩니다.__')
 
                             t_score_count_detail += 60
                             t_score_count += t_score_count_detail
@@ -1091,7 +1236,7 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                         elif '경기' in search_t:
                             print('가산 근거 : 출신 대학(2~3년제 대학) 소재지가 경기일 경우 40점이 가산됩니다.')
 
-                            detailInfo.append('출신대학(2~3년제대학)소재지가_서울일경우_40점이_가산됩니다.__')
+                            detailInfo.append('__출신대학(2~3년제대학)소재지가_서울일경우_40점이_가산됩니다.__')
 
                             t_score_count_detail += 40
                             t_score_count += t_score_count_detail
@@ -1099,7 +1244,7 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                         else:
                             print('가산 근거 : 출신 대학(2~3년제 대학) 소재지가 비-수도권일 경우 20점이 가산됩니다.')
 
-                            detailInfo.append('출신대학(2~3년제대학)소재지가_서울일경우_20점이_가산됩니다.__')
+                            detailInfo.append('__출신대학(2~3년제대학)소재지가_서울일경우_20점이_가산됩니다.__')
 
                             t_score_count_detail += 20
                             t_score_count += t_score_count_detail
@@ -1113,7 +1258,7 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                         if '서울대' or '중앙대' or '덕성여' or '서울교육대' or '홍익대' or '이화여' or '서울시립대' or '동국대' or '서울여' or '연세대' or '명지대' or '숙명여' or '고려대' or '상명대' or '동덕여' or '서강대' or '삼육대' or '국민대' or '서울과학기술대' or '한국체육대' or '성신여' or '한국외' or '숭실대' or '총신대' or '세종대' or '한국종합예술' or '한성대' or '서경대' or '성공회대' in search_t:
                             print('가산 근거 : 출신 대학교 소재지가 서울일 경우 60점이 가산 됩니다.')
 
-                            detailInfo.append('출신대학교소재지가_서울일경우_60점이_가산됩니다.__')
+                            detailInfo.append('__출신대학교소재지가_서울일경우_60점이_가산됩니다.__')
 
                             t_score_count_detail += 60
                             t_score_count += t_score_count_detail
@@ -1121,7 +1266,7 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                         else:
                             print('가산 근거 : 출신 대학교 소재지가 경기일 경우 30점이 가산됩니다.')
 
-                            detailInfo.append('출신대학교소재지가_서울일경우_30점이_가산됩니다.__')
+                            detailInfo.append('__출신대학교소재지가_서울일경우_30점이_가산됩니다.__')
 
                             t_score_count_detail += 30
                             t_score_count += t_score_count_detail
@@ -1135,7 +1280,7 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                         if '서울' in search_t:
                             print('가산 근거 : 출신 고등학교 소재지가 서울일 경우 60점이 가산 됩니다.')
 
-                            detailInfo.append('출신고등학교소재지가_서울일경우_60점이_가산됩니다.__')
+                            detailInfo.append('__출신고등학교소재지가_서울일경우_60점이_가산됩니다.__')
 
                             t_score_count_detail += 60
                             t_score_count += t_score_count_detail
@@ -1143,14 +1288,14 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                         elif '경기' in search_t:
                             print('가산 근거 : 출신 고등학교 소재지가 경기일 경우 40점이 가산됩니다.')
 
-                            detailInfo.append('출신고등학교소재지가_서울일경우_40점이_가산됩니다.__')
+                            detailInfo.append('__출신고등학교소재지가_서울일경우_40점이_가산됩니다.__')
                             t_score_count_detail += 40
                             t_score_count += t_score_count_detail
                             # print("%%", t_score_count)
                         else:
                             print('가산 근거 : 출신 고등학교 소재지가 비-수도권일 경우 20점이 가산됩니다.')
 
-                            detailInfo.append('출신고등학교소재지가_서울일경우_20점이_가산됩니다.__')
+                            detailInfo.append('__출신고등학교소재지가_서울일경우_20점이_가산됩니다.__')
 
                             t_score_count_detail += 20
                             t_score_count += t_score_count_detail
@@ -1163,7 +1308,7 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                         if '서울' in search_t:
                             print('가산 근거 : 출신 대학(2~3년제 대학) 소재지가 서울일 경우 60점이 가산 됩니다.')
 
-                            detailInfo.append('출신대학(2~3년제대학)소재지가_서울일경우_60점이_가산됩니다.__')
+                            detailInfo.append('__출신대학(2~3년제대학)소재지가_서울일경우_60점이_가산됩니다.__')
 
                             t_score_count_detail += 60
                             t_score_count += t_score_count_detail
@@ -1171,7 +1316,7 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                         elif '경기' in search_t:
                             print('가산 근거 : 출신 대학(2~3년제 대학) 소재지가 경기일 경우 40점이 가산됩니다.')
 
-                            detailInfo.append('출신대학(2~3년제대학)소재지가_서울일경우_40점이_가산됩니다.__')
+                            detailInfo.append('__출신대학(2~3년제대학)소재지가_서울일경우_40점이_가산됩니다.__')
 
                             t_score_count_detail += 40
                             t_score_count += t_score_count_detail
@@ -1179,7 +1324,7 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                         else:
                             print('가산 근거 : 출신 대학(2~3년제 대학) 소재지가 비-수도권일 경우 20점이 가산됩니다.')
 
-                            detailInfo.append('출신대학(2~3년제대학)소재지가_서울일경우_20점이_가산됩니다.__')
+                            detailInfo.append('__출신대학(2~3년제대학)소재지가_서울일경우_20점이_가산됩니다.__')
 
                             t_score_count_detail += 20
                             t_score_count += t_score_count_detail
@@ -1203,7 +1348,7 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                 if '서울' in search_c:
                     print('가산 근거 : 거주지가 서울일 경우 70점이 가산 됩니다.')
 
-                    detailInfo.append('거주지가_서울일경우_70점이_가산됩니다.__')
+                    detailInfo.append('__거주지가_서울일경우_70점이_가산됩니다.__')
 
                     c_score_count_detail += 70
                     c_score_count += c_score_count_detail
@@ -1211,7 +1356,7 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                 elif '경기' in search_c:
                     print('가산 근거 : 거주지가 경기일 경우 40점이 가산됩니다.')
 
-                    detailInfo.append('거주지가_서울일경우_40점이_가산됩니다.__')
+                    detailInfo.append('__거주지가_서울일경우_40점이_가산됩니다.__')
 
                     c_score_count_detail += 40
                     c_score_count += c_score_count_detail
@@ -1219,7 +1364,7 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                 else:
                     print('가산 근거 : 거주지가 비-수도권일 경우 30점이 가산됩니다.')
 
-                    detailInfo.append('거주지가_서울일경우_30점이_가산됩니다.__')
+                    detailInfo.append('__거주지가_서울일경우_30점이_가산됩니다.__')
 
                     c_score_count_detail += 30
                     c_score_count += c_score_count_detail
@@ -1233,7 +1378,7 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                 if '서울' in search_c:
                     print('가산 근거 : 출신지가 서울일 경우 70점이 가산 됩니다.')
 
-                    detailInfo.append('출신지가_서울일경우_70점이_가산됩니다.__')
+                    detailInfo.append('__출신지가_서울일경우_70점이_가산됩니다.__')
 
                     c_score_count_detail += 70
                     c_score_count += c_score_count_detail
@@ -1241,7 +1386,7 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                 elif '경기' in search_c:
                     print('가산 근거 : 출신지가 경기일 경우 40점이 가산됩니다.')
 
-                    detailInfo.append('출신지가_서울일경우_40점이_가산됩니다.__')
+                    detailInfo.append('__출신지가_서울일경우_40점이_가산됩니다.__')
 
                     c_score_count_detail += 40
                     c_score_count += c_score_count_detail
@@ -1249,7 +1394,7 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                 else:
                     print('가산 근거 : 출신지가 비-수도권일 경우 30점이 가산됩니다.')
 
-                    detailInfo.append('출신지가_서울일경우_30점이_가산됩니다.__')
+                    detailInfo.append('__출신지가_서울일경우_30점이_가산됩니다.__')
 
                     c_score_count_detail += 30
                     c_score_count += c_score_count_detail
@@ -1265,7 +1410,7 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                 if followCnt >= 50:
                     print('팔로워 수가 50명 이상일 경우 50점이 가산됩니다.')
 
-                    detailInfo.append('팔로워수가_50명이상일경우_50점이_가산됩니다.__')
+                    detailInfo.append('__팔로워수가_50명이상일경우_50점이_가산됩니다.__')
 
                     c_score_count_detail += 50
                     c_score_count += c_score_count_detail
@@ -1273,7 +1418,7 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                 elif 40 <= followCnt < 50:
                     print('팔로워 수가 40명 이상 50명 미만일 경우 40점이 가산됩니다.')
 
-                    detailInfo.append('팔로워수가_50명이상일경우_40점이_가산됩니다.__')
+                    detailInfo.append('__팔로워수가_50명이상일경우_40점이_가산됩니다.__')
 
                     c_score_count_detail += 40
                     c_score_count += c_score_count_detail
@@ -1281,7 +1426,7 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                 elif 30 <= followCnt < 40:
                     print('팔로워 수가 30명 이상 40명 미만일 경우 30점이 가산됩니다.')
 
-                    detailInfo.append('팔로워수가_50명이상일경우_30점이_가산됩니다.__')
+                    detailInfo.append('__팔로워수가_50명이상일경우_30점이_가산됩니다.__')
 
                     c_score_count_detail += 30
                     c_score_count += c_score_count_detail
@@ -1289,7 +1434,7 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                 elif 20 <= followCnt < 30:
                     print('팔로워 수가 20명 이상 30명 미만일 경우 20점이 가산됩니다.')
 
-                    detailInfo.append('팔로워수가_50명이상일경우_20점이_가산됩니다.__')
+                    detailInfo.append('__팔로워수가_50명이상일경우_20점이_가산됩니다.__')
 
                     c_score_count_detail += 20
                     c_score_count += c_score_count_detail
@@ -1297,7 +1442,7 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                 elif 10 <= followCnt < 20:
                     print('팔로워 수가 10명 이상 20명 미만일 경우 10점이 가산됩니다.')
 
-                    detailInfo.append('팔로워수가_50명이상일경우_10점이_가산됩니다.__')
+                    detailInfo.append('__팔로워수가_50명이상일경우_10점이_가산됩니다.__')
 
                     c_score_count_detail += 10
                     c_score_count += c_score_count_detail
@@ -1305,7 +1450,7 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                 elif 1 <= followCnt < 10:
                     print('팔로워 수가 1명 이상 10명 미만일 경우 5점이 가산됩니다.')
 
-                    detailInfo.append('팔로워수가_50명이상일경우_5점이_가산됩니다.__')
+                    detailInfo.append('__팔로워수가_50명이상일경우_5점이_가산됩니다.__')
 
                     c_score_count_detail += 5
                     c_score_count += c_score_count_detail
@@ -1317,6 +1462,9 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
         except Exception as e_c:
             print('C SCORE EXCEPTION :', e_c)
 
+    # (returnedResult : 미리 받아온 세부 데이터)를 이용하지 않고, 친구 수 값을 추출하여 C_SCORE를 산출하기
+    # friend count
+    returnedResultDict['친구수'] = 0
     try:
         autoScrolled_data_soup_html_result = autoScroller(driver)
         userContent_FriendList = autoScrolled_data_soup_html_result.find('div', attrs={
@@ -1332,6 +1480,8 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
             print(friendsCnt_str)
             friendsCnt = int(friendsCnt_str.split('명')[0].replace(',', ''))
 
+            # returnedResultDict['친구수'] = int(friendsCnt_str.split('명')[0].replace(',', ''))
+            # {'모든친구': 1228, '함께아는친구': 5, '최근추가한친구': 18, '대학교': 20, '거주지': 407, '출신지': 38, '팔로워': 644}
             print('친구 수 : ', friendsCnt)
 
             if friendsCnt >= 500:
@@ -1398,14 +1548,7 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
     friends_html = driver.page_source
     friends_soup = bs(friends_html, 'html.parser')
 
-    returnedResultDict['친구수'] = 0
-    returnedResultDict['모든친구'] = 0
-    returnedResultDict['함께아는친구'] = 0
-    returnedResultDict['최근추가한친구'] = 0
-    returnedResultDict['대학교'] = 0
-    returnedResultDict['거주지'] = 0
-    returnedResultDict['출신지'] = 0
-    returnedResultDict['팔로워'] = 0
+
 
     try:
         friends_all_cnt = friends_soup.select(
@@ -1423,7 +1566,22 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                     '#pagelet_timeline_medley_friends > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > a:nth-of-type(' + str(
                         frnKindLgth + 1) + ') > span:nth-of-type(2)')[0].text
 
+                # print(friendsKind, ':', friendsKind_Cnt)
+
+                '''
+                예시)
+                모든 친구 : 1,228
+                함께 아는 친구 : 5
+                최근 추가한 친구 : 18
+                대학교 : 20
+                거주지 : 407
+                출신지 : 38
+                팔로워 : 644
+                '''
+
+                # 위의 항목들중 존재하는 항목들이 returnedResultDict에 추가될 것이다.
                 returnedResultDict[friendsKind.replace(" ", "")] = int(friendsKind_Cnt.replace(",", ""))
+                # print(friendsKind.replace(" ", ""), ':', int(friendsKind_Cnt.replace(",","")))
 
             print(returnedResultDict)
 
@@ -1433,8 +1591,8 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
     except Exception as e:
         print('친구 정보가 공개되지 않았습니다. ')
 
-    returnedResultDict['좋아요클릭한사람수'] = 0
-    returnedResultDict['이미지에좋아요클릭한사람수'] = 0
+
+
     likePushPersonCnt = 0
 
     try:
@@ -1453,11 +1611,14 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
 
             try:
                 like_cnt_int = like_cnt_int + int(like_cnt_str)
+                # print('"좋아요" 표시 전체 갯수 :', like_cnt_int)
                 likePushPersonCnt += 1
 
             except ValueError as e_p:
                 like_man = attrValue_like_txtVal[likePerson].text
                 likePushPersonCnt += 1
+                # 갯수가 표시되지 않고 사람 이름이 표시된 경우에 해당함.
+                # print('"좋아요"를 누른 사람의 이름:', like_man)
                 if '외' in like_man:
                     likeManCntStr = like_man.split('외')[1].strip()
                     likeManCnt1 = int(likeManCntStr.split('명')[0])
@@ -1527,15 +1688,7 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
     returnedResultDict['좋아요클릭한사람수'] = likePushPersonCnt
     returnedResultDict['이미지에좋아요클릭한사람수'] = cnt_like_img
 
-    # 좋아요(관심사) - syhan
-    returnedResultDict['좋아요모두'] = 0
-    returnedResultDict['영화'] = 0
-    returnedResultDict['TV프로그램'] = 0
-    returnedResultDict['음악'] = 0
-    returnedResultDict['책'] = 0
-    returnedResultDict['스포츠팀'] = 0
-    returnedResultDict['음식점'] = 0
-    returnedResultDict['앱과게임'] = 0
+
 
     driver.get('https://www.facebook.com/' + user_fbpage_id + '/likes')
 
@@ -1561,9 +1714,23 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                     '#pagelet_timeline_medley_likes > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > a:nth-of-type(' + str(
                         likesKindLgth + 1) + ') > span:nth-of-type(2)')[0].text
 
+                # print(likesKind, ':', likesKind_Cnt)
+
+                '''
+                예시)            
+                좋아요 모두 : 407
+                영화 : 11
+                TV 프로그램 : 14
+                음악 : 32
+                책 : 12
+                스포츠 팀 : 1
+                음식점 : 3
+                앱과 게임 : 7
+                '''
 
                 returnedResultDict[likesKind.replace(" ", "")] = int(likesKind_Cnt.replace(",", ""))
                 print(likesKind.replace(" ", ""), ':', int(likesKind_Cnt.replace(",", "")))
+                # {'좋아요모두': 407, '영화': 11, 'TV프로그램': 14, '음악': 32, '책': 12, '스포츠팀': 1, '음식점': 3, '앱과게임': 7}
 
             print(returnedResultDict)
 
@@ -1602,9 +1769,21 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                     '#pagelet_timeline_medley_map > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > a:nth-of-type(' + str(
                         mapKindLgth + 1) + ') > span:nth-of-type(2)')[0].text
 
+                # print(likesKind, ':', likesKind_Cnt)
+
+                '''
+                예시)
+                길이: 3
+                장소 : 203
+                도시 : 56
+                최근에가본곳 : 417            
+                '''
+
                 returnedResultDict[mapKind.replace(" ", "")] = int(mapKind_Cnt.replace(",", ""))
+                # print(mapKind.replace(" ", ""), ':', int(mapKind_Cnt.replace(",", "")))
 
             print(returnedResultDict)
+            # {'장소': 203, '도시': 56, '최근에가본곳': 417}
 
         else:
             print('표시할 체크인 없음')
@@ -1642,6 +1821,20 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                 eventsKind_date = events_soup.select(
                     '#pagelet_timeline_medley_events > div:nth-of-type(2) > div:nth-of-type(1) > ul > li:nth-of-type(' + str(
                         eventsKindLgth + 1) + ') > div > div:nth-of-type(1) > div:nth-of-type(2) > div')[0].text
+
+                # print(eventsKind_title, ':', eventsKind_date)
+
+                '''
+                예시)
+                케이채사진전TheSouth:작가와의만남:2018년4월28일토요일오후3:00
+                @박정민개인전‘소년,제주에살다’오프닝파티:2018년2월2일금요일오후8:00
+                @관철수대선단독출마:2017년12월20일수요일오전6:00
+                @8월서울정기모임:2016년8월6일토요일오후3:00
+                @사진읽기9월3주차정기모임:2015년9월19일토요일오후2:00
+                @포토그래퍼스갤러리코리아선정8월의작가고방원초대개인전:2015년8월19일수요일오전11:00
+                @2013-1한예종연극원레퍼토리<로미오와줄리엣>:2013년5월30일목요일오전12:00
+                @"Catchtheeye;Eve"2012.12.24.Mon@BehiveLounge'sFirstParty:2012년12월24일월요일오후10:00    
+                '''
 
                 events_data.append(
                     eventsKind_title.replace(" ", "").replace("'", "") + ':' + eventsKind_date.replace(" ", ""))
@@ -1693,6 +1886,8 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
 
                 returnedResultDict[moviesKind_title.replace(" ", "")] = int(moviesKind_cnt.replace(",", ""))
 
+            # returnedResultDict['봤어요'] = int(moviesKind_cnt.replace(",", "")
+            # returnedResultDict['영화'] = int(moviesKind_cnt.replace(",", "")
 
         movies_all_list = movies_soup.select(
             '#pagelet_timeline_medley_movies > div:nth-of-type(2) > div:nth-of-type(1) > ul > li')
@@ -1712,9 +1907,13 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
 
                 movies_data.append(
                     movies_title.replace(" ", "").replace("'", "") + ':' + moviesSaw_date.replace(" ", ""))
+                # print(events_data)
 
+            # print('@'.join(events_data) )
             returnedResultDict['영화내용개수'] = len(movies_all_list)
             returnedResultDict['영화제목'] = '_@'.join(movies_data)
+            # print(returnedResultDict['영화내용개수'], ', ', returnedResultDict['영화제목'])
+
         else:
             print('표시할 영화 없음')
 
@@ -1724,9 +1923,14 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
     # 게시글 댓글 수 정보 추가- 타임라인
 
     userFacebook_currentUrl = 'https://www.facebook.com/' + user_fbpage_id
+
+    # driver.get('https://www.facebook.com/' + user_fbpage_id)
+    # articles_reply_html = driver.page_source
+    # articles_reply_soup = bs(articles_reply_html, 'html.parser')
     articles_reply_soup = autoScroller2(driver, userFacebook_currentUrl)
 
     articles_reply_data = []
+    # articles_reply_data_dic = {}
 
     returnedResultDict['댓글개수'] = 0
     returnedResultDict['댓글내용'] = '표시할 댓글 없음'
@@ -1775,8 +1979,18 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
 
                 # 게시글을 출력하는 묶음 단위가 존재하며, 각 묶음단위별 포함하고 있는 게시글의 갯수가 상이함.
 
+                print()
+                print()
+                print()
+                print('innerArticleCnt : ', len(innerArticleCnt))
 
                 for innerArtclLnth in range(len(innerArticleCnt)):
+
+                    # 1. 게시글 내용 리스트화
+                    # 2. 게시글 내용 vs 긍정어 단어 매칭 빈도수 측정(확률로 계산하면 될 듯)
+
+                    # 게시글 영역
+                    # 게시글 등록 시간
                     try:
                         updatedTime = \
                             articles_reply_soup.select('#recent_capsule_container > ol > div:nth-of-type(' + str(
@@ -1790,6 +2004,15 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                                 innerArtclLnth + 1) + ') > div > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div:nth-of-type(2) > div > div > div:nth-of-type(2) > div > span:nth-of-type(3) > span > abbr > span')[
                                 0].text
 
+                    print()
+                    print()
+                    print()
+                    print('게시글 등록 시간:', updatedTime)
+
+
+
+                    # 올해 게시물일 경우
+                    # 현재의 년월일값 : currTime = str(time.localtime().tm_year) + '년' + str(time.localtime().tm_mon) + '월' + str(time.localtime().tm_mday) + '일'
                     currYear = '%04d' % time.localtime().tm_year
                     currMnth = '%02d' % time.localtime().tm_mon
                     currDays = '%02d' % time.localtime().tm_mday
@@ -1829,9 +2052,13 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                         monthList1 = [1, 3, 5, 7, 8, 10, 12]
                         monthList2 = [4, 6, 9, 11]
 
+                        # updatedTime = currTimeUpdated을 만들기 위한 조건문
                         if '시간' in updatedTime.replace(" ", ""):
                             print('1')
                             print(updatedTime.split('시간')[0])
+                            # 현재시간 - 표시된 시간 = 경과한 시간값
+                            # updatedTime = rightNowTime
+                            # print('updatedTime:', updatedTime)
 
                             try:
                                 passedHour = int(str(time.localtime().tm_hour)) - int(updatedTime.split('시간')[0])
@@ -1966,12 +2193,24 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                     articles_reply_data = articles_reply_data + updatedArticleContentsList
 
                     article_reply_text = '@'.join(articles_reply_data)
+
+                    # 2-2. 게시글의 내용(단어)를 리스트로 변환
+                    # 2-3. 게시글 내용 리스트와 긍정어 단어 리스트의 비교 분석 및 빈도수 측정
                     returnExpList = readCSV_goodExpressions()
+                    # print('1-1')
+
+                    # print('단어 리스트 길이 :', len(returnExpList) )
 
                     cycNumGoodWords = 0
                     cycNumElseWords = 0
+                    # returnExpList : 긍정어.csv 파일에서 가져온 긍정어 항목
                     for expListLngth in range(len(returnExpList)):
+                        # 긍정어 표현 목록 길이 만큼 반복문을 돈다.
+
+                        # articles_reply_data :  게시글에서 추출한 단어 리스트
                         if returnExpList[expListLngth] in updatedArticleContentsList:
+                            # 긍정어.csv에서 가져온 단어가 게시글에서 추출한 단어 리스트에 존재하는지.
+
                             print('일치하는 긍정어 있음 :', returnExpList[expListLngth])
 
                             cycNumGoodWords += 1
@@ -1990,6 +2229,13 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
 
                     print('각 게시물 당 긍정어 사용 비율:', goodWordsUsingRate)
 
+                    # 3. 댓글과 덧글의 작성자명을 추출
+                    # 4. 각 게시물당 댓글 작성자명을 리스트로 변경, 같은 이름의 빈도수를 추출
+                    # 5. 게시물과 댓글의 내용을 리스트로 변경하여 긍정어 빈도수 추출
+                    # 6. 댓글 내용 vs 긍정어 단어 매칭 빈도수 측정(확률로 계산하면 될 듯)
+
+                    # 댓글영역
+                    # 좋아요 수
                     try:
                         articleLikeCnt = \
                             articles_reply_soup.select('#recent_capsule_container > ol > div:nth-of-type(' + str(
@@ -2006,6 +2252,8 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                     articleLikeTotCnt += int(articleLikeCnt)
 
 
+                    # 댓글영역
+                    # 댓글 개수
                     try:
                         articleReplyContentsCnt = \
                             articles_reply_soup.select('#recent_capsule_container > ol > div:nth-of-type(' + str(
@@ -2036,6 +2284,9 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
 
                         print('댓글 이나 게시 공유가 없습니다.')
 
+                    # 댓글영역
+                    # 댓글 추출
+                    # 3. 게시글의 댓글 가져오기(댓글중 텍스트와 텍스트 아닌 것을 구분하기)
 
                     try:
                         articleReplyContentsList = articles_reply_soup.select(
@@ -2122,6 +2373,8 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
             regArticleDateCnt = 0
 
             for regDateLength in range(len(articleRegisterDate)):
+                # print('regDateLength:', regDateLength)
+                # print('@:', articleRegisterDate[regDateLength].count(dateVal))
                 if dateVal in articleRegisterDate[regDateLength]:
                     regArticleDateCnt += 1
                     continue
@@ -2131,6 +2384,8 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
 
             print('%02d' % time.localtime().tm_mon, '월 게시글 개수:', regArticleDateCnt)
 
+            # 전 월의 게시물 찾기
+            # yrVal = '%04d' % time.localtime().tm_year
             mnthVal2 = '%02d' % (time.localtime().tm_mon - 1)
 
             dateVal_pre = yrVal + mnthVal2
@@ -2139,6 +2394,8 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
             regArticleDateCnt2 = 0
 
             for regDateLength2 in range(len(articleRegisterDate)):
+                # print('regDateLength:', regDateLength)
+                # print('@:', articleRegisterDate[regDateLength].count(dateVal))
                 if dateVal_pre in articleRegisterDate[regDateLength2]:
                     regArticleDateCnt2 += 1
                     continue
@@ -2245,6 +2502,7 @@ def getDetailInfoDictionaryType(userPageId, driver, loginCnt, userName, reqClien
 
         # [연락처 정보] & [소셜링크 및 웹사이트 정보] Dictionary
         contDic = {}
+        contDic['전체연락처정보'] = ''
         contDataList = []
         contDataList_webSns = []
 
@@ -2291,6 +2549,8 @@ def getDetailInfoDictionaryType(userPageId, driver, loginCnt, userName, reqClien
                         contDataList.append(value)
                         conCycle += 1
 
+                    # contDic['전체연락처정보'] = '__'.join(contDataList)
+                    # print("contDic['전체연락처정보'] :", contDic['전체연락처정보'])
 
                 except:
                     print('더이상 가져올 수 있는 정보가 존재하지 않습니다.')
@@ -2484,112 +2744,62 @@ def TCMCountGen(tScoreCount, cScoreCount, ResultDict, user_fbpage_url, driver, r
         ResultDict.update({'T_SCORE': tScoreCount, 'C_SCORE': cScoreCount, 'M_SCORE': mScoreCount})
 
         print('최종 RESULT : ', ResultDict)
+        #
+        # resultKeyList = []
+        # resultValueList = []
+        #
+        # try:
+        #     print('Result key 개수:', len(ResultDict.keys()) )
+        #     # print(ResultDict.keys()[0])
+        #     # print(ResultDict.keys()[7])
+        #     print(type(ResultDict.keys()) )
+        #     print('Result value 개수:', len(ResultDict.values()))
+        #
+        #     for key in ResultDict:
+        #         print("key: %s, value: %s" % (key, ResultDict[key]))
+        #
+        #         resultKeyList.append(key)
+        #
+        #     print("resultKeyList: ", resultKeyList)
+        #
+        #
+        # except Exception as e:
+        #     print(e)
 
+        # try:
+        #     databaseConnection_jeniel = mysqlConnection_jeniel.DatabaseConnection_jeniel()
+        #
+        #     for resultLength in range(len(ResultDict.keys())):
+        #         ResultDict[]
+        #
+        # except Exception as e:
+        #     print('DB insert Error :', e)
 
-        #test print
-
-        str(ResultDict['사용자이름']),  # userName
-        str(ResultDict['페이스북페이지ID']),  # facebookUrl
-        str(ResultDict['전체기본정보']),  # basicInfo_tot
-        str(ResultDict['전체연락처정보']),  # contctInfo_tot
-        str(ResultDict['웹사이트및소셜링크정보']),  # websiteSnsInfo
-        str(ResultDict['소개글']),  # introduceText
-        str(ResultDict['프로필게시개수']),  # profileTotCnt
-        str(ResultDict['전체프로필정보']),  # profileTotInfo
-        str(ResultDict['친구수']),  # friendsCnt
-        str(ResultDict['좋아요(image)__표시전체갯수']),  # imgLikeCnt
-        str(ResultDict['동영상수']),  # vodCnt
-        str(ResultDict['사진수']),  # picCnt
-        str(ResultDict['팔로워']),  # fllwerCnt
-        str(ResultDict['DETAIL']).replace(" ", "").replace("/", ""),  # detail_info
-        str(ResultDict['좋아요__사람전체명수']),  # likePeopleCnt
-        str(ResultDict['생일']),  # birthday
-        str(ResultDict['음력생일']),  # birthday_luna
-        str(ResultDict['성별']),  # sex
-        str(ResultDict['혈액형']),  # bloodType
-        str(ResultDict['주소']),  # addr
-        str(ResultDict['웹사이트']),  # website
-        str(ResultDict['소셜링크']),  # snsLink
-        str(ResultDict['종교관']),  # religion
-        str(ResultDict['휴대폰']),  # cellPhone
-        str(ResultDict['모든친구']),  # allFrndCnt
-        str(ResultDict['함께아는친구']),  # knowEachFrnd
-        str(ResultDict['최근추가한친구']),  # latestAddFrnd
-        str(ResultDict['대학교']),  # univFrnd
-        str(ResultDict['거주지']),  # homeFrnd
-        str(ResultDict['출신지']),  # homeTwnFrnd
-        str(ResultDict['고등학교']),  # highschoolFrnd
-        str(ResultDict['좋아요모두']),  # likeHobbyAllCnt
-        str(ResultDict['영화']),  # movieLikeCnt
-        str(ResultDict['TV프로그램']),  # tvLikeCnt
-        str(ResultDict['음악']),  # musicLikeCnt
-        str(ResultDict['책']),  # bookLikeCnt
-        str(ResultDict['스포츠팀']),  # sportsTemaLikeCnt
-        str(ResultDict['음식점']),  # foodPlaceCnt
-        str(ResultDict['앱과게임']),  # appAndGamesCnt
-        str(ResultDict['장소']),  # visitedPlc
-        str(ResultDict['도시']),  # visitedCity
-        str(ResultDict['최근에가본곳']),  # recentVisitPlc
-        str(ResultDict['이벤트내용개수']),  # evntCnt
-        str(ResultDict['이벤트내용']),  # eventContents
-        str(ResultDict['봤어요']),  # sawItCnt
-        str(ResultDict['영화내용개수']),  # sawMovieContentCnt
-        str(ResultDict['영화제목']),  # sawMovieTitle
-        str(ResultDict['댓글개수']),  # replyCnt
-        str(ResultDict['댓글내용']),  # replyContents
-        str(ResultDict['게시글좋아요수']),  # articleLikeCnt
-        str(ResultDict['게시글공유수']),  # articleShareCnt
-        str(ResultDict['수집한게시글개수']),  # articleCnt
-        str(ResultDict['평균댓글개수']),  # avgReplyCnt
-        str(ResultDict['평균덧글개수']),  # avgReplyAndReply
-        str(ResultDict['전체긍정어사용빈도']),  # gdExpssCnt
-        str(ResultDict['평균긍정어사용비율']),  # avgGdExpssRate
-        str(ResultDict['페이스북게시글등록시간']),  # fbacrticleRegTime
-        str(ResultDict['개요항목개수']),  # aboutInfoCnt
-        str(ResultDict['해당월게시글개수']),  # thisMnthArticleCnt
-        str(ResultDict['전월게시글개수']),  # preMnthArticleCnt
-        str(ResultDict['운영년수']),  # arrangeYears
-        str(ResultDict['T_SCORE']),  # fb_tscore
-        str(ResultDict['C_SCORE']),  # fb_cscore
-        str(ResultDict['M_SCORE'])  # fb_mscore
-
-        # DB INSERT
-        try:
-            # Server Connection to MySQL:
-            databaseConnection_jeniel = mysqlConnection_jeniel.DatabaseConnection_jeniel()
-            databaseConnection_jeniel.insert_record_origin_version(
-
-                str(ResultDict['사용자이름']),  # userName
-                str(ResultDict['페이스북페이지ID']),  # facebookUrl
-                str(ResultDict['전체기본정보']),  # basicInfo_tot
-                str(ResultDict['전체연락처정보']),  # contctInfo_tot
-                str(ResultDict['웹사이트및소셜링크정보']),  # websiteSnsInfo
-                str(ResultDict['소개글']),  # introduceText
-                str(ResultDict['프로필게시개수']),  # profileTotCnt
-                str(ResultDict['전체프로필정보']),  # profileTotInfo
-                str(ResultDict['친구수']),  # friendsCnt
-                str(ResultDict['좋아요(image)__표시전체갯수']),  # imgLikeCnt
-                str(ResultDict['동영상수']),  # vodCnt
-                str(ResultDict['사진수']),  # picCnt
-                str(ResultDict['팔로워']),  # fllwerCnt
-                str(ResultDict['DETAIL']),  # detail_info
-                str(ResultDict['좋아요__사람전체명수']),  # likePeopleCnt
-                str(ResultDict['생일']),  # birthday
-                str(ResultDict['음력생일']),  # birthday_luna
-                str(ResultDict['성별']),  # sex
-                str(ResultDict['혈액형']),  # bloodType
-                str(ResultDict['주소']),  # addr
-                str(ResultDict['웹사이트']),  # website
-                str(ResultDict['소셜링크']),  # snsLink
-                str(ResultDict['종교관']),  # religion
-                str(ResultDict['휴대폰']),  # cellPhone
+        print('test print:',
+                ResultDict['사용자이름'],
+                ResultDict['페이스북페이지ID'],
+                ''.join(ResultDict['전체기본정보']),
+                '_'.join(ResultDict['전체연락처정보']),
+                '_'.join(ResultDict['웹사이트및소셜링크정보']),
+                '_'.join(ResultDict['소개글']),
+                str(ResultDict['프로필게시개수']),
+                ResultDict['전체프로필정보'],
+                str(ResultDict['친구수']),
+                str(ResultDict['좋아요클릭한사람수']),
+                str(ResultDict['이미지에좋아요클릭한사람수']),
+                str(ResultDict['동영상수']),
+                str(ResultDict['사진수']),
+                str(ResultDict['T_SCORE']),
+                str(ResultDict['C_SCORE']),
+                str(ResultDict['M_SCORE']),
+                '_'.join(ResultDict['DETAIL']),
                 str(ResultDict['모든친구']),  # allFrndCnt
                 str(ResultDict['함께아는친구']),  # knowEachFrnd
                 str(ResultDict['최근추가한친구']),  # latestAddFrnd
                 str(ResultDict['대학교']),  # univFrnd
                 str(ResultDict['거주지']),  # homeFrnd
                 str(ResultDict['출신지']),  # homeTwnFrnd
-                str(ResultDict['고등학교']),  # highschoolFrnd
+                str(ResultDict['팔로워']),  # fllwerCnt
                 str(ResultDict['좋아요모두']),  # likeHobbyAllCnt
                 str(ResultDict['영화']),  # movieLikeCnt
                 str(ResultDict['TV프로그램']),  # tvLikeCnt
@@ -2604,149 +2814,102 @@ def TCMCountGen(tScoreCount, cScoreCount, ResultDict, user_fbpage_url, driver, r
                 str(ResultDict['이벤트내용개수']),  # evntCnt
                 str(ResultDict['이벤트내용']),  # eventContents
                 str(ResultDict['봤어요']),  # sawItCnt
+                str(ResultDict['영화']),  # sawMovieCnt
                 str(ResultDict['영화내용개수']),  # sawMovieContentCnt
                 str(ResultDict['영화제목']),  # sawMovieTitle
                 str(ResultDict['댓글개수']),  # replyCnt
                 str(ResultDict['댓글내용']),  # replyContents
                 str(ResultDict['게시글좋아요수']),  # articleLikeCnt
                 str(ResultDict['게시글공유수']),  # articleShareCnt
-                str(ResultDict['수집한게시글개수']),  # articleCnt
                 str(ResultDict['평균댓글개수']),  # avgReplyCnt
                 str(ResultDict['평균덧글개수']),  # avgReplyAndReply
                 str(ResultDict['전체긍정어사용빈도']),  # gdExpssCnt
                 str(ResultDict['평균긍정어사용비율']),  # avgGdExpssRate
-                str(ResultDict['페이스북게시글등록시간']),  # fbacrticleRegTime
                 str(ResultDict['개요항목개수']),  # aboutInfoCnt
-                str(ResultDict['해당월게시글개수']),  # thisMnthArticleCnt
-                str(ResultDict['전월게시글개수']),  # preMnthArticleCnt
-                str(ResultDict['운영년수']),  # arrangeYears
-                str(ResultDict['T_SCORE']),  # fb_tscore
-                str(ResultDict['C_SCORE']),  # fb_cscore
-                str(ResultDict['M_SCORE'])  # fb_mscore
+                str(ResultDict['해당월게시글개수']),    #thisMnthArticleCnt
+                str(ResultDict['전월게시글개수']),      #preMnthArticleCnt
+				str(ResultDict['운영년수']),			#arrangeYears
+                str(ResultDict['전화번호']),          #cellPhone
+                str(ResultDict['주소']),             #addr
+                str(ResultDict['소셜링크']),          #snsLink
+                str(ResultDict['웹사이트']),         #website
+                str(ResultDict['생일']),             #birthday
+                str(ResultDict['음력생일']),         #birthday_luna
+                str(ResultDict['고등학교'])          #highschoolFrnd
+        )
+
+        # allFrndCnt,knowEachFrnd,latestAddFrnd,univFrnd,homeFrnd,homeTwnFrnd,fllwerCnt,
+        # likeHobbyAllCnt,movieLikeCnt,tvLikeCnt,musicLikeCnt,
+        # bookLikeCnt,sportsTemaLikeCnt,foodPlaceCnt,appAndGamesCnt,
+        # visitedPlc,visitedCity,recentVisitPlc,evntCnt
+
+        # DB INSERT
+        try:
+            # Server Connection to MySQL:
+            databaseConnection_jeniel = mysqlConnection_jeniel.DatabaseConnection_jeniel()
+            databaseConnection_jeniel.insert_record_origin_version(
+                ResultDict['사용자이름'],
+                ResultDict['페이스북페이지ID'],
+                ''.join(ResultDict['전체기본정보']),
+                '_'.join(ResultDict['전체연락처정보']),
+                '_'.join(ResultDict['웹사이트및소셜링크정보']),
+                '_'.join(ResultDict['소개글']),
+                str(ResultDict['프로필게시개수']),
+                ResultDict['전체프로필정보'],
+                str(ResultDict['친구수']),
+                str(ResultDict['좋아요클릭한사람수']),
+                str(ResultDict['이미지에좋아요클릭한사람수']),
+                str(ResultDict['동영상수']),
+                str(ResultDict['사진수']),
+                str(ResultDict['T_SCORE']),
+                str(ResultDict['C_SCORE']),
+                str(ResultDict['M_SCORE']),
+                '_'.join(ResultDict['DETAIL']),
+                str(ResultDict['모든친구']),  # allFrndCnt
+                str(ResultDict['함께아는친구']),  # knowEachFrnd
+                str(ResultDict['최근추가한친구']),  # latestAddFrnd
+                str(ResultDict['대학교']),  # univFrnd
+                str(ResultDict['거주지']),  # homeFrnd
+                str(ResultDict['출신지']),  # homeTwnFrnd
+                str(ResultDict['팔로워']),  # fllwerCnt
+                str(ResultDict['좋아요모두']),  # likeHobbyAllCnt
+                str(ResultDict['영화']),  # movieLikeCnt
+                str(ResultDict['TV프로그램']),  # tvLikeCnt
+                str(ResultDict['음악']),  # musicLikeCnt
+                str(ResultDict['책']),  # bookLikeCnt
+                str(ResultDict['스포츠팀']),  # sportsTemaLikeCnt
+                str(ResultDict['음식점']),  # foodPlaceCnt
+                str(ResultDict['앱과게임']),  # appAndGamesCnt
+                str(ResultDict['장소']),  # visitedPlc
+                str(ResultDict['도시']),  # visitedCity
+                str(ResultDict['최근에가본곳']),  # recentVisitPlc
+                str(ResultDict['이벤트내용개수']),  # evntCnt
+                str(ResultDict['이벤트내용']),  # eventContents
+                str(ResultDict['봤어요']),  # sawItCnt
+                str(ResultDict['영화']),  # sawMovieCnt
+                str(ResultDict['영화내용개수']),  # sawMovieContentCnt
+                str(ResultDict['영화제목']),  # sawMovieTitle
+                str(ResultDict['댓글개수']),  # replyCnt
+                str(ResultDict['댓글내용']),  # replyContents
+                str(ResultDict['게시글좋아요수']),  # articleLikeCnt
+                str(ResultDict['게시글공유수']),  # articleShareCnt
+                str(ResultDict['평균댓글개수']),  # avgReplyCnt
+                str(ResultDict['평균덧글개수']),  # avgReplyAndReply
+                str(ResultDict['전체긍정어사용빈도']),  # gdExpssCnt
+                str(ResultDict['평균긍정어사용비율']),  # avgGdExpssRate
+                str(ResultDict['개요항목개수']),  # aboutInfoCnt
+                str(ResultDict['해당월게시글개수']),    #thisMnthArticleCnt
+                str(ResultDict['전월게시글개수']),      #preMnthArticleCnt
+				str(ResultDict['운영년수']),			#arrangeYears
+                str(ResultDict['전화번호']),          #cellPhone
+                str(ResultDict['주소']),             #addr
+                str(ResultDict['소셜링크']),          #snsLink
+                str(ResultDict['웹사이트']),         #website
+                str(ResultDict['생일']),             #birthday
+                str(ResultDict['음력생일'])         #birthday_luna
 
             )
 
-            #
-            # str(ResultDict['사용자이름']),                   #userName
-            # str(ResultDict['생일']),					        #birthday
-            # str(ResultDict['음력생일']),				        #birthday_luna
-            # str(ResultDict['성별']),					        #sex
-            # str(ResultDict['혈액형']),				        #bloodType
-            # str(ResultDict['종교관']),				        #religion
-            # str(ResultDict['전체기본정보']),			        #basicInfo_tot
-            # str(ResultDict['휴대폰']),				        #cellPhone
-            # str(ResultDict['주소']),					        #addr
-            # str(ResultDict['웹사이트']),				        #website
-            # str(ResultDict['소셜링크']),				        #snsLink
-            # str(ResultDict['웹사이트및소셜링크정보']),		    #websiteSnsInfo
-            # str(ResultDict['페이스북페이지ID']),		        #facebookUrl
-            # str(ResultDict['전체연락처정보']),			    #contctInfo_tot
-            # str(ResultDict['프로필게시개수']),			    #profileTotCnt
-            # str(ResultDict['전체프로필정보']),			    #profileTotInfo
-            # str(ResultDict['친구수']),				        #friendsCnt
-            # str(ResultDict['좋아요__사람전체명수']),		    #likePeopleCnt
-            # str(ResultDict['좋아요(image)__표시전체갯수']),   #imgLikeCnt
-            # str(ResultDict['이미지에좋아요클릭한사람수']),     #photoLikeCnt
-            # str(ResultDict['동영상수']),				        #vodCnt
-            # str(ResultDict['사진수']),				        #picCnt
-            # str(ResultDict['개요항목개수']),			        #aboutInfoCnt
-            # str(ResultDict['운영년수']),				        #arrangeYears
-            # str(ResultDict['모든친구']),				        #allFrndCnt
-            # str(ResultDict['함께아는친구']),			        #knowEachFrnd
-            # str(ResultDict['최근추가한친구']),			    #latestAddFrnd
-            # str(ResultDict['대학교']),				        #univFrnd
-            # str(ResultDict['거주지']),				        #homeFrnd
-            # str(ResultDict['출신지']),				        #homeTwnFrnd
-            # str(ResultDict['팔로워']),				        #fllwerCnt
-            # str(ResultDict['고등학교']),				        #highschoolFrndCnt
-            # str(ResultDict['좋아요모두']),				    #likeHobbyAllCnt
-            # str(ResultDict['영화']),					        #movieLikeCnt
-            # str(ResultDict['TV프로그램']),				    #tvLikeCnt
-            # str(ResultDict['음악']),					        #musicLikeCnt
-            # str(ResultDict['책']),					        #bookLikeCnt
-            # str(ResultDict['스포츠팀']),				        #sportsTemaLikeCnt
-            # str(ResultDict['음식점']),				        #foodPlaceCnt
-            # str(ResultDict['앱과게임']),				        #appAndGamesCnt
-            # str(ResultDict['장소']),					        #visitedPlc
-            # str(ResultDict['도시']),					        #visitedCity
-            # str(ResultDict['최근에가본곳']),			        #recentVisitPlc
-            # str(ResultDict['이벤트내용개수']),			    #evntCnt
-            # str(ResultDict['이벤트내용']),				    #eventContents
-            # str(ResultDict['봤어요']),				        #sawItCnt
-            # str(ResultDict['영화내용개수']),			        #sawMovieContentCnt
-            # str(ResultDict['영화제목']),				        #sawMovieTitle
-            # str(ResultDict['댓글개수']),				        #replyCnt
-            # str(ResultDict['댓글내용']),				        #replyContents
-            # str(ResultDict['게시글좋아요수']),			    #articleLikeCnt
-            # str(ResultDict['게시글공유수']),			        #articleShareCnt
-            # str(ResultDict['수집한게시글개수']),			    #articleCnt
-            # str(ResultDict['평균댓글개수']),			        #avgReplyCnt
-            # str(ResultDict['평균덧글개수']),			        #avgReplyAndReply
-            # str(ResultDict['전체긍정어사용빈도']),		        #gdExpssCnt
-            # str(ResultDict['평균긍정어사용비율']),		        #avgGdExpssRate
-            # str(ResultDict['페이스북게시글등록시간']),		    #fbacrticleRegTime
-            # str(ResultDict['해당월게시글개수']),			    #thisMnthArticleCnt
-            # str(ResultDict['전월게시글개수']),			    #preMnthArticleCnt
-            # str(ResultDict['DETAIL']),                      #detail_info
-            # str(ResultDict['T_SCORE']),                     #fb_tscore
-            # str(ResultDict['C_SCORE']),                     #fb_cscore
-            # str(ResultDict['M_SCORE'])                      #fb_mscore
-            #
-            #
-            #
-            # ResultDict['사용자이름'],
-            # ResultDict['페이스북페이지ID'],
-            # ''.join(ResultDict['전체기본정보']),
-            # '_'.join(ResultDict['전체연락처정보']),
-            # '_'.join(ResultDict['웹사이트및소셜링크정보']),
-            # '_'.join(ResultDict['소개글']),
-            # str(ResultDict['프로필게시개수']),
-            # ResultDict['전체프로필정보'],
-            # str(ResultDict['친구수']),
-            # str(ResultDict['좋아요클릭한사람수']),
-            # str(ResultDict['이미지에좋아요클릭한사람수']),
-            # str(ResultDict['동영상수']),
-            # str(ResultDict['사진수']),
-            # str(ResultDict['T_SCORE']),
-            # str(ResultDict['C_SCORE']),
-            # str(ResultDict['M_SCORE']),
-            # '_'.join(ResultDict['DETAIL']),
-            # str(ResultDict['모든친구']),  # allFrndCnt
-            # str(ResultDict['함께아는친구']),  # knowEachFrnd
-            # str(ResultDict['최근추가한친구']),  # latestAddFrnd
-            # str(ResultDict['대학교']),  # univFrnd
-            # str(ResultDict['거주지']),  # homeFrnd
-            # str(ResultDict['출신지']),  # homeTwnFrnd
-            # str(ResultDict['팔로워']),  # fllwerCnt
-            # str(ResultDict['좋아요모두']),  # likeHobbyAllCnt
-            # str(ResultDict['영화']),  # movieLikeCnt
-            # str(ResultDict['TV프로그램']),  # tvLikeCnt
-            # str(ResultDict['음악']),  # musicLikeCnt
-            # str(ResultDict['책']),  # bookLikeCnt
-            # str(ResultDict['스포츠팀']),  # sportsTemaLikeCnt
-            # str(ResultDict['음식점']),  # foodPlaceCnt
-            # str(ResultDict['앱과게임']),  # appAndGamesCnt
-            # str(ResultDict['장소']),  # visitedPlc
-            # str(ResultDict['도시']),  # visitedCity
-            # str(ResultDict['최근에가본곳']),  # recentVisitPlc
-            # str(ResultDict['이벤트내용개수']),  # evntCnt
-            # str(ResultDict['이벤트내용']),  # eventContents
-            # str(ResultDict['봤어요']),  # sawItCnt
-            # str(ResultDict['영화']),  # sawMovieCnt
-            # str(ResultDict['영화내용개수']),  # sawMovieContentCnt
-            # str(ResultDict['영화제목']),  # sawMovieTitle
-            # str(ResultDict['댓글개수']),  # replyCnt
-            # str(ResultDict['댓글내용']),  # replyContents
-            # str(ResultDict['게시글좋아요수']),  # articleLikeCnt
-            # str(ResultDict['게시글공유수']),  # articleShareCnt
-            # str(ResultDict['평균댓글개수']),  # avgReplyCnt
-            # str(ResultDict['평균덧글개수']),  # avgReplyAndReply
-            # str(ResultDict['전체긍정어사용빈도']),  # gdExpssCnt
-            # str(ResultDict['평균긍정어사용비율']),  # avgGdExpssRate
-            # str(ResultDict['개요항목개수']),  # aboutInfoCnt
-            # str(ResultDict['해당월게시글개수']),    #thisMnthArticleCnt
-            # str(ResultDict['전월게시글개수']),      #preMnthArticleCnt
-            # str(ResultDict['운영년수'])			#arrangeYears
 
         except Exception as e_maria:
             logger.error('[ Error ] MariaDB About information Insertion => {}'.format(e_maria))
@@ -2760,109 +2923,44 @@ def TCMCountGen(tScoreCount, cScoreCount, ResultDict, user_fbpage_url, driver, r
         print('M SCORE를 산출할 수 없습니다.')
         ResultDict.update({'T_SCORE': tScoreCount, 'C_SCORE': cScoreCount, 'M_SCORE': 0})
 
-        #test print
+        print('최종 RESULT : ', ResultDict)
 
-        str(ResultDict['사용자이름']),  # userName
-        str(ResultDict['페이스북페이지ID']),  # facebookUrl
-        str(ResultDict['전체기본정보']),  # basicInfo_tot
-        str(ResultDict['전체연락처정보']),  # contctInfo_tot
-        str(ResultDict['웹사이트및소셜링크정보']),  # websiteSnsInfo
-        str(ResultDict['소개글']),  # introduceText
-        str(ResultDict['프로필게시개수']),  # profileTotCnt
-        str(ResultDict['전체프로필정보']),  # profileTotInfo
-        str(ResultDict['친구수']),  # friendsCnt
-        str(ResultDict['좋아요(image)__표시전체갯수']),  # imgLikeCnt
-        str(ResultDict['동영상수']),  # vodCnt
-        str(ResultDict['사진수']),  # picCnt
-        str(ResultDict['팔로워']),  # fllwerCnt
-        str(ResultDict['DETAIL']).replace(" ", "").replace("/", ""),  # detail_info
-        str(ResultDict['좋아요__사람전체명수']),  # likePeopleCnt
-        str(ResultDict['생일']),  # birthday
-        str(ResultDict['음력생일']),  # birthday_luna
-        str(ResultDict['성별']),  # sex
-        str(ResultDict['혈액형']),  # bloodType
-        str(ResultDict['주소']),  # addr
-        str(ResultDict['웹사이트']),  # website
-        str(ResultDict['소셜링크']),  # snsLink
-        str(ResultDict['종교관']),  # religion
-        str(ResultDict['휴대폰']),  # cellPhone
-        str(ResultDict['모든친구']),  # allFrndCnt
-        str(ResultDict['함께아는친구']),  # knowEachFrnd
-        str(ResultDict['최근추가한친구']),  # latestAddFrnd
-        str(ResultDict['대학교']),  # univFrnd
-        str(ResultDict['거주지']),  # homeFrnd
-        str(ResultDict['출신지']),  # homeTwnFrnd
-        str(ResultDict['고등학교']),  # highschoolFrnd
-        str(ResultDict['좋아요모두']),  # likeHobbyAllCnt
-        str(ResultDict['영화']),  # movieLikeCnt
-        str(ResultDict['TV프로그램']),  # tvLikeCnt
-        str(ResultDict['음악']),  # musicLikeCnt
-        str(ResultDict['책']),  # bookLikeCnt
-        str(ResultDict['스포츠팀']),  # sportsTemaLikeCnt
-        str(ResultDict['음식점']),  # foodPlaceCnt
-        str(ResultDict['앱과게임']),  # appAndGamesCnt
-        str(ResultDict['장소']),  # visitedPlc
-        str(ResultDict['도시']),  # visitedCity
-        str(ResultDict['최근에가본곳']),  # recentVisitPlc
-        str(ResultDict['이벤트내용개수']),  # evntCnt
-        str(ResultDict['이벤트내용']),  # eventContents
-        str(ResultDict['봤어요']),  # sawItCnt
-        str(ResultDict['영화내용개수']),  # sawMovieContentCnt
-        str(ResultDict['영화제목']),  # sawMovieTitle
-        str(ResultDict['댓글개수']),  # replyCnt
-        str(ResultDict['댓글내용']),  # replyContents
-        str(ResultDict['게시글좋아요수']),  # articleLikeCnt
-        str(ResultDict['게시글공유수']),  # articleShareCnt
-        str(ResultDict['수집한게시글개수']),  # articleCnt
-        str(ResultDict['평균댓글개수']),  # avgReplyCnt
-        str(ResultDict['평균덧글개수']),  # avgReplyAndReply
-        str(ResultDict['전체긍정어사용빈도']),  # gdExpssCnt
-        str(ResultDict['평균긍정어사용비율']),  # avgGdExpssRate
-        str(ResultDict['페이스북게시글등록시간']),  # fbacrticleRegTime
-        str(ResultDict['개요항목개수']),  # aboutInfoCnt
-        str(ResultDict['해당월게시글개수']),  # thisMnthArticleCnt
-        str(ResultDict['전월게시글개수']),  # preMnthArticleCnt
-        str(ResultDict['운영년수']),  # arrangeYears
-        str(ResultDict['T_SCORE']),  # fb_tscore
-        str(ResultDict['C_SCORE']),  # fb_cscore
-        str(ResultDict['M_SCORE'])  # fb_mscore
+        try:
+            print('Result key 개수:', len(ResultDict.keys()) )
+            print('Result value 개수:', len(ResultDict.values()))
+        except Exception as e:
+            print(e)
 
         # DB INSERT
         try:
             # Server Connection to MySQL:
             databaseConnection_jeniel = mysqlConnection_jeniel.DatabaseConnection_jeniel()
             databaseConnection_jeniel.insert_record_origin_version(
-                str(ResultDict['사용자이름']),  # userName
-                str(ResultDict['페이스북페이지ID']),  # facebookUrl
-                str(ResultDict['전체기본정보']),  # basicInfo_tot
-                str(ResultDict['전체연락처정보']),  # contctInfo_tot
-                str(ResultDict['웹사이트및소셜링크정보']),  # websiteSnsInfo
-                str(ResultDict['소개글']),  # introduceText
-                str(ResultDict['프로필게시개수']),  # profileTotCnt
-                str(ResultDict['전체프로필정보']),  # profileTotInfo
-                str(ResultDict['친구수']),  # friendsCnt
-                str(ResultDict['좋아요(image)__표시전체갯수']),  # imgLikeCnt
-                str(ResultDict['동영상수']),  # vodCnt
-                str(ResultDict['사진수']),  # picCnt
-                str(ResultDict['팔로워']),  # fllwerCnt
-                str(ResultDict['DETAIL']).replace(" ","").replace("/",""),  # detail_info
-                str(ResultDict['좋아요__사람전체명수']),  # likePeopleCnt
-                str(ResultDict['생일']),  # birthday
-                str(ResultDict['음력생일']),  # birthday_luna
-                str(ResultDict['성별']),  # sex
-                str(ResultDict['혈액형']),  # bloodType
-                str(ResultDict['주소']),  # addr
-                str(ResultDict['웹사이트']),  # website
-                str(ResultDict['소셜링크']),  # snsLink
-                str(ResultDict['종교관']),  # religion
-                str(ResultDict['휴대폰']),  # cellPhone
+
+                ResultDict['사용자이름'],
+                ResultDict['페이스북페이지ID'],
+                ''.join(ResultDict['전체기본정보']),
+                '_'.join(ResultDict['전체연락처정보']),
+                '_'.join(ResultDict['웹사이트및소셜링크정보']),
+                '_'.join(ResultDict['소개글']),
+                str(ResultDict['프로필게시개수']),
+                ResultDict['전체프로필정보'],
+                str(ResultDict['친구수']),
+                str(ResultDict['좋아요클릭한사람수']),
+                str(ResultDict['이미지에좋아요클릭한사람수']),
+                str(ResultDict['동영상수']),
+                str(ResultDict['사진수']),
+                str(ResultDict['T_SCORE']),
+                str(ResultDict['C_SCORE']),
+                str(ResultDict['M_SCORE']),
+                '_'.join(ResultDict['DETAIL']),
                 str(ResultDict['모든친구']),  # allFrndCnt
                 str(ResultDict['함께아는친구']),  # knowEachFrnd
                 str(ResultDict['최근추가한친구']),  # latestAddFrnd
                 str(ResultDict['대학교']),  # univFrnd
                 str(ResultDict['거주지']),  # homeFrnd
                 str(ResultDict['출신지']),  # homeTwnFrnd
-                str(ResultDict['고등학교']),  # highschoolFrnd
+                str(ResultDict['팔로워']),  # fllwerCnt
                 str(ResultDict['좋아요모두']),  # likeHobbyAllCnt
                 str(ResultDict['영화']),  # movieLikeCnt
                 str(ResultDict['TV프로그램']),  # tvLikeCnt
@@ -2877,26 +2975,81 @@ def TCMCountGen(tScoreCount, cScoreCount, ResultDict, user_fbpage_url, driver, r
                 str(ResultDict['이벤트내용개수']),  # evntCnt
                 str(ResultDict['이벤트내용']),  # eventContents
                 str(ResultDict['봤어요']),  # sawItCnt
+                str(ResultDict['영화']),  # sawMovieCnt
                 str(ResultDict['영화내용개수']),  # sawMovieContentCnt
                 str(ResultDict['영화제목']),  # sawMovieTitle
                 str(ResultDict['댓글개수']),  # replyCnt
                 str(ResultDict['댓글내용']),  # replyContents
                 str(ResultDict['게시글좋아요수']),  # articleLikeCnt
                 str(ResultDict['게시글공유수']),  # articleShareCnt
-                str(ResultDict['수집한게시글개수']),  # articleCnt
                 str(ResultDict['평균댓글개수']),  # avgReplyCnt
                 str(ResultDict['평균덧글개수']),  # avgReplyAndReply
                 str(ResultDict['전체긍정어사용빈도']),  # gdExpssCnt
                 str(ResultDict['평균긍정어사용비율']),  # avgGdExpssRate
-                str(ResultDict['페이스북게시글등록시간']),  # fbacrticleRegTime
                 str(ResultDict['개요항목개수']),  # aboutInfoCnt
                 str(ResultDict['해당월게시글개수']),  # thisMnthArticleCnt
                 str(ResultDict['전월게시글개수']),  # preMnthArticleCnt
                 str(ResultDict['운영년수']),  # arrangeYears
-                str(ResultDict['T_SCORE']),  # fb_tscore
-                str(ResultDict['C_SCORE']),  # fb_cscore
-                str(ResultDict['M_SCORE'])  # fb_mscore
+                str(ResultDict['전화번호']),  # cellPhone
+                str(ResultDict['주소']),  # addr
+                str(ResultDict['소셜링크']),  # snsLink
+                str(ResultDict['웹사이트']),  # website
+                str(ResultDict['생일']),  # birthday
+                str(ResultDict['음력생일'])  # birthday_luna
 
+            #         ResultDict['사용자이름'],
+        #         ResultDict['페이스북페이지ID'],
+        #         ''.join(ResultDict['전체기본정보']),
+        #         '_'.join(ResultDict['전체연락처정보']),
+        #         '_'.join(ResultDict['웹사이트및소셜링크정보']),
+        #         '_'.join(ResultDict['소개글']),
+        #         str(ResultDict['프로필게시개수']),
+        #         ResultDict['전체프로필정보'],
+        #         str(ResultDict['친구수']),
+        #         str(ResultDict['좋아요클릭한사람수']),
+        #         str(ResultDict['이미지에좋아요클릭한사람수']),
+        #         str(ResultDict['동영상수']),
+        #         str(ResultDict['사진수']),
+        #         str(ResultDict['T_SCORE']),
+        #         str(ResultDict['C_SCORE']),
+        #         str(ResultDict['M_SCORE']),
+        #         '_'.join(ResultDict['DETAIL']),
+        #         str(ResultDict['모든친구']),  # allFrndCnt
+        #         str(ResultDict['함께아는친구']),  # knowEachFrnd
+        #         str(ResultDict['최근추가한친구']),  # latestAddFrnd
+        #         str(ResultDict['대학교']),  # univFrnd
+        #         str(ResultDict['거주지']),  # homeFrnd
+        #         str(ResultDict['출신지']),  # homeTwnFrnd
+        #         str(ResultDict['팔로워']),  # fllwerCnt
+        #         str(ResultDict['좋아요모두']),  # likeHobbyAllCnt
+        #         str(ResultDict['영화']),  # movieLikeCnt
+        #         str(ResultDict['TV프로그램']),  # tvLikeCnt
+        #         str(ResultDict['음악']),  # musicLikeCnt
+        #         str(ResultDict['책']),  # bookLikeCnt
+        #         str(ResultDict['스포츠팀']),  # sportsTemaLikeCnt
+        #         str(ResultDict['음식점']),  # foodPlaceCnt
+        #         str(ResultDict['앱과게임']),  # appAndGamesCnt
+        #         str(ResultDict['장소']),  # visitedPlc
+        #         str(ResultDict['도시']),  # visitedCity
+        #         str(ResultDict['최근에가본곳']),  # recentVisitPlc
+        #         str(ResultDict['이벤트내용개수']),  # evntCnt
+        #         str(ResultDict['이벤트내용']),  # eventContents
+        #         str(ResultDict['봤어요']),  # sawItCnt
+        #         str(ResultDict['영화']),  # sawMovieCnt
+        #         str(ResultDict['영화내용개수']),  # sawMovieContentCnt
+        #         str(ResultDict['영화제목']),  # sawMovieTitle
+        #         str(ResultDict['댓글개수']),  # replyCnt
+        #         str(ResultDict['댓글내용']),  # replyContents
+        #         str(ResultDict['게시글좋아요수']),  # articleLikeCnt
+        #         str(ResultDict['게시글공유수']),  # articleShareCnt
+        #         str(ResultDict['평균댓글개수']),  # avgReplyCnt
+        #         str(ResultDict['평균덧글개수']),  # avgReplyAndReply
+        #         str(ResultDict['전체긍정어사용빈도']),  # gdExpssCnt
+        #         str(ResultDict['평균긍정어사용비율']),  # avgGdExpssRate
+        #         str(ResultDict['개요항목개수']),  # aboutInfoCnt
+        #         str(ResultDict['해당월게시글개수']),    #thisMnthArticleCnt
+        #         str(ResultDict['전월게시글개수']),      #preMnthArticleCnt
+		# 		str(ResultDict['운영년수'])			#arrangeYears
             )
 
 
@@ -2953,11 +3106,14 @@ def TCMCountGen(tScoreCount, cScoreCount, ResultDict, user_fbpage_url, driver, r
         print(frndTitle, '-', frndCnt)
 
         databaseConnection_jeniel = mysqlConnection_jeniel.DatabaseConnection_jeniel()
+        #databaseConnection_jeniel.update_FollowerCnt(frndCnt, user_fbpage_url)
         databaseConnection_jeniel.update_FollowCnt(frndCnt, user_fbpage_url)
     except Exception as e:
         print('팔로우 수 노출되지 않았습니다.')
         databaseConnection_jeniel = mysqlConnection_jeniel.DatabaseConnection_jeniel()
-        databaseConnection_jeniel.update_FollowCnt('0', user_fbpage_url)
+        #databaseConnection_jeniel.update_FollowerCnt('0', user_fbpage_url)
+        databaseConnection_jeniel.update_FollowCnt(frndCnt, user_fbpage_url)
+
 
     # 사진첩의 댓글 개수, 좋아요 개수
     autoScrollerContentsPhotoText(user_fbpage_url, driver)
@@ -3076,6 +3232,9 @@ def autoScroller_MSCORE(User_site_url_addr, driver):
     return hangmok_pictureCntT
 
 
+# autoScroller관련 함수 =========================================================================
+
+# 상단에 인코딩을 명시적으로 표시해 줄 것 참조 : https://kyungw00k.github.io/2016/04/08/python-%ED%8C%8C%EC%9D%BC-%EC%83%81%EB%8B%A8%EC%97%90-%EC%BD%94%EB%93%9C-%EB%82%B4-%EC%9D%B8%EC%BD%94%EB%94%A9%EC%9D%84-%EB%AA%85%EC%8B%9C%EC%A0%81%EC%9C%BC%EB%A1%9C-%EC%B6%94%EA%B0%80%ED%95%A0-%EA%B2%83/
 def autoScroller(driver):
     # 게시글에서 좋아요 표시 갯수, 댓글 수 등의 정보 추출 >>  AUTO SCROLL 기능 필요
     SCROLL_PAUSE_TIME = 2
@@ -3286,8 +3445,9 @@ def autoScrollerContentsText(User_timeLine_site_url_addr, driver):
 
 # CSV 파일 읽기 ======================================================================
 def readCSV(searchTValue):
+    # C:\python_project\aster879_project\PycharmProjects
     reader = csv.reader(
-        open('경로\\1_500Corp.csv', 'rt', encoding='utf-8-sig',
+        open('C:\\python_project\\aster879_project\\PycharmProjects\\1_500Corp.csv', 'rt', encoding='utf-8-sig',
              newline=''), delimiter=' ', quotechar='|')
 
     print(searchTValue)

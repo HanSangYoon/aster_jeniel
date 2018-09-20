@@ -9,9 +9,7 @@ from selenium import webdriver
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.chrome.options import Options
 
-from PycharmProjects.crawling_modules_v1804.crawlerBot_package_JUST_TEST.NotUsingJSONDATAType import \
-    mysqlConnection_jeniel
-
+from aster_dev_201808.aster879.crawling_modules_v1804.crawlerBot_package_JUST_TEST.NotUsingJSONDATAType import mysqlConnection_jeniel
 
 class facebookCrawlerBot:
     def __init__(self):
@@ -44,8 +42,9 @@ formatter = logging.Formatter('[%(levelname)s|%(filename)s:%(lineno)s] %(asctime
 # fileHandler와 StreamHandler를 생성
 file_max_bytes = 10 * 1024 * 1024  # log file size : 10MB
 fileHandler = logging.handlers.RotatingFileHandler(
-    'C://dev_syhan/log/' + hereWork + 'crawlerbot_logging_' + currTime,
-    maxBytes=file_max_bytes, backupCount=10)
+    #'C://dev_syhan/log/' + hereWork + 'crawlerbot_logging_' + currTime, maxBytes=file_max_bytes, backupCount=10)
+    'C://dev_tenspace/PycharmProjects/log/' + hereWork + 'crawlerbot_logging_' + currTime, maxBytes=file_max_bytes, backupCount=10)
+
 streamHandler = logging.StreamHandler()
 
 # handler에 fommater 세팅
@@ -184,7 +183,8 @@ def readCSV_goodExpressions():
 
     # C:\python_project\aster879_project\PycharmProjects
     reader = csv.reader(
-        open('C:\\dev_syhan\\aster_jeniel_test_dev_201808\\긍정어4.csv', 'rt', encoding='utf-8-sig', newline=''),
+        #open('C:\\dev_syhan\\aster_jeniel_test_dev_201808\\긍정어4.csv', 'rt', encoding='utf-8-sig', newline=''),
+        open('C:\\dev_tenspace\\PycharmProjects\\aster_dev_201808\\긍정어4.csv', 'rt', encoding='utf-8-sig', newline=''),
         delimiter=' ', quotechar='|')
     # 'rt', encoding='utf-8-sig' 로 설정을 해야 1번째 CSV 값앞에 UTF-8로 인코딩한 헤더(\ufeff)가 나타나지 않는다.
     # print('reader:', reader)
@@ -217,7 +217,8 @@ def login_facebook(self, loginCnt, userFacebookPageId, insertedUserName, request
     chrome_options.add_experimental_option('prefs', prefs)
     #driver_chrome = r"C:\python_project\aster879_project\PycharmProjects\chromedriver.exe"
 
-    driver_chrome = r"C:\dev_syhan\aster_jeniel_test_dev_201808\chromedriver.exe"
+    #driver_chrome = r"C:\dev_syhan\aster_jeniel_test_dev_201808\chromedriver.exe"
+    driver_chrome = r"C:\dev_tenspace\PycharmProjects\aster_dev_201808\chromedriver.exe"
 
     # go to Google and click the I'm Feeling Lucky button
     driver = webdriver.Chrome(chrome_options=chrome_options, executable_path=driver_chrome)
@@ -2911,11 +2912,14 @@ def TCMCountGen(tScoreCount, cScoreCount, ResultDict, user_fbpage_url, driver, r
         print(frndTitle, '-', frndCnt)
 
         databaseConnection_jeniel = mysqlConnection_jeniel.DatabaseConnection_jeniel()
-        databaseConnection_jeniel.update_FollowerCnt(frndCnt, user_fbpage_url)
+        #databaseConnection_jeniel.update_FollowerCnt(frndCnt, user_fbpage_url)
+        databaseConnection_jeniel.update_FollowCnt(frndCnt, user_fbpage_url)
     except Exception as e:
         print('팔로우 수 노출되지 않았습니다.')
         databaseConnection_jeniel = mysqlConnection_jeniel.DatabaseConnection_jeniel()
-        databaseConnection_jeniel.update_FollowerCnt('0', user_fbpage_url)
+        #databaseConnection_jeniel.update_FollowerCnt('0', user_fbpage_url)
+        databaseConnection_jeniel.update_FollowCnt(frndCnt, user_fbpage_url)
+
 
     # 사진첩의 댓글 개수, 좋아요 개수
     autoScrollerContentsPhotoText(user_fbpage_url, driver)
