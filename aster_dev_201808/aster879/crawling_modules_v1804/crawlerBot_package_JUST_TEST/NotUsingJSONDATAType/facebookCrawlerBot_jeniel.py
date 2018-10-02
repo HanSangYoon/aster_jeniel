@@ -226,11 +226,11 @@ def login_facebook(self, loginCnt, userFacebookPageId, insertedUserName, request
     # url
     driver.get('https://www.facebook.com')
 
-    user_id = '01027746254'
-    user_pass = 'Gkstkddbs4$'
+    # user_id = '01027746254'
+    # user_pass = 'Gkstkddbs4$'
 
-    # user_id ='daramrec@naver.com'
-    # user_pass = 'gwanwoo777'
+    user_id ='daramrec@naver.com'
+    user_pass = 'gwanwoo777'
 
     # id and password
     driver.find_element_by_name('email').send_keys(user_id)
@@ -325,6 +325,8 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
 
     returnedResultDict['전체연락처정보'] = '',
     returnedResultDict['웹사이트및소셜링크정보'] = '',
+    returnedResultDict['소셜링크'] = '',
+    returnedResultDict['전화번호'] = '',
     returnedResultDict['소개글'] = '',
     returnedResultDict['프로필게시개수'] = 0,
     returnedResultDict['전체프로필정보'] = '',
@@ -1375,56 +1377,56 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                 c_score_count_detail = 0
 
                 if followCnt >= 50:
-                    print('팔로워 수가 50명 이상일 경우 50점이 가산됩니다.')
+                    print('팔로우 수가 50명 이상일 경우 50점이 가산됩니다.')
 
-                    detailInfo.append('__팔로워수가_50명이상일경우_50점이_가산됩니다.__')
+                    detailInfo.append('__팔로우수가_50명이상일경우_50점이_가산됩니다.__')
 
                     c_score_count_detail += 50
                     c_score_count += c_score_count_detail
 
                 elif 40 <= followCnt < 50:
-                    print('팔로워 수가 40명 이상 50명 미만일 경우 40점이 가산됩니다.')
+                    print('팔로우 수가 40명 이상 50명 미만일 경우 40점이 가산됩니다.')
 
-                    detailInfo.append('__팔로워수가_50명이상일경우_40점이_가산됩니다.__')
+                    detailInfo.append('__팔로우수가_50명이상일경우_40점이_가산됩니다.__')
 
                     c_score_count_detail += 40
                     c_score_count += c_score_count_detail
 
                 elif 30 <= followCnt < 40:
-                    print('팔로워 수가 30명 이상 40명 미만일 경우 30점이 가산됩니다.')
+                    print('팔로우 수가 30명 이상 40명 미만일 경우 30점이 가산됩니다.')
 
-                    detailInfo.append('__팔로워수가_50명이상일경우_30점이_가산됩니다.__')
+                    detailInfo.append('__팔로우수가_50명이상일경우_30점이_가산됩니다.__')
 
                     c_score_count_detail += 30
                     c_score_count += c_score_count_detail
 
                 elif 20 <= followCnt < 30:
-                    print('팔로워 수가 20명 이상 30명 미만일 경우 20점이 가산됩니다.')
+                    print('팔로우 수가 20명 이상 30명 미만일 경우 20점이 가산됩니다.')
 
-                    detailInfo.append('__팔로워수가_50명이상일경우_20점이_가산됩니다.__')
+                    detailInfo.append('__팔로우수가_50명이상일경우_20점이_가산됩니다.__')
 
                     c_score_count_detail += 20
                     c_score_count += c_score_count_detail
 
                 elif 10 <= followCnt < 20:
-                    print('팔로워 수가 10명 이상 20명 미만일 경우 10점이 가산됩니다.')
+                    print('팔로우 수가 10명 이상 20명 미만일 경우 10점이 가산됩니다.')
 
-                    detailInfo.append('__팔로워수가_50명이상일경우_10점이_가산됩니다.__')
+                    detailInfo.append('__팔로우수가_50명이상일경우_10점이_가산됩니다.__')
 
                     c_score_count_detail += 10
                     c_score_count += c_score_count_detail
 
                 elif 1 <= followCnt < 10:
-                    print('팔로워 수가 1명 이상 10명 미만일 경우 5점이 가산됩니다.')
+                    print('팔로우 수가 1명 이상 10명 미만일 경우 5점이 가산됩니다.')
 
-                    detailInfo.append('__팔로워수가_50명이상일경우_5점이_가산됩니다.__')
+                    detailInfo.append('__팔로우수가_50명이상일경우_5점이_가산됩니다.__')
 
                     c_score_count_detail += 5
                     c_score_count += c_score_count_detail
 
                 else:
-                    print('팔로워가 없으므로 가산점이 부여되지 않습니다. ')
-                    detailInfo.append('팔로워가_없으므로_가산점이_부여되지_않습니다.')
+                    print('팔로우가 없으므로 가산점이 부여되지 않습니다. ')
+                    detailInfo.append('팔로우가_없으므로_가산점이_부여되지_않습니다.')
 
         except Exception as e_c:
             print('C SCORE EXCEPTION :', e_c)
@@ -1661,7 +1663,7 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
     returnedResultDict['좋아요클릭한사람수'] = likePushPersonCnt
     returnedResultDict['이미지에좋아요클릭한사람수'] = cnt_like_img
 
-    # 좋아요(관심사) - syhan
+    # 좋아요(관심사)
     returnedResultDict['좋아요모두'] = 0
     returnedResultDict['영화'] = 0
     returnedResultDict['TV프로그램'] = 0
@@ -1682,7 +1684,6 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
 
         print(likes_all_cnt)
         if len(likes_all_cnt) is not 0:
-
             print('길이:', len(likes_all_cnt))
             # likes_data = {}
 
@@ -1697,6 +1698,10 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
 
                 # print(likesKind, ':', likesKind_Cnt)
 
+                returnedResultDict[likesKind.replace(" ", "")] = int(likesKind_Cnt.replace(",", ""))
+                print(likesKind.replace(" ", ""), ':', int(likesKind_Cnt.replace(",", "")))
+                # {'좋아요모두': 407, '영화': 11, 'TV프로그램': 14, '음악': 32, '책': 12, '스포츠팀': 1, '음식점': 3, '앱과게임': 7}
+
                 '''
                 예시)            
                 좋아요 모두 : 407
@@ -1708,10 +1713,6 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                 음식점 : 3
                 앱과 게임 : 7
                 '''
-
-                returnedResultDict[likesKind.replace(" ", "")] = int(likesKind_Cnt.replace(",", ""))
-                print(likesKind.replace(" ", ""), ':', int(likesKind_Cnt.replace(",", "")))
-                # {'좋아요모두': 407, '영화': 11, 'TV프로그램': 14, '음악': 32, '책': 12, '스포츠팀': 1, '음식점': 3, '앱과게임': 7}
 
             print(returnedResultDict)
 
@@ -1750,7 +1751,8 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                     '#pagelet_timeline_medley_map > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > a:nth-of-type(' + str(
                         mapKindLgth + 1) + ') > span:nth-of-type(2)')[0].text
 
-                # print(likesKind, ':', likesKind_Cnt)
+                returnedResultDict[mapKind.replace(" ", "")] = int(mapKind_Cnt.replace(",", ""))
+                # print(mapKind.replace(" ", ""), ':', int(mapKind_Cnt.replace(",", "")))
 
                 '''
                 예시)
@@ -1759,9 +1761,6 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                 도시 : 56
                 최근에가본곳 : 417            
                 '''
-
-                returnedResultDict[mapKind.replace(" ", "")] = int(mapKind_Cnt.replace(",", ""))
-                # print(mapKind.replace(" ", ""), ':', int(mapKind_Cnt.replace(",", "")))
 
             print(returnedResultDict)
             # {'장소': 203, '도시': 56, '최근에가본곳': 417}
@@ -2221,7 +2220,9 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                         articleLikeCnt = \
                             articles_reply_soup.select('#recent_capsule_container > ol > div:nth-of-type(' + str(
                                 articleLength + 1) + ') > div:nth-of-type(' + str(
-                                innerArtclLnth + 1) + ') > div > div:nth-of-type(3) > div:nth-of-type(2) > form > div:nth-of-type(1) > div > div > div > div:nth-of-type(1) > div > div > div:nth-of-type(2) > div > div > a > span:nth-of-type(2) > span')[
+                                innerArtclLnth + 1) + ') > div > div:nth-of-type(3) > div:nth-of-type(2) > form > div:nth-of-type(1) > '
+                                                      'div > div > div > div:nth-of-type(1) > div > div > div:nth-of-type(2) > div > div > '
+                                                      'a > span:nth-of-type(2) > span')[
                                 0].text
                     except Exception as e:
                         print('댓글영역 > 좋아요 수 부분 에러')
@@ -2239,7 +2240,8 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                         articleReplyContentsCnt = \
                             articles_reply_soup.select('#recent_capsule_container > ol > div:nth-of-type(' + str(
                                 articleLength + 1) + ') > div:nth-of-type(' + str(
-                                innerArtclLnth + 1) + ') > div > div:nth-of-type(3) > div:nth-of-type(2) > form > div:nth-of-type(1) > div > div > div > div:nth-of-type(1) > div > div > div:nth-of-type(1)')[
+                                innerArtclLnth + 1) + ') > div > div:nth-of-type(3) > div:nth-of-type(2) > form > div:nth-of-type(1) > '
+                                                      'div > div > div > div:nth-of-type(1) > div > div > div:nth-of-type(1)')[
                                 0].text
                     except Exception as e:
                         print('댓글영역 > 댓글 개수 부분 에러')
@@ -2273,7 +2275,8 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                         articleReplyContentsList = articles_reply_soup.select(
                             '#recent_capsule_container > ol > div:nth-of-type(' + str(
                                 articleLength + 1) + ') > div:nth-of-type(' + str(
-                                innerArtclLnth + 1) + ') > div > div:nth-of-type(3) > div:nth-of-type(2) > form > div:nth-of-type(2) > div > div:nth-of-type(1) > div > div')
+                                innerArtclLnth + 1) + ') > div > div:nth-of-type(3) > div:nth-of-type(2) > form > div:nth-of-type(2) > '
+                                                      'div > div:nth-of-type(1) > div > div')
 
                         print('노출된 댓글의 개수:', len(articleReplyContentsList))
 
@@ -2637,11 +2640,86 @@ def getDetailInfoDictionaryType(userPageId, driver, loginCnt, userName, reqClien
 
 
 # TCM SCORE 산출
+def findCntPhotos(driver, facebookPageID):
+    # 사용자 나온 사진 정보 추가
+    driver.get('https://www.facebook.com/' + facebookPageID + '/photos_of')
+    # photos_of_html = driver.page_source
+    # photos_of_soup = bs(photos_of_html, 'html.parser')
+    photos_of_soup = autoScroller(driver)
+
+    photos_of_cnt = '0'
+    photos_all_cnt = '0'
+    photos_albums_cnt_div = '0'
+    albumKindCnt = 0
+
+    time.sleep(1)
+    try:
+        photos_of_cnt = photos_of_soup.select(
+            '#pagelet_timeline_medley_photos > div:nth-of-type(2) > div:nth-of-type(1) > ul > li')
+        print('photos_of_cnt:', len(photos_of_cnt))
+
+    except Exception as e:
+        print('사용자 사진 정보가 공개되지 않았습니다. ')
+
+    # 모든 사진 정보 추가
+    driver.get('https://www.facebook.com/' + facebookPageID + '/photos_all')
+    # photos_all_html = driver.page_source
+    # photos_all_soup = bs(photos_all_html, 'html.parser')
+    photos_all_soup = autoScroller(driver)
+
+    time.sleep(1)
+    try:
+        photos_all_cnt = photos_all_soup.select(
+            '#pagelet_timeline_medley_photos > div:nth-of-type(2) > div:nth-of-type(1) > ul > li')
+        print('photos_all_cnt:', len(photos_all_cnt))
+
+    except Exception as e:
+        print('모든사진에 대한 정보가 공개되지 않았습니다. ')
+
+    # 사진첩 정보
+    driver.get('https://www.facebook.com/' + facebookPageID + '/photos_albums')
+    # photos_all_html = driver.page_source
+    # photos_all_soup = bs(photos_all_html, 'html.parser')
+    photos_albums_soup = autoScroller(driver)
+    print(driver.current_url)
+
+    time.sleep(1)
+    try:
+        photos_albums_cnt_div = photos_albums_soup.select(
+            '#pagelet_timeline_medley_photos > div:nth-of-type(2) > div > div')
+        time.sleep(1)
+        print('DIV 개수', len(photos_albums_cnt_div))
+
+        for divlength in range(len(photos_albums_cnt_div)):
+            photos_albums_cnt_tr = photos_albums_soup.select(
+                '#pagelet_timeline_medley_photos > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(' + str(
+                    divlength + 1) + ') > table > tbody > tr')
+            print('photos_all_cnt:', len(photos_albums_cnt_tr))
+
+            time.sleep(1)
+            i = 0
+            for trlength in range(len(photos_albums_cnt_tr)):
+                photos_albums_cnt_td = photos_albums_soup.select(
+                    '#pagelet_timeline_medley_photos > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > table > tbody > tr:nth-of-type(' + str(
+                        trlength + 1) + ') > td')
+                i += 1
+                print('photos_all_cnt', i, len(photos_albums_cnt_td))
+
+                albumKindCnt += len(photos_albums_cnt_td)
+
+        print('사진첩 종류 개수 :', albumKindCnt)
+    except Exception as e:
+        print('사진첩에 대한 정보가 공개되지 않았습니다. ', e)
+
+    return len(photos_of_cnt), len(photos_all_cnt), albumKindCnt
+
+
 def TCMCountGen(tScoreCount, cScoreCount, ResultDict, user_fbpage_url, driver, requestClient):
     print('TCMCountGen에서의 중간결과 :', ResultDict['DETAIL'])
 
     ResultDict['동영상수'] = 0
     ResultDict['사진수'] = 0
+    ResultDict['사진첩수'] = 0
 
     detailInfoList = '_'.join(ResultDict['DETAIL'])
 
@@ -2680,36 +2758,77 @@ def TCMCountGen(tScoreCount, cScoreCount, ResultDict, user_fbpage_url, driver, r
 
             contentCnt += 1
 
+        user_fbpage_url2 = user_fbpage_url.replace("https://www.facebook.com/", "")
+        returnValuePhoto = findCntPhotos(driver, user_fbpage_url2)
+
+        photCnt = int(returnValuePhoto[0])  #사용자가 나온 사진 수
+        photoTotCnt = int(returnValuePhoto[1])  #사용자의 사진 수
+        photobookCnt = int(returnValuePhoto[2]) #사진첩 수
+
+        photoCountData = contentCnt + totalPicCnt + photoTotCnt + photCnt
+        ResultDict['동영상수'] = prfl_vodCnt
+        ResultDict['사진수'] = photoCountData
+        ResultDict['사진첩수'] = photobookCnt
+
+        mCountData = contentCnt + totalPicCnt + photoTotCnt + photobookCnt + photCnt
+
         print('동영상수 :', prfl_vodCnt)
         print('사진수 :', totalPicCnt)
         print('게시글(사진, 동영상 포함) 수 : ', len(userContent_list_result))
-        mCountData = 0
-        mCountData = contentCnt + totalPicCnt
-        print('게시글(사진, 동영상 포함) 수 : ', contentCnt + totalPicCnt)
-        print('게시글(텍스트로만 구성) 수 : ', contentCnt - (prfl_picCnt + prfl_vodCnt))
+        #mCountData = 0
 
         if mCountData >= 500:
             print('사진 수가 500장 이상일 경우 80점이 가산됩니다.')
             m_score_count_detail += 80
             m_score_count += m_score_count_detail
             # print("%%", m_score_count)
-        elif 200 <= mCountData < 500:
-            print('사진 수가 200장 이상 500장 미만일 경우 65점이 가산됩니다.')
+        elif 450 <= mCountData < 500:
+            print('사진 수가 450장 이상 500장 미만일 경우 75점이 가산됩니다.')
+            m_score_count_detail += 75
+            m_score_count += m_score_count_detail
+            # print("%%", m_score_count)
+        elif 400 <= mCountData < 450:
+            print('사진 수가 400장 이상 450장 미만일 경우 70점이 가산됩니다.')
+            m_score_count_detail += 70
+            m_score_count += m_score_count_detail
+
+        elif 350 <= mCountData < 400:
+            print('사진 수가 350장 이상 400장 미만일 경우 65점이 가산됩니다.')
             m_score_count_detail += 65
             m_score_count += m_score_count_detail
             # print("%%", m_score_count)
-        elif 10 <= mCountData < 200:
-            print('사진 수가 10장 이상 200장 미만일 경우 50점이 가산됩니다.')
-            m_score_count_detail += 50
+        elif 300 <= mCountData < 350:
+            print('사진 수가 300장 이상 350장 미만일 경우 60점이 가산됩니다.')
+            m_score_count_detail += 60
+            m_score_count += m_score_count_detail
+        elif 250 <= mCountData < 300:
+            print('사진 수가 250장 이상 300장 미만일 경우 55점이 가산됩니다.')
+            m_score_count_detail += 55
             m_score_count += m_score_count_detail
             # print("%%", m_score_count)
-
-        ResultDict['동영상수'] = prfl_vodCnt
+        elif 200 <= mCountData < 250:
+            print('사진 수가 200장 이상 250장 미만일 경우 50점이 가산됩니다.')
+            m_score_count_detail += 50
+            m_score_count += m_score_count_detail
+        elif 150 <= mCountData < 200:
+            print('사진 수가 150장 이상 200장 미만일 경우 45점이 가산됩니다.')
+            m_score_count_detail += 45
+            m_score_count += m_score_count_detail
+        elif 100 <= mCountData < 150:
+            print('사진 수가 200장 이상 250장 미만일 경우 40점이 가산됩니다.')
+            m_score_count_detail += 40
+            m_score_count += m_score_count_detail
+        elif 50 <= mCountData < 100:
+            print('사진 수가 200장 이상 250장 미만일 경우 35점이 가산됩니다.')
+            m_score_count_detail += 35
+            m_score_count += m_score_count_detail
+        elif 1 <= mCountData < 50:
+            print('사진 수가 200장 이상 250장 미만일 경우 30점이 가산됩니다.')
+            m_score_count_detail += 30
+            m_score_count += m_score_count_detail
 
         print('ResultDict["동영상수"] :', ResultDict['동영상수'])
         print('ResultDict["사진수"] :', ResultDict['사진수'])
-
-        ResultDict['사진수'] = totalPicCnt
 
         mScoreCount = m_score_count
 
@@ -2743,6 +2862,7 @@ def TCMCountGen(tScoreCount, cScoreCount, ResultDict, user_fbpage_url, driver, r
                 str(ResultDict['이미지에좋아요클릭한사람수']),
                 str(ResultDict['동영상수']),
                 str(ResultDict['사진수']),
+
                 str(ResultDict['T_SCORE']),
                 str(ResultDict['C_SCORE']),
                 str(ResultDict['M_SCORE']),
@@ -2782,16 +2902,19 @@ def TCMCountGen(tScoreCount, cScoreCount, ResultDict, user_fbpage_url, driver, r
                 str(ResultDict['개요항목개수']),  # aboutInfoCnt
                 str(ResultDict['해당월게시글개수']),    #thisMnthArticleCnt
                 str(ResultDict['전월게시글개수']),      #preMnthArticleCnt
-				str(ResultDict['운영년수'])			#arrangeYears
+				str(ResultDict['운영년수']),			#arrangeYears
+                str(ResultDict['휴대폰']),  # cellPhone
+                str(ResultDict['주소']),  # addr
+                str(ResultDict['소셜링크']),  # snsLink
+                str(ResultDict['웹사이트']),  # website
+                str(ResultDict['생일']),  # birthday
+                str(ResultDict['음력생일']),  # birthday_luna
+                str(ResultDict['사진첩수']) #photobookCnt
             )
-
 
         except Exception as e_maria:
             logger.error('[ Error ] MariaDB About information Insertion => {}'.format(e_maria))
-
         returnedValue_TCMCountGen = True
-
-
 
     else:
 
@@ -2855,7 +2978,14 @@ def TCMCountGen(tScoreCount, cScoreCount, ResultDict, user_fbpage_url, driver, r
                 str(ResultDict['개요항목개수']),  # aboutInfoCnt
                 str(ResultDict['해당월게시글개수']),    #thisMnthArticleCnt
                 str(ResultDict['전월게시글개수']),      #preMnthArticleCnt
-				str(ResultDict['운영년수'])			#arrangeYears
+				str(ResultDict['운영년수']),			#arrangeYears
+                str(ResultDict['전화번호']),  # cellPhone
+                str(ResultDict['주소']),  # addr
+                str(ResultDict['소셜링크']),  # snsLink
+                str(ResultDict['웹사이트']),  # website
+                str(ResultDict['생일']),  # birthday
+                str(ResultDict['음력생일']),  # birthday_luna
+                str(ResultDict['사진첩수']) #photobookCnt
             )
 
 
@@ -2868,7 +2998,8 @@ def TCMCountGen(tScoreCount, cScoreCount, ResultDict, user_fbpage_url, driver, r
     reviewsCnt_str = '0'
     try:
         # https://www.facebook.com/kpokem/reviews
-        driver.get('https://www.facebook.com/' + user_fbpage_url + '/reviews')
+        #driver.get('https://www.facebook.com/' + user_fbpage_url + '/reviews')
+        driver.get(user_fbpage_url + '/reviews')
         print('리뷰 추출 페이지 확인 : ', driver.current_url)
 
         autoScrolled_data = driver.page_source
@@ -2895,7 +3026,8 @@ def TCMCountGen(tScoreCount, cScoreCount, ResultDict, user_fbpage_url, driver, r
     # 팔로우 수 추출
     frndCnt = '0'
     try:
-        driver.get('https://www.facebook.com/' + user_fbpage_url + '/followers')
+        #driver.get('https://www.facebook.com/' + user_fbpage_url + '/followers')
+        driver.get(user_fbpage_url + '/followers')
         print('팔로우 페이지 확인 :', driver.current_url)
 
         crawled_followsData = driver.page_source
@@ -3042,6 +3174,7 @@ def autoScroller_MSCORE(User_site_url_addr, driver):
 
 # 상단에 인코딩을 명시적으로 표시해 줄 것 참조 : https://kyungw00k.github.io/2016/04/08/python-%ED%8C%8C%EC%9D%BC-%EC%83%81%EB%8B%A8%EC%97%90-%EC%BD%94%EB%93%9C-%EB%82%B4-%EC%9D%B8%EC%BD%94%EB%94%A9%EC%9D%84-%EB%AA%85%EC%8B%9C%EC%A0%81%EC%9C%BC%EB%A1%9C-%EC%B6%94%EA%B0%80%ED%95%A0-%EA%B2%83/
 def autoScroller(driver):
+
     # 게시글에서 좋아요 표시 갯수, 댓글 수 등의 정보 추출 >>  AUTO SCROLL 기능 필요
     SCROLL_PAUSE_TIME = 2
 

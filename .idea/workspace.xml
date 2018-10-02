@@ -2,7 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="150bffea-c36e-40c2-bca5-771bb75d7e1e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/dbConnectionTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/dbConnectionTest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/facebookCrawlerBot_jeniel_GODOHWA.py" beforeDir="false" afterPath="$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/facebookCrawlerBot_jeniel_GODOHWA.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/facebook_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/facebook_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/geckodriver.log" beforeDir="false" afterPath="$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/geckodriver.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/mysqlConnection_just.py" beforeDir="false" afterPath="$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/mysqlConnection_just.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/testGeckoDriver.py" beforeDir="false" afterPath="$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/testGeckoDriver.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/worknetCrawlerBot_just_20180801.py" beforeDir="false" afterPath="$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/worknetCrawlerBot_just_20180801.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/worknetCrawlerBot_just_20180813.py" beforeDir="false" afterPath="$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/worknetCrawlerBot_just_20180813.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/worknetCrawlerBot_just_20180904.py" beforeDir="false" afterPath="$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/worknetCrawlerBot_just_20180904.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/worknetCrawlerBot_just_getEmail.py" beforeDir="false" afterPath="$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/worknetCrawlerBot_just_getEmail.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/worknetCrawlerBot_just_linux.py" beforeDir="false" afterPath="$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/worknetCrawlerBot_just_linux.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/worknetCrawlerBot_just_windows.py" beforeDir="false" afterPath="$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/worknetCrawlerBot_just_windows.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/worknetCrawlerBot_just_windows_20180907_jeniel.py" beforeDir="false" afterPath="$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/worknetCrawlerBot_just_windows_20180907_jeniel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/worknetCrawlerBot_just_windows_backup.py" beforeDir="false" afterPath="$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/worknetCrawlerBot_just_windows_backup.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,36 +85,66 @@
     <session id="-441638757">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="13" />
-          <entry key="project.open.time.0" value="3" />
+          <entry key="project.closed" value="21" />
+          <entry key="project.open.time.0" value="4" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.2" value="2" />
-          <entry key="project.open.time.3" value="6" />
-          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.3" value="10" />
+          <entry key="project.open.time.4" value="3" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="14" />
+          <entry key="project.opened" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="29" />
-          <entry key="py" value="11080" />
+          <entry key="py" value="11735" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="29" />
-          <entry key="Python" value="11080" />
+          <entry key="Python" value="11735" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="52" />
+          <entry key="py" value="56" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="52" />
+          <entry key="Python" value="56" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="-1744954011">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="py" value="9" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Python" value="9" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="py" value="267" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Python" value="267" />
         </counts>
       </usages-collector>
     </session>
@@ -109,10 +152,52 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/aster_dev_201808/aster879/crawling_modules_v1804/crawlerBot_package_JUST_TEST/NotUsingJSONDATAType/facebookCrawlerBot_jeniel_20180920.py">
+        <entry file="file://$PROJECT_DIR$/aster_dev_201808/aster879/crawling_modules_v1804/crawlerBot_package_JUST_TEST/NotUsingJSONDATAType/facebookCrawlerBot_jeniel_linux.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="1597" column="8" lean-forward="true" selection-start-line="1597" selection-start-column="8" selection-end-line="1597" selection-end-column="8" />
+            <state relative-caret-position="360">
+              <caret line="231" column="91" lean-forward="true" selection-start-line="231" selection-start-column="22" selection-end-line="231" selection-end-column="91" />
+              <folding>
+                <element signature="e#47#57#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/worknetCrawlerBot_just_linux.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="164">
+              <caret line="1158" lean-forward="true" selection-end-line="1528" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/mysqlConnection_just.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="256">
+              <caret line="102" column="8" selection-start-line="102" selection-start-column="8" selection-end-line="102" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/worknetCrawlerBot_just_windows_20180907_jeniel.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="164">
+              <caret line="1122" column="104" selection-end-line="1588" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/worknetCrawlerBot_just_linux_20181001_jeniel.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="426">
+              <caret line="1477" column="26" lean-forward="true" selection-start-line="1477" selection-start-column="26" selection-end-line="1477" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -120,17 +205,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aster_dev_201808/aster879/crawling_modules_v1804/crawlerBot_package_JUST_TEST/NotUsingJSONDATAType/mysqlConnection_jeniel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="131" column="8" selection-start-line="131" selection-start-column="8" selection-end-line="131" selection-end-column="8" />
+            <state relative-caret-position="40">
+              <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aster_dev_201808/aster879/crawling_modules_v1804/crawlerBot_package_JUST_TEST/startWebserver_Jeniel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="25" column="31" lean-forward="true" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+            <state relative-caret-position="440">
+              <caret line="22" column="75" lean-forward="true" selection-start-line="22" selection-start-column="75" selection-end-line="22" selection-end-column="75" />
               <folding>
                 <element signature="e#48#59#0" expanded="true" />
               </folding>
@@ -149,36 +234,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>DictionaryValue_list</find>
-      <find>da</find>
-      <find>C SCORE EXCEPTION</find>
-      <find>data i</find>
-      <find>'사용자이름:김동근', '@페이스북 사'</find>
-      <find>'사용자이름:김동근', '@페이스북 사</find>
-      <find>__</find>
-      <find>['DETAIL']</find>
-      <find>페이스북페이지ID:kpokem', '사용자이름:김동근', '페이스북 사</find>
-      <find>detailInfo</find>
-      <find>페이스북페이지ID:</find>
-      <find>페이스북페이지ID:kpokem', '사용자이름:김동근', '페이스북vs이</find>
-      <find>autoScrolled_data_soup</find>
-      <find>update_FollowerCnt</find>
-      <find>기본정보</find>
-      <find>개요</find>
-      <find>TCMCountGen</find>
-      <find>TCMCountGen(</find>
-      <find>010-4699-9775</find>
-      <find>좋아요모두</find>
-      <find>최종 RESULT 최종 RESULT</find>
       <find>returnedResultDict</find>
-      <find>user_id</find>
       <find>최종 RESULT</find>
-      <find>소셜링크</find>
       <find>고등학교</find>
       <find>최종</find>
       <find>사용자 페이스북 상의 세부 데이터</find>
       <find>전체연락처정보</find>
       <find>친구수</find>
+      <find>팔로잉</find>
+      <find>모든친구</find>
+      <find>TCMCountGen(</find>
+      <find>팔로우</find>
+      <find>User_timeLine_site_url_addr</find>
+      <find>user_fbpage_url</find>
+      <find>팔로워</find>
+      <find>좋아요 수</find>
+      <find>사진 수</find>
+      <find>사진첩</find>
+      <find>사진</find>
+      <find>photos_all_cnt</find>
+      <find>albumKindCnt</find>
+      <find>소셜링크</find>
+      <find>사진수</find>
+      <find>user</find>
+      <find>user_id</find>
+      <find>geckodriver</find>
+      <find>self.binary</find>
+      <find>corpWantJob</find>
+      <find>데이터 입력 오류 insert_new_record() missing 5 required positional arguments: 'f56', 'f57', 'f58', 'f59', and 'f60'</find>
+      <find>C:\\</find>
+      <find>3]</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -197,26 +282,31 @@
         <option value="$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/worknetCrawlerBot_just_login.py" />
         <option value="$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/worknetCrawlerBot_just_20180904.py" />
         <option value="$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/worknetCrawlerBot_just.py" />
-        <option value="$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/worknetCrawlerBot_just_linux.py" />
         <option value="$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/worknetCrawlerBot_just_windows2.py" />
         <option value="$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/worknetCrawlerBot_just_windows.py" />
         <option value="$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/mysqlConnection_just.py" />
-        <option value="$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/worknetCrawlerBot_just_windows_20180907_jeniel.py" />
         <option value="$PROJECT_DIR$/aster_dev_201808/aster879/crawling_modules_v1804/crawlerBot_package_JUST_TEST/NotUsingJSONDATAType/facebookCrawlerBot_jeniel_20180911.py" />
+        <option value="$PROJECT_DIR$/aster_dev_201808/aster879/crawling_modules_v1804/crawlerBot_package_JUST_TEST/NotUsingJSONDATAType/facebookCrawlerBot_jeniel_20180920.py" />
+        <option value="$PROJECT_DIR$/aster_dev_201808/aster879/crawling_modules_v1804/crawlerBot_package_JUST_TEST/For_test/facebook_test_photos.py" />
+        <option value="$PROJECT_DIR$/aster_dev_201808/aster879/crawling_modules_v1804/crawlerBot_package_JUST_TEST/NotUsingJSONDATAType/mysqlConnection_jeniel.py" />
+        <option value="$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/worknetCrawlerBot_just_windows_20180907_jeniel.py" />
         <option value="$PROJECT_DIR$/aster_dev_201808/aster879/crawling_modules_v1804/crawlerBot_package_JUST_TEST/NotUsingJSONDATAType/facebookCrawlerBot_jeniel.py" />
         <option value="$PROJECT_DIR$/aster_dev_201808/aster879/crawling_modules_v1804/crawlerBot_package_JUST_TEST/startWebserver_Jeniel.py" />
-        <option value="$PROJECT_DIR$/aster_dev_201808/aster879/crawling_modules_v1804/crawlerBot_package_JUST_TEST/NotUsingJSONDATAType/mysqlConnection_jeniel.py" />
-        <option value="$PROJECT_DIR$/aster_dev_201808/aster879/crawling_modules_v1804/crawlerBot_package_JUST_TEST/NotUsingJSONDATAType/facebookCrawlerBot_jeniel_20180920.py" />
+        <option value="$PROJECT_DIR$/aster_dev_201808/aster879/crawling_modules_v1804/crawlerBot_package_JUST_TEST/NotUsingJSONDATAType/facebookCrawlerBot_jeniel_linux.py" />
+        <option value="$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/worknetCrawlerBot_just_linux.py" />
+        <option value="$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/worknetCrawlerBot_just_linux_20181001_jeniel.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-3862" />
-    <option name="y" value="262" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1920" />
+    <option name="y" value="-2" />
+    <option name="width" value="1920" />
+    <option name="height" value="977" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -291,6 +381,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just" />
+      <recent name="$PROJECT_DIR$/aster_dev_201808/aster879/crawling_modules_v1804/crawlerBot_package_JUST_TEST/NotUsingJSONDATAType" />
       <recent name="C:\dev_tenspace\PycharmProjects\aster_dev_201808\aster879\crawling_modules_v1804\crawlerBot_package_JUST_TEST\NotUsingJSONDATAType" />
       <recent name="C:\dev_tenspace\PycharmProjects\aster_dev_201808\aster879\worknet_just" />
       <recent name="C:\Users\tenspace\PycharmProjects\aster_dev_201808\aster879\worknet_just" />
@@ -308,8 +400,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.startWebserver_Jeniel">
-    <configuration name="facebookCrawlerBot_jeniel_20180911" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.worknetCrawlerBot_just_linux_20181001_jeniel">
+    <configuration name="facebookCrawlerBot_jeniel" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pycharm" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -321,7 +413,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/aster_dev_201808/aster879/crawling_modules_v1804/crawlerBot_package_JUST_TEST/NotUsingJSONDATAType/facebookCrawlerBot_jeniel_20180911.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/aster_dev_201808/aster879/crawling_modules_v1804/crawlerBot_package_JUST_TEST/NotUsingJSONDATAType/facebookCrawlerBot_jeniel.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -330,7 +422,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="facebookCrawlerBot_jeniel_20180920" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="facebook_test_photos" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pycharm" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -338,32 +430,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/aster_dev_201808/aster879/crawling_modules_v1804/crawlerBot_package_JUST_TEST/NotUsingJSONDATAType" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/aster_dev_201808/aster879/crawling_modules_v1804/crawlerBot_package_JUST_TEST/For_test" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/aster_dev_201808/aster879/crawling_modules_v1804/crawlerBot_package_JUST_TEST/NotUsingJSONDATAType/facebookCrawlerBot_jeniel_20180920.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="mysqlConnection_just" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="pycharm" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/mysqlConnection_just.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/aster_dev_201808/aster879/crawling_modules_v1804/crawlerBot_package_JUST_TEST/For_test/facebook_test_photos.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -393,7 +464,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="worknetCrawlerBot_just_windows_20180907_jeniel" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="worknetCrawlerBot_just_linux" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pycharm" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -405,7 +476,28 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/worknetCrawlerBot_just_windows_20180907_jeniel.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/worknetCrawlerBot_just_linux.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="worknetCrawlerBot_just_linux_20181001_jeniel" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="pycharm" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/worknetCrawlerBot_just_linux_20181001_jeniel.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -415,19 +507,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.mysqlConnection_just" />
-      <item itemvalue="Python.worknetCrawlerBot_just_windows_20180907_jeniel" />
       <item itemvalue="Python.startWebserver_Jeniel" />
-      <item itemvalue="Python.facebookCrawlerBot_jeniel_20180911" />
-      <item itemvalue="Python.facebookCrawlerBot_jeniel_20180920" />
+      <item itemvalue="Python.facebook_test_photos" />
+      <item itemvalue="Python.facebookCrawlerBot_jeniel" />
+      <item itemvalue="Python.worknetCrawlerBot_just_linux" />
+      <item itemvalue="Python.worknetCrawlerBot_just_linux_20181001_jeniel" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.worknetCrawlerBot_just_linux_20181001_jeniel" />
+        <item itemvalue="Python.worknetCrawlerBot_just_linux" />
         <item itemvalue="Python.startWebserver_Jeniel" />
-        <item itemvalue="Python.facebookCrawlerBot_jeniel_20180920" />
-        <item itemvalue="Python.facebookCrawlerBot_jeniel_20180911" />
-        <item itemvalue="Python.worknetCrawlerBot_just_windows_20180907_jeniel" />
-        <item itemvalue="Python.mysqlConnection_just" />
+        <item itemvalue="Python.facebookCrawlerBot_jeniel" />
+        <item itemvalue="Python.facebook_test_photos" />
       </list>
     </recent_temporary>
   </component>
@@ -444,24 +536,33 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-3848" y="224" width="1936" height="1056" extended-state="6" />
+    <frame x="1987" y="25" width="1853" height="950" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23498419" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2830601" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" x="-1922" y="232" width="1922" height="1040" id="Run" order="2" type="FLOATING" visible="true" weight="0.8208469" />
+      <window_info active="true" anchor="bottom" x="108" y="76" width="1742" height="855" id="Run" order="2" type="FLOATING" visible="true" weight="0.3097561" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32899022" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32899022" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32899022" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="bottom" id="Python Console" internal_type="SLIDING" order="10" type="SLIDING" weight="0.32899022" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -495,13 +596,7 @@
     </ignored-roots>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/selenium/webdriver/common/service.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="75" selection-start-line="75" selection-end-line="75" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/selenium/webdriver/common/service.py" />
     <entry file="file://$PROJECT_DIR$/aster_jeniel_test_dev_201808/aster879_project/PycharmProjects/worknet_just/worknetCrawlerBot_just_getEmail.py" />
     <entry file="file://$PROJECT_DIR$/aster_jeniel_test_dev_201808/aster879_project/PycharmProjects/worknet_just/mysqlConnection_just.py" />
     <entry file="file://$PROJECT_DIR$/aster_jeniel_test_dev_201808/aster879_project/PycharmProjects/crawling_modules_v1804/crawlerBot_package_JUST_TEST/NotUsingJSONDATAType/dbConnectionTest.py" />
@@ -602,13 +697,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/worknetCrawlerBot_just_linux.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="196" column="12" selection-start-line="196" selection-start-column="12" selection-end-line="196" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/worknetCrawlerBot_just_getEmail.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-91">
@@ -640,23 +728,9 @@
     <entry file="file://$PROJECT_DIR$/aster_dev_201808/aster879/crawling_modules_v1804/crawlerBot_package_JUST_TEST/NotUsingJSONDATAType/facebookCrawlerBot.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/worknetCrawlerBot_just_windows_20180907_jeniel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="365" lean-forward="true" selection-start-line="365" selection-end-line="365" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/aster_dev_201808/aster879/crawling_modules_v1804/crawlerBot_package_JUST_TEST/NotUsingJSONDATAType/mysqlConnection.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-8130" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/mysqlConnection_just.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-67">
-          <caret line="143" column="97" selection-start-line="143" selection-start-column="97" selection-end-line="143" selection-end-column="97" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/aster_dev_201808/aster879/crawling_modules_v1804/crawlerBot_package_JUST_TEST/NotUsingJSONDATAType/facebookCrawlerBot_jeniel_20180813.py">
@@ -666,46 +740,104 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/aster_dev_201808/aster879/crawling_modules_v1804/crawlerBot_package_JUST_TEST/NotUsingJSONDATAType/facebookCrawlerBot_jeniel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="228" column="11" selection-start-line="228" selection-start-column="4" selection-end-line="228" selection-end-column="11" />
-          <folding>
-            <element signature="e#47#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aster_dev_201808/aster879/crawling_modules_v1804/crawlerBot_package_JUST_TEST/NotUsingJSONDATAType/mysqlConnection_jeniel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="131" column="8" selection-start-line="131" selection-start-column="8" selection-end-line="131" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/aster_dev_201808/aster879/crawling_modules_v1804/crawlerBot_package_JUST_TEST/NotUsingJSONDATAType/facebookCrawlerBot_jeniel_20180911.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="279">
           <caret line="2591" column="36" selection-start-line="2591" selection-start-column="32" selection-end-line="2591" selection-end-column="36" />
-          <folding>
-            <element signature="e#47#57#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/aster_dev_201808/aster879/crawling_modules_v1804/crawlerBot_package_JUST_TEST/NotUsingJSONDATAType/facebookCrawlerBot_jeniel_20180920.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="1597" column="8" lean-forward="true" selection-start-line="1597" selection-start-column="8" selection-end-line="1597" selection-end-column="8" />
+        <state relative-caret-position="266">
+          <caret line="2903" selection-start-line="2903" selection-end-line="2908" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aster_dev_201808/aster879/crawling_modules_v1804/crawlerBot_package_JUST_TEST/For_test/facebook_test_photos.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aster_dev_201808/aster879/crawling_modules_v1804/crawlerBot_package_JUST_TEST/NotUsingJSONDATAType/facebookCrawlerBot_jeniel_20180928.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="21" column="24" lean-forward="true" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aster_dev_201808/aster879/crawling_modules_v1804/crawlerBot_package_JUST_TEST/NotUsingJSONDATAType/facebookCrawlerBot_jeniel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aster_dev_201808/aster879/crawling_modules_v1804/crawlerBot_package_JUST_TEST/NotUsingJSONDATAType/mysqlConnection_jeniel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/aster_dev_201808/aster879/crawling_modules_v1804/crawlerBot_package_JUST_TEST/startWebserver_Jeniel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="25" column="31" lean-forward="true" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+        <state relative-caret-position="440">
+          <caret line="22" column="75" lean-forward="true" selection-start-line="22" selection-start-column="75" selection-end-line="22" selection-end-column="75" />
           <folding>
             <element signature="e#48#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aster_dev_201808/aster879/crawling_modules_v1804/crawlerBot_package_JUST_TEST/NotUsingJSONDATAType/facebookCrawlerBot_jeniel_linux.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="231" column="91" lean-forward="true" selection-start-line="231" selection-start-column="22" selection-end-line="231" selection-end-column="91" />
+          <folding>
+            <element signature="e#47#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/worknetCrawlerBot_just_windows_2018_jeniel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/mysqlConnection_just.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="102" column="8" selection-start-line="102" selection-start-column="8" selection-end-line="102" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/worknetCrawlerBot_just_windows_20180907_jeniel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="1122" column="104" selection-end-line="1588" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/worknetCrawlerBot_just_linux.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="1158" lean-forward="true" selection-end-line="1528" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aster_dev_201808/aster879/worknet_just/worknetCrawlerBot_just_linux_20181001_jeniel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="1477" column="26" lean-forward="true" selection-start-line="1477" selection-start-column="26" selection-end-line="1477" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>

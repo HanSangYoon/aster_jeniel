@@ -6,7 +6,8 @@ import logging
 import urllib.parse
 from http.server import HTTPServer, BaseHTTPRequestHandler
 #from aster_dev_201808.aster879.crawling_modules_v1804.crawlerBot_package_JUST_TEST.NotUsingJSONDATAType import facebookCrawlerBot_jeniel_20180911 as snsScrapBot
-from aster_dev_201808.aster879.crawling_modules_v1804.crawlerBot_package_JUST_TEST.NotUsingJSONDATAType import facebookCrawlerBot_jeniel_20180920 as snsScrapBot
+#from aster_dev_201808.aster879.crawling_modules_v1804.crawlerBot_package_JUST_TEST.NotUsingJSONDATAType import facebookCrawlerBot_jeniel_20180920 as snsScrapBot
+from aster_dev_201808.aster879.crawling_modules_v1804.crawlerBot_package_JUST_TEST.NotUsingJSONDATAType import facebookCrawlerBot_jeniel_linux as snsScrapBot
 
 class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
 
@@ -188,5 +189,7 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
             print("전달받은 데이터가 없습니다. ")
 
 #jeniel
-httpd = HTTPServer(('172.30.1.211', 8000), SimpleHTTPRequestHandler)
+#httpd = HTTPServer(('172.30.1.211', 8000), SimpleHTTPRequestHandler)
+#10.0.2.15
+httpd = HTTPServer(('10.0.2.15', 8000), SimpleHTTPRequestHandler)
 httpd.serve_forever()

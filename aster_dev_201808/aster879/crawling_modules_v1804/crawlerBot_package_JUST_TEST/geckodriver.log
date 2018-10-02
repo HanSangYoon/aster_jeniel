@@ -1,0 +1,52 @@
+1538376237326	geckodriver	INFO	Listening on 127.0.0.1:56533
+1538376238326	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.JUDwOMraY10j
+1538376238327	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1538376238328	geckodriver::marionette	INFO	Connecting to Marionette on localhost:35219
+1538376240270	Marionette	INFO	Listening on port 2828
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+1538376278936	Marionette	INFO	Stopped listening on port 2828
+1538376287169	geckodriver	INFO	Listening on 127.0.0.1:36039
+1538376288170	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.UraYyHH59Bw1
+1538376288170	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1538376288172	geckodriver::marionette	INFO	Connecting to Marionette on localhost:44605
+1538376289985	Marionette	INFO	Listening on port 2828
+1538376348580	geckodriver	INFO	Listening on 127.0.0.1:47243
+1538376349580	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.UFYoQuEcuy4r
+1538376349581	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1538376349582	geckodriver::marionette	INFO	Connecting to Marionette on localhost:40953
+1538376351397	Marionette	FATAL	Remote protocol server failed to start: Error: Could not bind to port 2828 (NS_ERROR_SOCKET_ADDRESS_IN_USE) (chrome://marionette/content/server.js:88:17) JS Stack trace: set acceptConnections@server.js:88:17
+start@server.js:119:5
+init/<@marionette.js:439:9
+1538376351426	addons.xpi	WARN	Exception running bootstrap method shutdown on activity-stream@mozilla.org: TypeError: setting getter-only property "_currentSearchHostname" (resource://activity-stream/lib/TopSitesFeed.jsm:86:5) JS Stack trace: uninit@TopSitesFeed.jsm:86:5
+onAction@TopSitesFeed.jsm:707:9
+_middleware/</<@Store.jsm:51:11
+Store/this[method]@Store.jsm:29:55
+uninit@Store.jsm:170:7
+uninit@ActivityStream.jsm:363:5
+uninit@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///usr/lib/firefox/browser/features/activity-stream@bootstrap.js:86:5
+shutdown@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///usr/lib/firefox/browser/features/activity-stream@bootstrap.js:194:3
+callBootstrapMethod@XPIProvider.jsm:1588:20
+_shutdown@XPIProvider.jsm:1724:12
+observe@AsyncShutdown.jsm:541:9
+init/<@marionette.js:444:11
+JavaScript error: resource:///modules/SavantShieldStudy.jsm, line 171: TypeError: this.addonListener is undefined
+JavaScript error: resource://gre/modules/Sqlite.jsm, line 841: Error: Connection is not open.
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+JavaScript error: resource://gre/modules/JSONFile.jsm, line 159: Error: Data is not ready.
+JavaScript error: resource://gre/modules/JSONFile.jsm, line 159: Error: Data is not ready.
+JavaScript error: resource://gre/modules/JSONFile.jsm, line 159: Error: Data is not ready.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[Child 5404, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-LCnNpq/firefox-62.0+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[Child 5361, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-LCnNpq/firefox-62.0+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1538376538935	geckodriver	INFO	Listening on 127.0.0.1:52469
+1538376539935	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.okMgiZyN8spV
+1538376539936	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1538376539937	geckodriver::marionette	INFO	Connecting to Marionette on localhost:42835
+1538376541855	Marionette	INFO	Listening on port 2828
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[Child 5735, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-LCnNpq/firefox-62.0+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[Child 5694, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-LCnNpq/firefox-62.0+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353

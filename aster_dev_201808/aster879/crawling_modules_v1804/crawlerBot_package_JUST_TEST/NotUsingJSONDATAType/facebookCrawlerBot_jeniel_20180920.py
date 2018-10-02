@@ -231,7 +231,7 @@ def login_facebook(self, loginCnt, userFacebookPageId, insertedUserName, request
 
     # user_id ='daramrec@naver.com'
     # user_pass = 'gwanwoo777'
-
+    #
     user_id = 'idkimtheho@gmail.com'
     user_pass = 'facP@ssw0rd'
 

@@ -1,0 +1,2 @@
+[ERROR|facebookCrawlerBot_jeniel.py:2790] 2018-09-21 10:23:41,912 > [ Error ] MariaDB About information Insertion => insert_record_origin_version() missing 6 required positional arguments: 'f54', 'f55', 'f56', 'f57', 'f58', and 'f59'
+[ERROR|facebookCrawlerBot_jeniel.py:2790] 2018-09-21 10:58:59,621 > [ Error ] MariaDB About information Insertion => insert_record_origin_version() missing 6 required positional arguments: 'f54', 'f55', 'f56', 'f57', 'f58', and 'f59'
