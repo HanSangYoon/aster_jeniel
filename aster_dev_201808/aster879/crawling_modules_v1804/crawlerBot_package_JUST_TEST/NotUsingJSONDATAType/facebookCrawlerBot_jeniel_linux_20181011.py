@@ -13,11 +13,8 @@ from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.chrome.options import Options
 
 from aster_dev_201808.aster879.crawling_modules_v1804.crawlerBot_package_JUST_TEST.NotUsingJSONDATAType import \
-    mysqlConnection_jeniel
+    mysqlConnection_zeniel_fail_20181011
 
-
-autoScrolled_data_soup = ''
-autoScrolled_data_soup_html = ''
 
 class facebookCrawlerBot:
     def __init__(self):
@@ -30,7 +27,6 @@ global user_pass
 global pagelet_dict_data
 global t_score_count
 global returnValue_facebook
-
 
 global hereWork
 hereWork = 'FaceBook'
@@ -141,8 +137,8 @@ def autoScrollerContentsPhotoText(url_addr, driver):
         print('총 댓글 수 :', commentCont_int)
 
         # update_PhotoLikeCmntCnt(댓글수, 좋아요수, 페이브북아이디)
-        databaseConnection_jeniel = mysqlConnection_jeniel.DatabaseConnection_jeniel()
-        databaseConnection_jeniel.update_PhotoLikeCmntCnt(str(commentCont_int), str(likeCnt_int), url_addr)
+        databaseConnection_zeniel = mysqlConnection_zeniel_fail_20181011.DatabaseConnection_zeniel()
+        databaseConnection_zeniel.update_PhotoLikeCmntCnt(str(commentCont_int), str(likeCnt_int), url_addr)
 
 
     except Exception as e:
@@ -152,14 +148,14 @@ def autoScrollerContentsPhotoText(url_addr, driver):
 def autoScroller2(driver, URL):
     driver.get(URL)
 
-    # 20181016_edited_syhan
-    global autoScrolled_data_soup
-
     print(driver.current_url)
     # 게시글에서 좋아요 표시 갯수, 댓글 수 등의 정보 추출 >>  AUTO SCROLL 기능 필요
     SCROLL_PAUSE_TIME = 2
     # 2초가 페이지 로딩에 안정적인 대기시간이다. 사실 매우 느리다.
+
     # 화면 길이 만큼 나눠 autoScroll 하고 각 페이지마다 데이터 가져오기
+    autoScrolled_data_soup_html = ''
+
     last_height = driver.execute_script("return document.body.scrollHeight")
     # print('last_height : ', last_height)
     # 화면 사이즈 생성하기(15번의 새로고침이 있을 정도로만 데이터 추출)
@@ -226,7 +222,7 @@ def login_facebook(self, loginCnt, userFacebookPageId, insertedUserName, request
     chrome_options.add_experimental_option('prefs', prefs)
     #driver_chrome = r"C:\python_project\aster879_project\PycharmProjects\chromedriver.exe"
     #self.binary = FirefoxBinary("/usr/bin/firefox", log_file=sys.stdout)
-    #driver_chrome = r"C:\dev_syhan\aster_jeniel_test_dev_201808\chromedriver.exe"
+    #driver_chrome = r"C:\dev_syhan\aster_zeniel_test_dev_201808\chromedriver.exe"
     #driver_chrome = r"C:\dev_tenspace\PycharmProjects\aster_dev_201808\chromedriver.exe"
     driver_chrome = '/usr/lib/chromium-browser/chromedriver'
 
@@ -240,9 +236,6 @@ def login_facebook(self, loginCnt, userFacebookPageId, insertedUserName, request
 
     user_id ='01027746254'
     user_pass = 'Gkstkddbs4$'
-
-    # user_id = 'idkimtheho@gmail.com'
-    # user_pass = 'facP@ssw0rd'
 
     # id and password
     driver.find_element_by_name('email').send_keys(user_id)
@@ -332,22 +325,20 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
     returnedResultDict = getDetailInfoDictionaryType(user_fbpage_id, driver, lgnCnt, insertedUserName, requestClient)
     print('사용자 페이스북 상의 세부 데이터 -> ', returnedResultDict)
 
-    returnedResultDict['사용자이름'] = ''
-    returnedResultDict['페이스북페이지ID'] = ''
-    returnedResultDict['전화번호'] = ''
-    returnedResultDict['주소'] = ''
-    returnedResultDict['생일'] = ''
-    returnedResultDict['전체연락처정보'] = ''
-    returnedResultDict['웹사이트및소셜링크정보'] = ''
-    returnedResultDict['소셜링크'] = ''
-    returnedResultDict['전화번호'] = ''
-    returnedResultDict['소개글'] = ''
-    returnedResultDict['프로필게시개수'] = 0
-    returnedResultDict['전체프로필정보'] = ''
-    returnedResultDict['친구수'] = 0
-    returnedResultDict['좋아요__사람전체명수'] = 0
-    returnedResultDict['좋아요(image)__표시전체갯수'] = 0
-    returnedResultDict['동영상수'] = 0
+    returnedResultDict['사용자이름'] = '',
+    returnedResultDict['페이스북페이지ID'] = '',
+
+    returnedResultDict['전체연락처정보'] = '',
+    returnedResultDict['웹사이트및소셜링크정보'] = '',
+    returnedResultDict['소셜링크'] = '',
+    returnedResultDict['전화번호'] = '',
+    returnedResultDict['소개글'] = '',
+    returnedResultDict['프로필게시개수'] = 0,
+    returnedResultDict['전체프로필정보'] = '',
+    returnedResultDict['친구수'] = 0,
+    returnedResultDict['좋아요__사람전체명수'] = 0,
+    returnedResultDict['좋아요(image)__표시전체갯수'] = 0,
+    returnedResultDict['동영상수'] = 0,
     returnedResultDict['사진수'] = 0
 
     # wait for loading & set(alter) driver's url
@@ -511,7 +502,7 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
         print('프로필 정보 취득 중 오류-> ', e)
 
     # print('결과 [List type]: ', returnedResultList)
-    print('[Dictionary type]: ', returnedResultDict)
+    print('@@@@@_결과 [Dictionary type]: ', returnedResultDict)
 
     tcm_score = {}
 
@@ -523,146 +514,164 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
     c_score_count_detail = 0
 
     # 20180810
+
+    # [개요]
+
+    returnedResultDict['개요항목개수'] = 0
     detail_url_overview = 'https://www.facebook.com/' + user_fbpage_id + '/about?section=overview'
     detail_fb_overview_info_soup = __getHTMLDoc_beautifulSoup4(driver, detail_url_overview)
 
-    aboutBoxLength = len(detail_fb_overview_info_soup.select('#pagelet_timeline_medley_about > div:nth-of-type(2) > div > ul > li'))
+    about_overviewURL = '#pagelet_timeline_medley_about > div:nth-of-type(2) > div > ul > li:nth-of-type(1) > div > div:nth-of-type(2) > div > div'
 
+    try:
+        aboutOverview_middle_lists = detail_fb_overview_info_soup.select(
+            about_overviewURL + ' > div:nth-of-type(1) > ul > li')
+        # 개요 항목의 리스트 개수
+        print('개요항목길이:', len(aboutOverview_middle_lists))
 
-    # [개요]
-    if aboutBoxLength == 1:
-        returnedResultDict['개요항목개수'] = 0
-        about_overviewURL = '#pagelet_timeline_medley_about > div:nth-of-type(2) > div > ul > li:nth-of-type(1) > div > div:nth-of-type(2) > div > div'
+        returnedResultDict['개요항목개수'] = len(aboutOverview_middle_lists)
 
-        try:
-            aboutOverview_middle_lists = detail_fb_overview_info_soup.select(
-                about_overviewURL + ' > div:nth-of-type(1) > ul > li')
-            # 개요 항목의 리스트 개수
-            print('개요항목길이:', len(aboutOverview_middle_lists))
+        # 개요 항목 리스트 추출
+        for about_list in range(len(aboutOverview_middle_lists)):
+            print(aboutOverview_middle_lists[about_list].text)
+            # 여기서의 구체적인 값들은 '개요'가 아닌 각 큰 카테고리내에서 개별 선별 해야 함.
 
-            if len(aboutOverview_middle_lists) != 0:
-                returnedResultDict['개요항목개수'] = len(aboutOverview_middle_lists)
-            else:
-                print('개요 항목이 존재하지 않음.')
-                returnedResultDict['개요항목개수'] = 0
+    except Exception as e:
+        print('개요 항목이 존재하지 않음.', e)
 
-            # 개요 항목 리스트 추출
-            for about_list in range(len(aboutOverview_middle_lists)):
-                print(aboutOverview_middle_lists[about_list].text)
-                # 여기서의 구체적인 값들은 '개요'가 아닌 각 큰 카테고리내에서 개별 선별 해야 함.
+    print('##############################################################')
 
-        except Exception as e:
-            print('개요 항목이 존재하지 않음.', e)
+    try:
+        aboutOverview_rightSide_lists = detail_fb_overview_info_soup.select(
+            about_overviewURL + ' > div:nth-of-type(2) > ul > li')
+        # 개요 항목 우측의 리스트 개수
+        # print(len(aboutOverview_rightSide_lists))
+        # 개요 항목 우측 리스트 추출
+        for about_list_right in range(len(aboutOverview_rightSide_lists)):
+            # 우측 리스트의 제목
+            # pagelet_timeline_medley_about > div:nth-of-type(2) > div > ul > li:nth-of-type(1) > div > div:nth-of-type(2) > div > div > div:nth-of-type(2) > ul > li > div > div:nth-of-type(2) > span > div:nth-of-type(1)
+            title_aboutPage_list_right = detail_fb_overview_info_soup.select(
+                about_overviewURL + ' > div:nth-of-type(2) > ul > li:nth-of-type(' + str(
+                    about_list_right + 1) + ') > div > div:nth-of-type(2) > span > div:nth-of-type(1)')
 
-        try:
-            aboutOverview_rightSide_lists = detail_fb_overview_info_soup.select(
-                about_overviewURL + ' > div:nth-of-type(2) > ul > li')
-            # 개요 항목 우측의 리스트 개수
-            # print(len(aboutOverview_rightSide_lists))
-            # 개요 항목 우측 리스트 추출
-            if len(aboutOverview_rightSide_lists) != 0:
-                for about_list_right in range(len(aboutOverview_rightSide_lists)):
-                    # 우측 리스트의 제목
-                    # pagelet_timeline_medley_about > div:nth-of-type(2) > div > ul > li:nth-of-type(1) > div > div:nth-of-type(2) > div > div > div:nth-of-type(2) > ul > li > div > div:nth-of-type(2) > span > div:nth-of-type(1)
-                    title_aboutPage_list_right = detail_fb_overview_info_soup.select(
-                        about_overviewURL + ' > div:nth-of-type(2) > ul > li:nth-of-type(' + str(
-                            about_list_right + 1) + ') > div > div:nth-of-type(2) > span > div:nth-of-type(1)')
+            # 우측 리스트의 내용
+            # pagelet_timeline_medley_about > div:nth-of-type(2) > div > ul > li:nth-of-type(1) > div > div:nth-of-type(2) > div > div > div:nth-of-type(2) > ul > li > div > div:nth-of-type(2) > span > div:nth-of-type(2)
+            contents_aboutPage_list_right = detail_fb_overview_info_soup.select(
+                about_overviewURL + ' > div:nth-of-type(2) > ul > li:nth-of-type(' + str(
+                    about_list_right + 1) + ') > div > div:nth-of-type(2) > span > div:nth-of-type(2)')
 
-                    # 우측 리스트의 내용
-                    # pagelet_timeline_medley_about > div:nth-of-type(2) > div > ul > li:nth-of-type(1) > div > div:nth-of-type(2) > div > div > div:nth-of-type(2) > ul > li > div > div:nth-of-type(2) > span > div:nth-of-type(2)
-                    contents_aboutPage_list_right = detail_fb_overview_info_soup.select(
-                        about_overviewURL + ' > div:nth-of-type(2) > ul > li:nth-of-type(' + str(
-                            about_list_right + 1) + ') > div > div:nth-of-type(2) > span > div:nth-of-type(2)')
+            # print(aboutOverview_rightSide_lists[about_list_right].text)
+            print(title_aboutPage_list_right[0].text)
+            print(contents_aboutPage_list_right[0].text)
 
-                    # print(aboutOverview_rightSide_lists[about_list_right].text)
-                    print(title_aboutPage_list_right[0].text)
-                    print(contents_aboutPage_list_right[0].text)
-            else:
-                print('개요의 우측 항목이 존재하지 않음.')
-                returnedResultDict['전화번호'] = ''
-                returnedResultDict['주소'] = ''
-                returnedResultDict['생일'] = ''
+    except Exception as e:
+        print('개요의 우측 항목이 존재하지 않음.', e)
 
-        except Exception as e:
-            print()
+    # [경력 및 학력]
+    # https://www.facebook.com/kpokem/about?section=education
+    detail_url_education = 'https://www.facebook.com/' + user_fbpage_id + 'about?section=education'
+    detail_fb_education_info_soup = __getHTMLDoc_beautifulSoup4(driver, detail_url_education)
+    # about_educationURL = '#pagelet_eduwork > div > div'
+    aboutEducation_lists = detail_fb_education_info_soup.select('#pagelet_eduwork > div > div')
+    # print(len(aboutEducation_lists))
 
+    for about_length_of_education_list in range(len(aboutEducation_lists)):
+        work_history_lists_title = detail_fb_education_info_soup.select(
+            '#pagelet_eduwork > div > div:nth-of-type(' + str(about_length_of_education_list + 1) + ') > div > span')[
+            0].text
 
-        # [경력 및 학력]
-        # https://www.facebook.com/kpokem/about?section=education
-        detail_url_education = 'https://www.facebook.com/' + user_fbpage_id + 'about?section=education'
-        detail_fb_education_info_soup = __getHTMLDoc_beautifulSoup4(driver, detail_url_education)
-        # about_educationURL = '#pagelet_eduwork > div > div'
-        aboutEducation_lists = detail_fb_education_info_soup.select('#pagelet_eduwork > div > div')
-        # print(len(aboutEducation_lists))
+        print(work_history_lists_title)  # 직장/전문기술/학력
 
-        for about_length_of_education_list in range(len(aboutEducation_lists)):
-            work_history_lists_title = detail_fb_education_info_soup.select(
-                '#pagelet_eduwork > div > div:nth-of-type(' + str(about_length_of_education_list + 1) + ') > div > span')[
-                0].text
+        if '전문 기술' in work_history_lists_title:
 
-            print(work_history_lists_title)  # 직장/전문기술/학력
+            # print(work_history_lists_title, '길이: 1')
+            work_history_lists_dir = '#pagelet_eduwork > div > div:nth-of-type(' + str(
+                about_length_of_education_list + 1) + ') > ul > li > div'
+            work_history_lists = detail_fb_education_info_soup.select(work_history_lists_dir)
 
-            if '전문 기술' in work_history_lists_title:
+            print(work_history_lists_title, '길이: ', len(work_history_lists))
 
-                # print(work_history_lists_title, '길이: 1')
-                work_history_lists_dir = '#pagelet_eduwork > div > div:nth-of-type(' + str(
-                    about_length_of_education_list + 1) + ') > ul > li > div'
-                work_history_lists = detail_fb_education_info_soup.select(work_history_lists_dir)
+            print(work_history_lists[0].text)
 
+        else:
+            # print('else:', len(aboutEducation_lists))
+            work_history_lists_dir = '#pagelet_eduwork > div > div:nth-of-type(' + str(
+                about_length_of_education_list + 1) + ') > ul > li'
+            work_history_lists = detail_fb_education_info_soup.select(work_history_lists_dir)
+            for about_length_of_edu_detail in range(len(work_history_lists)):
                 print(work_history_lists_title, '길이: ', len(work_history_lists))
+                print('@', detail_fb_education_info_soup.select(work_history_lists_dir + ':nth-of-type(' + str(
+                    about_length_of_edu_detail + 1) + ') div > div > div > div > div:nth-of-type(2) > div > a')[0].text)
 
-                print(work_history_lists[0].text)
+                print('@', detail_fb_education_info_soup.select(work_history_lists_dir + ':nth-of-type(' + str(
+                    about_length_of_edu_detail + 1) + ') div > div > div > div > div:nth-of-type(2) > div > div')[
+                    0].text)
 
+    # [거주했던 장소]
+    # https://www.facebook.com/kpokem/about?section=living
+    detail_url_living = 'https://www.facebook.com/' + user_fbpage_id + '/about?section=living'
+    detail_fb_living_info_soup = __getHTMLDoc_beautifulSoup4(driver, detail_url_living)
+    aboutLiving_lists = detail_fb_living_info_soup.select('#pagelet_hometown > div > div')
+
+    for about_length_of_living_list in range(len(aboutLiving_lists)):
+        # print('about_length_of_living_list : ', about_length_of_living_list)
+        living_history_lists_title = detail_fb_living_info_soup.select(
+            '#pagelet_hometown > div > div:nth-of-type(' + str(about_length_of_living_list + 1) + ') > div > span')[
+            0].text
+
+        print('living_history_lists_title : ', living_history_lists_title)  # 거주지와 출신지/기타 살았던 곳/거주지
+
+        living_history_lists_dir = '#pagelet_hometown > div > div:nth-of-type(' + str(
+            about_length_of_living_list + 1) + ') > ul > li'
+        living_history_lists = detail_fb_living_info_soup.select(living_history_lists_dir)
+
+        if '거주지' in living_history_lists_title:
+            if len(living_history_lists) == 1:
+                print('거주지 출력 부분은 구조가 1 depth 깊음')
+
+                for about_length_of_living_detail in range(len(living_history_lists)):
+                    print('len(living_history_lists) : ', len(living_history_lists))
+                    '''
+                    print(detail_fb_living_info_soup.select(
+                        living_history_lists_dir + ' > div > div > div > div > div > div:nth-of-type(2) > span > a')[
+                              0].text)
+                    print(detail_fb_living_info_soup.select(
+                        living_history_lists_dir + ' > div > div > div > div > div > div:nth-of-type(2) > div')[0].text)
+                    '''
             else:
-                # print('else:', len(aboutEducation_lists))
-                work_history_lists_dir = '#pagelet_eduwork > div > div:nth-of-type(' + str(
-                    about_length_of_education_list + 1) + ') > ul > li'
-                work_history_lists = detail_fb_education_info_soup.select(work_history_lists_dir)
-                for about_length_of_edu_detail in range(len(work_history_lists)):
-                    print(work_history_lists_title, '길이: ', len(work_history_lists))
+                print('거주지 출력 부분은 구조가 1 depth 깊음')
+                for about_length_of_living_detail in range(len(living_history_lists)):
+                    print('len(living_history_lists) : ', len(living_history_lists))
+                    '''
+                    print(detail_fb_living_info_soup.select(living_history_lists_dir + ':nth-of-type(' + str(
+                        about_length_of_living_detail + 1) + ') > div > div > div > div > div > div:nth-of-type(2) > span > a')[
+                              0].text)
+                    print(detail_fb_living_info_soup.select(living_history_lists_dir + ':nth-of-type(' + str(
+                        about_length_of_living_detail + 1) + ') > div > div > div > div > div > div:nth-of-type(2) > div')[
+                              0].text)
+                    '''
+        else:
+            if len(living_history_lists) == 1:
 
-
-        # [거주했던 장소]
-        # https://www.facebook.com/kpokem/about?section=living
-        detail_url_living = 'https://www.facebook.com/' + user_fbpage_id + '/about?section=living'
-        detail_fb_living_info_soup = __getHTMLDoc_beautifulSoup4(driver, detail_url_living)
-        aboutLiving_lists = detail_fb_living_info_soup.select('#pagelet_hometown > div > div')
-
-        for about_length_of_living_list in range(len(aboutLiving_lists)):
-            # print('about_length_of_living_list : ', about_length_of_living_list)
-            living_history_lists_title = detail_fb_living_info_soup.select(
-                '#pagelet_hometown > div > div:nth-of-type(' + str(about_length_of_living_list + 1) + ') > div > span')[
-                0].text
-
-            print('living_history_lists_title : ', living_history_lists_title)  # 거주지와 출신지/기타 살았던 곳/거주지
-
-            living_history_lists_dir = '#pagelet_hometown > div > div:nth-of-type(' + str(
-                about_length_of_living_list + 1) + ') > ul > li'
-            living_history_lists = detail_fb_living_info_soup.select(living_history_lists_dir)
-
-            if '거주지' in living_history_lists_title:
-                if len(living_history_lists) == 1:
-                    print('거주지 출력 부분은 구조가 1 depth 깊음')
-
-                    for about_length_of_living_detail in range(len(living_history_lists)):
-                        print('len(living_history_lists) : ', len(living_history_lists))
-
-                else:
-                    print('거주지 출력 부분은 구조가 1 depth 깊음')
-                    for about_length_of_living_detail in range(len(living_history_lists)):
-                        print('len(living_history_lists) : ', len(living_history_lists))
-
+                for about_length_of_living_detail in range(len(living_history_lists)):
+                    print('len(living_history_lists) : ', len(living_history_lists))
+                    '''
+                    print(detail_fb_living_info_soup.select(
+                        living_history_lists_dir + ' > div > div > div > div > div:nth-of-type(2) > span > a')[0].text)
+                    print(detail_fb_living_info_soup.select(
+                        living_history_lists_dir + ' > div > div > div > div > div:nth-of-type(2) > div')[0].text)
+                    '''
             else:
-                if len(living_history_lists) == 1:
-
-                    for about_length_of_living_detail in range(len(living_history_lists)):
-                        print('len(living_history_lists) : ', len(living_history_lists))
-
-                else:
-                    for about_length_of_living_detail in range(len(living_history_lists)):
-                        print('len(living_history_lists) : ', len(living_history_lists))
-
-
+                for about_length_of_living_detail in range(len(living_history_lists)):
+                    print('len(living_history_lists) : ', len(living_history_lists))
+                    '''
+                    print(detail_fb_living_info_soup.select(living_history_lists_dir + ':nth-of-type(' + str(
+                        about_length_of_living_detail + 1) + ') > div > div > div > div > div > div:nth-of-type(2) > span > a')[
+                              0].text)
+                    print(detail_fb_living_info_soup.select(living_history_lists_dir + ':nth-of-type(' + str(
+                        about_length_of_living_detail + 1) + ') > div > div > div > div > div > div:nth-of-type(2) > div')[
+                              0].text)
+                    '''
         # No.4 [연락처 및 기본정보]-연락처 정보, 웹사이트 및 소셜 링크 정보, 기본 정보
         # https://www.facebook.com/userpageID/about?section=contact-info
         detail_url_contact = 'https://www.facebook.com/' + user_fbpage_id + '/about?section=contact-info&pnref=about'
@@ -690,16 +699,11 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
         # [연락처 정보]란 취득
         if not user_pglet_contactData_title_01:
             print('사용자가 연락처 정보를 등록하지 않았습니다.')
-            returnedResultDict['휴대폰'] = ''
-            returnedResultDict['Facebook'] = ''
 
             # make Data
             # aboutDataDic[user_pglet_contactData_title_01.replace(" ", "")] = ''
 
         else:
-            returnedResultDict['휴대폰'] = ''
-            returnedResultDict['Facebook'] = ''
-
             # pagelet_contact
             if '연락처' in user_pglet_contactData_title_01[0].text:
                 print(user_pglet_contactData_title_01[0].text)  # 연락처 정보
@@ -736,27 +740,17 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                         # aboutInfo[key] = value
                         conCycle += 1
 
-                # 20181016_edited_syhan
                 except:
                     print('더이상 가져올 수 있는 정보가 존재하지 않습니다.')
                     # print('연락처 정보 수집 결과[Dictionary type]:', aboutInfo)
-                    returnedResultDict['휴대폰'] = ''
-                    returnedResultDict['Facebook'] = ''
-            else:
-                returnedResultDict['휴대폰'] = ''
-                returnedResultDict['Facebook'] = ''
 
         # [웹사이트 및 소셜 링크]란
         if not user_pglet_contactData_title_01_2:
             print('사용자가 웹사이트 및 소셜 링크 정보를 등록하지 않았습니다.')
-            returnedResultDict['소셜링크'] = ''
-            returnedResultDict['웹사이트'] = ''
 
             # make Data
             # aboutDataDic[user_pglet_contactData_title_01_2.replace(" ", "")] = ''
         else:
-            returnedResultDict['소셜링크'] = ''
-            returnedResultDict['웹사이트'] = ''
             # pagelet_contact
             if '웹사이트' in user_pglet_contactData_title_01_2[0].text:
                 print(user_pglet_contactData_title_01_2[0].text)  # 웹사이트 및 소셜 링크 정보
@@ -799,23 +793,14 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
                     # logger.debug('웹사이트 및 소셜 링크 정보 수집 결과[Dictionary type]: {}'.format(aboutDataDic))
 
         # [기본 정보]란 취득
-        # 20181016_edited_syhan
         if not user_pglet_basicData_title_01:
             print('사용자가 기본 정보를 등록하지 않았습니다.')
-            returnedResultDict['음력생일'] = ''
-            returnedResultDict['성별'] = ''
-            returnedResultDict['혈액형'] = ''
-            returnedResultDict['종교관'] = ''
 
             # make Data
             # aboutDataDic[user_pglet_basicData_title_01.replace(" ", "")] = ''
 
         else:
             # pagelet_basic
-            returnedResultDict['음력생일'] = ''
-            returnedResultDict['성별'] = ''
-            returnedResultDict['혈액형'] = ''
-            returnedResultDict['종교관'] = ''
             if '기본' in user_pglet_basicData_title_01[0].text:
                 print(user_pglet_basicData_title_01[0].text)  # 기본 정보
 
@@ -851,800 +836,240 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
 
                         baseCycle += 1
 
-                    # 20181016_edited_syhan
                 except:
                     print('더이상 가져올 수 있는 정보가 존재하지 않습니다.')
                     # print('기본 정보 수집 결과 [Dictionary type]: {}'.format(aboutDataDic))
-                    returnedResultDict['음력생일'] = ''
-                    returnedResultDict['성별'] = ''
-                    returnedResultDict['혈액형'] = ''
-                    returnedResultDict['종교관'] = ''
-            else:
-                returnedResultDict['음력생일'] = ''
-                returnedResultDict['성별'] = ''
-                returnedResultDict['혈액형'] = ''
-                returnedResultDict['종교관'] = ''
 
-        # [가족 및 결혼/연애 상태]
-        # https://www.facebook.com/kpokem/about?section=relationship
-        detail_url_relationship = 'https://www.facebook.com/' + user_fbpage_id + '/about?section=relationship'
-        detail_fb_relationship_info_soup = __getHTMLDoc_beautifulSoup4(driver, detail_url_relationship)
-        aboutRelationship_lists = detail_fb_relationship_info_soup.select('#pagelet_relationships > div')
+    # [가족 및 결혼/연애 상태]
+    # https://www.facebook.com/kpokem/about?section=relationship
+    detail_url_relationship = 'https://www.facebook.com/' + user_fbpage_id + '/about?section=relationship'
+    detail_fb_relationship_info_soup = __getHTMLDoc_beautifulSoup4(driver, detail_url_relationship)
+    aboutRelationship_lists = detail_fb_relationship_info_soup.select('#pagelet_relationships > div')
 
-        for about_length_of_Relationships_list in range(len(aboutRelationship_lists)):
+    for about_length_of_Relationships_list in range(len(aboutRelationship_lists)):
 
-            # 20181016_edited_syhan_start
-            try:
-                # 결혼/연애 상태
-                relationship_marriage_status_title = detail_fb_relationship_info_soup.select(
-                    '#pagelet_relationships > div:nth-of-type(' + str(
-                        about_length_of_Relationships_list + 1) + ') > div > span')[0].text
-                print('relationship_marriage_status_title : ', relationship_marriage_status_title)
+        try:
+            # 결혼/연애 상태
+            relationship_marriage_status_title = detail_fb_relationship_info_soup.select(
+                '#pagelet_relationships > div:nth-of-type(' + str(
+                    about_length_of_Relationships_list + 1) + ') > div > span')[0].text
+            print('relationship_marriage_status_title : ', relationship_marriage_status_title)
 
-                relationship_lists_dir = '#pagelet_relationships > div:nth-of-type(' + str(
-                    about_length_of_Relationships_list + 1) + ') > ul > li'
+            relationship_lists_dir = '#pagelet_relationships > div:nth-of-type(' + str(
+                about_length_of_Relationships_list + 1) + ') > ul > li'
 
-                relationship_lists = detail_fb_relationship_info_soup.select(relationship_lists_dir)
+            relationship_lists = detail_fb_relationship_info_soup.select(relationship_lists_dir)
+            print('##syhan', len(relationship_lists))
 
-                if len(relationship_lists) == 1:
-                    try:
-                        # 결혼/연애상태의 대상자가 존재할 때
-                        try:
-                            print('결혼/연애상태의 대상자가 존재할 때_no name, only status')
-                            relationship_list_name = ''
-                            relationship_list_status = detail_fb_relationship_info_soup.select(
-                                relationship_lists_dir + ' > div > div > div > div:nth-of-type(2) > div')[
-                                0].text
-                        except Exception as e:
-                            print('결혼/연애상태의 대상자가 존재할 때_name, status', e)
-                            relationship_list_name = detail_fb_relationship_info_soup.select(
-                                relationship_lists_dir + ' > div > div > div > div > div > div:nth-of-type(2) > div:nth-of-type(1) > a')[
-                                0].text
-
-                            relationship_list_status = detail_fb_relationship_info_soup.select(
-                                relationship_lists_dir + ' > div > div > div > div > div > div:nth-of-type(2) > div:nth-of-type(2)')[
-                                0].text
-                        print('relationship name & status : ', relationship_list_name, ', ', relationship_list_status)
-                    except Exception as e:
-                        # 결혼/연애상태의 대상자가 존재하지 않을 때
-                        print('결혼/연애상태의 대상자가 존재하지 않을 때', e)
-                        relationship_list_name = detail_fb_relationship_info_soup.select(
-                            relationship_lists_dir + ' > div > div:nth-of-type(2) > div > div:nth-of-type(2) > span')[
-                            0].text
-                        print('relationship name : ', relationship_list_name)
-                else:
-                    # 결혼/연애상태의 대상자 수가 복수일 때
-                    for length_lists in range(len(relationship_lists)):
-                        relationship_list_name = detail_fb_relationship_info_soup.select(
-                            relationship_lists_dir + ':nth-of-type(' + str(
-                                length_lists + 1) + ') > div > div > div > div > div > div:nth-of-type(2) > div:nth-of-type(1) > a')[
-                            0].text
-                        relationship_list_status = detail_fb_relationship_info_soup.select(
-                            relationship_lists_dir + ':nth-of-type(' + str(
-                                length_lists + 1) + ') > div > div > div > div > div > div:nth-of-type(2) > div:nth-of-type(2)')[
-                            0].text
-                        print('relationship name & status : ', relationship_list_name, ', ', relationship_list_status)
-
-            # 20181016_edited_syhan_end
-
-            except Exception as e:
-                # 가족
-                print('family:', e)
-                relationship_family_status_title = detail_fb_relationship_info_soup.select(
-                    '#pagelet_relationships > div:nth-of-type(' + str(
-                        about_length_of_Relationships_list + 1) + ') > div > div > span')[0].text
-                print('relationship_family_status_title : ', relationship_family_status_title)
-
-                relationship_lists_dir = '#pagelet_relationships > div:nth-of-type(' + str(
-                    about_length_of_Relationships_list + 1) + ') > div > ul > li'
-                relationship_lists = detail_fb_relationship_info_soup.select(relationship_lists_dir)
-
-                if len(relationship_lists) == 1:
+            if len(relationship_lists) == 1:
+                try:
+                    # 결혼/연애상태의 대상자가 존재할 때
                     relationship_list_name = detail_fb_relationship_info_soup.select(
                         relationship_lists_dir + ':nth-of-type(1) > div > div > div > div > div > div:nth-of-type(2) > div:nth-of-type(1) > a')[
                         0].text
-                    relationship_list_staus = detail_fb_relationship_info_soup.select(
+                    relationship_list_status = detail_fb_relationship_info_soup.select(
                         relationship_lists_dir + ':nth-of-type(1) > div > div > div > div > div > div:nth-of-type(2) > div:nth-of-type(2)')[
                         0].text
                     print('relationship name & status : ', relationship_list_name, ', ', relationship_list_status)
-                else:
-                    for length_lists in range(len(relationship_lists)):
-                        relationship_list_name = detail_fb_relationship_info_soup.select(
-                            relationship_lists_dir + ':nth-of-type(' + str(
-                                length_lists + 1) + ') > div > div:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div:nth-of-type(1) > span > a')[
-                            0].text
-                        relationship_list_status = detail_fb_relationship_info_soup.select(
-                            relationship_lists_dir + ':nth-of-type(' + str(
-                                length_lists + 1) + ') > div > div:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div:nth-of-type(2)')[
-                            0].text
-                        print('relationship name & status : ', relationship_list_name, ', ', relationship_list_status)
-
-        # [자세한 소개]
-        # https://www.facebook.com/kpokem/about?section=bio
-        detail_url_bio = 'https://www.facebook.com/' + user_fbpage_id + '/about?section=bio'
-        detail_fb_bio_info_soup = __getHTMLDoc_beautifulSoup4(driver, detail_url_bio)
-
-        # bio와 Quotes는 기본으로 출력함
-        try:
-            about_Bio_title = detail_fb_bio_info_soup.select('#pagelet_bio > div > div > span')[0].text  # 누구누구님의 정보
-        except Exception as e:
-            print('about_Bio_title 없음')
-            about_Bio_title = ''
-        try:
-            about_Bio_contents = detail_fb_bio_info_soup.select('#pagelet_bio > div > ul > li > span')[0].text  # 내용 또는 표시할 추가 정보 없음
-        except Exception as e:
-            print('about_Bio_contents 없음')
-            about_Bio_contents = ''
-
-        print('bio : ', about_Bio_title, ', ', about_Bio_contents)
-
-        try:
-            about_Pronounce = detail_fb_bio_info_soup.select('#pagelet_pronounce')
-        except Exception as e:
-            print('pagelet_pronounce 정보가 없습니다.')
-
-        try:
-            about_nicknames = detail_fb_bio_info_soup.select('#pagelet_nicknames')
-        except Exception as e:
-            print('pagelet_nicknames 정보가 없습니다. ')
-
-        about_Quotes_title = ''
-        about_Quotes_contents = ''
-
-        try:
-            # bio와 Quotes는 기본으로 출력함
-            about_Quotes_title = detail_fb_bio_info_soup.select('#pagelet_quotes > div > div > span')[0].text
-        except Exception as e:
-            print()
-        try:
-            about_Quotes_contents = detail_fb_bio_info_soup.select('#pagelet_quotes > div > ul > li > div > div > span')[
-                0].text
-        except Exception as e:
-            print()
-
-        print('quotes : ', about_Quotes_title, ', ', about_Quotes_contents)
-
-
-        # [중요 이벤트]
-        detail_url_yearOverviews = 'https://www.facebook.com/' + user_fbpage_id + '/about?section=year-overviews'
-        detail_fb_yearOverviews_info_soup = __getHTMLDoc_beautifulSoup4(driver, detail_url_yearOverviews)
-
-        yearOverviews_medly_about_title = detail_fb_yearOverviews_info_soup.select(
-            '#timeline-medley > div > div#pagelet_timeline_medley_about > div > div > ul > li > div > div:nth-of-type(2) > div > div > div > span')[
-            0].text  # 중요 이벤트
-        yearOverviews_medly_about_contents_lists = detail_fb_yearOverviews_info_soup.select(
-            '#timeline-medley > div > div#pagelet_timeline_medley_about > div > div > ul > li > div > div:nth-of-type(2) > div > div > ul > li')
-
-        returnedResultDict['운영년수'] = 0
-        arrangeYearsList = []
-
-        for list_length in range(len(yearOverviews_medly_about_contents_lists)):
-
-            yearOverviews_medly_about_contents_detail_year = detail_fb_yearOverviews_info_soup.select(
-                '#timeline-medley > div > div#pagelet_timeline_medley_about > div > div > ul > li > div > div:nth-of-type(2) > div > div > ul > li:nth-of-type(' + str(
-                    list_length + 1) + ') > div > div:nth-of-type(1) > span')[0].text  # 년도
-            yearOverviews_medly_about_contents_detail_list = detail_fb_yearOverviews_info_soup.select(
-                '#timeline-medley > div > div#pagelet_timeline_medley_about > div > div > ul > li > div > div:nth-of-type(2) > div > div > ul > li:nth-of-type(' + str(
-                    list_length + 1) + ') > div > div:nth-of-type(2) > ul > li')
-
-
-            arrangeYearsList.append(yearOverviews_medly_about_contents_detail_year)
-
-            for detail_list_length in range(len(yearOverviews_medly_about_contents_detail_list)):
-                yearOverviews_medly_about_contents_detail_02 = detail_fb_yearOverviews_info_soup.select(
-                    '#timeline-medley > div > div#pagelet_timeline_medley_about > div > div > ul > li > div > div:nth-of-type(2) > div > div > ul > li:nth-of-type(' + str(
-                        list_length + 1) + ') > div > div:nth-of-type(2) > ul > li:nth-of-type(' + str(
-                        detail_list_length + 1) + ') > div > div > a > span')[0].text  # 내용
-                print(yearOverviews_medly_about_contents_detail_year, ', ', yearOverviews_medly_about_contents_detail_02)
-
-        print('년도 리스트:', arrangeYearsList)
-
-        print('년도 리스트 길이:', len(arrangeYearsList))
-
-        if len(arrangeYearsList) != 0 and len(arrangeYearsList) != 1:
-            print(arrangeYearsList[0:len(arrangeYearsList) - 1])
-            arrangePeriod = 0
-            arrangeYearsList_2 = arrangeYearsList[0:len(arrangeYearsList) - 1]
-
-            # print(arrangeYearsList_2[-1].replace("년"))
-            lastYearVal = int(arrangeYearsList_2[-1].replace("년", ""))
-            currYear = '%04d' % time.localtime().tm_year
-            arrangePeriod = int(currYear) - lastYearVal
-
-            print('운영 년수: ', arrangePeriod)
-
-            returnedResultDict['운영년수'] = arrangePeriod
-
-        elif len(arrangeYearsList) == 1:
-
-            print('운영 년수를 알 수 없습니다. ')
-            arrangePeriod = 0
-            arrangeYearsList_2 = 0
-
-        else:
-            print('운영 년수를 알 수 없습니다. ')
-            arrangePeriod = 0
-            arrangeYearsList_2 = 0
-
-    elif aboutBoxLength == 2:
-
-        returnedResultDict['개요항목개수'] = 0
-        about_overviewURL = '#pagelet_timeline_medley_about > div:nth-of-type(2) > div > ul > li:nth-of-type(2) > div > div:nth-of-type(2) > div > div'
-
-        try:
-            aboutOverview_middle_lists = detail_fb_overview_info_soup.select(
-                about_overviewURL + ' > div:nth-of-type(1) > ul > li')
-            # 개요 항목의 리스트 개수
-            print('개요항목길이:', len(aboutOverview_middle_lists))
-
-            if len(aboutOverview_middle_lists) != 0:
-                returnedResultDict['개요항목개수'] = len(aboutOverview_middle_lists)
+                except Exception:
+                    # 결혼/연애상태의 대상자가 존재하지 않을 때
+                    relationship_list_name = detail_fb_relationship_info_soup.select(
+                        relationship_lists_dir + ':nth-of-type(1) > div > div:nth-of-type(2) > div > div:nth-of-type(2) > span')[
+                        0].text
+                    print('relationship name : ', relationship_list_name)
             else:
-                returnedResultDict['개요항목개수'] = 0
-
-            # 개요 항목 리스트 추출
-            for about_list in range(len(aboutOverview_middle_lists)):
-                print(aboutOverview_middle_lists[about_list].text)
-
-        except Exception as e:
-            print('개요 항목이 존재하지 않음.', e)
-
-
-        # 20181016_edited_syhan_start
-        try:
-            aboutOverview_rightSide_lists = detail_fb_overview_info_soup.select(
-                about_overviewURL + ' > div:nth-of-type(2) > ul > li')
-            # 개요 항목 우측의 리스트 개수
-            # print(len(aboutOverview_rightSide_lists))
-            # 개요 항목 우측 리스트 추출
-            if len(aboutOverview_rightSide_lists) != 0:
-                print('개요의 우측 항목이 존재.')
-
-            else:
-                print('개요의 우측 항목이 존재하지 않음.')
-                returnedResultDict['전화번호'] = ''
-                returnedResultDict['주소'] = ''
-                returnedResultDict['생일'] = ''
-
-        except Exception as e:
-            print('개요의 우측 항목이 존재하지 않음.', e)
-            returnedResultDict['전화번호'] = ''
-            returnedResultDict['주소'] = ''
-            returnedResultDict['생일'] = ''
+                # 결혼/연애상태의 대상자 수가 복수일 때
+                for length_lists in range(len(relationship_lists)):
+                    relationship_list_name = detail_fb_relationship_info_soup.select(
+                        relationship_lists_dir + ':nth-of-type(' + str(
+                            length_lists + 1) + ') > div > div > div > div > div > div:nth-of-type(2) > div:nth-of-type(1) > a')[
+                        0].text
+                    relationship_list_status = detail_fb_relationship_info_soup.select(
+                        relationship_lists_dir + ':nth-of-type(' + str(
+                            length_lists + 1) + ') > div > div > div > div > div > div:nth-of-type(2) > div:nth-of-type(2)')[
+                        0].text
+                    print('relationship name & status : ', relationship_list_name, ', ', relationship_list_status)
 
 
-        # [경력 및 학력]
-        # https://www.facebook.com/kpokem/about?section=education
-        detail_url_education = 'https://www.facebook.com/' + user_fbpage_id + '/about?section=education'
+        except Exception:
+            # 가족
+            relationship_family_status_title = detail_fb_relationship_info_soup.select(
+                '#pagelet_relationships > div:nth-of-type(' + str(
+                    about_length_of_Relationships_list + 1) + ') > div > div > span')[0].text
+            print('relationship_family_status_title : ', relationship_family_status_title)
 
-        detail_fb_education_info_soup = __getHTMLDoc_beautifulSoup4(driver, detail_url_education)
-        # about_educationURL = '#pagelet_eduwork > div > div'
-        aboutEducation_lists = detail_fb_education_info_soup.select('#pagelet_eduwork > div > div')
-        # print(len(aboutEducation_lists))
-        print('[경력 및 학력]')
+            relationship_lists_dir = '#pagelet_relationships > div:nth-of-type(' + str(
+                about_length_of_Relationships_list + 1) + ') > div > ul > li'
+            relationship_lists = detail_fb_relationship_info_soup.select(relationship_lists_dir)
 
-        if len(aboutEducation_lists) != 0:
-            for about_length_of_education_list in range(len(aboutEducation_lists)):
-                work_history_lists_title = detail_fb_education_info_soup.select(
-                    '#pagelet_eduwork > div > div:nth-of-type(' + str(
-                        about_length_of_education_list + 1) + ') > div > span')[
+            if len(relationship_lists) == 1:
+                relationship_list_name = detail_fb_relationship_info_soup.select(
+                    relationship_lists_dir + ':nth-of-type(1) > div > div > div > div > div > div:nth-of-type(2) > div:nth-of-type(1) > a')[
                     0].text
-
-                print(work_history_lists_title)  # 직장/전문기술/학력
-
-                if '전문 기술' in work_history_lists_title:
-
-                    work_history_lists_dir = '#pagelet_eduwork > div > div:nth-of-type(' + str(
-                        about_length_of_education_list + 1) + ') > ul > li > div'
-                    work_history_lists = detail_fb_education_info_soup.select(work_history_lists_dir)
-
-                    print(work_history_lists_title, '길이: ', len(work_history_lists))
-
-                else:
-
-                    work_history_lists_dir = '#pagelet_eduwork > div > div:nth-of-type(' + str(
-                        about_length_of_education_list + 1) + ') > ul > li'
-                    work_history_lists = detail_fb_education_info_soup.select(work_history_lists_dir)
-                    for about_length_of_edu_detail in range(len(work_history_lists)):
-                        print(work_history_lists_title, '길이: ', len(work_history_lists))
-
-        else:
-            print()
-        # 20181016_edited_syhan_end
-
-
-        # [거주했던 장소]
-        # https://www.facebook.com/kpokem/about?section=living
-        detail_url_living = 'https://www.facebook.com/' + user_fbpage_id + '/about?section=living'
-        detail_fb_living_info_soup = __getHTMLDoc_beautifulSoup4(driver, detail_url_living)
-        aboutLiving_lists = detail_fb_living_info_soup.select('#pagelet_hometown > div > div')
-
-        for about_length_of_living_list in range(len(aboutLiving_lists)):
-            # print('about_length_of_living_list : ', about_length_of_living_list)
-            living_history_lists_title = detail_fb_living_info_soup.select(
-                '#pagelet_hometown > div > div:nth-of-type(' + str(
-                    about_length_of_living_list + 1) + ') > div > span')[
-                0].text
-
-            print('living_history_lists_title : ', living_history_lists_title)  # 거주지와 출신지/기타 살았던 곳/거주지
-
-            living_history_lists_dir = '#pagelet_hometown > div > div:nth-of-type(' + str(
-                about_length_of_living_list + 1) + ') > ul > li'
-            living_history_lists = detail_fb_living_info_soup.select(living_history_lists_dir)
-
-            if '거주지' in living_history_lists_title:
-                if len(living_history_lists) == 1:
-
-
-                    for about_length_of_living_detail in range(len(living_history_lists)):
-                        print('len(living_history_lists) : ', len(living_history_lists))
-
-                else:
-                    print('거주지 출력 부분은 구조가 1 depth 깊음')
-                    for about_length_of_living_detail in range(len(living_history_lists)):
-                        print('len(living_history_lists) : ', len(living_history_lists))
-
+                relationship_list_staus = detail_fb_relationship_info_soup.select(
+                    relationship_lists_dir + ':nth-of-type(1) > div > div > div > div > div > div:nth-of-type(2) > div:nth-of-type(2)')[
+                    0].text
+                print('relationship name & status : ', relationship_list_name, ', ', relationship_list_status)
             else:
-                if len(living_history_lists) == 1:
-
-                    for about_length_of_living_detail in range(len(living_history_lists)):
-                        print('len(living_history_lists) : ', len(living_history_lists))
-
-                else:
-                    for about_length_of_living_detail in range(len(living_history_lists)):
-                        print('len(living_history_lists) : ', len(living_history_lists))
-
-        # No.4 [연락처 및 기본정보]-연락처 정보, 웹사이트 및 소셜 링크 정보, 기본 정보
-        # https://www.facebook.com/userpageID/about?section=contact-info
-        detail_url_contact = 'https://www.facebook.com/' + user_fbpage_id + '/about?section=contact-info&pnref=about'
-        detail_fb_info_soup = __getHTMLDoc_beautifulSoup4(driver, detail_url_contact)
-
-        # [연락처 및 기본정보]-[연락처 정보]란 제목
-        user_pglet_contactData_title_01 = detail_fb_info_soup.select(
-            '#pagelet_contact > div > div:nth-of-type(1) > div > span')
-
-        # [연락처 및 기본정보]-[웹사이트 및 소셜 링크]란 제목
-        user_pglet_contactData_title_01_2 = detail_fb_info_soup.select(
-            '#pagelet_contact > div > div:nth-of-type(2) > div > div > span')
-
-        # [연락처 및 기본정보]-[기본 정보]란 제목
-        user_pglet_basicData_title_01 = detail_fb_info_soup.select(
-            '#pagelet_basic > div > div > span')
-
-        user_pglet_data = detail_fb_info_soup.select('div#pagelet_contact > div > div')[0].text
-        print('user_pglet_data = {}'.format(user_pglet_data))
-
-        length_user_pglet_data = len(user_pglet_data)
-
-        print('연락처 정보 & 웹사이트 정보 등 표시 영역 길이 : {}'.format(length_user_pglet_data))
-
-        # [연락처 정보]란 취득
-        if not user_pglet_contactData_title_01:
-            print('사용자가 연락처 정보를 등록하지 않았습니다.')
-            returnedResultDict['휴대폰'] = ''
-            returnedResultDict['Facebook'] = ''
-
-            # make Data
-            # aboutDataDic[user_pglet_contactData_title_01.replace(" ", "")] = ''
-
-        else:
-            returnedResultDict['휴대폰'] = ''
-            returnedResultDict['Facebook'] = ''
-
-            # pagelet_contact
-            if '연락처' in user_pglet_contactData_title_01[0].text:
-                print(user_pglet_contactData_title_01[0].text)  # 연락처 정보
-
-                # [연락처 정보]란 하단 세부 정보 타이틀
-                pagelet_contact_dir_list = 'div#pagelet_contact > div > div:nth-of-type(1) > ul > li'
-
-                # [연락처 정보]란 하단 세부 정보 타이틀 갯수
-                length_of_contList = len(detail_fb_info_soup.select(pagelet_contact_dir_list))
-
-                # [연락처 정보]란 하단 세부 정보에 대한 딕셔너리[key : value => 제목 : 값] 생성
-                conCycle = 0
-                try:
-                    # 하단 세부 정보 길이 만큼 반복문 실행해 key:value 생성
-                    while conCycle < length_of_contList:
-                        userContactInfoListTitle = detail_fb_info_soup.select(
-                            pagelet_contact_dir_list + ':nth-of-type(' + str(
-                                int(conCycle + 1)) + ') > div > div:nth-of-type(1)')[0].text
-
-                        # [연락처 정보]란_title
-                        key = userContactInfoListTitle.replace(" ", "")
-                        print('연락처 정보_title: ', key)
-
-                        # [연락처 정보]란_value
-                        value = detail_fb_info_soup.select(
-                            pagelet_contact_dir_list + ':nth-of-type(' + str(
-                                int(conCycle + 1)) + ') > div > div:nth-of-type(2) > div > div > span')[
-                            0].text.replace(" ", "")
-                        print('연락처 정보_value: ', value)
-
-                        # make Data
-                        # aboutDataDic[key] = value
-
-                        # aboutInfo[key] = value
-                        conCycle += 1
-
-                # 20181016_edited_syhan
-                except:
-                    print('더이상 가져올 수 있는 정보가 존재하지 않습니다.')
-                    # print('연락처 정보 수집 결과[Dictionary type]:', aboutInfo)
-                    returnedResultDict['휴대폰'] = ''
-                    returnedResultDict['Facebook'] = ''
-            else:
-                returnedResultDict['휴대폰'] = ''
-                returnedResultDict['Facebook'] = ''
-
-        # [웹사이트 및 소셜 링크]란
-        if not user_pglet_contactData_title_01_2:
-            print('사용자가 웹사이트 및 소셜 링크 정보를 등록하지 않았습니다.')
-
-            returnedResultDict['소셜링크'] = ''
-            returnedResultDict['웹사이트'] = ''
-
-            # make Data
-            # aboutDataDic[user_pglet_contactData_title_01_2.replace(" ", "")] = ''
-        else:
-
-            returnedResultDict['소셜링크'] = ''
-            returnedResultDict['웹사이트'] = ''
-            # pagelet_contact
-            if '웹사이트' in user_pglet_contactData_title_01_2[0].text:
-                print(user_pglet_contactData_title_01_2[0].text)  # 웹사이트 및 소셜 링크 정보
-
-                # [웹사이트 및 소셜 링크]란 하단 세부 정보 타이틀
-                pagelet_contact_webSite_dir_list = 'div#pagelet_contact > div > div:nth-of-type(2) > div > ul > li'
-
-                # [웹사이트 및 소셜 링크]란 하단 세부 정보 타이틀 갯수
-                length_of_contWebSiteList = len(detail_fb_info_soup.select(pagelet_contact_webSite_dir_list))
-
-                # [웹사이트 및 소셜 링크]란 하단 세부 정보에 대한 딕셔너리[key : value => 제목 : 값] 생성
-                conWebCycle = 0
-
-                try:
-                    while conWebCycle < length_of_contWebSiteList:
-                        userContactWebInfoListTitle = detail_fb_info_soup.select(
-                            pagelet_contact_webSite_dir_list + ':nth-of-type(' + str(
-                                int(conWebCycle + 1)) + ') > div > div:nth-of-type(1)')[0].text
-
-                        # [웹사이트 및 소셜 링크]란 title
-                        key = userContactWebInfoListTitle.replace(" ", "")
-                        print('웹사이트 및 소셜 링크 정보_title: ', key)
-
-                        # [웹사이트 및 소셜 링크]란 value
-                        value = detail_fb_info_soup.select(
-                            pagelet_contact_webSite_dir_list + ':nth-of-type(' + str(
-                                int(conWebCycle + 1)) + ') > div > div:nth-of-type(2) > div > div > span')[
-                            0].text.replace(" ", "")
-
-                        print('웹사이트 및 소셜 링크 정보_value: ', value)
-
-                        # make Data
-                        # aboutDataDic[key] = value
-
-                        # aboutInfo[key] = value
-                        conWebCycle += 1
-
-                except:
-                    print('더이상 가져올 수 있는 정보가 존재하지 않습니다.')
-                    # logger.debug('웹사이트 및 소셜 링크 정보 수집 결과[Dictionary type]: {}'.format(aboutDataDic))
-
-        # [기본 정보]란 취득
-        # 20181016_edited_syhan
-        if not user_pglet_basicData_title_01:
-            print('사용자가 기본 정보를 등록하지 않았습니다.')
-            returnedResultDict['음력생일'] = ''
-            returnedResultDict['성별'] = ''
-            returnedResultDict['혈액형'] = ''
-            returnedResultDict['종교관'] = ''
-
-            # make Data
-            # aboutDataDic[user_pglet_basicData_title_01.replace(" ", "")] = ''
-
-        else:
-            # pagelet_basic
-            returnedResultDict['음력생일'] = ''
-            returnedResultDict['성별'] = ''
-            returnedResultDict['혈액형'] = ''
-            returnedResultDict['종교관'] = ''
-            if '기본' in user_pglet_basicData_title_01[0].text:
-                print(user_pglet_basicData_title_01[0].text)  # 기본 정보
-
-                # [기본 정보]란 하단 세부 정보 타이틀
-                pagelet_basic_dir_list = 'div#pagelet_basic > div > ul > li'
-
-                # [기본 정보]란 하단 세부 정보 타이틀 갯수
-                length_of_basicList = len(detail_fb_info_soup.select(pagelet_basic_dir_list))
-
-                # [기본 정보]란 하단 세부 정보에 대한 딕셔너리[key : value => 제목 : 값] 생성
-                baseCycle = 0
-                try:
-                    while baseCycle < length_of_basicList:
-                        userBasicInfoListTitle = detail_fb_info_soup.select(
-                            pagelet_basic_dir_list + ':nth-of-type(' + str(
-                                int(baseCycle + 1)) + ') > div > div:nth-of-type(1)')[0].text
-
-                        # [기본 정보]란 title
-                        key = userBasicInfoListTitle.replace(" ", "")
-
-                        print('기본 정보_key : ', key)
-
-                        # [기본 정보]란 value
-                        value = detail_fb_info_soup.select(
-                            pagelet_basic_dir_list + ':nth-of-type(' + str(
-                                int(baseCycle + 1)) + ') > div > div:nth-of-type(2) > div > div > span')[
-                            0].text.replace(" ", "")
-
-                        print('기본 정보_value : ', value)
-
-                        # make Data
-                        # aboutDataDic[key] = value
-
-                        baseCycle += 1
-
-                    # 20181016_edited_syhan
-                except:
-                    print('더이상 가져올 수 있는 정보가 존재하지 않습니다.')
-                    # print('기본 정보 수집 결과 [Dictionary type]: {}'.format(aboutDataDic))
-                    returnedResultDict['음력생일'] = ''
-                    returnedResultDict['성별'] = ''
-                    returnedResultDict['혈액형'] = ''
-                    returnedResultDict['종교관'] = ''
-            else:
-                returnedResultDict['음력생일'] = ''
-                returnedResultDict['성별'] = ''
-                returnedResultDict['혈액형'] = ''
-                returnedResultDict['종교관'] = ''
-
-        # [가족 및 결혼/연애 상태]
-        # https://www.facebook.com/kpokem/about?section=relationship
-        detail_url_relationship = 'https://www.facebook.com/' + user_fbpage_id + '/about?section=relationship'
-        detail_fb_relationship_info_soup = __getHTMLDoc_beautifulSoup4(driver, detail_url_relationship)
-        aboutRelationship_lists = detail_fb_relationship_info_soup.select('#pagelet_relationships > div')
-
-
-        for about_length_of_Relationships_list in range(len(aboutRelationship_lists)):
-
-            try:
-                # 결혼/연애 상태
-                relationship_marriage_status_title = detail_fb_relationship_info_soup.select(
-                    '#pagelet_relationships > div:nth-of-type(' + str(
-                        about_length_of_Relationships_list + 1) + ') > div > span')[0].text
-                print('relationship_marriage_status_title : ', relationship_marriage_status_title)
-
-                relationship_lists_dir = '#pagelet_relationships > div:nth-of-type(' + str(
-                    about_length_of_Relationships_list + 1) + ') > ul > li'
-
-                relationship_lists = detail_fb_relationship_info_soup.select(relationship_lists_dir)
-
-                if len(relationship_lists) == 1:
-                    try:
-                        # 결혼/연애상태의 대상자가 존재할 때
-                        print('결혼/연애상태의 대상자가 존재할 때')
-
-                        try:
-                            #name described
-                            relationship_list_name = detail_fb_relationship_info_soup.select(
-                                relationship_lists_dir + ' > div > div > div > div > div > div:nth-of-type(2) > div:nth-of-type(1) > a')[
-                                0].text
-
-                            relationship_list_status = detail_fb_relationship_info_soup.select(
-                                relationship_lists_dir + ' > div > div > div > div > div > div:nth-of-type(2) > div:nth-of-type(2)')[
-                                0].text
-
-                            print('relationship name & status : ', relationship_list_name, ', ', relationship_list_status)
-
-                        except Exception as e:
-                            #no name just only describe
-                            relationship_list_name = ''
-
-                            relationship_list_status = detail_fb_relationship_info_soup.select(
-                                relationship_lists_dir + ' > div > div > div > div:nth-of-type(2) > div')[
-                                0].text
-
-                            print('relationship name & status : ', relationship_list_name, ', ', relationship_list_status)
-                    except Exception:
-                        # 결혼/연애상태의 대상자가 존재하지 않을 때
-
-                        relationship_list_name = detail_fb_relationship_info_soup.select(
-                            relationship_lists_dir + ' > div > div:nth-of-type(2) > div > div:nth-of-type(2) > span')[
-                            0].text
-                        print('relationship name : ', relationship_list_name)
-                else:
-                    # 결혼/연애상태의 대상자 수가 복수일 때
-
-                    for length_lists in range(len(relationship_lists)):
-                        relationship_list_name = detail_fb_relationship_info_soup.select(
-                            relationship_lists_dir + ':nth-of-type(' + str(
-                                length_lists + 1) + ') > div > div > div > div > div > div:nth-of-type(2) > div:nth-of-type(1) > a')[
-                            0].text
-                        relationship_list_status = detail_fb_relationship_info_soup.select(
-                            relationship_lists_dir + ':nth-of-type(' + str(
-                                length_lists + 1) + ') > div > div > div > div > div > div:nth-of-type(2) > div:nth-of-type(2)')[
-                            0].text
-                        print('relationship name & status : ', relationship_list_name, ', ', relationship_list_status)
-
-
-            except Exception:
-                # 가족
-                relationship_family_status_title = detail_fb_relationship_info_soup.select(
-                    '#pagelet_relationships > div:nth-of-type(' + str(
-                        about_length_of_Relationships_list + 1) + ') > div > div > span')[0].text
-                print('relationship_family_status_title : ', relationship_family_status_title)
-
-                relationship_lists_dir = '#pagelet_relationships > div:nth-of-type(' + str(
-                    about_length_of_Relationships_list + 1) + ') > div > ul > li'
-                relationship_lists = detail_fb_relationship_info_soup.select(relationship_lists_dir)
-
-                if len(relationship_lists) == 1:
+                for length_lists in range(len(relationship_lists)):
                     relationship_list_name = detail_fb_relationship_info_soup.select(
-                        relationship_lists_dir + ':nth-of-type(1) > div > div > div > div > div > div:nth-of-type(2) > div:nth-of-type(1) > a')[
+                        relationship_lists_dir + ':nth-of-type(' + str(
+                            length_lists + 1) + ') > div > div:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div:nth-of-type(1) > span > a')[
                         0].text
-                    relationship_list_staus = detail_fb_relationship_info_soup.select(
-                        relationship_lists_dir + ':nth-of-type(1) > div > div > div > div > div > div:nth-of-type(2) > div:nth-of-type(2)')[
+                    relationship_list_status = detail_fb_relationship_info_soup.select(
+                        relationship_lists_dir + ':nth-of-type(' + str(
+                            length_lists + 1) + ') > div > div:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div:nth-of-type(2)')[
                         0].text
                     print('relationship name & status : ', relationship_list_name, ', ', relationship_list_status)
-                else:
-                    for length_lists in range(len(relationship_lists)):
-                        relationship_list_name = detail_fb_relationship_info_soup.select(
-                            relationship_lists_dir + ':nth-of-type(' + str(
-                                length_lists + 1) + ') > div > div:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div:nth-of-type(1) > span > a')[
-                            0].text
-                        relationship_list_status = detail_fb_relationship_info_soup.select(
-                            relationship_lists_dir + ':nth-of-type(' + str(
-                                length_lists + 1) + ') > div > div:nth-of-type(1) > div > div > div > div:nth-of-type(2) > div:nth-of-type(2)')[
-                            0].text
-                        print('relationship name & status : ', relationship_list_name, ', ', relationship_list_status)
 
-        # [자세한 소개]
-        # https://www.facebook.com/kpokem/about?section=bio
-        detail_url_bio = 'https://www.facebook.com/' + user_fbpage_id + '/about?section=bio'
-        detail_fb_bio_info_soup = __getHTMLDoc_beautifulSoup4(driver, detail_url_bio)
+    # [자세한 소개]
+    # https://www.facebook.com/kpokem/about?section=bio
+    detail_url_bio = 'https://www.facebook.com/' + user_fbpage_id + '/about?section=bio'
+    detail_fb_bio_info_soup = __getHTMLDoc_beautifulSoup4(driver, detail_url_bio)
 
+    print("!@#!@#!@#!@#!@#")
+
+
+    # bio와 Quotes는 기본으로 출력함
+    try:
+        about_Bio_title = detail_fb_bio_info_soup.select('#pagelet_bio > div > div > span')[0].text  # 누구누구님의 정보
+    except Exception as e:
+        print('about_Bio_title 없음')
+        about_Bio_title = ''
+    try:
+        about_Bio_contents = detail_fb_bio_info_soup.select('#pagelet_bio > div > ul > li > span')[0].text  # 내용 또는 표시할 추가 정보 없음
+    except Exception as e:
+        print('about_Bio_contents 없음')
+        about_Bio_contents = ''
+
+    print('bio : ', about_Bio_title, ', ', about_Bio_contents)
+
+    try:
+        about_Pronounce = detail_fb_bio_info_soup.select('#pagelet_pronounce')
+    except Exception as e:
+        print('pagelet_pronounce 정보가 없습니다.')
+
+    try:
+        about_nicknames = detail_fb_bio_info_soup.select('#pagelet_nicknames')
+    except Exception as e:
+        print('pagelet_nicknames 정보가 없습니다. ')
+
+    about_Quotes_title = ''
+    about_Quotes_contents = ''
+
+    try:
         # bio와 Quotes는 기본으로 출력함
-        try:
-            about_Bio_title = detail_fb_bio_info_soup.select('#pagelet_bio > div > div > span')[0].text  # 누구누구님의 정보
-        except Exception as e:
-            print('about_Bio_title 없음')
-            about_Bio_title = ''
-        try:
-            about_Bio_contents = detail_fb_bio_info_soup.select('#pagelet_bio > div > ul > li > span')[
-                0].text  # 내용 또는 표시할 추가 정보 없음
-        except Exception as e:
-            print('about_Bio_contents 없음')
-            about_Bio_contents = ''
+        about_Quotes_title = detail_fb_bio_info_soup.select('#pagelet_quotes > div > div > span')[0].text
+    except Exception as e:
+        print('bio와 Quotes는 기본으로 출력함에서 exception')
+    try:
+        about_Quotes_contents = detail_fb_bio_info_soup.select('#pagelet_quotes > div > ul > li > div > div > span')[
+            0].text
+    except Exception as e:
+        print('bio와 Quotes는 기본으로 출력함2에서 exception')
 
-        print('bio : ', about_Bio_title, ', ', about_Bio_contents)
+    print('quotes : ', about_Quotes_title, ', ', about_Quotes_contents)
+    '''
+    # [중요 이벤트]
+    # https://www.facebook.com/kpokem/about?section=year-overviews
+    detail_url_yearOverviews = 'https://www.facebook.com/' + user_fbpage_id + '/about?section=year-overviews'
+    detail_fb_yearOverviews_info_soup = __getHTMLDoc_beautifulSoup4(driver, detail_url_yearOverviews)
 
-        try:
-            about_Pronounce = detail_fb_bio_info_soup.select('#pagelet_pronounce')
-        except Exception as e:
-            print('pagelet_pronounce 정보가 없습니다.')
+    yearOverviews_medly_about_title = detail_fb_yearOverviews_info_soup.select(
+        '#timeline-medley > div > div#pagelet_timeline_medley_about > div > div > ul > li > div > div:nth-of-type(2) > div > div > div > span')[
+        0].text  # 중요 이벤트
+    yearOverviews_medly_about_contents_lists = detail_fb_yearOverviews_info_soup.select(
+        '#timeline-medley > div > div#pagelet_timeline_medley_about > div > div > ul > li > div > div:nth-of-type(2) > div > div > ul > li')
 
-        try:
-            about_nicknames = detail_fb_bio_info_soup.select('#pagelet_nicknames')
-        except Exception as e:
-            print('pagelet_nicknames 정보가 없습니다. ')
+    for list_length in range(len(yearOverviews_medly_about_contents_lists)):
 
-        about_Quotes_title = ''
-        about_Quotes_contents = ''
+        yearOverviews_medly_about_contents_detail_01 = detail_fb_yearOverviews_info_soup.select(
+            '#timeline-medley > div > div#pagelet_timeline_medley_about > div > div > ul > li > div > div:nth-of-type(2) > div > div > ul > li:nth-of-type(' + str(
+                list_length + 1) + ') > div > div:nth-of-type(1) > span')[0].text  # 년도
+        yearOverviews_medly_about_contents_detail_list = detail_fb_yearOverviews_info_soup.select(
+            '#timeline-medley > div > div#pagelet_timeline_medley_about > div > div > ul > li > div > div:nth-of-type(2) > div > div > ul > li:nth-of-type(' + str(
+                list_length + 1) + ') > div > div:nth-of-type(2) > ul > li')
 
-        try:
-            # bio와 Quotes는 기본으로 출력함
-            about_Quotes_title = detail_fb_bio_info_soup.select('#pagelet_quotes > div > div > span')[0].text
-        except Exception as e:
-            print('bio와 Quotes는 기본으로 출력함에서 exception')
-        try:
-            about_Quotes_contents = \
-            detail_fb_bio_info_soup.select('#pagelet_quotes > div > ul > li > div > div > span')[
-                0].text
-        except Exception as e:
-            print('bio와 Quotes는 기본으로 출력함2에서 exception')
+        # print(len(yearOverviews_medly_about_contents_detail_list))
 
-        print('quotes : ', about_Quotes_title, ', ', about_Quotes_contents)
-        '''
-        # [중요 이벤트]
-        # https://www.facebook.com/kpokem/about?section=year-overviews
-        detail_url_yearOverviews = 'https://www.facebook.com/' + user_fbpage_id + '/about?section=year-overviews'
-        detail_fb_yearOverviews_info_soup = __getHTMLDoc_beautifulSoup4(driver, detail_url_yearOverviews)
-
-        yearOverviews_medly_about_title = detail_fb_yearOverviews_info_soup.select(
-            '#timeline-medley > div > div#pagelet_timeline_medley_about > div > div > ul > li > div > div:nth-of-type(2) > div > div > div > span')[
-            0].text  # 중요 이벤트
-        yearOverviews_medly_about_contents_lists = detail_fb_yearOverviews_info_soup.select(
-            '#timeline-medley > div > div#pagelet_timeline_medley_about > div > div > ul > li > div > div:nth-of-type(2) > div > div > ul > li')
-
-        for list_length in range(len(yearOverviews_medly_about_contents_lists)):
-
-            yearOverviews_medly_about_contents_detail_01 = detail_fb_yearOverviews_info_soup.select(
+        for detail_list_length in range(len(yearOverviews_medly_about_contents_detail_list)):
+            yearOverviews_medly_about_contents_detail_02 = detail_fb_yearOverviews_info_soup.select(
                 '#timeline-medley > div > div#pagelet_timeline_medley_about > div > div > ul > li > div > div:nth-of-type(2) > div > div > ul > li:nth-of-type(' + str(
-                    list_length + 1) + ') > div > div:nth-of-type(1) > span')[0].text  # 년도
-            yearOverviews_medly_about_contents_detail_list = detail_fb_yearOverviews_info_soup.select(
+                    list_length + 1) + ') > div > div:nth-of-type(2) > ul > li:nth-of-type(' + str(
+                    detail_list_length + 1) + ') > div > div > a > span')[0].text  # 내용
+            print(yearOverviews_medly_about_contents_detail_01, ', ', yearOverviews_medly_about_contents_detail_02)
+    '''
+
+    # [중요 이벤트]
+    detail_url_yearOverviews = 'https://www.facebook.com/' + user_fbpage_id + '/about?section=year-overviews'
+    detail_fb_yearOverviews_info_soup = __getHTMLDoc_beautifulSoup4(driver, detail_url_yearOverviews)
+
+    yearOverviews_medly_about_title = detail_fb_yearOverviews_info_soup.select(
+        '#timeline-medley > div > div#pagelet_timeline_medley_about > div > div > ul > li > div > div:nth-of-type(2) > div > div > div > span')[
+        0].text  # 중요 이벤트
+    yearOverviews_medly_about_contents_lists = detail_fb_yearOverviews_info_soup.select(
+        '#timeline-medley > div > div#pagelet_timeline_medley_about > div > div > ul > li > div > div:nth-of-type(2) > div > div > ul > li')
+
+    returnedResultDict['운영년수'] = 0
+    arrangeYearsList = []
+
+    for list_length in range(len(yearOverviews_medly_about_contents_lists)):
+
+        yearOverviews_medly_about_contents_detail_year = detail_fb_yearOverviews_info_soup.select(
+            '#timeline-medley > div > div#pagelet_timeline_medley_about > div > div > ul > li > div > div:nth-of-type(2) > div > div > ul > li:nth-of-type(' + str(
+                list_length + 1) + ') > div > div:nth-of-type(1) > span')[0].text  # 년도
+        yearOverviews_medly_about_contents_detail_list = detail_fb_yearOverviews_info_soup.select(
+            '#timeline-medley > div > div#pagelet_timeline_medley_about > div > div > ul > li > div > div:nth-of-type(2) > div > div > ul > li:nth-of-type(' + str(
+                list_length + 1) + ') > div > div:nth-of-type(2) > ul > li')
+
+        # print(len(yearOverviews_medly_about_contents_detail_list))
+        print('yearOverviews_medly_about_contents_detail_year :', yearOverviews_medly_about_contents_detail_year)
+        print('yearOverviews_medly_about_contents_detail_list :', yearOverviews_medly_about_contents_detail_list)
+
+        arrangeYearsList.append(yearOverviews_medly_about_contents_detail_year)
+
+        for detail_list_length in range(len(yearOverviews_medly_about_contents_detail_list)):
+            yearOverviews_medly_about_contents_detail_02 = detail_fb_yearOverviews_info_soup.select(
                 '#timeline-medley > div > div#pagelet_timeline_medley_about > div > div > ul > li > div > div:nth-of-type(2) > div > div > ul > li:nth-of-type(' + str(
-                    list_length + 1) + ') > div > div:nth-of-type(2) > ul > li')
+                    list_length + 1) + ') > div > div:nth-of-type(2) > ul > li:nth-of-type(' + str(
+                    detail_list_length + 1) + ') > div > div > a > span')[0].text  # 내용
+            print(yearOverviews_medly_about_contents_detail_year, ', ', yearOverviews_medly_about_contents_detail_02)
 
-            # print(len(yearOverviews_medly_about_contents_detail_list))
+    print('년도 리스트:', arrangeYearsList)
 
-            for detail_list_length in range(len(yearOverviews_medly_about_contents_detail_list)):
-                yearOverviews_medly_about_contents_detail_02 = detail_fb_yearOverviews_info_soup.select(
-                    '#timeline-medley > div > div#pagelet_timeline_medley_about > div > div > ul > li > div > div:nth-of-type(2) > div > div > ul > li:nth-of-type(' + str(
-                        list_length + 1) + ') > div > div:nth-of-type(2) > ul > li:nth-of-type(' + str(
-                        detail_list_length + 1) + ') > div > div > a > span')[0].text  # 내용
-                print(yearOverviews_medly_about_contents_detail_01, ', ', yearOverviews_medly_about_contents_detail_02)
-        '''
+    print('년도 리스트 길이:', len(arrangeYearsList))
 
-        # [중요 이벤트]
-        detail_url_yearOverviews = 'https://www.facebook.com/' + user_fbpage_id + '/about?section=year-overviews'
-        detail_fb_yearOverviews_info_soup = __getHTMLDoc_beautifulSoup4(driver, detail_url_yearOverviews)
+    if len(arrangeYearsList) != 0 and len(arrangeYearsList) != 1:
+        print(arrangeYearsList[0:len(arrangeYearsList) - 1])
+        arrangePeriod = 0
+        arrangeYearsList_2 = arrangeYearsList[0:len(arrangeYearsList) - 1]
 
-        yearOverviews_medly_about_title = detail_fb_yearOverviews_info_soup.select(
-            '#timeline-medley > div > div#pagelet_timeline_medley_about > div > div > ul > li > div > div:nth-of-type(2) > div > div > div > span')[
-            0].text  # 중요 이벤트
-        yearOverviews_medly_about_contents_lists = detail_fb_yearOverviews_info_soup.select(
-            '#timeline-medley > div > div#pagelet_timeline_medley_about > div > div > ul > li > div > div:nth-of-type(2) > div > div > ul > li')
+        # print(arrangeYearsList_2[-1].replace("년"))
+        lastYearVal = int(arrangeYearsList_2[-1].replace("년", ""))
+        currYear = '%04d' % time.localtime().tm_year
+        arrangePeriod = int(currYear) - lastYearVal
 
-        returnedResultDict['운영년수'] = 0
-        arrangeYearsList = []
+        print('운영 년수: ', arrangePeriod)
 
-        for list_length in range(len(yearOverviews_medly_about_contents_lists)):
+        returnedResultDict['운영년수'] = arrangePeriod
 
-            yearOverviews_medly_about_contents_detail_year = detail_fb_yearOverviews_info_soup.select(
-                '#timeline-medley > div > div#pagelet_timeline_medley_about > div > div > ul > li > div > div:nth-of-type(2) > div > div > ul > li:nth-of-type(' + str(
-                    list_length + 1) + ') > div > div:nth-of-type(1) > span')[0].text  # 년도
-            yearOverviews_medly_about_contents_detail_list = detail_fb_yearOverviews_info_soup.select(
-                '#timeline-medley > div > div#pagelet_timeline_medley_about > div > div > ul > li > div > div:nth-of-type(2) > div > div > ul > li:nth-of-type(' + str(
-                    list_length + 1) + ') > div > div:nth-of-type(2) > ul > li')
+    elif len(arrangeYearsList) == 1:
 
-            # print(len(yearOverviews_medly_about_contents_detail_list))
-            print('yearOverviews_medly_about_contents_detail_year :', yearOverviews_medly_about_contents_detail_year)
-            print('yearOverviews_medly_about_contents_detail_list :', yearOverviews_medly_about_contents_detail_list)
+        print('운영 년수를 알 수 없습니다. ')
+        arrangePeriod = 0
+        arrangeYearsList_2 = 0
 
-            arrangeYearsList.append(yearOverviews_medly_about_contents_detail_year)
+    else:
+        print('운영 년수를 알 수 없습니다. ')
+        arrangePeriod = 0
+        arrangeYearsList_2 = 0
 
-            for detail_list_length in range(len(yearOverviews_medly_about_contents_detail_list)):
-                yearOverviews_medly_about_contents_detail_02 = detail_fb_yearOverviews_info_soup.select(
-                    '#timeline-medley > div > div#pagelet_timeline_medley_about > div > div > ul > li > div > div:nth-of-type(2) > div > div > ul > li:nth-of-type(' + str(
-                        list_length + 1) + ') > div > div:nth-of-type(2) > ul > li:nth-of-type(' + str(
-                        detail_list_length + 1) + ') > div > div > a > span')[0].text  # 내용
-                print(yearOverviews_medly_about_contents_detail_year, ', ',
-                      yearOverviews_medly_about_contents_detail_02)
-
-        print('년도 리스트:', arrangeYearsList)
-
-        print('년도 리스트 길이:', len(arrangeYearsList))
-
-        if len(arrangeYearsList) != 0 and len(arrangeYearsList) != 1:
-            print(arrangeYearsList[0:len(arrangeYearsList) - 1])
-            arrangePeriod = 0
-            arrangeYearsList_2 = arrangeYearsList[0:len(arrangeYearsList) - 1]
-
-            # print(arrangeYearsList_2[-1].replace("년"))
-            lastYearVal = int(arrangeYearsList_2[-1].replace("년", ""))
-            currYear = '%04d' % time.localtime().tm_year
-            arrangePeriod = int(currYear) - lastYearVal
-
-            print('운영 년수: ', arrangePeriod)
-
-            returnedResultDict['운영년수'] = arrangePeriod
-
-        elif len(arrangeYearsList) == 1:
-
-            print('운영 년수를 알 수 없습니다. ')
-            arrangePeriod = 0
-            arrangeYearsList_2 = 0
-
-        else:
-            print('운영 년수를 알 수 없습니다. ')
-            arrangePeriod = 0
-            arrangeYearsList_2 = 0
 
     DictionaryValue_list = returnedResultDict.values()
 
     for search_t in DictionaryValue_list:
-        #print('search_t:', search_t)
 
+        # 20181011_edited
         search_t = str(search_t)
         try:
             if '남성' in search_t:
@@ -1891,8 +1316,8 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
     like_cnt_int = 0
     cnt_like_img = 0
     for search_c in DictionaryValue_list:
-        #print('search_c:', search_c)
 
+        # 20181011_edited
         search_c = str(search_c)
         try:
             if '거주' in search_c:
@@ -2308,6 +1733,9 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
     except Exception as e:
         print('좋아요 정보가 공개되지 않았습니다. ')
 
+    # 20181011_edited
+    time.sleep(1)
+
     # 체크인 수 정보 추가
     driver.get('https://www.facebook.com/' + user_fbpage_id + '/map')
 
@@ -2356,6 +1784,9 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
 
     except Exception as e:
         print('체크인 정보가 공개되지 않았습니다. ')
+
+    # 20181011_edited
+    time.sleep(1)
 
     # 이벤트 수 정보 추가
     driver.get('https://www.facebook.com/' + user_fbpage_id + '/events')
@@ -2420,6 +1851,9 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
     except Exception as e:
         print('이벤트 정보가 공개되지 않았습니다. ')
 
+    # 20181011_edited
+    time.sleep(1)
+
     # 영화 수 정보 추가
     driver.get('https://www.facebook.com/' + user_fbpage_id + '/movies')
 
@@ -2480,18 +1914,16 @@ def profileTextDataCrawling(loginValue, lgnCnt, insertedUser_fbpage_id, inserted
             returnedResultDict['영화제목'] = '_@'.join(movies_data)
             # print(returnedResultDict['영화내용개수'], ', ', returnedResultDict['영화제목'])
 
-        # 20181016_edited_syhan
         else:
             print('표시할 영화 없음')
-            returnedResultDict['영화내용개수'] = 0
-            returnedResultDict['영화제목'] = '표시할 영화 없음'
 
     except Exception as e:
         print('영화 정보가 공개되지 않았습니다. ')
-        returnedResultDict['영화내용개수'] = 0
-        returnedResultDict['영화제목'] = '표시할 영화 없음'
 
     # 게시글 댓글 수 정보 추가- 타임라인
+
+    # 20181011_edited
+    time.sleep(1.5)
 
     userFacebook_currentUrl = 'https://www.facebook.com/' + user_fbpage_id
 
@@ -3243,7 +2675,7 @@ def findCntPhotos(driver, facebookPageID):
     photos_albums_cnt_div = '0'
     albumKindCnt = 0
 
-    #time.sleep(0.5)
+    time.sleep(1)
     try:
         photos_of_cnt = photos_of_soup.select(
             '#pagelet_timeline_medley_photos > div:nth-of-type(2) > div:nth-of-type(1) > ul > li')
@@ -3258,7 +2690,7 @@ def findCntPhotos(driver, facebookPageID):
     # photos_all_soup = bs(photos_all_html, 'html.parser')
     photos_all_soup = autoScroller(driver)
 
-    #time.sleep(0.5)
+    time.sleep(1)
     try:
         photos_all_cnt = photos_all_soup.select(
             '#pagelet_timeline_medley_photos > div:nth-of-type(2) > div:nth-of-type(1) > ul > li')
@@ -3278,7 +2710,7 @@ def findCntPhotos(driver, facebookPageID):
     try:
         photos_albums_cnt_div = photos_albums_soup.select(
             '#pagelet_timeline_medley_photos > div:nth-of-type(2) > div > div')
-        #time.sleep(1)
+        time.sleep(1)
         print('DIV 개수', len(photos_albums_cnt_div))
 
         for divlength in range(len(photos_albums_cnt_div)):
@@ -3287,7 +2719,7 @@ def findCntPhotos(driver, facebookPageID):
                     divlength + 1) + ') > table > tbody > tr')
             print('photos_all_cnt:', len(photos_albums_cnt_tr))
 
-            time.sleep(0.5)
+            time.sleep(1)
             i = 0
             for trlength in range(len(photos_albums_cnt_tr)):
                 photos_albums_cnt_td = photos_albums_soup.select(
@@ -3319,13 +2751,11 @@ def TCMCountGen(tScoreCount, cScoreCount, ResultDict, user_fbpage_url, driver, r
     returnedValue_TCMCountGen = False
 
     # dictResult ={}
-    # 20181016_edited_syhan
     print('M_SCORE를 산출하겠습니다.')
-    try:
-        userContent_list_result = autoScrollerUserWrapperContents(driver)
-    except Exception as e:
-        print('There is no Data for crawling.')
-        userContent_list_result = None
+
+    # 20181011_edited
+    time.sleep(1)
+    userContent_list_result = autoScrollerUserWrapperContents(driver)
 
     if userContent_list_result is not None:
         totalPicCnt = autoScroller_MSCORE(user_fbpage_url, driver)
@@ -3444,8 +2874,8 @@ def TCMCountGen(tScoreCount, cScoreCount, ResultDict, user_fbpage_url, driver, r
         # DB INSERT
         try:
             # Server Connection to MySQL:
-            databaseConnection_jeniel = mysqlConnection_jeniel.DatabaseConnection_jeniel()
-            databaseConnection_jeniel.insert_record_origin_version(
+            databaseConnection_zeniel = mysqlConnection_zeniel_fail_20181011.DatabaseConnection_zeniel()
+            databaseConnection_zeniel.insert_record_origin_version(
                 ResultDict['사용자이름'],
                 ResultDict['페이스북페이지ID'],
                 ''.join(ResultDict['전체기본정보']),
@@ -3521,8 +2951,8 @@ def TCMCountGen(tScoreCount, cScoreCount, ResultDict, user_fbpage_url, driver, r
         # DB INSERT
         try:
             # Server Connection to MySQL:
-            databaseConnection_jeniel = mysqlConnection_jeniel.DatabaseConnection_jeniel()
-            databaseConnection_jeniel.insert_record_origin_version(
+            databaseConnection_zeniel = mysqlConnection_zeniel_fail_20181011.DatabaseConnection_zeniel()
+            databaseConnection_zeniel.insert_record_origin_version(
                 ResultDict['사용자이름'],
                 ResultDict['페이스북페이지ID'],
                 ''.join(ResultDict['전체기본정보']),
@@ -3609,16 +3039,18 @@ def TCMCountGen(tScoreCount, cScoreCount, ResultDict, user_fbpage_url, driver, r
 
         print('모든 리뷰 수 :', reviewsCnt_int)
 
-        databaseConnection_jeniel = mysqlConnection_jeniel.DatabaseConnection_jeniel()
-        databaseConnection_jeniel.update_ReviewCnt(reviewsCnt_str, user_fbpage_url.replace("https://www.facebook.com/", ""))
+        databaseConnection_zeniel = mysqlConnection_zeniel_fail_20181011.DatabaseConnection_zeniel()
+        # 20181011_edited
+        databaseConnection_zeniel.update_ReviewCnt(reviewsCnt_str, user_fbpage_url.replace("https://www.facebook.com/", ""))
 
 
     except Exception as e:
         print('리뷰수 정보가 노출되지 않았습니다. ', e)
         print('모든 리뷰 수 :', reviewsCnt_str)
 
-        databaseConnection_jeniel = mysqlConnection_jeniel.DatabaseConnection_jeniel()
-        databaseConnection_jeniel.update_ReviewCnt(reviewsCnt_str, user_fbpage_url.replace("https://www.facebook.com/", ""))
+        databaseConnection_zeniel = mysqlConnection_zeniel_fail_20181011.DatabaseConnection_zeniel()
+        # 20181011_edited
+        databaseConnection_zeniel.update_ReviewCnt(reviewsCnt_str, user_fbpage_url.replace("https://www.facebook.com/", ""))
 
     # 팔로우 수 추출
     frndCnt = '0'
@@ -3640,14 +3072,18 @@ def TCMCountGen(tScoreCount, cScoreCount, ResultDict, user_fbpage_url, driver, r
 
         print(frndTitle, '-', frndCnt)
 
-        databaseConnection_jeniel = mysqlConnection_jeniel.DatabaseConnection_jeniel()
-        #databaseConnection_jeniel.update_FollowerCnt(frndCnt, user_fbpage_url)
-        databaseConnection_jeniel.update_FollowCnt(frndCnt, user_fbpage_url.replace("https://www.facebook.com/", ""))
+        databaseConnection_zeniel = mysqlConnection_zeniel_fail_20181011.DatabaseConnection_zeniel()
+        #databaseConnection_zeniel.update_FollowerCnt(frndCnt, user_fbpage_url)
+
+        # 20181011_edited
+        databaseConnection_zeniel.update_FollowCnt(frndCnt, user_fbpage_url.replace("https://www.facebook.com/", ""))
     except Exception as e:
         print('팔로우 수 노출되지 않았습니다.')
-        databaseConnection_jeniel = mysqlConnection_jeniel.DatabaseConnection_jeniel()
-        #databaseConnection_jeniel.update_FollowerCnt('0', user_fbpage_url)
-        databaseConnection_jeniel.update_FollowCnt(frndCnt, user_fbpage_url.replace("https://www.facebook.com/", ""))
+        databaseConnection_zeniel = mysqlConnection_zeniel_fail_20181011.DatabaseConnection_zeniel()
+        #databaseConnection_zeniel.update_FollowerCnt('0', user_fbpage_url)
+
+        # 20181011_edited
+        databaseConnection_zeniel.update_FollowCnt(frndCnt, user_fbpage_url.replace("https://www.facebook.com/", ""))
 
 
     # 사진첩의 댓글 개수, 좋아요 개수
@@ -3666,9 +3102,8 @@ def autoScrollerUserWrapperContents(driver):
     # 게시글에서 좋아요 표시 갯수, 댓글 수 등의 정보 추출 >>  AUTO SCROLL 기능 필요
     SCROLL_PAUSE_TIME = 0.5
 
-    # 20181016_edited_syhan
-    global autoScrolled_data_soup_html
     # 화면 길이 만큼 나눠 autoScroll 하고 각 페이지마다 데이터 가져오기
+    autoScrolled_data_soup_html = ''
     last_height = driver.execute_script("return document.body.scrollHeight")
 
     # 화면 사이즈 생성하기(15번의 새로고침이 있을 정도로만 데이터 추출)
@@ -3690,7 +3125,7 @@ def autoScrollerUserWrapperContents(driver):
         userContent_list_result = []
 
     try:
-        time.sleep(1)
+        time.sleep(2)
         userContent_list_result = autoScrolled_data_soup_html.find_all('div', attrs={'class': 'userContentWrapper'})
 
     except Exception as e:
@@ -3704,8 +3139,6 @@ def autoScrollerUserWrapperContents(driver):
 def autoScroller_MSCORE(User_site_url_addr, driver):
     driver.get(User_site_url_addr + '/photos_albums')
 
-    # 20181016_edited_syhan
-    global autoScrolled_data_soup
     # 게시글에서 좋아요 표시 갯수, 댓글 수 등의 정보 추출 >>  AUTO SCROLL 기능 필요
     SCROLL_PAUSE_TIME = 0.5
 
@@ -3778,10 +3211,8 @@ def autoScroller(driver):
     # 게시글에서 좋아요 표시 갯수, 댓글 수 등의 정보 추출 >>  AUTO SCROLL 기능 필요
     SCROLL_PAUSE_TIME = 2
 
-    # 20181016_edited_syhan
-    global autoScrolled_data_soup_html
-
     # 화면 길이 만큼 나눠 autoScroll 하고 각 페이지마다 데이터 가져오기
+    autoScrolled_data_soup_html = ''
     last_height = driver.execute_script("return document.body.scrollHeight")
 
     # 화면 사이즈 생성하기(15번의 새로고침이 있을 정도로만 데이터 추출)
@@ -3809,15 +3240,13 @@ def autoScrollerContentsText(User_timeLine_site_url_addr, driver):
     driver.get(User_timeLine_site_url_addr)
     SCROLL_PAUSE_TIME = 0.5
 
-    # 20181016_edited_syhan
-    global autoScrolled_data_soup
-
     # 화면 길이 만큼 나눠 autoScroll 하고 각 페이지마다 데이터 가져오기
+    autoScrolled_data_soup_html = ''
     last_height = driver.execute_script("return document.body.scrollHeight")
 
     # 화면 사이즈 생성하기(15번의 새로고침이 있을 정도로만 데이터 추출)
     textDataList = []
-
+    autoScrolled_data_soup = ''
     for cyc in range(0, 10):
         # Scroll down to bottom
         driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")

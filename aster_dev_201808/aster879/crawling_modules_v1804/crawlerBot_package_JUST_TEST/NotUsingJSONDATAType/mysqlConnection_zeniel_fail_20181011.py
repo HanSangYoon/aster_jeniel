@@ -1,10 +1,9 @@
-#!/usr/bin/python
+# !/usr/bin/python
 import pymysql
 
+class DatabaseConnection_zeniel:
 
-class DatabaseConnection_jeniel:
     def __init__(self):
-
         try:
             self.connection = pymysql.connect(host='uml.kr', port=3366,
                        user='just_aster_dba', password='!just716811',
@@ -15,8 +14,8 @@ class DatabaseConnection_jeniel:
 
             print('DB connection completed')
 
-        except Exception as e:
-            print('Cannot connect to Database: ', e)
+        except:
+            print('Cannot connect to Database')
 
     def create_table(self):
         create_table_query = "CREATE TABLE `facebook_crawled_just` (\
@@ -52,9 +51,11 @@ class DatabaseConnection_jeniel:
         self.cursor.execute(create_table_query)
         self.connection.close()
 
-    #INSERT facebook
+
+    # INSERT facebook
     def insert_record_origin_version(self, f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11, f12, f13, f14, f15, f16, f17,
-                                     f18, f19, f20, f21, f22, f23, f24, f25, f26, f27, f28, f29, f30, f31, f32, f33, f34, f35, f36, f37, f38, f39, f40, f41, f42, f43, f44, f45,
+                                     f18, f19, f20, f21, f22, f23, f24, f25, f26, f27, f28, f29, f30, f31, f32, f33,
+                                     f34, f35, f36, f37, f38, f39, f40, f41, f42, f43, f44, f45,
                                      f46, f47, f48, f49, f50, f51, f52, f53, f54, f55, f56, f57, f58, f59, f60):
         try:
             insert_command = "INSERT INTO facebook_crawled_just (" \
@@ -70,9 +71,9 @@ class DatabaseConnection_jeniel:
                              "avgReplyCnt,avgReplyAndReply,gdExpssCnt,avgGdExpssRate,aboutInfoCnt," \
                              "thisMnthArticleCnt,preMnthArticleCnt,arrangeYears," \
                              "cellPhone,addr,snsLink,website,birthday,birthday_luna,photobookCnt) VALUES('" \
-                             + f1 + "','" + f2 + "','" + f3 + "','" + f4 + "','" + f5 + "','" + f6 + "','"\
-                             + f7 + "','" + f8 + "','" + f9 + "','" + f10 + "','" + f11 + "','" + f12 + "','"\
-                             + f13 + "','" + f14 + "','" + f15 + "', '" + f16 + "', '" + f17 + "','"\
+                             + f1 + "','" + f2 + "','" + f3 + "','" + f4 + "','" + f5 + "','" + f6 + "','" \
+                             + f7 + "','" + f8 + "','" + f9 + "','" + f10 + "','" + f11 + "','" + f12 + "','" \
+                             + f13 + "','" + f14 + "','" + f15 + "', '" + f16 + "', '" + f17 + "','" \
                              + f18 + "','" + f19 + "','" + f20 + "','" + f21 + "','" + f22 + "','" + f23 + "','" \
                              + f24 + "','" + f25 + "','" + f26 + "','" + f27 + "','" + f28 + "','" + f29 + "','" \
                              + f30 + "','" + f31 + "','" + f32 + "', '" + f33 + "', '" + f34 + "','" + f35 + "','" \
@@ -89,13 +90,12 @@ class DatabaseConnection_jeniel:
         except Exception as e:
             print(e)
 
-
     # UPDATE
     def update_ReviewCnt(self, f1, f2):
         print('update_ReviewCnt')
         try:
             insert_command = "UPDATE facebook_crawled_just SET " \
-                        "reviewsCnt='" + f1 + "' WHERE facebookUrl='" + f2 + "'; "
+                             "reviewsCnt='" + f1 + "' WHERE facebookUrl='" + f2 + "'; "
 
             print(insert_command)
             self.cursor.execute(insert_command)
@@ -112,7 +112,7 @@ class DatabaseConnection_jeniel:
         print('update_FollowerCnt')
         try:
             insert_command = "UPDATE facebook_crawled_just SET " \
-                        "fllwCnt='" + f1 + "' WHERE facebookUrl='" + f2 + "'; "
+                             "fllwCnt='" + f1 + "' WHERE facebookUrl='" + f2 + "'; "
 
             print(insert_command)
             self.cursor.execute(insert_command)
@@ -124,14 +124,12 @@ class DatabaseConnection_jeniel:
         except Exception as e:
             print(e)
 
-
-
     # UPDATE
     def update_PhotoLikeCmntCnt(self, f1, f2, f3):
         print('update_PhotoLikeCmntCnt')
         try:
             insert_command = "UPDATE facebook_crawled_just SET " \
-                        "phdatgulCnt='" + f1 + "', photoLikeCnt='" + f2 + "' WHERE facebookUrl='" + f3 + "'; "
+                             "phdatgulCnt='" + f1 + "', photoLikeCnt='" + f2 + "' WHERE facebookUrl='" + f3 + "'; "
 
             print(insert_command)
             self.cursor.execute(insert_command)
@@ -142,9 +140,3 @@ class DatabaseConnection_jeniel:
 
         except Exception as e:
             print(e)
-
-
-
-
-
-
